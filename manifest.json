@@ -1,0 +1,471 @@
+{
+  "homepages": [],
+  "source_base_path": "G:/Documentation/Unify.Framework",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Core.Extensions.EnumerableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Core.Extensions.EnumerableExtensions.html",
+          "hash": "drcY04uJbRNzYOI/t7D/Ew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Core.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Core.Extensions.html",
+          "hash": "cvKCvJDwBfg/YHHGfe/HYA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Core.IValidatable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Core.IValidatable.html",
+          "hash": "4eMLyet3uHQQPZznzTuU1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Core.html",
+          "hash": "leM3n3ccck4ugqNfE48ukw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutine-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutine-1.html",
+          "hash": "K1uUSgdS6x957POff2KGQA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutine.html",
+          "hash": "H9G0uDP//dUisiw96fqprA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html",
+          "hash": "gsI6sSYOBO3gzgFBqxacMw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineEventArgs-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineEventArgs-1.html",
+          "hash": "guiPFLISjzLnh8L4cOaypg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineEventArgs.html",
+          "hash": "9GF9krF+SMXlFCsZ7az5Ng=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineState.html",
+          "hash": "X6TYO3n2jABVutGZkS/zHQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Coroutines.UnifyTimer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Coroutines.UnifyTimer.html",
+          "hash": "jiI2AFDBIPit9U6c1aZy3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Coroutines.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Coroutines.html",
+          "hash": "HJRQXf72FgQVSyga0PuB4A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/index.html",
+          "hash": "unmX/xK87OGmaG39UnFt6A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "0.1.x/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/toc.html",
+          "hash": "ghJlT0i5br9vpi//7/yB0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/IntroductionToUnifyExamples.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/IntroductionToUnifyExamples.html",
+          "hash": "R+doutHpf7A+G3+wBHfykw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/Cancelling.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/Cancelling.html",
+          "hash": "96Rb1mOgP0IFP/Bt05XBTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/CreatingAndStarting.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/CreatingAndStarting.html",
+          "hash": "lELAMjQPGWUpB6fGjbfM8w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/Events.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/Events.html",
+          "hash": "NvVIjMbs7+GRlB7LhTWXGQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutines.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutines.html",
+          "hash": "Q0sOv81v/BqJVtSOMVhsyA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/PausingAndResuming.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/PausingAndResuming.html",
+          "hash": "Nx/mFXxeg+Ba6gVwtA4c5Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/ReturningAValue.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/ReturningAValue.html",
+          "hash": "b//F6Hyk+ctEKyieheLmfA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/StoppingAndRestarting.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/StoppingAndRestarting.html",
+          "hash": "F81IRg/C1AmQM32s5NKJkQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "0.1.x/userguide/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/toc.html",
+          "hash": "TX1feLcHJaP+JRCzJm/kPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/exception_cancel.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/exception_cancel.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/exception_pause.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/exception_pause.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/exception_start.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/exception_start.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/exception_stop.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/exception_stop.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/linkedin_off_40x40.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/linkedin_off_40x40.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/linkedin_on_40x40.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/linkedin_on_40x40.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/twitter_off_40x40.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/twitter_off_40x40.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/twitter_on_40x40.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/twitter_on_40x40.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/unify_48x48.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/unify_48x48.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "edJJcmuJE5SQpZrSgvjkXw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "L+uEGsSPigKA7UxgdRc4sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 10,
+          "skipped_file_count": 10
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 12,
+          "skipped_file_count": 12
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

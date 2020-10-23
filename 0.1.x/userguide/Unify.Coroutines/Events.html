@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Unify Coroutine Events | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Unify Coroutine Events | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="unify-coroutine-events">Unify Coroutine Events</h2>
+
+<p>Unify Coroutines provide the following events:</p>
+<ul>
+<li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Started"><strong>Started</strong></a> - Fired when a Unify Coroutine is successfully started with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Start"><strong>Start()</strong></a> method</li>
+<li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Paused"><strong>Paused</strong></a> - Fired when a Unify Coroutine is successfully paused with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a> method</li>
+<li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resumed"><strong>Resumed</strong></a> - Fired when a Unify Coroutine is successfully resumed with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume"><strong>Resume()</strong></a> method</li>
+<li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stopped"><strong>Stopped</strong></a> - Fired when a Unify Coroutine is successfully stopped with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stop"><strong>Stop()</strong></a> method</li>
+<li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancelled"><strong>Cancelled</strong></a> - Fired when a Unify Coroutine successfully is cancelled with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancel"><strong>Cancel()</strong></a> method</li>
+<li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished"><strong>Finished</strong></a> - Fired when a Unify Coroutine successfully finishes</li>
+</ul>
+<p>Unify provides a custom data base class named <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs.html"><strong>UnifyCoroutineEventArgs</strong></a>, an instance of which is passed to event handlers. This base class holds no data, it is provided as a way for you to create your own custom event arguments class.</p>
+<h3 id="subscribing-to-unify-coroutine-events">Subscribing to Unify Coroutine events</h3>
+<p>There are three ways to subscribe to <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html"><strong>UnifyCoroutine</strong></a> events; programmatically, anonymous methods and lambda expressions. An example of each is provided below.</p>
+<h4 id="programmatically">Programmatically</h4>
+<pre><code>myUnifyCoroutine.Started += StartedEventHandler;
+
+private void StartedEventHandler(object sender, UnifyCoroutineEventArgs e)
+{
+	print(&quot;* STARTED EVENT HANDLER *&quot;);
+}
+</code></pre>
+<h4 id="anonymous-method">Anonymous Method</h4>
+<pre><code>myUnifyCoroutine.Started += delegate(object sender, UnifyCoroutineEventArgs e)
+{
+	print(&quot;* STARTED EVENT HANDLER *&quot;);
+};
+</code></pre>
+<h4 id="lambda-expression">Lambda Expression</h4>
+<pre><code>myUnifyCoroutine.Started += (sender, e) =&gt;
+{
+	print(&quot;* STARTED EVENT HANDLER *&quot;);
+};
+</code></pre>
+<h3 id="unsubscribing-from-unify-coroutine-events">Unsubscribing from Unify Coroutine events</h3>
+<p>If you intend to unsubscribe from a Unify Coroutine event, you should use the programmatical method described <a href="#programmatically">above</a>. It is not possible to unsubscribe from a C# event if you subscribed using either an anonymous method or lambda expression.</p>
+<pre><code>myUnifyCoroutine.Started -= StartedEventHandler;
+</code></pre>
+<h3 id="example">Example</h3>
+<p>This Unify Coroutine example counts from 1 to 60, printing the current value to the Unity Console every second.<br>
+Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow restarting and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a>
+has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions">below</a>.</p>
+<p>This example shows the three ways you can subscribe to a Unify Coroutine event and also how to unsubscribe.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>S</strong> to Start the Unify Coroutine</li>
+<li><strong>P</strong> to Pause the Unify Coroutine</li>
+<li><strong>R</strong> to Resume the Unify Coroutine</li>
+<li><strong>X</strong> to Stop the Unify Coroutine</li>
+<li><strong>C</strong> to Cancel the Unify Coroutine</li>
+<li><strong>E</strong> to subscribe to/unsubscribe from PAUSED event</li>
+</ul>
+<br>
+<pre><code>using System.Collections;
+using Unify.Coroutines;
+using UnityEngine;
+
+public class CoroutineEvents : MonoBehaviour
+{
+    private UnifyCoroutine myUnifyCoroutine;
+    private bool pausedSubscribeToggle = false;
+
+    void Start()
+    {
+        myUnifyCoroutine = new UnifyCoroutine(WaitAndPrint());
+        myUnifyCoroutine.failSilently = false;
+        myUnifyCoroutine.keepAlive = true;
+
+        // Subscribe to the Started event programmatically.
+        myUnifyCoroutine.Started += StartedEventHandler;
+
+        // Subscribe to the Paused event programmatically.
+        myUnifyCoroutine.Paused += PausedEventHandler;
+
+        // Subscribe to the Resumed event using an anonymous method.
+        myUnifyCoroutine.Resumed += delegate (object sender, UnifyCoroutineEventArgs e)
+        {
+            print(&quot;* RESUMED EVENT HANDLER *&quot;);
+        };
+
+        // Subscribe to the Stopped event using an anonymous method.
+        myUnifyCoroutine.Stopped += delegate (object sender, UnifyCoroutineEventArgs e)
+        {
+            print(&quot;* STOPPED EVENT HANDLER *&quot;);
+        };
+
+        // Subscribe to the Cancelled event using a lambda expression.
+        myUnifyCoroutine.Cancelled += (sender, e) =&gt;
+        {
+            print(&quot;* CANCELLED EVENT HANDLER *&quot;);
+        };
+
+        // Subscribe to the Finished event using a lambda expression.
+        myUnifyCoroutine.Finished += (sender, e) =&gt;
+        {
+            print(&quot;* FINISHED EVENT HANDLER *&quot;);
+        };
+
+        print(&quot;press S to START&quot;);
+        print(&quot;press P to PAUSE&quot;);
+        print(&quot;press R to RESUME&quot;);
+        print(&quot;press X to STOP&quot;);
+        print(&quot;press C to CANCEL&quot;);
+        print(&quot;press E to subscribe to/unsubscribe from PAUSED event&quot;);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            myUnifyCoroutine.Start();
+        }
+
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            myUnifyCoroutine.Pause();
+        }
+
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            myUnifyCoroutine.Resume();
+        }
+
+        if (Input.GetKeyUp(KeyCode.X))
+        {
+            myUnifyCoroutine.Stop();
+        }
+
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            myUnifyCoroutine.Cancel();
+        }
+
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            if (pausedSubscribeToggle)
+            {
+                myUnifyCoroutine.Paused += PausedEventHandler;
+                print(&quot;* SUBSCRIBED TO PAUSED EVENT *&quot;);
+            }
+            else
+            {
+                myUnifyCoroutine.Paused -= PausedEventHandler;
+                print(&quot;* UNSUBSCRIBED FROM PAUSED EVENT *&quot;);
+            }
+
+            pausedSubscribeToggle = !pausedSubscribeToggle;
+        }
+    }
+
+    IEnumerator WaitAndPrint()
+    {
+        for (int i = 0; i &lt; 60; i++)
+        {
+            print(&quot;i = &quot; + i);
+            yield return new WaitForSecondsRealtime(1f);
+        }
+    }
+
+    private void StartedEventHandler(object sender, UnifyCoroutineEventArgs e)
+    {
+        print(&quot;* STARTED EVENT HANDLER *&quot;);
+    }
+
+    private void PausedEventHandler(object sender, UnifyCoroutineEventArgs e)
+    {
+        print(&quot;* PAUSED EVENT HANDLER *&quot;);
+    }
+}
+</code></pre>
+<h3 id="exceptions">Exceptions</h3>
+<p>Unify does not throw exceptions for Unify Coroutine events. However, the .NET framework may still throw exceptions.</p>
+<h3 id="see-also">See Also</h3>
+<p><a class="xref" href="IntroductionToUnifyCoroutines.html#whats-the-difference-between-pause-stop-and-cancel">What's the difference between Pause, Stop and Cancel?</a></p>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

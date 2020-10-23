@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pausing and Resuming a Unify Coroutine | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Pausing and Resuming a Unify Coroutine | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="PausingandResuming">
+<h2 id="pausing-and-resuming-a-unify-coroutine">Pausing and Resuming a Unify Coroutine</h2>
+
+<p>Unlike a standard Unity Coroutine, a Unify Coroutine can be paused and resumed.</p>
+<br>
+<p>To pause a Unify Coroutine, call the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a> method on a Unify Coroutine instance. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a> method will return <strong>true</strong> if the Unify Coroutine was paused successfully, otherwise it will return <strong>false</strong>.</p>
+<pre><code>bool paused = myUnifyCoroutine.Pause();
+</code></pre>
+<br>
+<p>To resume a Unify Coroutine, call the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume"><strong>Resume()</strong></a> method on a Unify Coroutine instance. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume"><strong>Resume()</strong></a> method will return <strong>true</strong> if the Unify Coroutine was resumed successfully, otherwise it will return <strong>false</strong>.</p>
+<pre><code>bool resumed = myUnifyCoroutine.Resume();
+</code></pre>
+<h3 id="example">Example</h3>
+<p>This Unify Coroutine example runs for 60 seconds, printing the current second value to the Unity Console every second.<br>
+Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions">below</a>.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>S</strong> to Start the Unify Coroutine</li>
+<li><strong>P</strong> to Pause the Unify Coroutine</li>
+<li><strong>R</strong> to Resume the Unify Coroutine</li>
+</ul>
+<br>
+<pre><code>using System.Collections;
+using Unify.Coroutines;
+using UnityEngine;
+
+public class PausingAndResuming : MonoBehaviour
+{
+    private UnifyCoroutine myUnifyCoroutine;
+
+    void Start()
+    {
+        myUnifyCoroutine = new UnifyCoroutine(WaitAndPrint());
+        myUnifyCoroutine.failSilently = false;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            print(&quot;* Starting Unify Coroutine *&quot;);
+            myUnifyCoroutine.Start();
+        }
+
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            print(&quot;* Pausing Unify Coroutine *&quot;);
+            myUnifyCoroutine.Pause();
+        }
+
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            print(&quot;* Resuming Unify Coroutine *&quot;);
+            myUnifyCoroutine.Resume();
+        }
+    }
+
+    IEnumerator WaitAndPrint()
+    {
+        for (int i = 0; i &lt; 60; i++)
+        {
+            print(&quot;i = &quot; + i);
+            yield return new WaitForSecondsRealtime(1f);
+        }
+    }
+}
+</code></pre>
+<h3 id="exceptions">Exceptions</h3>
+<p>Exceptions will be thrown under the following circumstances:</p>
+<ul>
+<li><strong>Pausing</strong> a Unify Coroutine that is in any state other than <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Running</strong></a></li>
+<li><strong>Resuming</strong> a Unify Coroutine that is in any state other than <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Paused</strong></a></li>
+</ul>
+<p>Exceptions will not be thrown if <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> is <strong>true</strong>.</p>
+<br>
+<p>Unify will provide information in the exception message to help you find the cause of the error, for example:</p>
+<p><img src="../../../images/exception_pause.png" alt="Exception Image"></p>
+<p>This message tell us the Unify Coroutine was in the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Ready</strong></a> state at the time of the pause request, therefore it cannot be paused because it is not running.</p>
+<h3 id="see-also">See Also</h3>
+<p><a class="xref" href="IntroductionToUnifyCoroutines.html#whats-the-difference-between-pause-stop-and-cancel">What's the difference between Pause, Stop and Cancel?</a></p>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

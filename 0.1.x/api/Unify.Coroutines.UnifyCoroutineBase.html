@@ -1,0 +1,1055 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UnifyCoroutineBase
+   | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UnifyCoroutineBase
+   | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="Unify.Coroutines.UnifyCoroutineBase">
+  
+  
+  <h1 id="Unify_Coroutines_UnifyCoroutineBase" data-uid="Unify.Coroutines.UnifyCoroutineBase" class="text-break">Class UnifyCoroutineBase
+  </h1>
+  <div class="markdown level0 summary"><p>Base class for all Unify Coroutines.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UnifyCoroutineBase</span></div>
+      <div class="level2"><a class="xref" href="Unify.Coroutines.UnifyCoroutine.html">UnifyCoroutine</a></div>
+      <div class="level2"><a class="xref" href="Unify.Coroutines.UnifyCoroutine-1.html">UnifyCoroutine&lt;T&gt;</a></div>
+      <div class="level2"><a class="xref" href="Unify.Coroutines.UnifyTimer.html">UnifyTimer</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Unify.Coroutines.html">Unify.Coroutines</a></h6>
+  <h6><strong>Assembly</strong>: Unify.Coroutines.dll</h6>
+  <h5 id="Unify_Coroutines_UnifyCoroutineBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class UnifyCoroutineBase</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_coroutine_" data-uid="Unify.Coroutines.UnifyCoroutineBase.coroutine*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_coroutine" data-uid="Unify.Coroutines.UnifyCoroutineBase.coroutine">coroutine</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Coroutine coroutine { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Coroutine</span></td>
+        <td><p>Reference to a Unity Coroutine.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_currentRepeatCount_" data-uid="Unify.Coroutines.UnifyCoroutineBase.currentRepeatCount*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_currentRepeatCount" data-uid="Unify.Coroutines.UnifyCoroutineBase.currentRepeatCount">currentRepeatCount</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int currentRepeatCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Counts iterations up to a maximum of <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount">repeatCount</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_failSilently_" data-uid="Unify.Coroutines.UnifyCoroutineBase.failSilently*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_failSilently" data-uid="Unify.Coroutines.UnifyCoroutineBase.failSilently">failSilently</h4>
+  <div class="markdown level1 summary"><p>Indicates if the Unify Coroutine should throw a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.exception">System.Exception</a> on errors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool failSilently { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>When true, the Unify Coroutine will NOT throw an exception on error. Otherwise, exceptions WILL be thrown.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_firstRun_" data-uid="Unify.Coroutines.UnifyCoroutineBase.firstRun*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_firstRun" data-uid="Unify.Coroutines.UnifyCoroutineBase.firstRun">firstRun</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Indicates if this is the first time the Unify Coroutine has been run. Allows derived classes to perform one-time initialisation tasks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool firstRun { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True when the Unify Coroutine has never been started, otherwise false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_keepAlive_" data-uid="Unify.Coroutines.UnifyCoroutineBase.keepAlive*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_keepAlive" data-uid="Unify.Coroutines.UnifyCoroutineBase.keepAlive">keepAlive</h4>
+  <div class="markdown level1 summary"><p>If re-use is required this MUST be set to true BEFORE starting the Unify Coroutine for the first time .</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool keepAlive { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>When true, the Unify Coroutine will be cloned for re-use. Otherwise, the Unify Coroutine will not be cloned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><p>When the Unify Coroutine cannot be cloned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_name_" data-uid="Unify.Coroutines.UnifyCoroutineBase.name*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_name" data-uid="Unify.Coroutines.UnifyCoroutineBase.name">name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The name of the Unify Coroutine.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_originalTarget_" data-uid="Unify.Coroutines.UnifyCoroutineBase.originalTarget*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_originalTarget" data-uid="Unify.Coroutines.UnifyCoroutineBase.originalTarget">originalTarget</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerator originalTarget { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><p>Stores the original <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target">target</a> for cloning. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_CloneIEnumerator__1___0_">CloneIEnumerator&lt;T&gt;(T)</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_passDelay_" data-uid="Unify.Coroutines.UnifyCoroutineBase.passDelay*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_passDelay" data-uid="Unify.Coroutines.UnifyCoroutineBase.passDelay">passDelay</h4>
+  <div class="markdown level1 summary"><p>The delay in seconds between each run of the Unify Coroutine. Only applies for repeating Coroutines. Cannot be negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float passDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_repeatCount_" data-uid="Unify.Coroutines.UnifyCoroutineBase.repeatCount*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_repeatCount" data-uid="Unify.Coroutines.UnifyCoroutineBase.repeatCount">repeatCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int repeatCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Number of times to run the Coroutine.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_startDelay_" data-uid="Unify.Coroutines.UnifyCoroutineBase.startDelay*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_startDelay" data-uid="Unify.Coroutines.UnifyCoroutineBase.startDelay">startDelay</h4>
+  <div class="markdown level1 summary"><p>Number of seconds to delay starting the Unify Coroutine after <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Start">Start()</a> is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float startDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_state_" data-uid="Unify.Coroutines.UnifyCoroutineBase.state*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_state" data-uid="Unify.Coroutines.UnifyCoroutineBase.state">state</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyCoroutineState state { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Coroutines.UnifyCoroutineState.html">UnifyCoroutineState</a></td>
+        <td><p>The current state of the Unify Coroutine.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_target_" data-uid="Unify.Coroutines.UnifyCoroutineBase.target*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_target" data-uid="Unify.Coroutines.UnifyCoroutineBase.target">target</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerator target { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><p>Reference to the Coroutine method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_unifyCoroutine_" data-uid="Unify.Coroutines.UnifyCoroutineBase.unifyCoroutine*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_unifyCoroutine" data-uid="Unify.Coroutines.UnifyCoroutineBase.unifyCoroutine">unifyCoroutine</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerator unifyCoroutine { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><p>Reference to the Unify Coroutine controller method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_useScaledTime_" data-uid="Unify.Coroutines.UnifyCoroutineBase.useScaledTime*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_useScaledTime" data-uid="Unify.Coroutines.UnifyCoroutineBase.useScaledTime">useScaledTime</h4>
+  <div class="markdown level1 summary"><p>When true scaled time is used, otherwise unscaled time will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useScaledTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_Cancel_" data-uid="Unify.Coroutines.UnifyCoroutineBase.Cancel*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_Cancel" data-uid="Unify.Coroutines.UnifyCoroutineBase.Cancel">Cancel()</h4>
+  <div class="markdown level1 summary"><p>Cancels a Unify Coroutine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Cancel()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the Unify Coroutine was cancelled successfully. Otherwise, false. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><p>Thrown if the Unify Coroutine could not be cancelled. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_CloneIEnumerator_" data-uid="Unify.Coroutines.UnifyCoroutineBase.CloneIEnumerator*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_CloneIEnumerator__1___0_" data-uid="Unify.Coroutines.UnifyCoroutineBase.CloneIEnumerator``1(``0)">CloneIEnumerator&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Clones a type implementing <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator">IEnumerator</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static T CloneIEnumerator&lt;T&gt;(T instance)
+    where T : IEnumerator</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td><p>An instance implementing the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator">IEnumerator</a> interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>A cloned instance of type T.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>A type implementing <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator">IEnumerator</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_OnCancelled_" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnCancelled*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_OnCancelled" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnCancelled">OnCancelled()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Invokes <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancelled">Cancelled</a> event callbacks when a Unify Coroutine is cancelled successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnCancelled()</code></pre>
+  </div>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_OnFinished_" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnFinished*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_OnFinished" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnFinished">OnFinished()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Invokes <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished">Finished</a> event callbacks when a Unify Coroutine has finished.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnFinished()</code></pre>
+  </div>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_OnPassComplete_" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnPassComplete*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_OnPassComplete" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnPassComplete">OnPassComplete()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Invokes <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete">PassComplete</a> event callbacks when a repeating Unify Coroutine has completed a pass successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPassComplete()</code></pre>
+  </div>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_OnPaused_" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnPaused*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_OnPaused" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnPaused">OnPaused()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Invokes <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Paused">Paused</a> event callbacks when a Unify Coroutine is paused successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPaused()</code></pre>
+  </div>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_OnResumed_" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnResumed*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_OnResumed" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnResumed">OnResumed()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Invokes <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resumed">Resumed</a> event callbacks when a Unify Coroutine is resumed successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnResumed()</code></pre>
+  </div>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_OnStarted_" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnStarted*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_OnStarted" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnStarted">OnStarted()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Invokes <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Started">Started</a> event callbacks when a Unify Coroutine is started successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnStarted()</code></pre>
+  </div>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_OnStopped_" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnStopped*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_OnStopped" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnStopped">OnStopped()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Invokes <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stopped">Stopped</a> event callbacks when a Unify Coroutine is stopped successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnStopped()</code></pre>
+  </div>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_Pause_" data-uid="Unify.Coroutines.UnifyCoroutineBase.Pause*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_Pause" data-uid="Unify.Coroutines.UnifyCoroutineBase.Pause">Pause()</h4>
+  <div class="markdown level1 summary"><p>Pauses the Unify Coroutine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Pause()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the Unify Coroutine was paused successfully. Otherwise, false. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><p>Thrown if the Unify Coroutine could not be paused. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_Resume_" data-uid="Unify.Coroutines.UnifyCoroutineBase.Resume*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_Resume" data-uid="Unify.Coroutines.UnifyCoroutineBase.Resume">Resume()</h4>
+  <div class="markdown level1 summary"><p>Resumes a paused Unify Coroutine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Resume()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the Unify Coroutine was resumed successfully. Otherwise, false. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><p>Thrown if the Unify Coroutine could not be resumed. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_Start_" data-uid="Unify.Coroutines.UnifyCoroutineBase.Start*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_Start" data-uid="Unify.Coroutines.UnifyCoroutineBase.Start">Start()</h4>
+  <div class="markdown level1 summary"><p>Starts a Unify Coroutine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Start()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the Unify Coroutine started successfully. Otherwise, false. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><p>Thrown if the Unify Coroutine could not be started. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_StartUnifyCoroutine_" data-uid="Unify.Coroutines.UnifyCoroutineBase.StartUnifyCoroutine*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_StartUnifyCoroutine" data-uid="Unify.Coroutines.UnifyCoroutineBase.StartUnifyCoroutine">StartUnifyCoroutine()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Manages the execution of the Unify Coroutine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator StartUnifyCoroutine()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><p>A Unity <a href="https://docs.unity3d.com/ScriptReference/CustomYieldInstruction.html">CustomYieldInstruction</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_Stop_" data-uid="Unify.Coroutines.UnifyCoroutineBase.Stop*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_Stop" data-uid="Unify.Coroutines.UnifyCoroutineBase.Stop">Stop()</h4>
+  <div class="markdown level1 summary"><p>Stops a running Unify Coroutine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Stop()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the Unify Coroutine was stopped successfully. Otherwise, false. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><p>Thrown if the Unify Coroutine could not be stopped. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_WaitForDelay_" data-uid="Unify.Coroutines.UnifyCoroutineBase.WaitForDelay*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_WaitForDelay_System_Single_" data-uid="Unify.Coroutines.UnifyCoroutineBase.WaitForDelay(System.Single)">WaitForDelay(Single)</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Manages Unify Coroutine delays, taking into account <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_useScaledTime">useScaledTime</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator WaitForDelay(float p_delay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">p_delay</span></td>
+        <td><p>Number of seconds to delay.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><p>A Unity <a href="https://docs.unity3d.com/ScriptReference/CustomYieldInstruction.html">CustomYieldInstruction</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_Cancelled" data-uid="Unify.Coroutines.UnifyCoroutineBase.Cancelled">Cancelled</h4>
+  <div class="markdown level1 summary"><p>Callback when a Unify Coroutine is cancelled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;UnifyCoroutineEventArgs&gt; Cancelled</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_Finished" data-uid="Unify.Coroutines.UnifyCoroutineBase.Finished">Finished</h4>
+  <div class="markdown level1 summary"><p>Callback when a Unify Coroutine has finished.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;UnifyCoroutineEventArgs&gt; Finished</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_PassComplete" data-uid="Unify.Coroutines.UnifyCoroutineBase.PassComplete">PassComplete</h4>
+  <div class="markdown level1 summary"><p>Callback when a repeating Unify Coroutine completes each pass.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;UnifyCoroutineEventArgs&gt; PassComplete</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_Paused" data-uid="Unify.Coroutines.UnifyCoroutineBase.Paused">Paused</h4>
+  <div class="markdown level1 summary"><p>Callback when a Unify Coroutine is paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;UnifyCoroutineEventArgs&gt; Paused</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_Resumed" data-uid="Unify.Coroutines.UnifyCoroutineBase.Resumed">Resumed</h4>
+  <div class="markdown level1 summary"><p>Callback when a Unify Coroutine is resumed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;UnifyCoroutineEventArgs&gt; Resumed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_Started" data-uid="Unify.Coroutines.UnifyCoroutineBase.Started">Started</h4>
+  <div class="markdown level1 summary"><p>Callback when a Unify Coroutine is started.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;UnifyCoroutineEventArgs&gt; Started</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_Stopped" data-uid="Unify.Coroutines.UnifyCoroutineBase.Stopped">Stopped</h4>
+  <div class="markdown level1 summary"><p>Callback when a Unify Coroutine is stopped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;UnifyCoroutineEventArgs&gt; Stopped</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
