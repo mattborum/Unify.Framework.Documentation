@@ -58,7 +58,7 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-12">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="UnifyCoroutineEvents">
 <h2 id="unify-coroutine-events">Unify Coroutine Events</h2>
 
 <p>Unify Coroutines provide the following events:</p>
@@ -70,7 +70,6 @@
 <li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancelled"><strong>Cancelled</strong></a> - Fired when a Unify Coroutine successfully is cancelled with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancel"><strong>Cancel()</strong></a> method</li>
 <li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished"><strong>Finished</strong></a> - Fired when a Unify Coroutine successfully finishes</li>
 </ul>
-<p>Unify provides a custom data base class named <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs.html"><strong>UnifyCoroutineEventArgs</strong></a>, an instance of which is passed to event handlers. This base class holds no data, it is provided as a way for you to create your own custom event arguments class.</p>
 <h3 id="subscribing-to-unify-coroutine-events">Subscribing to Unify Coroutine events</h3>
 <p>There are three ways to subscribe to <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html"><strong>UnifyCoroutine</strong></a> events; programmatically, anonymous methods and lambda expressions. An example of each is provided below.</p>
 <h4 id="programmatically">Programmatically</h4>
@@ -97,10 +96,12 @@ private void StartedEventHandler(object sender, UnifyCoroutineEventArgs e)
 <p>If you intend to unsubscribe from a Unify Coroutine event, you should use the programmatical method described <a href="#programmatically">above</a>. It is not possible to unsubscribe from a C# event if you subscribed using either an anonymous method or lambda expression.</p>
 <pre><code>myUnifyCoroutine.Started -= StartedEventHandler;
 </code></pre>
+<h3 id="event-args">Event Args</h3>
+<p>Unify provides a custom data base class named <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs.html"><strong>UnifyCoroutineEventArgs</strong></a>, an instance of which is passed to event handlers. This base class holds no data, it is provided as a way for you to create your own custom event arguments class.
+<br></p>
 <h3 id="example">Example</h3>
 <p>This Unify Coroutine example counts from 1 to 60, printing the current value to the Unity Console every second.<br>
-Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow restarting and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a>
-has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions">below</a>.</p>
+Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow restarting and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions.</p>
 <p>This example shows the three ways you can subscribe to a Unify Coroutine event and also how to unsubscribe.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
@@ -230,9 +231,11 @@ public class CoroutineEvents : MonoBehaviour
 }
 </code></pre>
 <h3 id="exceptions">Exceptions</h3>
-<p>Unify does not throw exceptions for Unify Coroutine events. However, the .NET framework may still throw exceptions.</p>
+<p>Unify does not throw exceptions specifically for Unify Coroutine events.</p>
 <h3 id="see-also">See Also</h3>
-<p><a class="xref" href="IntroductionToUnifyCoroutines.html#whats-the-difference-between-pause-stop-and-cancel">What's the difference between Pause, Stop and Cancel?</a></p>
+<ul>
+<li><a class="xref" href="IntroductionToUnifyCoroutines.html#whats-the-difference-between-pause-stop-and-cancel">What's the difference between Pause, Stop and Cancel?</a></li>
+</ul>
 </article>
           </div>
         </div>

@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/Cancelling.html",
-          "hash": "96Rb1mOgP0IFP/Bt05XBTA=="
+          "hash": "QOJwySxBUxtkOxXejBZuvA=="
         }
       },
       "is_incremental": true,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/CreatingAndStarting.html",
-          "hash": "lELAMjQPGWUpB6fGjbfM8w=="
+          "hash": "UKiLaeO5wY+7ajPJnVTjlw=="
         }
       },
       "is_incremental": true,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/Events.html",
-          "hash": "NvVIjMbs7+GRlB7LhTWXGQ=="
+          "hash": "YBEPmjSDr3NBl523ce+R5g=="
         }
       },
       "is_incremental": true,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/PausingAndResuming.html",
-          "hash": "Nx/mFXxeg+Ba6gVwtA4c5Q=="
+          "hash": "4bCCK6vV9MM+AVzRGphRig=="
         }
       },
       "is_incremental": true,
@@ -249,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/ReturningAValue.html",
-          "hash": "b//F6Hyk+ctEKyieheLmfA=="
+          "hash": "GgCYaA4pjcezINtQuKBL9A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/StoppingAndRestarting.html",
-          "hash": "F81IRg/C1AmQM32s5NKJkQ=="
+          "hash": "/rmEzE9L7omDumP4Xl4H5A=="
         }
       },
       "is_incremental": true,
@@ -427,7 +427,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 10,
-          "skipped_file_count": 10
+          "skipped_file_count": 9
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

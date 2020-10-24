@@ -762,3 +762,6 @@ references:
   commentId: E:Unify.Coroutines.UnifyTimer.Tick
   fullName: Unify.Coroutines.UnifyTimer.Tick
   nameWithType: UnifyTimer.Tick
+- uid: UnifyCoroutineEvents
+  name: Unify Coroutine Events
+  href: 0.1.x/userguide/Unify.Coroutines/Events.html

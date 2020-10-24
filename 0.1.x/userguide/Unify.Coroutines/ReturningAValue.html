@@ -61,7 +61,125 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="returning-a-value-from-a-unify-coroutine">Returning a value from a Unify Coroutine</h2>
 
-<p>Unify Coroutines can have return values.</p>
+<p>To return a value from a Unify Coroutine, you should use the generic <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;T&gt;</strong></a> class.
+The generic type parameter <strong>&lt;T&gt;</strong> represents the type of the value to be returned.
+<br>
+To create a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;T&gt;</strong></a> instance, use the <code>new()</code> operator, specify <strong>&lt;T&gt;</strong> as the return type and pass the Coroutine method to the constructor.</p>
+<p>The return type of the Unify Coroutine should always be <code>IEnumerator</code>, regardless of the type being returned.<br>
+Use <code>yield return</code> to return the value, rather that just <code>return</code>.</p>
+<p>For example, to create a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;T&gt;</strong></a> instance that returns a string:</p>
+<pre><code>UnifyCoroutine&lt;string&gt; myUnifyCoroutine = new UnifyCoroutine&lt;string&gt;(SayHello());
+
+IEnumerator SayHello()
+{
+    yield return  &quot;Hello, Unify!&quot;;
+}
+</code></pre>
+<h3 id="capturing-the-return-value">Capturing the return value</h3>
+<p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;T&gt;</strong></a> class provides a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1_ValueReturned"><strong>ValueReturned</strong></a> event for capturing return values.<br>
+The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1_ValueReturned"><strong>ValueReturned</strong></a> event is fired every time a value of type <strong>&lt;T&gt;</strong> is returned using <code>yield return</code>.</p>
+<h3 id="subscribe-to-and-unsubscribe-from-the-valuereturned-event">Subscribe to and Unsubscribe from the ValueReturned event</h3>
+<p>See: How to <a class="xref" href="Events.html#subscribing-to-unify-coroutine-events"><strong>subscribe</strong></a> to and <a class="xref" href="Events.html#unsubscribing-from-unify-coroutine-events"><strong>unsubscribe</strong></a> from Unify Coroutine events.</p>
+<h3 id="event-args">Event Args</h3>
+<p>An instance of <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs-1.html"><strong>UnifyCoroutineEventArgs&lt;T&gt;</strong></a> is passed to the event handler, the return value is held in the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs-1.html#Unify_Coroutines_UnifyCoroutineEventArgs_1_returnValue"><strong>returnValue</strong></a> property, which is of type <strong>&lt;T&gt;</strong>.</p>
+<h3 id="example-one">Example One</h3>
+<p>The first example waits for two seconds and returns a string with the value: <strong><em>&quot;Hello, Unify!&quot;</em></strong><br>
+It uses a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;string&gt;</strong></a> instance to return a value of type <strong>string</strong> and a lambda expression event handler to capture the return value and print the return value to the Unity Console.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>S</strong> to Start the Unify Coroutine</li>
+</ul>
+<br>
+<pre><code>using System.Collections;
+using Unify.Coroutines;
+using UnityEngine;
+
+public class ReturnValueOnce : MonoBehaviour
+{
+    private UnifyCoroutine&lt;string&gt; myUnifyCoroutine;
+
+    void Start()
+    {
+        myUnifyCoroutine = new UnifyCoroutine&lt;string&gt;(WaitAndReturnString());
+        myUnifyCoroutine.failSilently = false;
+        myUnifyCoroutine.keepAlive = true;
+
+        myUnifyCoroutine.ValueReturned += (sender, e) =&gt;
+        {
+            print(e.returnValue);
+        };
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            print(&quot;* Starting Unify Coroutine - waiting for 2 seconds....&quot;);
+            myUnifyCoroutine.Start();
+        }
+    }
+
+    IEnumerator WaitAndReturnString()
+    {
+        yield return new WaitForSecondsRealtime(2f);
+        yield return &quot;Hello, Unify!&quot;;
+    }
+}
+</code></pre>
+<h3 id="example-two">Example Two</h3>
+<p>The second example counts from 1 to 30, returning an integer value every time the counter is a multiple of 3.<br>
+It uses a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;int&gt;</strong></a> instance to return a value of type <strong>integer</strong> and an event handler programmatically to capture the return value and print the value to the Unity Console.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>S</strong> to Start the Unify Coroutine</li>
+</ul>
+<br>
+<pre><code>using System.Collections;
+using Unify.Coroutines;
+using UnityEngine;
+
+public class ReturnValueMultiple : MonoBehaviour
+{
+    private UnifyCoroutine&lt;int&gt; myUnifyCoroutine;
+
+    void Start()
+    {
+        myUnifyCoroutine = new UnifyCoroutine&lt;int&gt;(MultiplesOfThree());
+        myUnifyCoroutine.failSilently = false;
+        myUnifyCoroutine.keepAlive = true;
+
+        myUnifyCoroutine.ValueReturned += ValueReturnedEventHandler;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            print(&quot;* Starting Unify Coroutine *&quot;);
+            myUnifyCoroutine.Start();
+        }
+    }
+
+    private void ValueReturnedEventHandler(object sender, UnifyCoroutineEventArgs&lt;int&gt; e)
+    {
+        print($&quot;{e.returnValue} is a multiple of 3&quot;);
+    }
+
+    IEnumerator MultiplesOfThree()
+    {
+        for (int i = 1; i &lt;= 30; i++)
+        {
+            if (i % 3 == 0)
+            {
+                yield return i;
+                yield return new WaitForSecondsRealtime(1f);
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="exceptions">Exceptions</h3>
+<p>Unify does not throw exceptions when returning a value from a Unify Coroutine.</p>
 </article>
           </div>
         </div>
