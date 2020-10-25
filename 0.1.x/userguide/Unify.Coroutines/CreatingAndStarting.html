@@ -74,9 +74,19 @@ IEnumerator SayHello()
 <p>To start a Unify Coroutine, call the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Start"><strong>Start()</strong></a> method on the newly created instance. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Start"><strong>Start()</strong></a> method will return <strong>true</strong> if the Unify Coroutine was started successfully, otherwise it will return <strong>false</strong>.</p>
 <pre><code>bool started = myUnifyCoroutine.Start();
 </code></pre>
+<h3 id="delayed-start">Delayed Start</h3>
+<p>A Unify Coroutine has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property to allow delaying execution from when the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Start"><strong>Start()</strong></a> method is called.</p>
+<p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property can be set in two ways:
+<br></p>
+<p>Set the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property directly:</p>
+<pre><code>myUnifyCoroutine.startDelay = 2.5f; // 2.5 seconds
+</code></pre>
+<p>Pass <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> as a parameter to the constructor:</p>
+<pre><code>myUnifyCoroutine = new UnifyCoroutine(PrintEverySecond(), startDelay:2.5f); // 2.5 seconds
+</code></pre>
 <h3 id="example">Example</h3>
-<p>This Unify Coroutine example counts from 1 to 10, printing the current value to the Unity Console every second.<br>
-Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions">below</a>.</p>
+<p>This Unify Coroutine example waits for 2.5 seconds, then counts from 1 to 10, printing the current value to the Unity Console every second.<br>
+Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:
 <br></p>
 <ul>
@@ -93,7 +103,7 @@ public class CreatingAndStarting : MonoBehaviour
 
     void Start()
     {
-        myUnifyCoroutine = new UnifyCoroutine(PrintEverySecond());
+        myUnifyCoroutine = new UnifyCoroutine(PrintEverySecond(), startDelay:2.5f);
     }
 
     void Update()
@@ -125,7 +135,7 @@ public class CreatingAndStarting : MonoBehaviour
 <br>
 <p>Unify will provide information in the exception message to help you find the cause of the error, for example:</p>
 <p><img src="../../../images/exception_start.png" alt="Exception Image"></p>
-<p>This message tell us the Unify Coroutine was in the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Running</strong></a> state at the time of the start request, therefore it could not be started because it was already running.</p>
+<p>This message tells us the Unify Coroutine was in the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Running</strong></a> state at the time of the start request, therefore it could not be started because it was already running.</p>
 </article>
           </div>
         </div>

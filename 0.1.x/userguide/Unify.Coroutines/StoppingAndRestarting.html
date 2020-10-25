@@ -62,7 +62,7 @@
 <h2 id="stopping-and-restarting-a-unify-coroutine">Stopping and Restarting a Unify Coroutine</h2>
 
 <p>Unify Coroutines can be stopped and restarted without having to create a new Unify Coroutine instance.<br>
-To enable this, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> must be set to <strong>true</strong> before starting the Unify Coroutine for the first time.<br>
+To enable this, the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property must be set to <strong>true</strong> before starting the Unify Coroutine for the first time.<br>
 You should stop a Unify Coroutine when you do not want it to continue running, but may want to run it again at some point in the future.</p>
 <br>
 <p>To stop a Unify Coroutine, call the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stop"><strong>Stop()</strong></a> method on a Unify Coroutine instance. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stop"><strong>Stop()</strong></a> method will return <strong>true</strong> if the Unify Coroutine was stopped successfully, otherwise it will return <strong>false</strong>.<br></p>

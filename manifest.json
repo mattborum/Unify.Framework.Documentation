@@ -180,7 +180,7 @@
           "hash": "R+doutHpf7A+G3+wBHfykw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -192,7 +192,7 @@
           "hash": "QOJwySxBUxtkOxXejBZuvA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/CreatingAndStarting.html",
-          "hash": "UKiLaeO5wY+7ajPJnVTjlw=="
+          "hash": "+5PrYhOvBgGDIWGZsMWVvA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -216,7 +216,7 @@
           "hash": "YBEPmjSDr3NBl523ce+R5g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -228,7 +228,7 @@
           "hash": "Q0sOv81v/BqJVtSOMVhsyA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -240,7 +240,19 @@
           "hash": "4bCCK6vV9MM+AVzRGphRig=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/Repeating.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/Repeating.html",
+          "hash": "elJoqoLb9Ri27Twu8REJbg=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/StoppingAndRestarting.html",
-          "hash": "/rmEzE9L7omDumP4Xl4H5A=="
+          "hash": "BLBjgEyw2pMVZqEfFxqgjA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/toc.html",
-          "hash": "TX1feLcHJaP+JRCzJm/kPg=="
+          "hash": "41WvdcoyGuRblvywmd8+gw=="
         }
       },
       "is_incremental": false,
@@ -296,6 +308,17 @@
       "output": {
         "resource": {
           "relative_path": "images/exception_pause.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/exception_repeatCount.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/exception_repeatCount.png"
         }
       },
       "is_incremental": false,
@@ -426,8 +449,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 10,
-          "skipped_file_count": 9
+          "total_file_count": 11,
+          "skipped_file_count": 11
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

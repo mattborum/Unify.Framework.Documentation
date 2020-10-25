@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Repeating a Unify Coroutine | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Repeating a Unify Coroutine | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="repeating-a-unify-coroutine">Repeating a Unify Coroutine</h2>
+
+<p>Unify Coroutines provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> property to specify the number times a Coroutine should be executed. To repeat execution of a Unify Coroutine infinitely, set <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> to <strong>-1</strong>.<br>
+To enable this functionality, either the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> property <strong>or</strong> the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property <strong>must</strong> be initialised <strong>before</strong> starting the Unify Coroutine for the first time.</p>
+<p>Unify Coroutines also provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> property to allow a delay between each execution.</p>
+<p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties can be set in two ways:
+<br></p>
+<p>Set the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> and/or <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties directly:</p>
+<pre><code>myUnifyCoroutine.repeatCount = 3;
+myUnifyCoroutine.passDelay = 1.5f; // 1.5 seconds
+</code></pre>
+<p>Pass <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> and/or <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> as parameters to the constructor:</p>
+<pre><code>myUnifyCoroutine = new UnifyCoroutine(CountToTen(), repeatCount:3, passDelay:1.5f);
+</code></pre>
+<h3 id="example">Example</h3>
+<p>This example counts from 1 to 10, printing the current value to the Unity Console every 0.25 seconds. This is repeated 3 times with a 2 second delay between each execution.<br>
+The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties are initialised via the Unify Coroutine constructor.<br>
+Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow restarting and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a>
+has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions">below</a>.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>S</strong> to Start the Unify Coroutine</li>
+</ul>
+<br>
+<pre><code>using System.Collections;
+using Unify.Coroutines;
+using UnityEngine;
+
+public class Repeat : MonoBehaviour
+{
+    private UnifyCoroutine myUnifyCoroutine;
+
+    void Start()
+    {
+        myUnifyCoroutine = new UnifyCoroutine(CountToTen(), repeatCount:3, passDelay:2f);
+        myUnifyCoroutine.keepAlive = true;
+        myUnifyCoroutine.failSilently = false;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            print(&quot;* Starting Unify Coroutine *&quot;);
+            myUnifyCoroutine.Start();
+        }
+    }
+
+    private IEnumerator CountToTen()
+    {
+        for (int i = 1; i &lt;= 10; i++)
+        {
+            print($&quot;counting... {i}&quot;);
+            yield return new WaitForSecondsRealtime(0.25f);
+        }
+    }
+}
+</code></pre>
+<h3 id="exceptions">Exceptions</h3>
+<p>Exceptions will be thrown under the following circumstances:</p>
+<ul>
+<li>Setting the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> property to a value of <strong>greater than 1</strong> or to a value of <strong>-1</strong> (infinite execution), <strong>after</strong> the Unify Coroutine has been started for the first time</li>
+<li>Setting the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property to <strong>true</strong>, <strong>after</strong> the Unify Coroutine has been started for the first time</li>
+</ul>
+<p>Exceptions will not be thrown if <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> is <strong>true</strong>.</p>
+<br>
+<p>Unify will provide information in the exception message to help you find the cause of the error, for example:</p>
+<p><img src="../../../images/exception_repeatCount.png" alt="Exception Image"></p>
+<p>This message tells us the <strong>firstRun</strong> flag is <strong>false</strong>, therefore we have tried to set either the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> property to a value other than <strong>1</strong>, or change the value of the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property to <strong>true</strong>, <strong>after</strong> the Unify Coroutine had been started for the first time.</p>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
