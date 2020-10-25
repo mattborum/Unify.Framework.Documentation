@@ -431,19 +431,6 @@ references:
   commentId: E:Unify.Coroutines.UnifyCoroutineBase.PassComplete
   fullName: Unify.Coroutines.UnifyCoroutineBase.PassComplete
   nameWithType: UnifyCoroutineBase.PassComplete
-- uid: Unify.Coroutines.UnifyCoroutineBase.passDelay
-  name: passDelay
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay
-  commentId: P:Unify.Coroutines.UnifyCoroutineBase.passDelay
-  fullName: Unify.Coroutines.UnifyCoroutineBase.passDelay
-  nameWithType: UnifyCoroutineBase.passDelay
-- uid: Unify.Coroutines.UnifyCoroutineBase.passDelay*
-  name: passDelay
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay_
-  commentId: Overload:Unify.Coroutines.UnifyCoroutineBase.passDelay
-  isSpec: "True"
-  fullName: Unify.Coroutines.UnifyCoroutineBase.passDelay
-  nameWithType: UnifyCoroutineBase.passDelay
 - uid: Unify.Coroutines.UnifyCoroutineBase.Pause
   name: Pause()
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause
@@ -476,6 +463,19 @@ references:
   isSpec: "True"
   fullName: Unify.Coroutines.UnifyCoroutineBase.repeatCount
   nameWithType: UnifyCoroutineBase.repeatCount
+- uid: Unify.Coroutines.UnifyCoroutineBase.repeatDelay
+  name: repeatDelay
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay
+  commentId: P:Unify.Coroutines.UnifyCoroutineBase.repeatDelay
+  fullName: Unify.Coroutines.UnifyCoroutineBase.repeatDelay
+  nameWithType: UnifyCoroutineBase.repeatDelay
+- uid: Unify.Coroutines.UnifyCoroutineBase.repeatDelay*
+  name: repeatDelay
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay_
+  commentId: Overload:Unify.Coroutines.UnifyCoroutineBase.repeatDelay
+  isSpec: "True"
+  fullName: Unify.Coroutines.UnifyCoroutineBase.repeatDelay
+  nameWithType: UnifyCoroutineBase.repeatDelay
 - uid: Unify.Coroutines.UnifyCoroutineBase.Resume
   name: Resume()
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume
