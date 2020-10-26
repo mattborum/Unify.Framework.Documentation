@@ -12,7 +12,7 @@
           "hash": "drcY04uJbRNzYOI/t7D/Ew=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -24,7 +24,7 @@
           "hash": "cvKCvJDwBfg/YHHGfe/HYA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -36,7 +36,7 @@
           "hash": "4eMLyet3uHQQPZznzTuU1Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -48,7 +48,7 @@
           "hash": "leM3n3ccck4ugqNfE48ukw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -60,7 +60,7 @@
           "hash": "4VBN1HjNAs1L01cqu3ro0Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -72,7 +72,7 @@
           "hash": "CcoNrQJzb1NC1XSUufB52Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -84,7 +84,7 @@
           "hash": "J4JkiDh5C/+srqCbyWZGyQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -96,7 +96,7 @@
           "hash": "guiPFLISjzLnh8L4cOaypg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -108,19 +108,7 @@
           "hash": "9GF9krF+SMXlFCsZ7az5Ng=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineEventDelegate.yml",
-      "output": {
-        ".html": {
-          "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineEventDelegate.html",
-          "hash": "MB2hUeInTusPupiC1r+UYQ=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -132,7 +120,7 @@
           "hash": "X6TYO3n2jABVutGZkS/zHQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -144,7 +132,7 @@
           "hash": "tqkwKiHkGjz1DGkhclqBVA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Coroutines.html",
-          "hash": "sW2Lm4Cx2/AC9gjrtgqAmg=="
+          "hash": "HJRQXf72FgQVSyga0PuB4A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -168,7 +156,7 @@
           "hash": "unmX/xK87OGmaG39UnFt6A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/toc.html",
-          "hash": "Hvdytn+uWdC1RlWjCJXd3w=="
+          "hash": "ghJlT0i5br9vpi//7/yB0A=="
         }
       },
       "is_incremental": false,
@@ -204,7 +192,7 @@
           "hash": "SdNey3pt5qM26CvjSkrAag=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -216,7 +204,7 @@
           "hash": "yoK+mShzv7PREvPYoJhUkA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/Events.html",
-          "hash": "3xJL9iCD+k54Xe9Mv94H0w=="
+          "hash": "BpHFj97iRQVu5JrmQIlZPg=="
         }
       },
       "is_incremental": false,
@@ -240,7 +228,7 @@
           "hash": "Q0sOv81v/BqJVtSOMVhsyA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -252,7 +240,7 @@
           "hash": "LZSdh6JobDQ8lKqjFL7eOw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -264,7 +252,7 @@
           "hash": "YaHMdpTvxQcjDAY+GXwA9A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -288,7 +276,7 @@
           "hash": "FAZcbr0d3riVqMyg4167Hg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -467,8 +455,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 13,
-          "skipped_file_count": 13
+          "total_file_count": 12,
+          "skipped_file_count": 10
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

@@ -93,8 +93,7 @@ private void StartedEventHandler(object sender, UnifyCoroutineEventArgs e)
 };
 </code></pre>
 <h3 id="unsubscribing-from-unify-coroutine-events">Unsubscribing from Unify Coroutine events</h3>
-<p>If you intend to unsubscribe from a Unify Coroutine event, you should use the <a href="#programmatically"><strong>programmatical</strong></a> method described <a href="#programmatically"><strong>above</strong></a>.<br>
-If you subscribed using either an anonymous method or lambda expression then it is not possible to unsubscribe from an event unless you have a reference to the original method which was used to subscribe:</p>
+<p>If you subscribed using either an anonymous method or lambda expression then it is not possible to unsubscribe from an event unless you have a reference to the original method which was used to subscribe:</p>
 <h4 id="programmatically-1">Programmatically</h4>
 <pre><code>myUnifyCoroutine.Started -= StartedEventHandler;
 
