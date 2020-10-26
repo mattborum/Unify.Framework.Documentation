@@ -308,6 +308,38 @@ references:
   isSpec: "True"
   fullName: Unify.Coroutines.UnifyCoroutineBase.keepAlive
   nameWithType: UnifyCoroutineBase.keepAlive
+- uid: Unify.Coroutines.UnifyCoroutineBase.LoopComplete
+  name: LoopComplete
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_LoopComplete
+  commentId: E:Unify.Coroutines.UnifyCoroutineBase.LoopComplete
+  fullName: Unify.Coroutines.UnifyCoroutineBase.LoopComplete
+  nameWithType: UnifyCoroutineBase.LoopComplete
+- uid: Unify.Coroutines.UnifyCoroutineBase.loopCount
+  name: loopCount
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount
+  commentId: P:Unify.Coroutines.UnifyCoroutineBase.loopCount
+  fullName: Unify.Coroutines.UnifyCoroutineBase.loopCount
+  nameWithType: UnifyCoroutineBase.loopCount
+- uid: Unify.Coroutines.UnifyCoroutineBase.loopCount*
+  name: loopCount
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount_
+  commentId: Overload:Unify.Coroutines.UnifyCoroutineBase.loopCount
+  isSpec: "True"
+  fullName: Unify.Coroutines.UnifyCoroutineBase.loopCount
+  nameWithType: UnifyCoroutineBase.loopCount
+- uid: Unify.Coroutines.UnifyCoroutineBase.loopDelay
+  name: loopDelay
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopDelay
+  commentId: P:Unify.Coroutines.UnifyCoroutineBase.loopDelay
+  fullName: Unify.Coroutines.UnifyCoroutineBase.loopDelay
+  nameWithType: UnifyCoroutineBase.loopDelay
+- uid: Unify.Coroutines.UnifyCoroutineBase.loopDelay*
+  name: loopDelay
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopDelay_
+  commentId: Overload:Unify.Coroutines.UnifyCoroutineBase.loopDelay
+  isSpec: "True"
+  fullName: Unify.Coroutines.UnifyCoroutineBase.loopDelay
+  nameWithType: UnifyCoroutineBase.loopDelay
 - uid: Unify.Coroutines.UnifyCoroutineBase.name
   name: name
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name
@@ -425,12 +457,6 @@ references:
   isSpec: "True"
   fullName: Unify.Coroutines.UnifyCoroutineBase.originalTarget
   nameWithType: UnifyCoroutineBase.originalTarget
-- uid: Unify.Coroutines.UnifyCoroutineBase.PassComplete
-  name: PassComplete
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete
-  commentId: E:Unify.Coroutines.UnifyCoroutineBase.PassComplete
-  fullName: Unify.Coroutines.UnifyCoroutineBase.PassComplete
-  nameWithType: UnifyCoroutineBase.PassComplete
 - uid: Unify.Coroutines.UnifyCoroutineBase.Pause
   name: Pause()
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause
@@ -450,32 +476,6 @@ references:
   commentId: E:Unify.Coroutines.UnifyCoroutineBase.Paused
   fullName: Unify.Coroutines.UnifyCoroutineBase.Paused
   nameWithType: UnifyCoroutineBase.Paused
-- uid: Unify.Coroutines.UnifyCoroutineBase.repeatCount
-  name: repeatCount
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount
-  commentId: P:Unify.Coroutines.UnifyCoroutineBase.repeatCount
-  fullName: Unify.Coroutines.UnifyCoroutineBase.repeatCount
-  nameWithType: UnifyCoroutineBase.repeatCount
-- uid: Unify.Coroutines.UnifyCoroutineBase.repeatCount*
-  name: repeatCount
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount_
-  commentId: Overload:Unify.Coroutines.UnifyCoroutineBase.repeatCount
-  isSpec: "True"
-  fullName: Unify.Coroutines.UnifyCoroutineBase.repeatCount
-  nameWithType: UnifyCoroutineBase.repeatCount
-- uid: Unify.Coroutines.UnifyCoroutineBase.repeatDelay
-  name: repeatDelay
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay
-  commentId: P:Unify.Coroutines.UnifyCoroutineBase.repeatDelay
-  fullName: Unify.Coroutines.UnifyCoroutineBase.repeatDelay
-  nameWithType: UnifyCoroutineBase.repeatDelay
-- uid: Unify.Coroutines.UnifyCoroutineBase.repeatDelay*
-  name: repeatDelay
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay_
-  commentId: Overload:Unify.Coroutines.UnifyCoroutineBase.repeatDelay
-  isSpec: "True"
-  fullName: Unify.Coroutines.UnifyCoroutineBase.repeatDelay
-  nameWithType: UnifyCoroutineBase.repeatDelay
 - uid: Unify.Coroutines.UnifyCoroutineBase.Resume
   name: Resume()
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume

@@ -61,21 +61,21 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="repeating-a-unify-coroutine">Repeating a Unify Coroutine</h2>
 
-<p>Unify Coroutines provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> property to specify the number times a Coroutine should be executed. To repeat execution of a Unify Coroutine infinitely, set <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> to <strong>-1</strong>.<br>
-To enable this functionality, either the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> property <strong>or</strong> the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property <strong>must</strong> be initialised <strong>before</strong> starting the Unify Coroutine for the first time.</p>
+<p>Unify Coroutines provide a <a href="xref:Unify.Coroutines.UnifyCoroutineBase.repeatCount"><strong>repeatCount</strong></a> property to specify the number times a Coroutine should be executed. To repeat execution of a Unify Coroutine infinitely, set <a href="xref:Unify.Coroutines.UnifyCoroutineBase.repeatCount"><strong>repeatCount</strong></a> to <strong>-1</strong>.<br>
+To enable this functionality, either the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.repeatCount"><strong>repeatCount</strong></a> property <strong>or</strong> the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property <strong>must</strong> be initialised <strong>before</strong> starting the Unify Coroutine for the first time.</p>
 <p>Unify Coroutines also provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay"><strong>repeatDelay</strong></a> property to allow a delay between each execution.</p>
-<p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay"><strong>repeatDelay</strong></a> properties can be set in two ways:
+<p>The <a href="xref:Unify.Coroutines.UnifyCoroutineBase.repeatCount"><strong>repeatCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay"><strong>repeatDelay</strong></a> properties can be set in two ways:
 <br></p>
-<p>Set the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> and/or <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay"><strong>repeatDelay</strong></a> properties directly:</p>
+<p>Set the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.repeatCount"><strong>repeatCount</strong></a> and/or <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay"><strong>repeatDelay</strong></a> properties directly:</p>
 <pre><code>myUnifyCoroutine.repeatCount = 3;
 myUnifyCoroutine.repeatDelay = 1.5f; // 1.5 seconds
 </code></pre>
-<p>Pass <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> and/or <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay"><strong>repeatDelay</strong></a> as parameters to the constructor:</p>
+<p>Pass <a href="xref:Unify.Coroutines.UnifyCoroutineBase.repeatCount"><strong>repeatCount</strong></a> and/or <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay"><strong>repeatDelay</strong></a> as parameters to the constructor:</p>
 <pre><code>myUnifyCoroutine = new UnifyCoroutine(CountToTen(), repeatCount:3, repeatDelay:1.5f);
 </code></pre>
 <h3 id="example">Example</h3>
 <p>This example counts from 1 to 10, printing the current value to the Unity Console every 0.25 seconds. This is repeated 3 times with a 2 second delay between each execution.<br>
-The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay"><strong>repeatDelay</strong></a> properties are initialised via the Unify Coroutine constructor.<br>
+The <a href="xref:Unify.Coroutines.UnifyCoroutineBase.repeatCount"><strong>repeatCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay"><strong>repeatDelay</strong></a> properties are initialised via the Unify Coroutine constructor.<br>
 Also, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow restarting and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a>
 has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions">below</a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
@@ -120,15 +120,15 @@ public class Repeat : MonoBehaviour
 <h3 id="exceptions">Exceptions</h3>
 <p>Exceptions will be thrown under the following circumstances:</p>
 <ul>
-<li>Setting the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> property to a value of <strong>greater than 1</strong> or to a value of <strong>-1</strong> (infinite execution), <strong>after</strong> the Unify Coroutine has been started for the first time</li>
-<li>Setting the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatDelay</strong></a> property to a value of less than zero</li>
+<li>Setting the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.repeatCount"><strong>repeatCount</strong></a> property to a value of <strong>greater than 1</strong> or to a value of <strong>-1</strong> (infinite execution), <strong>after</strong> the Unify Coroutine has been started for the first time</li>
+<li>Setting the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.repeatCount"><strong>repeatDelay</strong></a> property to a value of less than zero</li>
 <li>Setting the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property to <strong>true</strong>, <strong>after</strong> the Unify Coroutine has been started for the first time</li>
 </ul>
 <p>Exceptions will not be thrown if <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> is <strong>true</strong>.</p>
 <br>
 <p>Unify will provide information in the exception message to help you find the cause of the error, for example:</p>
 <p><img src="../../../images/exception_repeatCount.png" alt="Exception Image"></p>
-<p>This message tells us the <strong>firstRun</strong> flag is <strong>false</strong>, therefore we have tried to set either the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount"><strong>repeatCount</strong></a> property to a value other than <strong>1</strong>, or change the value of the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property to <strong>true</strong>, <strong>after</strong> the Unify Coroutine had been started for the first time.</p>
+<p>This message tells us the <strong>firstRun</strong> flag is <strong>false</strong>, therefore we have tried to set either the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.repeatCount"><strong>repeatCount</strong></a> property to a value other than <strong>1</strong>, or change the value of the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property to <strong>true</strong>, <strong>after</strong> the Unify Coroutine had been started for the first time.</p>
 </article>
           </div>
         </div>

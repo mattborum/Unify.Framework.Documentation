@@ -12,7 +12,7 @@
           "hash": "drcY04uJbRNzYOI/t7D/Ew=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -24,7 +24,7 @@
           "hash": "cvKCvJDwBfg/YHHGfe/HYA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -36,7 +36,7 @@
           "hash": "4eMLyet3uHQQPZznzTuU1Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -48,7 +48,7 @@
           "hash": "leM3n3ccck4ugqNfE48ukw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutine-1.html",
-          "hash": "4VBN1HjNAs1L01cqu3ro0Q=="
+          "hash": "7xZGVaWnBtZGUY1WRPvAtA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutine.html",
-          "hash": "CcoNrQJzb1NC1XSUufB52Q=="
+          "hash": "+nSS8HtSCY6meQYNEy1fGg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html",
-          "hash": "J4JkiDh5C/+srqCbyWZGyQ=="
+          "hash": "Cctu5zx2GUjx0Kh3fnvl/g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -96,7 +96,7 @@
           "hash": "guiPFLISjzLnh8L4cOaypg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -108,7 +108,7 @@
           "hash": "9GF9krF+SMXlFCsZ7az5Ng=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -120,7 +120,7 @@
           "hash": "X6TYO3n2jABVutGZkS/zHQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Coroutines.UnifyTimer.html",
-          "hash": "tqkwKiHkGjz1DGkhclqBVA=="
+          "hash": "5RpzCEKNshq2m0CV2BJ6oA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -144,7 +144,7 @@
           "hash": "HJRQXf72FgQVSyga0PuB4A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -156,7 +156,7 @@
           "hash": "unmX/xK87OGmaG39UnFt6A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -192,7 +192,7 @@
           "hash": "SdNey3pt5qM26CvjSkrAag=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -204,7 +204,7 @@
           "hash": "yoK+mShzv7PREvPYoJhUkA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -213,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/Events.html",
-          "hash": "BpHFj97iRQVu5JrmQIlZPg=="
+          "hash": "p41yCRHUb44M0n5aSO3YLw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -225,7 +225,19 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutines.html",
-          "hash": "Q0sOv81v/BqJVtSOMVhsyA=="
+          "hash": "8XKRftl9jVdnfl1+bIKC/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/Looping.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/Looping.html",
+          "hash": "CVU0iuSDnd1C0kK7pa7aRg=="
         }
       },
       "is_incremental": false,
@@ -240,19 +252,7 @@
           "hash": "LZSdh6JobDQ8lKqjFL7eOw=="
         }
       },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/Repeating.md",
-      "output": {
-        ".html": {
-          "relative_path": "0.1.x/userguide/Unify.Coroutines/Repeating.html",
-          "hash": "YaHMdpTvxQcjDAY+GXwA9A=="
-        }
-      },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -264,7 +264,7 @@
           "hash": "GgCYaA4pjcezINtQuKBL9A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -276,7 +276,7 @@
           "hash": "FAZcbr0d3riVqMyg4167Hg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/toc.html",
-          "hash": "41WvdcoyGuRblvywmd8+gw=="
+          "hash": "jstttvApkWftvG9bquMh1A=="
         }
       },
       "is_incremental": false,
@@ -304,10 +304,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/exception_pause.png",
+      "source_relative_path": "images/exception_loopCount.png",
       "output": {
         "resource": {
-          "relative_path": "images/exception_pause.png"
+          "relative_path": "images/exception_loopCount.png"
         }
       },
       "is_incremental": false,
@@ -315,10 +315,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/exception_repeatCount.png",
+      "source_relative_path": "images/exception_pause.png",
       "output": {
         "resource": {
-          "relative_path": "images/exception_repeatCount.png"
+          "relative_path": "images/exception_pause.png"
         }
       },
       "is_incremental": false,
@@ -456,7 +456,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 12,
-          "skipped_file_count": 10
+          "skipped_file_count": 12
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

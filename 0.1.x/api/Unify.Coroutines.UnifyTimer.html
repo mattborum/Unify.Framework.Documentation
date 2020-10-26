@@ -91,13 +91,13 @@
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancelled">UnifyCoroutineBase.Cancelled</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete">UnifyCoroutineBase.PassComplete</a>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_LoopComplete">UnifyCoroutineBase.LoopComplete</a>
     </div>
     <div>
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished">UnifyCoroutineBase.Finished</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatCount">UnifyCoroutineBase.repeatCount</a>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount">UnifyCoroutineBase.loopCount</a>
     </div>
     <div>
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_currentRepeatCount">UnifyCoroutineBase.currentRepeatCount</a>
@@ -130,7 +130,7 @@
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay">UnifyCoroutineBase.startDelay</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_repeatDelay">UnifyCoroutineBase.repeatDelay</a>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopDelay">UnifyCoroutineBase.loopDelay</a>
     </div>
     <div>
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">UnifyCoroutineBase.failSilently</a>
@@ -269,7 +269,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnifyTimer(float interval, int repeatCount = 1, float startDelay = 0F, Action finishedCallback = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public UnifyTimer(float interval, int loopCount = 1, float startDelay = 0F, Action finishedCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,7 +289,7 @@
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">repeatCount</span></td>
+        <td><span class="parametername">loopCount</span></td>
         <td><p>Number of times to repeat the interval.</p>
 </td>
       </tr>
