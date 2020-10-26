@@ -72,7 +72,7 @@
 </code></pre>
 <h3 id="example">Example</h3>
 <p>This Unify Coroutine example runs for 60 seconds, printing the current second value to the Unity Console every second.<br>
-Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions">below</a>.</p>
+Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
 <li><strong>S</strong> to Start the Unify Coroutine</li>
@@ -92,6 +92,8 @@ public class PausingAndResuming : MonoBehaviour
     {
         myUnifyCoroutine = new UnifyCoroutine(WaitAndPrint());
         myUnifyCoroutine.failSilently = false;
+
+        print(&quot;press S to START, P to PAUSE, R to RESUME&quot;);
     }
 
     void Update()
@@ -138,7 +140,7 @@ public class PausingAndResuming : MonoBehaviour
 <p>This message tell us the Unify Coroutine was in the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Ready</strong></a> state at the time of the pause request, therefore it cannot be paused because it is not running.</p>
 <h3 id="see-also">See Also</h3>
 <ul>
-<li><a class="xref" href="IntroductionToUnifyCoroutines.html#whats-the-difference-between-pause-stop-and-cancel">What's the difference between Pause, Stop and Cancel?</a></li>
+<li><a class="xref" href="IntroductionToUnifyCoroutines.html#whats-the-difference-between-pause-stop-and-cancel"><strong>What's the difference between Pause, Stop and Cancel?</strong></a></li>
 </ul>
 </article>
           </div>

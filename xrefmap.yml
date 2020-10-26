@@ -670,6 +670,12 @@ references:
   fullName.vb: Unify.Coroutines.UnifyCoroutineEventArgs(Of T).returnValue
   nameWithType: UnifyCoroutineEventArgs<T>.returnValue
   nameWithType.vb: UnifyCoroutineEventArgs(Of T).returnValue
+- uid: Unify.Coroutines.UnifyCoroutineEventDelegate
+  name: UnifyCoroutineEventDelegate
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineEventDelegate.html
+  commentId: T:Unify.Coroutines.UnifyCoroutineEventDelegate
+  fullName: Unify.Coroutines.UnifyCoroutineEventDelegate
+  nameWithType: UnifyCoroutineEventDelegate
 - uid: Unify.Coroutines.UnifyCoroutineState
   name: UnifyCoroutineState
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineState.html

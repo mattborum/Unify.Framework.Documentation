@@ -71,7 +71,7 @@
 <li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished"><strong>Finished</strong></a> - Fired when a Unify Coroutine successfully finishes</li>
 </ul>
 <h3 id="subscribing-to-unify-coroutine-events">Subscribing to Unify Coroutine events</h3>
-<p>There are three ways to subscribe to <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html"><strong>UnifyCoroutine</strong></a> events; programmatically, anonymous methods and lambda expressions. An example of each is provided below.</p>
+<p>There are three ways to subscribe to Unify Coroutine events; programmatically, anonymous methods and lambda expressions:</p>
 <h4 id="programmatically">Programmatically</h4>
 <pre><code>myUnifyCoroutine.Started += StartedEventHandler;
 
@@ -93,8 +93,29 @@ private void StartedEventHandler(object sender, UnifyCoroutineEventArgs e)
 };
 </code></pre>
 <h3 id="unsubscribing-from-unify-coroutine-events">Unsubscribing from Unify Coroutine events</h3>
-<p>If you intend to unsubscribe from a Unify Coroutine event, you should use the programmatical method described <a href="#programmatically">above</a>. It is not possible to unsubscribe from a C# event if you subscribed using either an anonymous method or lambda expression.</p>
+<p>If you intend to unsubscribe from a Unify Coroutine event, you should use the <a href="#programmatically"><strong>programmatical</strong></a> method described <a href="#programmatically"><strong>above</strong></a>.<br>
+If you subscribed using either an anonymous method or lambda expression then it is not possible to unsubscribe from an event unless you have a reference to the original method which was used to subscribe:</p>
+<h4 id="programmatically-1">Programmatically</h4>
 <pre><code>myUnifyCoroutine.Started -= StartedEventHandler;
+
+private void StartedEventHandler(object sender, UnifyCoroutineEventArgs e)
+{
+    print(&quot;* STARTED EVENT HANDLER *&quot;);
+}
+</code></pre>
+<h4 id="anonymous-method-1">Anonymous Method</h4>
+<pre><code>private EventHandler&lt;UnifyCoroutineEventArgs&gt; myUnifyCoroutineEventDelegate;
+myUnifyCoroutineEventDelegate = delegate { print(&quot;Unify Coroutine Anonymous Event Handler&quot;); };
+
+myUnifyCoroutine.Started += myUnifyCoroutineEventDelegate;  // Subscribe
+myUnifyCoroutine.Started -= myUnifyCoroutineEventDelegate;  // Unsubscribe
+</code></pre>
+<h4 id="lambda-expression-1">Lambda Expression</h4>
+<pre><code>private EventHandler&lt;UnifyCoroutineEventArgs&gt; myUnifyCoroutineEventDelegate;
+myUnifyCoroutineEventDelegate = (sender, args) =&gt; { print(&quot;Unify Coroutine Lambda Event Handler&quot;); };
+
+myUnifyCoroutine.Started += myUnifyCoroutineEventDelegate; // Subscribe
+myUnifyCoroutine.Started -= myUnifyCoroutineEventDelegate; // Unsubscribe
 </code></pre>
 <h3 id="event-args">Event Args</h3>
 <p>Unify provides a custom data base class named <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs.html"><strong>UnifyCoroutineEventArgs</strong></a>, an instance of which is passed to event handlers. This base class holds no data, it is provided as a way for you to create your own custom event arguments class.
@@ -158,12 +179,7 @@ public class CoroutineEvents : MonoBehaviour
             print(&quot;* FINISHED EVENT HANDLER *&quot;);
         };
 
-        print(&quot;press S to START&quot;);
-        print(&quot;press P to PAUSE&quot;);
-        print(&quot;press R to RESUME&quot;);
-        print(&quot;press X to STOP&quot;);
-        print(&quot;press C to CANCEL&quot;);
-        print(&quot;press E to subscribe to/unsubscribe from PAUSED event&quot;);
+        print(&quot;press S to START, P to PAUSE, R to RESUME, X to STOP, C to CANCEL, E to subscribe to/unsubscribe from PAUSED event&quot;);
     }
 
     void Update()
@@ -231,10 +247,10 @@ public class CoroutineEvents : MonoBehaviour
 }
 </code></pre>
 <h3 id="exceptions">Exceptions</h3>
-<p>Unify does not throw exceptions specifically for Unify Coroutine events.</p>
+<p>Unify does not throw exceptions for Unify Coroutine events.</p>
 <h3 id="see-also">See Also</h3>
 <ul>
-<li><a class="xref" href="IntroductionToUnifyCoroutines.html#whats-the-difference-between-pause-stop-and-cancel">What's the difference between Pause, Stop and Cancel?</a></li>
+<li><a class="xref" href="IntroductionToUnifyCoroutines.html#whats-the-difference-between-pause-stop-and-cancel"><strong>What's the difference between Pause, Stop and Cancel?</strong></a></li>
 </ul>
 </article>
           </div>
