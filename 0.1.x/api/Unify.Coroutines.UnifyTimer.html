@@ -91,7 +91,7 @@
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancelled">UnifyCoroutineBase.Cancelled</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_LoopComplete">UnifyCoroutineBase.LoopComplete</a>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete">UnifyCoroutineBase.PassComplete</a>
     </div>
     <div>
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished">UnifyCoroutineBase.Finished</a>
@@ -100,7 +100,7 @@
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount">UnifyCoroutineBase.loopCount</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_currentRepeatCount">UnifyCoroutineBase.currentRepeatCount</a>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_currentPassCount">UnifyCoroutineBase.currentPassCount</a>
     </div>
     <div>
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_coroutine">UnifyCoroutineBase.coroutine</a>
@@ -130,7 +130,7 @@
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay">UnifyCoroutineBase.startDelay</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopDelay">UnifyCoroutineBase.loopDelay</a>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay">UnifyCoroutineBase.passDelay</a>
     </div>
     <div>
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">UnifyCoroutineBase.failSilently</a>
@@ -214,62 +214,12 @@
   <h3 id="constructors">Constructors
   </h3>
   <a id="Unify_Coroutines_UnifyTimer__ctor_" data-uid="Unify.Coroutines.UnifyTimer.#ctor*"></a>
-  <h4 id="Unify_Coroutines_UnifyTimer__ctor_System_Action_System_Single_System_Int32_System_Single_System_Action_" data-uid="Unify.Coroutines.UnifyTimer.#ctor(System.Action,System.Single,System.Int32,System.Single,System.Action)">UnifyTimer(Action, Single, Int32, Single, Action)</h4>
+  <h4 id="Unify_Coroutines_UnifyTimer__ctor_System_Single_System_Int32_System_Single_System_Action_System_Action_" data-uid="Unify.Coroutines.UnifyTimer.#ctor(System.Single,System.Int32,System.Single,System.Action,System.Action)">UnifyTimer(Single, Int32, Single, Action, Action)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnifyTimer(Action tickCallback, float interval, int repeatCount = 1, float startDelay = 0F, Action finishedCallback = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">tickCallback</span></td>
-        <td><p>Callback when interval value has elapsed.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">interval</span></td>
-        <td><p>Duration in seconds of each tick.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">repeatCount</span></td>
-        <td><p>Number of times to repeat the interval.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">startDelay</span></td>
-        <td><p>Number of seconds to delay the start of the timer.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">finishedCallback</span></td>
-        <td><p>Delegate to call when the timer has finished.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Coroutines_UnifyTimer__ctor_" data-uid="Unify.Coroutines.UnifyTimer.#ctor*"></a>
-  <h4 id="Unify_Coroutines_UnifyTimer__ctor_System_Single_System_Int32_System_Single_System_Action_" data-uid="Unify.Coroutines.UnifyTimer.#ctor(System.Single,System.Int32,System.Single,System.Action)">UnifyTimer(Single, Int32, Single, Action)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnifyTimer(float interval, int loopCount = 1, float startDelay = 0F, Action finishedCallback = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public UnifyTimer(float interval, int loopCount = 1, float startDelay = 0F, Action tickCallback = null, Action finishedCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,8 +251,14 @@
       </tr>
       <tr>
         <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">tickCallback</span></td>
+        <td><p>Callback when each interval has elapsed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
         <td><span class="parametername">finishedCallback</span></td>
-        <td><p>Delegate to call when the timer has finished.</p>
+        <td><p>Callback when the timer has finished.</p>
 </td>
       </tr>
     </tbody>
@@ -310,13 +266,13 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Unify_Coroutines_UnifyTimer_Start_" data-uid="Unify.Coroutines.UnifyTimer.Start*"></a>
-  <h4 id="Unify_Coroutines_UnifyTimer_Start_System_Action_System_Single_System_Int32_System_Single_System_Action_" data-uid="Unify.Coroutines.UnifyTimer.Start(System.Action,System.Single,System.Int32,System.Single,System.Action)">Start(Action, Single, Int32, Single, Action)</h4>
+  <h4 id="Unify_Coroutines_UnifyTimer_Start_System_Single_System_Int32_System_Single_System_Action_System_Action_" data-uid="Unify.Coroutines.UnifyTimer.Start(System.Single,System.Int32,System.Single,System.Action,System.Action)">Start(Single, Int32, Single, Action, Action)</h4>
   <div class="markdown level1 summary"><p>Start a timer without creating an instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Start(Action tickCallback, float interval, int repeatCount = 1, float startDelay = 0F, Action finishedCallback = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Start(float interval, int repeatCount = 1, float startDelay = 0F, Action tickCallback = null, Action finishedCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,79 +284,34 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">interval</span></td>
+        <td><p>Duration in seconds of each tick.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">repeatCount</span></td>
+        <td><p>Number of times to repeat the interval.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">startDelay</span></td>
+        <td><p>Number of seconds to delay the start of the timer.</p>
+</td>
+      </tr>
       <tr>
         <td><span class="xref">System.Action</span></td>
         <td><span class="parametername">tickCallback</span></td>
-        <td><p>Delegate to call when interval value has elapsed.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">interval</span></td>
-        <td><p>Duration in seconds of each tick.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">repeatCount</span></td>
-        <td><p>Number of times to repeat the interval.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">startDelay</span></td>
-        <td><p>Number of seconds to delay the start of the timer.</p>
+        <td><p>Callback when each interval has elapsed.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Action</span></td>
         <td><span class="parametername">finishedCallback</span></td>
-        <td><p>Delegate to call when the timer has finished.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Coroutines_UnifyTimer_Start_" data-uid="Unify.Coroutines.UnifyTimer.Start*"></a>
-  <h4 id="Unify_Coroutines_UnifyTimer_Start_System_Single_System_Int32_System_Single_System_Action_" data-uid="Unify.Coroutines.UnifyTimer.Start(System.Single,System.Int32,System.Single,System.Action)">Start(Single, Int32, Single, Action)</h4>
-  <div class="markdown level1 summary"><p>Start a timer without creating an instance.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Start(float interval, int repeatCount = 1, float startDelay = 0F, Action finishedCallback = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">interval</span></td>
-        <td><p>Duration in seconds of each tick.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">repeatCount</span></td>
-        <td><p>Number of times to repeat the interval.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">startDelay</span></td>
-        <td><p>Number of seconds to delay the start of the timer.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">finishedCallback</span></td>
-        <td><p>Delegate to call when the timer has finished.</p>
+        <td><p>Callback when the timer has finished.</p>
 </td>
       </tr>
     </tbody>
@@ -408,7 +319,7 @@
   <h3 id="events">Events
   </h3>
   <h4 id="Unify_Coroutines_UnifyTimer_Tick" data-uid="Unify.Coroutines.UnifyTimer.Tick">Tick</h4>
-  <div class="markdown level1 summary"><p>Callback for when the timer's interval value has elapsed.</p>
+  <div class="markdown level1 summary"><p>Callback when the timer's interval value has elapsed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

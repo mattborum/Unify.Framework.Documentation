@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Introduction to Unify Coroutines | Unify Framework </title>
+    <title>Unify Timer | Unify Framework </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Introduction to Unify Coroutines | Unify Framework ">
+    <meta name="title" content="Unify Timer | Unify Framework ">
     <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -58,41 +58,9 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-12">
-            <article class="content wrap" id="_content" data-uid="IntroductionToUnifyCoroutines">
-<h2 id="introduction-to-unify-coroutines">Introduction to Unify Coroutines</h2>
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="unify-timer">Unify Timer</h2>
 
-<p>Unify extends the core functionality of Unity's Coroutines.</p>
-<p>Unify Coroutines add the ability to:</p>
-<ul>
-<li><strong>Delay Starting Coroutines</strong></li>
-<li><strong>Pause Coroutines</strong></li>
-<li><strong>Resume Coroutines</strong></li>
-<li><strong>Cancel Coroutines on a Per Instance Basis</strong></li>
-<li><strong>Restart/Reuse Coroutines</strong> (without having to create a <code>new()</code> instance)</li>
-<li><strong>Return a Value from a Coroutine</strong></li>
-<li><strong>Loop a Coroutine</strong></li>
-</ul>
-<p>They also provide the following events:</p>
-<ul>
-<li><strong>Started</strong></li>
-<li><strong>Paused</strong></li>
-<li><strong>Resumed</strong></li>
-<li><strong>Stopped</strong></li>
-<li><strong>Cancelled</strong></li>
-<li><strong>ValueReturned</strong></li>
-<li><strong>LoopComplete</strong></li>
-<li><strong>Finished</strong></li>
-</ul>
-<h3 id="whats-the-difference-between-pause-stop-and-cancel">What's the difference between Pause, Stop and Cancel?</h3>
-<h4 id="pause"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a></h4>
-<p>Temporarily halts execution until the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume"><strong>Resume()</strong></a> method is called. Execution resumes from the point is was paused.</p>
-<h4 id="stop"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stop"><strong>Stop()</strong></a></h4>
-<p>Halts execution. The Unify Coroutine can be restarted with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Start"><strong>Start()</strong></a> method. Execution starts from the beginning.</p>
-<h4 id="cancel"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancel"><strong>Cancel()</strong></a></h4>
-<p>Permanently halts execution. The Unify Coroutine cannot be resumed or restarted.</p>
-<h3 id="known-issues">Known Issues</h3>
-<p>When a Unify Coroutine is executing a <a href="https://docs.unity3d.com/ScriptReference/CustomYieldInstruction.html" target="_blank"><strong>CustomYieldInstruction</strong></a>, such as <a href="https://docs.unity3d.com/ScriptReference/WaitForSeconds.html" target="_blank"><strong>WaitForSeconds()</strong></a>
-, this does not currently pause the <a href="https://docs.unity3d.com/ScriptReference/CustomYieldInstruction.html" target="_blank"><strong>CustomYieldInstruction</strong></a>.</p>
 </article>
           </div>
         </div>

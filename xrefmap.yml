@@ -250,19 +250,19 @@ references:
   isSpec: "True"
   fullName: Unify.Coroutines.UnifyCoroutineBase.coroutine
   nameWithType: UnifyCoroutineBase.coroutine
-- uid: Unify.Coroutines.UnifyCoroutineBase.currentRepeatCount
-  name: currentRepeatCount
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_currentRepeatCount
-  commentId: P:Unify.Coroutines.UnifyCoroutineBase.currentRepeatCount
-  fullName: Unify.Coroutines.UnifyCoroutineBase.currentRepeatCount
-  nameWithType: UnifyCoroutineBase.currentRepeatCount
-- uid: Unify.Coroutines.UnifyCoroutineBase.currentRepeatCount*
-  name: currentRepeatCount
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_currentRepeatCount_
-  commentId: Overload:Unify.Coroutines.UnifyCoroutineBase.currentRepeatCount
+- uid: Unify.Coroutines.UnifyCoroutineBase.currentPassCount
+  name: currentPassCount
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_currentPassCount
+  commentId: P:Unify.Coroutines.UnifyCoroutineBase.currentPassCount
+  fullName: Unify.Coroutines.UnifyCoroutineBase.currentPassCount
+  nameWithType: UnifyCoroutineBase.currentPassCount
+- uid: Unify.Coroutines.UnifyCoroutineBase.currentPassCount*
+  name: currentPassCount
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_currentPassCount_
+  commentId: Overload:Unify.Coroutines.UnifyCoroutineBase.currentPassCount
   isSpec: "True"
-  fullName: Unify.Coroutines.UnifyCoroutineBase.currentRepeatCount
-  nameWithType: UnifyCoroutineBase.currentRepeatCount
+  fullName: Unify.Coroutines.UnifyCoroutineBase.currentPassCount
+  nameWithType: UnifyCoroutineBase.currentPassCount
 - uid: Unify.Coroutines.UnifyCoroutineBase.failSilently
   name: failSilently
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently
@@ -308,12 +308,6 @@ references:
   isSpec: "True"
   fullName: Unify.Coroutines.UnifyCoroutineBase.keepAlive
   nameWithType: UnifyCoroutineBase.keepAlive
-- uid: Unify.Coroutines.UnifyCoroutineBase.LoopComplete
-  name: LoopComplete
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_LoopComplete
-  commentId: E:Unify.Coroutines.UnifyCoroutineBase.LoopComplete
-  fullName: Unify.Coroutines.UnifyCoroutineBase.LoopComplete
-  nameWithType: UnifyCoroutineBase.LoopComplete
 - uid: Unify.Coroutines.UnifyCoroutineBase.loopCount
   name: loopCount
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount
@@ -327,19 +321,6 @@ references:
   isSpec: "True"
   fullName: Unify.Coroutines.UnifyCoroutineBase.loopCount
   nameWithType: UnifyCoroutineBase.loopCount
-- uid: Unify.Coroutines.UnifyCoroutineBase.loopDelay
-  name: loopDelay
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopDelay
-  commentId: P:Unify.Coroutines.UnifyCoroutineBase.loopDelay
-  fullName: Unify.Coroutines.UnifyCoroutineBase.loopDelay
-  nameWithType: UnifyCoroutineBase.loopDelay
-- uid: Unify.Coroutines.UnifyCoroutineBase.loopDelay*
-  name: loopDelay
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopDelay_
-  commentId: Overload:Unify.Coroutines.UnifyCoroutineBase.loopDelay
-  isSpec: "True"
-  fullName: Unify.Coroutines.UnifyCoroutineBase.loopDelay
-  nameWithType: UnifyCoroutineBase.loopDelay
 - uid: Unify.Coroutines.UnifyCoroutineBase.name
   name: name
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name
@@ -457,6 +438,25 @@ references:
   isSpec: "True"
   fullName: Unify.Coroutines.UnifyCoroutineBase.originalTarget
   nameWithType: UnifyCoroutineBase.originalTarget
+- uid: Unify.Coroutines.UnifyCoroutineBase.PassComplete
+  name: PassComplete
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete
+  commentId: E:Unify.Coroutines.UnifyCoroutineBase.PassComplete
+  fullName: Unify.Coroutines.UnifyCoroutineBase.PassComplete
+  nameWithType: UnifyCoroutineBase.PassComplete
+- uid: Unify.Coroutines.UnifyCoroutineBase.passDelay
+  name: passDelay
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay
+  commentId: P:Unify.Coroutines.UnifyCoroutineBase.passDelay
+  fullName: Unify.Coroutines.UnifyCoroutineBase.passDelay
+  nameWithType: UnifyCoroutineBase.passDelay
+- uid: Unify.Coroutines.UnifyCoroutineBase.passDelay*
+  name: passDelay
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay_
+  commentId: Overload:Unify.Coroutines.UnifyCoroutineBase.passDelay
+  isSpec: "True"
+  fullName: Unify.Coroutines.UnifyCoroutineBase.passDelay
+  nameWithType: UnifyCoroutineBase.passDelay
 - uid: Unify.Coroutines.UnifyCoroutineBase.Pause
   name: Pause()
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause
@@ -718,18 +718,12 @@ references:
   commentId: T:Unify.Coroutines.UnifyTimer
   fullName: Unify.Coroutines.UnifyTimer
   nameWithType: UnifyTimer
-- uid: Unify.Coroutines.UnifyTimer.#ctor(System.Action,System.Single,System.Int32,System.Single,System.Action)
-  name: UnifyTimer(Action, Single, Int32, Single, Action)
-  href: 0.1.x/api/Unify.Coroutines.UnifyTimer.html#Unify_Coroutines_UnifyTimer__ctor_System_Action_System_Single_System_Int32_System_Single_System_Action_
-  commentId: M:Unify.Coroutines.UnifyTimer.#ctor(System.Action,System.Single,System.Int32,System.Single,System.Action)
-  fullName: Unify.Coroutines.UnifyTimer.UnifyTimer(System.Action, System.Single, System.Int32, System.Single, System.Action)
-  nameWithType: UnifyTimer.UnifyTimer(Action, Single, Int32, Single, Action)
-- uid: Unify.Coroutines.UnifyTimer.#ctor(System.Single,System.Int32,System.Single,System.Action)
-  name: UnifyTimer(Single, Int32, Single, Action)
-  href: 0.1.x/api/Unify.Coroutines.UnifyTimer.html#Unify_Coroutines_UnifyTimer__ctor_System_Single_System_Int32_System_Single_System_Action_
-  commentId: M:Unify.Coroutines.UnifyTimer.#ctor(System.Single,System.Int32,System.Single,System.Action)
-  fullName: Unify.Coroutines.UnifyTimer.UnifyTimer(System.Single, System.Int32, System.Single, System.Action)
-  nameWithType: UnifyTimer.UnifyTimer(Single, Int32, Single, Action)
+- uid: Unify.Coroutines.UnifyTimer.#ctor(System.Single,System.Int32,System.Single,System.Action,System.Action)
+  name: UnifyTimer(Single, Int32, Single, Action, Action)
+  href: 0.1.x/api/Unify.Coroutines.UnifyTimer.html#Unify_Coroutines_UnifyTimer__ctor_System_Single_System_Int32_System_Single_System_Action_System_Action_
+  commentId: M:Unify.Coroutines.UnifyTimer.#ctor(System.Single,System.Int32,System.Single,System.Action,System.Action)
+  fullName: Unify.Coroutines.UnifyTimer.UnifyTimer(System.Single, System.Int32, System.Single, System.Action, System.Action)
+  nameWithType: UnifyTimer.UnifyTimer(Single, Int32, Single, Action, Action)
 - uid: Unify.Coroutines.UnifyTimer.#ctor*
   name: UnifyTimer
   href: 0.1.x/api/Unify.Coroutines.UnifyTimer.html#Unify_Coroutines_UnifyTimer__ctor_
@@ -737,18 +731,12 @@ references:
   isSpec: "True"
   fullName: Unify.Coroutines.UnifyTimer.UnifyTimer
   nameWithType: UnifyTimer.UnifyTimer
-- uid: Unify.Coroutines.UnifyTimer.Start(System.Action,System.Single,System.Int32,System.Single,System.Action)
-  name: Start(Action, Single, Int32, Single, Action)
-  href: 0.1.x/api/Unify.Coroutines.UnifyTimer.html#Unify_Coroutines_UnifyTimer_Start_System_Action_System_Single_System_Int32_System_Single_System_Action_
-  commentId: M:Unify.Coroutines.UnifyTimer.Start(System.Action,System.Single,System.Int32,System.Single,System.Action)
-  fullName: Unify.Coroutines.UnifyTimer.Start(System.Action, System.Single, System.Int32, System.Single, System.Action)
-  nameWithType: UnifyTimer.Start(Action, Single, Int32, Single, Action)
-- uid: Unify.Coroutines.UnifyTimer.Start(System.Single,System.Int32,System.Single,System.Action)
-  name: Start(Single, Int32, Single, Action)
-  href: 0.1.x/api/Unify.Coroutines.UnifyTimer.html#Unify_Coroutines_UnifyTimer_Start_System_Single_System_Int32_System_Single_System_Action_
-  commentId: M:Unify.Coroutines.UnifyTimer.Start(System.Single,System.Int32,System.Single,System.Action)
-  fullName: Unify.Coroutines.UnifyTimer.Start(System.Single, System.Int32, System.Single, System.Action)
-  nameWithType: UnifyTimer.Start(Single, Int32, Single, Action)
+- uid: Unify.Coroutines.UnifyTimer.Start(System.Single,System.Int32,System.Single,System.Action,System.Action)
+  name: Start(Single, Int32, Single, Action, Action)
+  href: 0.1.x/api/Unify.Coroutines.UnifyTimer.html#Unify_Coroutines_UnifyTimer_Start_System_Single_System_Int32_System_Single_System_Action_System_Action_
+  commentId: M:Unify.Coroutines.UnifyTimer.Start(System.Single,System.Int32,System.Single,System.Action,System.Action)
+  fullName: Unify.Coroutines.UnifyTimer.Start(System.Single, System.Int32, System.Single, System.Action, System.Action)
+  nameWithType: UnifyTimer.Start(Single, Int32, Single, Action, Action)
 - uid: Unify.Coroutines.UnifyTimer.Start*
   name: Start
   href: 0.1.x/api/Unify.Coroutines.UnifyTimer.html#Unify_Coroutines_UnifyTimer_Start_

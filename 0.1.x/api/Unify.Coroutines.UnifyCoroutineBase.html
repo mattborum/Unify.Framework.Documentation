@@ -133,14 +133,14 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Coroutines_UnifyCoroutineBase_currentRepeatCount_" data-uid="Unify.Coroutines.UnifyCoroutineBase.currentRepeatCount*"></a>
-  <h4 id="Unify_Coroutines_UnifyCoroutineBase_currentRepeatCount" data-uid="Unify.Coroutines.UnifyCoroutineBase.currentRepeatCount">currentRepeatCount</h4>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_currentPassCount_" data-uid="Unify.Coroutines.UnifyCoroutineBase.currentPassCount*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_currentPassCount" data-uid="Unify.Coroutines.UnifyCoroutineBase.currentPassCount">currentPassCount</h4>
   <div class="markdown level1 summary"><p>INTERNAL USE.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected int currentRepeatCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected int currentPassCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,7 +153,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Counts iterations up to a maximum of <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount">loopCount</a>.</p>
+        <td><p>Counts loop passes.</p>
 </td>
       </tr>
     </tbody>
@@ -210,7 +210,7 @@
   </table>
   <a id="Unify_Coroutines_UnifyCoroutineBase_keepAlive_" data-uid="Unify.Coroutines.UnifyCoroutineBase.keepAlive*"></a>
   <h4 id="Unify_Coroutines_UnifyCoroutineBase_keepAlive" data-uid="Unify.Coroutines.UnifyCoroutineBase.keepAlive">keepAlive</h4>
-  <div class="markdown level1 summary"><p>If re-use is required this MUST be set to true BEFORE starting the Unify Coroutine for the first time .</p>
+  <div class="markdown level1 summary"><p>If reuse is required this MUST be set to true BEFORE starting the Unify Coroutine for the first time .</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -228,7 +228,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>When true, the Unify Coroutine will be cloned for re-use. Otherwise, the Unify Coroutine will not be cloned.</p>
+        <td><p>When true, the Unify Coroutine will be cloned for reuse. Otherwise, the Unify Coroutine will not be cloned and not available for reuse.</p>
 </td>
       </tr>
     </tbody>
@@ -268,32 +268,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Number of times to execute the Coroutine.</p>
+        <td><p>Number of times to execute the Unify Coroutine.</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Coroutines_UnifyCoroutineBase_loopDelay_" data-uid="Unify.Coroutines.UnifyCoroutineBase.loopDelay*"></a>
-  <h4 id="Unify_Coroutines_UnifyCoroutineBase_loopDelay" data-uid="Unify.Coroutines.UnifyCoroutineBase.loopDelay">loopDelay</h4>
-  <div class="markdown level1 summary"><p>The delay in seconds between each execution of the Unify Coroutine. Only applies for repeating Coroutines. Cannot be negative.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float loopDelay { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -343,6 +319,30 @@
         <td><span class="xref">System.Collections.IEnumerator</span></td>
         <td><p>Stores the original <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target">target</a> for cloning. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_CloneIEnumerator__1___0_">CloneIEnumerator&lt;T&gt;(T)</a>.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_passDelay_" data-uid="Unify.Coroutines.UnifyCoroutineBase.passDelay*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_passDelay" data-uid="Unify.Coroutines.UnifyCoroutineBase.passDelay">passDelay</h4>
+  <div class="markdown level1 summary"><p>The delay in seconds between each execution of the Unify Coroutine. Only applies for repeating Coroutines. Cannot be negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float passDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -591,7 +591,7 @@
   </div>
   <a id="Unify_Coroutines_UnifyCoroutineBase_OnPassComplete_" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnPassComplete*"></a>
   <h4 id="Unify_Coroutines_UnifyCoroutineBase_OnPassComplete" data-uid="Unify.Coroutines.UnifyCoroutineBase.OnPassComplete">OnPassComplete()</h4>
-  <div class="markdown level1 summary"><p>INTERNAL USE. Invokes <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_LoopComplete">LoopComplete</a> event callbacks when a repeating Unify Coroutine has completed a pass successfully.</p>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Invokes <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete">PassComplete</a> event callbacks when a repeating Unify Coroutine has completed a pass successfully.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -914,13 +914,13 @@
       </tr>
     </tbody>
   </table>
-  <h4 id="Unify_Coroutines_UnifyCoroutineBase_LoopComplete" data-uid="Unify.Coroutines.UnifyCoroutineBase.LoopComplete">LoopComplete</h4>
-  <div class="markdown level1 summary"><p>Callback when a looping Unify Coroutine completes each loop.</p>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_PassComplete" data-uid="Unify.Coroutines.UnifyCoroutineBase.PassComplete">PassComplete</h4>
+  <div class="markdown level1 summary"><p>Callback when a looping Unify Coroutine completes a pass.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;UnifyCoroutineEventArgs&gt; LoopComplete</code></pre>
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;UnifyCoroutineEventArgs&gt; PassComplete</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">

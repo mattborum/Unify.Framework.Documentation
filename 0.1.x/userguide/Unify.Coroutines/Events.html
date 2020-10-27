@@ -68,7 +68,7 @@
 <li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resumed"><strong>Resumed</strong></a> - Fired when a Unify Coroutine is successfully resumed with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume"><strong>Resume()</strong></a> method</li>
 <li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stopped"><strong>Stopped</strong></a> - Fired when a Unify Coroutine is successfully stopped with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stop"><strong>Stop()</strong></a> method</li>
 <li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancelled"><strong>Cancelled</strong></a> - Fired when a Unify Coroutine successfully is cancelled with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancel"><strong>Cancel()</strong></a> method</li>
-<li><a href="xref:Unify.Coroutines.UnifyCoroutineBase.PassComplete"><strong>PassComplete</strong></a> - Fired when a repeating Unify Coroutine successfully completes each execution</li>
+<li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete"><strong>PassComplete</strong></a> - Fired when a repeating Unify Coroutine successfully completes a pass of the loop</li>
 <li><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished"><strong>Finished</strong></a> - Fired when a Unify Coroutine successfully finishes (for repeating Unify Coroutines, this is fired after all repeated executions have finished)</li>
 </ul>
 <h3 id="subscribing-to-unify-coroutine-events">Subscribing to Unify Coroutine events</h3>
@@ -94,7 +94,6 @@ private void StartedEventHandler(object sender, UnifyCoroutineEventArgs e)
 };
 </code></pre>
 <h3 id="unsubscribing-from-unify-coroutine-events">Unsubscribing from Unify Coroutine events</h3>
-<p>If you subscribed using either an anonymous method or lambda expression then it is not possible to unsubscribe from an event unless you have a reference to the original method which was used to subscribe:</p>
 <h4 id="programmatically-1">Programmatically</h4>
 <pre><code>myUnifyCoroutine.Started -= StartedEventHandler;
 
@@ -103,6 +102,7 @@ private void StartedEventHandler(object sender, UnifyCoroutineEventArgs e)
     print(&quot;* STARTED EVENT HANDLER *&quot;);
 }
 </code></pre>
+<p>If you subscribed to a Unify Coroutine event using either an anonymous method or lambda expression, then it is not possible to unsubscribe from that event unless you have a reference to the original method which was used to subscribe:</p>
 <h4 id="anonymous-method-1">Anonymous Method</h4>
 <pre><code>private EventHandler&lt;UnifyCoroutineEventArgs&gt; myUnifyCoroutineEventDelegate;
 myUnifyCoroutineEventDelegate = delegate { print(&quot;Unify Coroutine Anonymous Event Handler&quot;); };
@@ -118,12 +118,11 @@ myUnifyCoroutine.Started += myUnifyCoroutineEventDelegate; // Subscribe
 myUnifyCoroutine.Started -= myUnifyCoroutineEventDelegate; // Unsubscribe
 </code></pre>
 <h3 id="event-args">Event Args</h3>
-<p>Unify provides a custom data base class named <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs.html"><strong>UnifyCoroutineEventArgs</strong></a>, an instance of which is passed to event handlers. This base class holds no data, it is provided as a way for you to create your own custom event arguments class.
-<br></p>
+<p>Unify Coroutines provide a custom data base class named <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs.html"><strong>UnifyCoroutineEventArgs</strong></a>, an instance of which is passed to event handlers. This base class holds no data, it is provided as a way for you to create your own custom <a href="https://docs.microsoft.com/en-us/dotnet/api/system.eventargs?view=netcore-3.1" target="_blank"><strong>EventArgs</strong></a> classes.<br></p>
 <h3 id="example">Example</h3>
 <p>This Unify Coroutine example counts from 1 to 60, printing the current value to the Unity Console every second.<br>
 Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow restarting and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions.</p>
-<p>This example shows the three ways you can subscribe to a Unify Coroutine event and also how to unsubscribe.</p>
+<p>This example shows the three ways you can subscribe to Unify Coroutine events. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a> method is used to demonstrate unsubscribing from a Unify Coroutine event using the <a href="#programmatically"><strong>programmatical</strong></a> method described <a href="#programmatically"><strong>above</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
 <li><strong>S</strong> to Start the Unify Coroutine</li>
