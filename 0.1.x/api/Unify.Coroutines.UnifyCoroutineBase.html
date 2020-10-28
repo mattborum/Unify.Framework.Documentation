@@ -317,7 +317,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.IEnumerator</span></td>
-        <td><p>Stores the original <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target">target</a> for cloning. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_CloneIEnumerator__1___0_">CloneIEnumerator&lt;T&gt;(T)</a>.</p>
+        <td><p>Stores the original <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target">target</a> for cloning. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_CloneCoroutine__1___0_">CloneCoroutine&lt;T&gt;(T)</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -511,14 +511,14 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Coroutines_UnifyCoroutineBase_CloneIEnumerator_" data-uid="Unify.Coroutines.UnifyCoroutineBase.CloneIEnumerator*"></a>
-  <h4 id="Unify_Coroutines_UnifyCoroutineBase_CloneIEnumerator__1___0_" data-uid="Unify.Coroutines.UnifyCoroutineBase.CloneIEnumerator``1(``0)">CloneIEnumerator&lt;T&gt;(T)</h4>
-  <div class="markdown level1 summary"><p>INTERNAL USE. Clones a type implementing <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator">IEnumerator</a>.</p>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_CloneCoroutine_" data-uid="Unify.Coroutines.UnifyCoroutineBase.CloneCoroutine*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_CloneCoroutine__1___0_" data-uid="Unify.Coroutines.UnifyCoroutineBase.CloneCoroutine``1(``0)">CloneCoroutine&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"><p>Clones an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator">IEnumerator</a> type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected static T CloneIEnumerator&lt;T&gt;(T instance)
+    <pre><code class="lang-csharp hljs">public static T CloneCoroutine&lt;T&gt;(T instance)
     where T : IEnumerator</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -550,7 +550,7 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><p>A cloned instance of type T.</p>
+        <td><p>A cloned instance of the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator">IEnumerator</a> implementation from the type T.</p>
 </td>
       </tr>
     </tbody>
@@ -830,7 +830,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual IEnumerator WaitForDelay(float p_delay)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator WaitForDelay(float pDelay)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -844,7 +844,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">p_delay</span></td>
+        <td><span class="parametername">pDelay</span></td>
         <td><p>Number of seconds to delay.</p>
 </td>
       </tr>
