@@ -223,12 +223,12 @@
     <pre><code class="lang-csharp hljs">protected UnifyCoroutine()</code></pre>
   </div>
   <a id="Unify_Coroutines_UnifyCoroutine__ctor_" data-uid="Unify.Coroutines.UnifyCoroutine.#ctor*"></a>
-  <h4 id="Unify_Coroutines_UnifyCoroutine__ctor_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_" data-uid="Unify.Coroutines.UnifyCoroutine.#ctor(System.Collections.IEnumerator,System.Single,System.Int32,System.Single)">UnifyCoroutine(IEnumerator, Single, Int32, Single)</h4>
+  <h4 id="Unify_Coroutines_UnifyCoroutine__ctor_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_String_" data-uid="Unify.Coroutines.UnifyCoroutine.#ctor(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.String)">UnifyCoroutine(IEnumerator, Single, Int32, Single, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnifyCoroutine(IEnumerator target, float startDelay = 0F, int loopCount = 1, float passDelay = 0F)</code></pre>
+    <pre><code class="lang-csharp hljs">public UnifyCoroutine(IEnumerator target, float startDelay = 0F, int loopCount = 1, float passDelay = 0F, string name = &quot;[UnnamedUnifyCoroutine]&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,18 +264,24 @@
         <td><p>The delay in seconds between each execution of the Unify Coroutine. Only applies for repeating Unify Coroutines. Cannot be negative.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the Unify Coroutine.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
   <a id="Unify_Coroutines_UnifyCoroutine_Start_" data-uid="Unify.Coroutines.UnifyCoroutine.Start*"></a>
-  <h4 id="Unify_Coroutines_UnifyCoroutine_Start_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_Boolean_System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__" data-uid="Unify.Coroutines.UnifyCoroutine.Start(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.Boolean,System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs})">Start(IEnumerator, Single, Int32, Single, Boolean, EventHandler&lt;UnifyCoroutineEventArgs&gt;)</h4>
+  <h4 id="Unify_Coroutines_UnifyCoroutine_Start_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_Boolean_System_String_System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__" data-uid="Unify.Coroutines.UnifyCoroutine.Start(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.Boolean,System.String,System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs})">Start(IEnumerator, Single, Int32, Single, Boolean, String, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;)</h4>
   <div class="markdown level1 summary"><p>Starts a Unify Coroutine.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Start(IEnumerator target, float startDelay = 0F, int repeatCount = 1, float passDelay = 0F, bool failSilently = false, EventHandler&lt;UnifyCoroutineEventArgs&gt; finishedEventHandler = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool Start(IEnumerator target, float startDelay = 0F, int loopCount = 1, float passDelay = 0F, bool failSilently = false, string name = &quot;[UnnamedUnifyCoroutine]&quot;, EventHandler&lt;UnifyCoroutineEventArgs&gt; passCompleteEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; finishedEventHandler = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,7 +307,7 @@
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">repeatCount</span></td>
+        <td><span class="parametername">loopCount</span></td>
         <td><p>Number of times to run the Unify Coroutine.</p>
 </td>
       </tr>
@@ -315,6 +321,18 @@
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">failSilently</span></td>
         <td><p>When true, the Unify Coroutine will NOT throw an exception on error. Otherwise, exceptions WILL be thrown.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the Unify Coroutine.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">passCompleteEventHandler</span></td>
+        <td><p>Callback when a repeating Unify Coroutine completes each pass of the loop.</p>
 </td>
       </tr>
       <tr>
@@ -336,7 +354,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>True if the Unify Coroutine started successfully. Otherwise, false.</p>
+</td>
       </tr>
     </tbody>
   </table>

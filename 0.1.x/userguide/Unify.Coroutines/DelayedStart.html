@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Cancelling a Unify Coroutine | Unify Framework </title>
+    <title>Delayed Start of a Unify Coroutine | Unify Framework </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Cancelling a Unify Coroutine | Unify Framework ">
+    <meta name="title" content="Delayed Start of a Unify Coroutine | Unify Framework ">
     <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -58,67 +58,63 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-12">
-            <article class="content wrap" id="_content" data-uid="CancellingaUnifyCoroutine">
-<h2 id="cancelling-a-unify-coroutine">Cancelling a Unify Coroutine</h2>
+            <article class="content wrap" id="_content" data-uid="DelayedStart">
+<h2 id="delayed-start-of-a-unify-coroutine">Delayed Start of a Unify Coroutine</h2>
 
-<p>A Unify Coroutine can be cancelled, it does not have to be running in order for it to be cancelled.<br>
-When a Unify Coroutine has been cancelled, it can no longer be resumed or restarted. It is <strong>your</strong> responsibility to destroy any references.<br></p>
-<br>
-<p>To cancel a Unify Coroutine, call the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancel"><strong>Cancel()</strong></a> method on a Unify Coroutine instance. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancel"><strong>Cancel()</strong></a> method will return <strong>true</strong> if the Unify Coroutine was cancelled successfully, otherwise it will return <strong>false</strong>.
+<p>A Unify Coroutine has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property to allow delaying execution from when the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Start"><strong>Start()</strong></a> method is called.</p>
+<p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property can be set in two ways:
 <br></p>
-<pre><code>bool cancelled = myUnifyCoroutine.Cancel();
+<p>Pass <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> as a parameter to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#constructors"><strong>constructor</strong></a>:</p>
+<pre><code>UnifyCoroutine myUnifyCoroutine = new UnifyCoroutine(PrintEverySecond(), startDelay: 2.5f); // 2.5 seconds
+
+IEnumerator SayHello()
+{
+    print(&quot;Hello, Unify!&quot;);
+    yield return null;
+}
+</code></pre>
+<p>Set the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property directly:</p>
+<pre><code>myUnifyCoroutine.startDelay = 2.5f; // 2.5 seconds
 </code></pre>
 <h3 id="example">Example</h3>
-<p>This Unify Coroutine example counts from 1 to 60, printing the current value to the Unity Console at 1 second intervals.<br>
-Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'Georgia'</strong> to demonstrate how Unify Coroutine instances are identified in <a href="#exceptions"><strong>exception messages</strong></a>.</p>
-<p>Attach the script below to a GameObject and press:</p>
+<p>This Unify Coroutine has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 2.5 seconds and then prints the string <em>&quot;Hello, Unify!&quot;</em>, one letter at a time to the Unity Console at 1 second intervals.<br>
+Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'Dave'</strong> to demonstrate how Unify Coroutine instances are identified in <a href="#exceptions"><strong>exception messages</strong></a>.</p>
+<p>Attach the script below to a GameObject and press:
+<br></p>
 <ul>
-<li><strong>S</strong> to Start the Unify Coroutine</li>
-<li><strong>X</strong> to Stop the Unify Coroutine</li>
-<li><strong>C</strong> to Cancel the Unify Coroutine</li>
+<li><strong>S</strong> to Start</li>
 </ul>
 <br>
 <pre><code>using System.Collections;
 using Unify.Coroutines;
 using UnityEngine;
 
-public class Cancelling : MonoBehaviour
+public class DelayedStart : MonoBehaviour
 {
     private UnifyCoroutine myUnifyCoroutine;
 
     void Start()
     {
-        myUnifyCoroutine = new UnifyCoroutine(WaitAndPrint(), name: &quot;Georgia&quot;) { failSilently = false };
-     
-        print(&quot;press S to START, X to STOP, C to CANCEL&quot;);
+        myUnifyCoroutine = new UnifyCoroutine(SayHello(), startDelay: 2.5f, name: &quot;Dave&quot;) { failSilently = false };
+
+        print(&quot;press S to START&quot;)
     }
 
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.S))
         {
-            print(&quot;* Starting Unify Coroutine *&quot;);
             myUnifyCoroutine.Start();
-        }
-
-        if (Input.GetKeyUp(KeyCode.X))
-        {
-            print(&quot;* Stopping Unify Coroutine *&quot;);
-            myUnifyCoroutine.Stop();
-        }
-
-        if (Input.GetKeyUp(KeyCode.C))
-        {
-            print(&quot;* Cancelling Unify Coroutine *&quot;);
-            myUnifyCoroutine.Cancel();
         }
     }
 
-    IEnumerator WaitAndPrint()
+    IEnumerator SayHello()
     {
-        for (int i = 1; i &lt;= 60; i++)
+        string hello = &quot;Hello, Unify!&quot;;
+
+        for (int i = 0; i &lt; hello.Length; i++)
         {
-            print(&quot;i = &quot; + i);
+            print(hello[i]);
             yield return new WaitForSecondsRealtime(1f);
         }
     }
@@ -128,19 +124,16 @@ public class Cancelling : MonoBehaviour
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
 <li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter</li>
+<li>Passing a value of <strong>less than 0</strong> to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> parameter</li>
 </ul>
 <p>Exceptions will be thrown under the following circumstances, <strong>only</strong> if <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> is <strong>false</strong>:</p>
 <ul>
-<li><strong>Cancelling</strong> a Unify Coroutine that is already in a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Cancelled</strong></a> <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_state"><strong>state</strong></a></li>
+<li><strong>Starting</strong> a Unify Coroutine that is in a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Running</strong></a> <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_state"><strong>state</strong></a></li>
 </ul>
 <br>
 <p>Unify will provide information in the exception message to help you find the cause of the error, for example:</p>
-<p><img src="../../../images/exception_cancel.png" alt="Exception Image"></p>
-<p>This message tells us the exception was caused by calling the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancel"><strong>Cancel()</strong></a> method on a Unify Coroutine that was already in a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Cancelled</strong></a> <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_state"><strong>state</strong></a>, and that <strong>'Georgia'</strong> was the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> of the offending Unify Coroutine instance.</p>
-<h3 id="see-also">See Also</h3>
-<ul>
-<li><a class="xref" href="IntroductionToUnifyCoroutines.html#whats-the-difference-between-pause-stop-and-cancel"><strong>What's the difference between Pause, Stop and Cancel?</strong></a></li>
-</ul>
+<p><img src="../../../images/exception_startDelay.png" alt="Exception Image"></p>
+<p>This message tells us the exception was caused by setting the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property to a negative value, and that <strong>'Dave'</strong> was the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> of the offending Unify Coroutine instance.</p>
 </article>
           </div>
         </div>

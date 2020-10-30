@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutine.html",
-          "hash": "GT9+lLz7uh/eIuIMsId1Lg=="
+          "hash": "Aj3sXlelnTYRamitZRQw2g=="
         }
       },
       "is_incremental": true,
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/Cancelling.html",
-          "hash": "SdNey3pt5qM26CvjSkrAag=="
+          "hash": "9UavPCv7HaPFgfHuwXihyQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +201,22 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/CreatingAndStarting.html",
-          "hash": "U9kvx8xhq5zAApMAGblmWQ=="
+          "hash": "58Tmclg/IZPCLU6ccliWgQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/DelayedStart.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/DelayedStart.html",
+          "hash": "Xzwr2ulcxeztzwB0pOlD9Q=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -213,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/Events.html",
-          "hash": "Nd6ZUx8RpOCQ31fIg30GWA=="
+          "hash": "odexrOPJBFnuKslQgfMw7g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutines.html",
-          "hash": "9rnfmDywQUWRjodb+XO0XA=="
+          "hash": "iEywQ8PnCqXIHds1A8xENg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/Looping.html",
-          "hash": "MCX+7hK4Ib6png3I4XVP3A=="
+          "hash": "UOiH8jF2zMxFS0NvOLqMZg=="
         }
       },
       "is_incremental": true,
@@ -249,10 +261,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/PausingAndResuming.html",
-          "hash": "d7ofmEZdgS79eBvGMLjtMg=="
+          "hash": "BpPFHfQtci/L8Jy+AJUvmg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,7 +273,19 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/ReturningAValue.html",
-          "hash": "GgCYaA4pjcezINtQuKBL9A=="
+          "hash": "2x+17H5xg/o6qfQyAw0cFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/StaticUnifyCoroutines.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/StaticUnifyCoroutines.html",
+          "hash": "vjO3U0JJMuVn5GLl1IOw/g=="
         }
       },
       "is_incremental": true,
@@ -273,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/StoppingAndRestarting.html",
-          "hash": "FAZcbr0d3riVqMyg4167Hg=="
+          "hash": "1TpRDtDDahUdnUMB/ELX0w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/toc.html",
-          "hash": "HXSIUFXS9kYAZ9PEtxsa/A=="
+          "hash": "r5iV6TIDdOvJJhpCquKuoA=="
         }
       },
       "is_incremental": false,
@@ -353,6 +377,17 @@
       "output": {
         "resource": {
           "relative_path": "images/exception_start.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/exception_startDelay.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/exception_startDelay.png"
         }
       },
       "is_incremental": false,
@@ -483,8 +518,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 12,
-          "skipped_file_count": 11
+          "total_file_count": 14,
+          "skipped_file_count": 13
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

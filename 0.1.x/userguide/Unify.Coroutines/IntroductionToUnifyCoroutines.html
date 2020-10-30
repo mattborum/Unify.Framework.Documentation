@@ -62,6 +62,7 @@
 <h2 id="introduction-to-unify-coroutines">Introduction to Unify Coroutines</h2>
 
 <p>Unify extends the core functionality of Unity's Coroutines.</p>
+<h3 id="functionality">Functionality</h3>
 <p>Unify Coroutines add the ability to:</p>
 <ul>
 <li><strong>Delay Starting Coroutines</strong></li>
@@ -72,6 +73,7 @@
 <li><strong>Return a Value from a Coroutine</strong></li>
 <li><strong>Loop a Coroutine</strong></li>
 </ul>
+<h3 id="events">Events</h3>
 <p>Unify Coroutines also provide the following events:</p>
 <ul>
 <li><strong>Started</strong></li>
@@ -83,9 +85,12 @@
 <li><strong>LoopComplete</strong></li>
 <li><strong>Finished</strong></li>
 </ul>
+<h3 id="exceptions">Exceptions</h3>
+<p>Unify will throw an exception when an invalid operation is attempted, for example, a Unify Coroutine can only be paused when it is running, so trying to pause a Unify Coroutine that is not running will result in an exception. To suppress these exceptions Unify Coroutines provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> property, which must be set to <strong>true</strong>.</p>
+<p>However, Unify will <strong>always</strong> throw an exception when trying to set a <strong>property</strong> or a <strong>parameter</strong> to an invalid value.</p>
 <h3 id="whats-the-difference-between-pause-stop-and-cancel">What's the difference between Pause, Stop and Cancel?</h3>
 <h4 id="pause"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a></h4>
-<p>Temporarily halts execution until the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume"><strong>Resume()</strong></a> method is called. Execution resumes from the point is was paused.</p>
+<p>Temporarily halts execution until the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume"><strong>Resume()</strong></a> method is called. Execution resumes from the point the UnifyCoroutine was paused.</p>
 <h4 id="stop"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stop"><strong>Stop()</strong></a></h4>
 <p>Halts execution. The Unify Coroutine can be restarted with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Start"><strong>Start()</strong></a> method. Execution starts from the beginning.</p>
 <h4 id="cancel"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancel"><strong>Cancel()</strong></a></h4>

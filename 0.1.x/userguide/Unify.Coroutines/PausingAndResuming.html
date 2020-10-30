@@ -62,7 +62,6 @@
 <h2 id="pausing-and-resuming-a-unify-coroutine">Pausing and Resuming a Unify Coroutine</h2>
 
 <p>A Unify Coroutine can be paused and resumed.</p>
-<br>
 <p>To pause a Unify Coroutine, call the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a> method on a Unify Coroutine instance. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a> method will return <strong>true</strong> if the Unify Coroutine was paused successfully, otherwise it will return <strong>false</strong>.</p>
 <pre><code>bool paused = myUnifyCoroutine.Pause();
 </code></pre>
@@ -71,13 +70,13 @@
 <pre><code>bool resumed = myUnifyCoroutine.Resume();
 </code></pre>
 <h3 id="example">Example</h3>
-<p>This Unify Coroutine example runs for 60 seconds, printing the current second value to the Unity Console every second.<br>
-Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>.</p>
+<p>This Unify Coroutine example runs for 60 seconds, printing the current second value to the Unity Console at 1 second intervals.<br>
+Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'Karen'</strong> to demonstrate how Unify Coroutine instances are identified in <a href="#exceptions"><strong>exception messages</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
-<li><strong>S</strong> to Start the Unify Coroutine</li>
-<li><strong>P</strong> to Pause the Unify Coroutine</li>
-<li><strong>R</strong> to Resume the Unify Coroutine</li>
+<li><strong>S</strong> to Start</li>
+<li><strong>P</strong> to Pause</li>
+<li><strong>R</strong> to Resume</li>
 </ul>
 <br>
 <pre><code>using System.Collections;
@@ -90,8 +89,7 @@ public class PausingAndResuming : MonoBehaviour
 
     void Start()
     {
-        myUnifyCoroutine = new UnifyCoroutine(WaitAndPrint());
-        myUnifyCoroutine.failSilently = false;
+        myUnifyCoroutine = new UnifyCoroutine(WaitAndPrint(), name: &quot;Karen&quot;) { failSilently = false };
 
         print(&quot;press S to START, P to PAUSE, R to RESUME&quot;);
     }
@@ -128,16 +126,19 @@ public class PausingAndResuming : MonoBehaviour
 }
 </code></pre>
 <h3 id="exceptions">Exceptions</h3>
-<p>Exceptions will be thrown under the following circumstances:</p>
+<p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
-<li><strong>Pausing</strong> a Unify Coroutine that is in any state other than <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Running</strong></a></li>
-<li><strong>Resuming</strong> a Unify Coroutine that is in any state other than <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Paused</strong></a></li>
+<li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter</li>
 </ul>
-<p>Exceptions will not be thrown if <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> is <strong>true</strong>.</p>
+<p>Exceptions will be thrown under the following circumstances, <strong>only</strong> if <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> is <strong>false</strong>:</p>
+<ul>
+<li><strong>Pausing</strong> a Unify Coroutine that is in a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_state"><strong>state</strong></a> other than <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Running</strong></a></li>
+<li><strong>Resuming</strong> a Unify Coroutine that is in a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_state"><strong>state</strong></a> other than <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Paused</strong></a></li>
+</ul>
 <br>
 <p>Unify will provide information in the exception message to help you find the cause of the error, for example:</p>
 <p><img src="../../../images/exception_pause.png" alt="Exception Image"></p>
-<p>This message tell us the Unify Coroutine was in the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Ready</strong></a> state at the time of the pause request, therefore it cannot be paused because it is not running.</p>
+<p>This message tells us the exception was caused by calling the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a> method on a Unify Coroutine that was already in a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Paused</strong></a> <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_state"><strong>state</strong></a>, and that <strong>'Karen'</strong> was the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> of the offending Unify Coroutine instance.</p>
 <h3 id="see-also">See Also</h3>
 <ul>
 <li><a class="xref" href="IntroductionToUnifyCoroutines.html#whats-the-difference-between-pause-stop-and-cancel"><strong>What's the difference between Pause, Stop and Cancel?</strong></a></li>
