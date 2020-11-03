@@ -145,14 +145,14 @@ references:
   fullName.vb: Unify.Coroutines.UnifyCoroutine(Of T).UnifyCoroutine()
   nameWithType: UnifyCoroutine<T>.UnifyCoroutine()
   nameWithType.vb: UnifyCoroutine(Of T).UnifyCoroutine()
-- uid: Unify.Coroutines.UnifyCoroutine`1.#ctor(System.Collections.IEnumerator,System.Single,System.Int32,System.Single)
-  name: UnifyCoroutine(IEnumerator, Single, Int32, Single)
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1__ctor_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_
-  commentId: M:Unify.Coroutines.UnifyCoroutine`1.#ctor(System.Collections.IEnumerator,System.Single,System.Int32,System.Single)
-  fullName: Unify.Coroutines.UnifyCoroutine<T>.UnifyCoroutine(System.Collections.IEnumerator, System.Single, System.Int32, System.Single)
-  fullName.vb: Unify.Coroutines.UnifyCoroutine(Of T).UnifyCoroutine(System.Collections.IEnumerator, System.Single, System.Int32, System.Single)
-  nameWithType: UnifyCoroutine<T>.UnifyCoroutine(IEnumerator, Single, Int32, Single)
-  nameWithType.vb: UnifyCoroutine(Of T).UnifyCoroutine(IEnumerator, Single, Int32, Single)
+- uid: Unify.Coroutines.UnifyCoroutine`1.#ctor(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.String)
+  name: UnifyCoroutine(IEnumerator, Single, Int32, Single, String)
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1__ctor_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_String_
+  commentId: M:Unify.Coroutines.UnifyCoroutine`1.#ctor(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.String)
+  fullName: Unify.Coroutines.UnifyCoroutine<T>.UnifyCoroutine(System.Collections.IEnumerator, System.Single, System.Int32, System.Single, System.String)
+  fullName.vb: Unify.Coroutines.UnifyCoroutine(Of T).UnifyCoroutine(System.Collections.IEnumerator, System.Single, System.Int32, System.Single, System.String)
+  nameWithType: UnifyCoroutine<T>.UnifyCoroutine(IEnumerator, Single, Int32, Single, String)
+  nameWithType.vb: UnifyCoroutine(Of T).UnifyCoroutine(IEnumerator, Single, Int32, Single, String)
 - uid: Unify.Coroutines.UnifyCoroutine`1.#ctor*
   name: UnifyCoroutine
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1__ctor_
@@ -162,15 +162,15 @@ references:
   fullName.vb: Unify.Coroutines.UnifyCoroutine(Of T).UnifyCoroutine
   nameWithType: UnifyCoroutine<T>.UnifyCoroutine
   nameWithType.vb: UnifyCoroutine(Of T).UnifyCoroutine
-- uid: Unify.Coroutines.UnifyCoroutine`1.Start(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs{`0}},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs})
-  name: Start(IEnumerator, Single, Int32, Single, EventHandler<UnifyCoroutineEventArgs<T>>, EventHandler<UnifyCoroutineEventArgs>)
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1_Start_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__0___System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__
-  commentId: M:Unify.Coroutines.UnifyCoroutine`1.Start(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs{`0}},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs})
-  name.vb: Start(IEnumerator, Single, Int32, Single, EventHandler(Of UnifyCoroutineEventArgs(Of T)), EventHandler(Of UnifyCoroutineEventArgs))
-  fullName: Unify.Coroutines.UnifyCoroutine<T>.Start(System.Collections.IEnumerator, System.Single, System.Int32, System.Single, System.EventHandler<Unify.Coroutines.UnifyCoroutineEventArgs<T>>, System.EventHandler<Unify.Coroutines.UnifyCoroutineEventArgs>)
-  fullName.vb: Unify.Coroutines.UnifyCoroutine(Of T).Start(System.Collections.IEnumerator, System.Single, System.Int32, System.Single, System.EventHandler(Of Unify.Coroutines.UnifyCoroutineEventArgs(Of T)), System.EventHandler(Of Unify.Coroutines.UnifyCoroutineEventArgs))
-  nameWithType: UnifyCoroutine<T>.Start(IEnumerator, Single, Int32, Single, EventHandler<UnifyCoroutineEventArgs<T>>, EventHandler<UnifyCoroutineEventArgs>)
-  nameWithType.vb: UnifyCoroutine(Of T).Start(IEnumerator, Single, Int32, Single, EventHandler(Of UnifyCoroutineEventArgs(Of T)), EventHandler(Of UnifyCoroutineEventArgs))
+- uid: Unify.Coroutines.UnifyCoroutine`1.Start(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.String,System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs{`0}},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs})
+  name: Start(IEnumerator, Single, Int32, Single, String, EventHandler<UnifyCoroutineEventArgs<T>>, EventHandler<UnifyCoroutineEventArgs>, EventHandler<UnifyCoroutineEventArgs>)
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1_Start_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_String_System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__0___System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__
+  commentId: M:Unify.Coroutines.UnifyCoroutine`1.Start(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.String,System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs{`0}},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs})
+  name.vb: Start(IEnumerator, Single, Int32, Single, String, EventHandler(Of UnifyCoroutineEventArgs(Of T)), EventHandler(Of UnifyCoroutineEventArgs), EventHandler(Of UnifyCoroutineEventArgs))
+  fullName: Unify.Coroutines.UnifyCoroutine<T>.Start(System.Collections.IEnumerator, System.Single, System.Int32, System.Single, System.String, System.EventHandler<Unify.Coroutines.UnifyCoroutineEventArgs<T>>, System.EventHandler<Unify.Coroutines.UnifyCoroutineEventArgs>, System.EventHandler<Unify.Coroutines.UnifyCoroutineEventArgs>)
+  fullName.vb: Unify.Coroutines.UnifyCoroutine(Of T).Start(System.Collections.IEnumerator, System.Single, System.Int32, System.Single, System.String, System.EventHandler(Of Unify.Coroutines.UnifyCoroutineEventArgs(Of T)), System.EventHandler(Of Unify.Coroutines.UnifyCoroutineEventArgs), System.EventHandler(Of Unify.Coroutines.UnifyCoroutineEventArgs))
+  nameWithType: UnifyCoroutine<T>.Start(IEnumerator, Single, Int32, Single, String, EventHandler<UnifyCoroutineEventArgs<T>>, EventHandler<UnifyCoroutineEventArgs>, EventHandler<UnifyCoroutineEventArgs>)
+  nameWithType.vb: UnifyCoroutine(Of T).Start(IEnumerator, Single, Int32, Single, String, EventHandler(Of UnifyCoroutineEventArgs(Of T)), EventHandler(Of UnifyCoroutineEventArgs), EventHandler(Of UnifyCoroutineEventArgs))
 - uid: Unify.Coroutines.UnifyCoroutine`1.Start*
   name: Start
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1_Start_

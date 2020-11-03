@@ -63,7 +63,7 @@
 
 <p>Unify Coroutines provide a static <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>Start()</strong></a> method that enables the starting of a Unify Coroutine without needing to create an instance.<br>
 Static Unify Coroutines still offer <a class="xref" href="DelayedStart.html"><strong>delayed start</strong></a> and <a class="xref" href="Looping.html"><strong>looping</strong></a> functionality through the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a>, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties, values for which can be passed into the static <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>Start()</strong></a> method as parameters.<br>
-The static <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>Start()</strong></a> method also offers subscription to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished"><strong>Finished</strong></a> event through the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>finishedEventHandler</strong></a> parameter.</p>
+The static <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>Start()</strong></a> method also offers subscription to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished"><strong>Finished</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete"><strong>passComplete</strong></a> events through the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>finishedEventHandler</strong></a> and [<strong>passCompleteEventHandler</strong>] parameters respectively.</p>
 <p>The static <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>Start()</strong></a> method will return <strong>true</strong> if the Unify Coroutine was started successfully, otherwise it will return <strong>false</strong>.</p>
 <pre><code>bool started = UnifyCoroutine.Start(SayHello(), startDelay: 1f, loopCount: 2, passDelay: 1f,
                                     finishedEventHandler: (s, e) =&gt;
@@ -77,8 +77,8 @@ IEnumerator SayHello()
     yield return null;
 }
 </code></pre>
-<h3 id="example">Example</h3>
-<p>This Unify Coroutine example counts from 1 to 10 and prints the square of each value to the Unity Console at 1 second intervals. The Unify Coroutine has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 1 second, a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> of 3 and a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> of 2.5 seconds.
+<h3 id="example-one">Example One</h3>
+<p>This example uses a standard <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html"><strong>Unify Coroutine</strong></a> to count from 1 to 10 and print the square of each value to the Unity Console at 1 second intervals. The Unify Coroutine has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 1 second, a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> of 3 and a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> of 2.5 seconds.
 The static <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>Start()</strong></a> method is used to begin execution of the Unify Coroutine.
 Here, the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished"><strong>Finished</strong></a> event handler is subscribed to using a lambda expression through the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>finishedEventHandler</strong></a> parameter, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>, and the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'William'</strong> to demonstrate how Unify Coroutine instances are identified in <a href="#exceptions"><strong>exception messages</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
@@ -105,14 +105,14 @@ public class Coroutines_StaticStart : MonoBehaviour
             print(&quot;* Starting Unify Coroutine *&quot;);
 
             UnifyCoroutine.Start(SquaresOfOneToTen(), startDelay: 1f, loopCount: 3, passDelay: 2.5f, name: &quot;William&quot;,
-                                 passCompleteEventHandler: (s, e) =&gt;
-                                 {
-                                     print(&quot;* PASS COMPLETE *&quot;);
-                                 },
-                                 finishedEventHandler: (s, e) =&gt;
-                                 {
-                                     print(&quot;* Static Unify Coroutine FINISHED *&quot;);
-                                 });
+                passCompleteEventHandler: (s, e) =&gt;
+                {
+                    print(&quot;* PASS COMPLETE *&quot;);
+                },
+                finishedEventHandler: (s, e) =&gt;
+                {
+                    print(&quot;* Static Unify Coroutine FINISHED *&quot;);
+                });
         }
     }
 
@@ -121,6 +121,57 @@ public class Coroutines_StaticStart : MonoBehaviour
         for (int i = 1; i &lt;= 10; i++)
         {
             print($&quot;sqr({i}) = &quot; + i * i);
+            yield return new WaitForSecondsRealtime(1f);
+        }
+    }
+}
+</code></pre>
+<h3 id="example-two">Example Two</h3>
+<p>This Unify Coroutine example shows how to return a value from a static Unify Coroutine. It is the same example as <a href="#example-one"><strong>above</strong></a> but uses a generic <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;T&gt;</strong></a> to return the value, rather than print it from within the Coroutine. The return value is picked up by the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1_ValueReturned"><strong>ValueReturned</strong></a> event handler which is passed as a lambda expression through the constructor.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>S</strong> to Start the Unify Coroutine</li>
+</ul>
+<br>
+<p><a href="../files/Coroutines_StaticStartReturnValue.cs"><img src="../../../images/download_button_off.png" onmouseover="this.src='../../../images/download_button_on.png'" onmouseout="this.src='../../../images/download_button_off.png'"></a></p>
+<pre><code>using System.Collections;
+using Unify.Coroutines;
+using UnityEngine;
+
+public class Coroutines_StaticStartReturnValue : MonoBehaviour
+{
+    void Start()
+    {
+        print(&quot;press S to START&quot;);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            print(&quot;* Starting Unify Coroutine *&quot;);
+
+            UnifyCoroutine&lt;int&gt;.Start(SquaresOfOneToTen(), startDelay: 1f, loopCount: 3, passDelay: 2.5f, name: &quot;William&quot;,
+                valueReturnedHandler: (s, e) =&gt;
+                {
+                    print($&quot;sqr({e.returnValue}) = {e.returnValue * e.returnValue}&quot;);
+                },
+                passCompleteEventHandler: (s, e) =&gt;
+                {
+                    print(&quot;* PASS COMPLETE *&quot;);
+                },
+                finishedEventHandler: (s, e) =&gt;
+                {
+                    print(&quot;* Static Unify Coroutine FINISHED *&quot;);
+                });
+        }
+    }
+
+    IEnumerator SquaresOfOneToTen()
+    {
+        for (int i = 1; i &lt;= 10; i++)
+        {
+            yield return i;
             yield return new WaitForSecondsRealtime(1f);
         }
     }

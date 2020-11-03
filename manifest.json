@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutine-1.html",
-          "hash": "gqciYPI9HWXB0mU9ZVQLXA=="
+          "hash": "tYVS2tnB0kCX//Uf/4rndg=="
         }
       },
       "is_incremental": true,
@@ -273,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/StaticUnifyCoroutines.html",
-          "hash": "AhpAUstotIRoxgLVoQgZTg=="
+          "hash": "uP3uGhblADGxdCPSeSE2OA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -385,6 +385,17 @@
       "output": {
         "resource": {
           "relative_path": "0.1.x/userguide/files/Coroutines_StaticStart.cs"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "0.1.x/userguide/files/Coroutines_StaticStartReturnValue.cs",
+      "output": {
+        "resource": {
+          "relative_path": "0.1.x/userguide/files/Coroutines_StaticStartReturnValue.cs"
         }
       },
       "is_incremental": false,
@@ -625,7 +636,7 @@
           "hash": "yuu2uYQla7Ha2TZk6xOBCg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
