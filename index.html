@@ -56,7 +56,7 @@
 
 <p>This is version 0.1.0 of Unify. This release features the Unify Coroutine portion of the framework.</p>
 <h2 id="unify-coroutines">Unify Coroutines</h2>
-<p>Unify Coroutines extend Unity Coroutines to provide much requested extra functionality. Unify Coroutines add the following features; delayed start, pause, resume, cancel, restart/reuse, return a value and looping. Unify Coroutines are observable, subscribe to events to notified when a Unify Coroutine is; started, paused, resumed, stopped, cancelled and finished as well as events to capture a return value and callback after every pass of a looping Unify Coroutine.</p>
+<p>Unify Coroutines extend Unity Coroutines to provide much requested extra functionality. Unify Coroutines add the following features; delayed start, pause, resume, cancel, restart/reuse, return a value and looping. Unify Coroutines are observable, subscribe to events to notified when a Unify Coroutine is; started, paused, resumed, stopped, cancelled or finished as well as events to capture a return value and callback after every pass of a looping Unify Coroutine.</p>
 <p>See the <a href="0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutines.html"><strong>Unify Coroutine User Guide</strong></a> for more details.</p>
 <br>
 <h1 id="unify-roadmap">Unify Roadmap</h1>
@@ -70,7 +70,7 @@ Move over just a portion of a collection using Unify's range feature, which also
 <p>Unify Collections allow you to iterate over a collection while adding, inserting and removing items at the same time. Unify Collections are observable, subscribe to events to be notified when items are added, inserted or removed, or the collecton is cleared. Unify provides a generic and non-generic version of the Collection. Use all the features of Unify Enumerators with Unify Collections.</p>
 <p>The Unify.Collection namespace also offers two specialised collections for Unify Coroutines; the <strong>UnifyCoroutineQueue</strong> and the <strong>UnifyCoroutineCollection</strong>. These two collections operate in the same way as a standard .NET Queue or Collection, but have been built to allow fine grained control of Unify Coroutines.</p>
 <p>With a Unify Coroutine Queue you can line up a chain of Unify Coroutines to be executed one after the other, or alternatively, the Unify Coroutine Collection allows you to start a group of Unify Coroutines at the same time.</p>
-<p>In fact, the Unify Coroutine Queue and Unify Coroutine Collection classes are also Unify Coroutines themselves. You can control a whole queue or collection of Unify Coroutines the same way you can a single Unify Coroutine.  You have all the functionality of pausing, restaring and reusing the whole collection just like a single Unify Coroutine. This means they are also interchangable with each other; you could, for example, add a Unify Coroutine Collection to a Unify Coroutine Queue or vice versa.</p>
+<p>In fact, the Unify Coroutine Queue and Unify Coroutine Collection classes are also Unify Coroutines themselves. You can control a whole queue or collection of Unify Coroutines the same way you can a single Unify Coroutine.  You have all the functionality of pausing, restaring and reusing the whole collection just like a single Unify Coroutine. This means they are also interchangable; you could, for example, add a Unify Coroutine Collection to a Unify Coroutine Queue or vice versa.</p>
 <p>As Unify Easing Functions are also Unify Coroutines, these can be added to a Unify Queue or Collection and controlled in the same way.</p>
 <br>
 <br>

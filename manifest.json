@@ -180,7 +180,7 @@
           "hash": "c2ITEqPk83x2dRUiIv76yw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -216,7 +216,7 @@
           "hash": "IANwEEwPKolhQVIuQC0/xA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -228,7 +228,7 @@
           "hash": "CdOrFaV42Y5/TtabW3M1iQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -252,7 +252,7 @@
           "hash": "0izK02xAdXtsGCAD9onKEQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -288,7 +288,7 @@
           "hash": "Vdmpg6eO19QQtJ3FAVzufQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -622,7 +622,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "thiq5xhXQzyM6uBnKQVXmw=="
+          "hash": "60plsLqg1KLi5SKODmdTow=="
         }
       },
       "is_incremental": false,
@@ -654,7 +654,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 14,
-          "skipped_file_count": 12
+          "skipped_file_count": 13
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
