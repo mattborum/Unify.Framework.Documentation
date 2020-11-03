@@ -88,17 +88,18 @@ It uses a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html
 <li><strong>S</strong> to Start the Unify Coroutine</li>
 </ul>
 <br>
+<p><a href="../files/Coroutines_ReturnValueOnce.cs"><img src="../../../images/download_button_off.png" onmouseover="this.src='../../../images/download_button_on.png'" onmouseout="this.src='../../../images/download_button_off.png'"></a></p>
 <pre><code>using System.Collections;
 using Unify.Coroutines;
 using UnityEngine;
 
-public class ReturnValueOnce : MonoBehaviour
+public class Coroutines_ReturnValueOnce : MonoBehaviour
 {
     private UnifyCoroutine&lt;string&gt; myUnifyCoroutine;
 
     void Start()
     {
-        myUnifyCoroutine = new UnifyCoroutine&lt;string&gt;(WaitAndReturnString()) { failSilently = false, keepAlive = true };
+        myUnifyCoroutine = new UnifyCoroutine&lt;string&gt;(WaitAndReturnString(), startDelay: 2f) { failSilently = false, keepAlive = true };
 
         myUnifyCoroutine.ValueReturned += (sender, e) =&gt;
         {
@@ -133,11 +134,12 @@ Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#U
 <li><strong>S</strong> to Start the Unify Coroutine</li>
 </ul>
 <br>
+<p><a href="../files/Coroutines_ReturnValueMultiple.cs"><img src="../../../images/download_button_off.png" onmouseover="this.src='../../../images/download_button_on.png'" onmouseout="this.src='../../../images/download_button_off.png'"></a></p>
 <pre><code>using System.Collections;
 using Unify.Coroutines;
 using UnityEngine;
 
-public class ReturnValueMultiple : MonoBehaviour
+public class Coroutines_ReturnValueMultiple : MonoBehaviour
 {
     private UnifyCoroutine&lt;int&gt; myUnifyCoroutine;
 
@@ -147,7 +149,7 @@ public class ReturnValueMultiple : MonoBehaviour
         myUnifyCoroutine.failSilently = false;
         myUnifyCoroutine.keepAlive = true;
 
-        myUnifyCoroutine.ValueReturned += ValueReturnedEventHandler;
+        myUnifyCoroutine.ValueReturned += ValueReturnedHandler;
     }
 
     void Update()
@@ -159,7 +161,7 @@ public class ReturnValueMultiple : MonoBehaviour
         }
     }
 
-    private void ValueReturnedEventHandler(object sender, UnifyCoroutineEventArgs&lt;int&gt; e)
+    private void ValueReturnedHandler(object sender, UnifyCoroutineEventArgs&lt;int&gt; e)
     {
         print($&quot;{e.returnValue} is a multiple of 3&quot;);
     }
@@ -181,6 +183,13 @@ public class ReturnValueMultiple : MonoBehaviour
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
 <li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter</li>
+</ul>
+<p>Unify does not throw exceptions specifically around returning a value from a Unify Coroutine, however exceptions <strong>will</strong> be thrown from other operations:<br></p>
+<ul>
+<li><a class="xref" href="CreatingAndStarting.html#exceptions"><strong>Creating and Starting</strong></a></li>
+<li><a class="xref" href="PausingAndResuming.html#exceptions"><strong>Pausing and Resuming</strong></a></li>
+<li><a class="xref" href="StoppingAndRestarting.html#exceptions"><strong>Stopping and Restarting</strong></a></li>
+<li><a class="xref" href="Cancelling.html#exceptions"><strong>Cancelling</strong></a></li>
 </ul>
 </article>
           </div>

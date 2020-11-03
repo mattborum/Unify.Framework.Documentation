@@ -88,25 +88,26 @@ myUnifyCoroutine.passDelay = 1.5f; // 1.5 seconds delay between each pass
 <h3 id="example">Example</h3>
 <p>This Unify Coroutine example calculates the first 10 numbers in the Fibonacci Sequence and prints each value to the Unity Console at intervals of 0.3 seconds.<br>
 The Unify Coroutine is repeated 3 times with a 2.5 second delay between each pass of the loop. Here, the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties are initialised through the Unify Coroutine constructor.<br>
-Also, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow looping and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>.</p>
+Also, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow looping and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'Ginny'</strong> to demonstrate how Unify Coroutine instances are identified in <a href="#exceptions"><strong>exception messages</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
 <li><strong>S</strong> to Start the Unify Coroutine</li>
 </ul>
 <br>
+<p><a href="../files/Coroutines_Looping.cs"><img src="../../../images/download_button_off.png" onmouseover="this.src='../../../images/download_button_on.png'" onmouseout="this.src='../../../images/download_button_off.png'"></a></p>
 <pre><code>using System.Collections;
 using Unify.Coroutines;
 using UnityEngine;
 
-public class Looping : MonoBehaviour
+public class Coroutines_Looping : MonoBehaviour
 {
     private UnifyCoroutine myUnifyCoroutine;
 
     void Start()
     {
-        myUnifyCoroutine = new UnifyCoroutine(Fibonacci(), loopCount:3, passDelay:2.5f);
-        myUnifyCoroutine.keepAlive = false;
+        myUnifyCoroutine = new UnifyCoroutine(Fibonacci(), loopCount: 3, passDelay: 2.5f, name: &quot;Ginny&quot;);
         myUnifyCoroutine.failSilently = true;
+        myUnifyCoroutine.keepAlive = false;
 
         myUnifyCoroutine.PassComplete += MyUnifyCoroutine_PassComplete;
 

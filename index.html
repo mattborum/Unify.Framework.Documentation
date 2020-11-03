@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>This is the HOMEPAGE. | Unify Framework </title>
+    <title>Introduction to Unify | Unify Framework </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="This is the HOMEPAGE. | Unify Framework ">
+    <meta name="title" content="Introduction to Unify | Unify Framework ">
     <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -52,13 +52,34 @@
         <div class="article row grid">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="this-is-the-homepage">This is the <strong>HOMEPAGE</strong>.</h1>
+<h1 id="introduction-to-unify">Introduction to Unify</h1>
 
-<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
-<ol>
-<li>Add images to the <em>images</em> folder if the file is referencing an image.</li>
-</ol>
+<p>This is version 0.1.0 of Unify. This release features the Unify Coroutine portion of the framework.</p>
+<h2 id="unify-coroutines">Unify Coroutines</h2>
+<p>Unify Coroutines extend Unity Coroutines to provide much requested extra functionality. Unify Coroutines add the following features; delayed start, pause, resume, cancel, restart/reuse, return a value and looping. Unify Coroutines are observable, subscribe to events to notified when a Unify Coroutine is; started, paused, resumed, stopped, cancelled and finished as well as events to capture a return value and callback after every pass of a looping Unify Coroutine.</p>
+<p>See the <a href="/0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutines.html"><strong>Unify Coroutine User Guide</strong></a> for more details.</p>
+<br>
+<h1 id="unify-roadmap">Unify Roadmap</h1>
+<p>Future releases of Unify will see the following features added;</p>
+<h2 id="unify-easing-functions">Unify Easing Functions</h2>
+<p>Unify provides many, many easing functions. You can use the lightweight static easing functions provided, or if you need something more powerful, Unify also provides a feature rich Coroutine version of each easing function. The Unify Coroutine version of easing functions offer all the Unify Coroutine features; pausing, resuming, looping and cloning/reuse to name a few, plus extra functionality including a progress update event and the choice of an absolute or relative end value. You can even bind a GameObject's transform to an easing function to manipulate a GameObject without any extra code. Unify's easing functions currently support easing of the following types; float, Vector2, Vector3, Vector4, Quaternion and Color.</p>
+<h2 id="unify-enumerators">Unify Enumerators</h2>
+<p>Iterate over any .NET collection any way you please. Unify provides the following enumerators out of the box; forwards, backwards, yoyo and random. Or if you need something different, you can write your own custom enumerators<sup><b>*</b></sup>.
+Move over just a portion of a collection using Unify's range feature, which also offers stepping. Combine range and stepping with any Unify Enumerator. You can choose to have the range automatically grow and shrink as items are added, inserted and removed. Unify Enumerators can be cloned for reuse, no need to create a new enumerator every time, just call the Reset() method and use again.</p>
+<h2 id="unify-collections">Unify Collections</h2>
+<p>Unify Collections allow you to iterate over a collection while adding, inserting and removing items at the same time. Unify Collections are observable, subscribe to events to be notified when items are added, inserted or removed, or the collecton is cleared. Unify provides a generic and non-generic version of the Collection. Use all the features of Unify Enumerators with Unify Collections.</p>
+<p>The Unify.Collection namespace also offers two specialised collections for Unify Coroutines; the <strong>UnifyCoroutineQueue</strong> and the <strong>UnifyCoroutineCollection</strong>. These two collections operate in the same way as a standard .NET Queue or Collection, but have been built to allow fine grained control of Unify Coroutines.</p>
+<p>With a Unify Coroutine Queue you can line up a chain of Unify Coroutines to be executed one after the other, or alternatively, the Unify Coroutine Collection allows you to start a group of Unify Coroutines at the same time.</p>
+<p>In fact, the Unify Coroutine Queue and Unify Coroutine Collection classes are also Unify Coroutines themselves. You can control a whole queue or collection of Unify Coroutines the same way you can a single Unify Coroutine.  You have all the functionality of pausing, restaring and reusing the whole collection just like a single Unify Coroutine. This means they are also interchangable with each other; you could, for example, add a Unify Coroutine Collection to a Unify Coroutine Queue or vice versa.</p>
+<p>As Unify Easing Functions are also Unify Coroutines, these can be added to a Unify Queue or Collection and controlled in the same way.</p>
+<br>
+<br>
+<p>Follow Unify:<br><br>
+<a href="https://twitter.com/UnifyFramework" target="_blank"><img src="images/twitter_off_40x40.png" onmouseover="this.src='images/twitter_on_40x40.png'" onmouseout="this.src='images/twitter_off_40x40.png'"></a>  
+<a href="https://www.linkedin.com/in/mattborum/" target="_blank"><img src="images/linkedin_off_40x40.png" onmouseover="this.src='images/linkedin_on_40x40.png'" onmouseout="this.src='images/linkedin_off_40x40.png'"></a></p>
+<br>
+<br>
+<sup><b>&ast;</b></sup> Available with the source code release of Unify.
 </article>
           </div>
         </div>

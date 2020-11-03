@@ -1,6 +1,9 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: APIIndex
+  name: API Documentation for Unify 0.1.0
+  href: 0.1.x/api/index.html
 - uid: CancellingaUnifyCoroutine
   name: Cancelling a Unify Coroutine
   href: 0.1.x/userguide/Unify.Coroutines/Cancelling.html

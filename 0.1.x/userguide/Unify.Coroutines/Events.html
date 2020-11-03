@@ -118,10 +118,11 @@ myUnifyCoroutine.Started += myUnifyCoroutineEventDelegate; // Subscribe
 myUnifyCoroutine.Started -= myUnifyCoroutineEventDelegate; // Unsubscribe
 </code></pre>
 <h3 id="event-args">Event Args</h3>
-<p>Unify Coroutines provide a custom data base class named <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs.html"><strong>UnifyCoroutineEventArgs</strong></a>, an instance of which is passed to event handlers. This base class holds no data, it is provided as a way for you to create your own custom <a href="https://docs.microsoft.com/en-us/dotnet/api/system.eventargs?view=netcore-3.1" target="_blank"><strong>EventArgs</strong></a> classes.<br></p>
+<p>Unify Coroutines provide a custom data base class named <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs.html"><strong>UnifyCoroutineEventArgs</strong></a>, an instance of which is passed to event handlers. This base class holds no data, it is provided as a way for you to create your own custom <a href="https://docs.microsoft.com/en-us/dotnet/api/system.eventargs" target="_blank"><strong>EventArgs</strong></a> classes.<br></p>
 <h3 id="example">Example</h3>
-<p>This Unify Coroutine example counts from 1 to 100, printing all even numbers to the Unity Console at 1 second intervals.<br>
-Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow restarting and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>.</p>
+<p>This Unify Coroutine example counts from 1 to 20, printing all even numbers to the Unity Console at 1 second intervals. The Unify Coroutine is repeated 4 times with a 1 second delay between each pass of the loop.<br>
+Here, the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties are initialised through the Unify Coroutine constructor.<br>
+Also, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow restarting and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>.</p>
 <p>This example shows the three ways you can subscribe to Unify Coroutine events. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a> method is used to demonstrate unsubscribing from a Unify Coroutine event using the <a href="#programmatically"><strong>programmatical</strong></a> method described <a href="#programmatically"><strong>above</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
@@ -133,28 +134,30 @@ Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#U
 <li><strong>E</strong> to subscribe to/unsubscribe from the Paused event</li>
 </ul>
 <br>
+<p><a href="../files/Coroutines_Events.cs"><img src="../../../images/download_button_off.png" onmouseover="this.src='../../../images/download_button_on.png'" onmouseout="this.src='../../../images/download_button_off.png'"></a></p>
 <pre><code>using System;
 using System.Collections;
 using Unify.Coroutines;
 using UnityEngine;
 
-public class CoroutineEvents : MonoBehaviour
+public class Coroutines_Events : MonoBehaviour
 {
     private UnifyCoroutine myUnifyCoroutine;
     private bool pausedSubscribeToggle = false;
 
-    private EventHandler&lt;UnifyCoroutineEventArgs&gt; myUnifyCoroutineEventDelegate;
+    private EventHandler&lt;UnifyCoroutineEventArgs&gt; pausedEventDelegate;
+    private EventHandler&lt;UnifyCoroutineEventArgs&gt; passCompleteEventDelegate;
 
     void Start()
     {
-        myUnifyCoroutine = new UnifyCoroutine(WaitAndPrint(), name: &quot;Grace&quot;) { failSilently = false, keepAlive = true };
+        myUnifyCoroutine = new UnifyCoroutine(WaitAndPrint(), name: &quot;Grace&quot;, loopCount: 4, passDelay: 1f) { failSilently = false, keepAlive = true };
 
         // Subscribe to the Started event programmatically.
         myUnifyCoroutine.Started += StartedEventHandler;
 
         // Subscribe to the Paused event programmatically.
         myUnifyCoroutine.Paused += PausedEventHandler;
-        myUnifyCoroutine.Paused += myUnifyCoroutineEventDelegate;
+        myUnifyCoroutine.Paused += pausedEventDelegate;
 
         // Subscribe to the Resumed event using an anonymous method.
         myUnifyCoroutine.Resumed += delegate(object sender, UnifyCoroutineEventArgs e)
@@ -173,6 +176,10 @@ public class CoroutineEvents : MonoBehaviour
         {
             print(&quot;* CANCELLED EVENT HANDLER *&quot;);
         };
+
+        // Subscribe to the PassComplete event using a lambda expression through a referenced delegate
+        passCompleteEventDelegate = (sender, args) =&gt; { print(&quot;* PASS COMPLETE EVENT HANDLER*&quot;);};
+        myUnifyCoroutine.PassComplete += passCompleteEventDelegate;
 
         // Subscribe to the Finished event using a lambda expression.
         myUnifyCoroutine.Finished += (sender, e) =&gt;
@@ -215,13 +222,15 @@ public class CoroutineEvents : MonoBehaviour
             if (pausedSubscribeToggle)
             {
                 myUnifyCoroutine.Paused += PausedEventHandler;
-                myUnifyCoroutine.Paused += myUnifyCoroutineEventDelegate;
+                myUnifyCoroutine.Paused += pausedEventDelegate;
+
                 print(&quot;* SUBSCRIBED TO PAUSED EVENT *&quot;);
             }
             else
             {
                 myUnifyCoroutine.Paused -= PausedEventHandler;
-                myUnifyCoroutine.Paused -= myUnifyCoroutineEventDelegate;
+                myUnifyCoroutine.Paused -= pausedEventDelegate;
+
                 print(&quot;* UNSUBSCRIBED FROM PAUSED EVENT *&quot;);
             }
 
@@ -231,7 +240,7 @@ public class CoroutineEvents : MonoBehaviour
 
     IEnumerator WaitAndPrint()
     {
-        for (int i = 1; i &lt;= 100; i++)
+        for (int i = 1; i &lt;= 20; i++)
         {
             if (i % 2 == 0)
             {
@@ -258,7 +267,7 @@ public class CoroutineEvents : MonoBehaviour
 <li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter</li>
 </ul>
 <br>
-<p>Unify does not throw exceptions from Unify Coroutine events, however exceptions <strong>will</strong> be thrown from other operations:<br></p>
+<p>Unify does not throw exceptions specifically for Unify Coroutine events, however exceptions <strong>will</strong> be thrown from other operations:<br></p>
 <ul>
 <li><a class="xref" href="CreatingAndStarting.html#exceptions"><strong>Creating and Starting</strong></a></li>
 <li><a class="xref" href="PausingAndResuming.html#exceptions"><strong>Pausing and Resuming</strong></a></li>

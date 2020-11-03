@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/index.html",
-          "hash": "unmX/xK87OGmaG39UnFt6A=="
+          "hash": "jyidqK/JyxJBpY75A66HNw=="
         }
       },
       "is_incremental": true,
@@ -173,26 +173,14 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "0.1.x/userguide/IntroductionToUnifyExamples.md",
-      "output": {
-        ".html": {
-          "relative_path": "0.1.x/userguide/IntroductionToUnifyExamples.html",
-          "hash": "R+doutHpf7A+G3+wBHfykw=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "0.1.x/userguide/Unify.Coroutines/Cancelling.md",
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/Cancelling.html",
-          "hash": "9UavPCv7HaPFgfHuwXihyQ=="
+          "hash": "c2ITEqPk83x2dRUiIv76yw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/CreatingAndStarting.html",
-          "hash": "58Tmclg/IZPCLU6ccliWgQ=="
+          "hash": "+95slX/WC8B/U0aHTS03gg=="
         }
       },
       "is_incremental": true,
@@ -213,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/DelayedStart.html",
-          "hash": "Xzwr2ulcxeztzwB0pOlD9Q=="
+          "hash": "BGChay38tz+onCJHAmjYUw=="
         }
       },
       "is_incremental": true,
@@ -225,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/Events.html",
-          "hash": "odexrOPJBFnuKslQgfMw7g=="
+          "hash": "IANwEEwPKolhQVIuQC0/xA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutines.html",
-          "hash": "iEywQ8PnCqXIHds1A8xENg=="
+          "hash": "lWysST/dmZMGKTlgMWbOEQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/Looping.html",
-          "hash": "UOiH8jF2zMxFS0NvOLqMZg=="
+          "hash": "V9zqslO5pwa7tAwZSueQ/g=="
         }
       },
       "is_incremental": true,
@@ -261,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/PausingAndResuming.html",
-          "hash": "BpPFHfQtci/L8Jy+AJUvmg=="
+          "hash": "0izK02xAdXtsGCAD9onKEQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/ReturningAValue.html",
-          "hash": "2x+17H5xg/o6qfQyAw0cFw=="
+          "hash": "TN5/ag6g335M8y1IYA06mQ=="
         }
       },
       "is_incremental": true,
@@ -285,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/StaticUnifyCoroutines.html",
-          "hash": "vjO3U0JJMuVn5GLl1IOw/g=="
+          "hash": "AhpAUstotIRoxgLVoQgZTg=="
         }
       },
       "is_incremental": true,
@@ -297,22 +285,120 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/StoppingAndRestarting.html",
-          "hash": "1TpRDtDDahUdnUMB/ELX0w=="
+          "hash": "Vdmpg6eO19QQtJ3FAVzufQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/UnifyTimer.md",
+      "type": "Resource",
+      "source_relative_path": "0.1.x/userguide/files/Coroutines_Cancelling.cs",
       "output": {
-        ".html": {
-          "relative_path": "0.1.x/userguide/Unify.Coroutines/UnifyTimer.html",
-          "hash": "IDXNJeURYzb2CLxcfLr8qg=="
+        "resource": {
+          "relative_path": "0.1.x/userguide/files/Coroutines_Cancelling.cs"
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "0.1.x/userguide/files/Coroutines_CreatingAndStarting.cs",
+      "output": {
+        "resource": {
+          "relative_path": "0.1.x/userguide/files/Coroutines_CreatingAndStarting.cs"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "0.1.x/userguide/files/Coroutines_DelayedStart.cs",
+      "output": {
+        "resource": {
+          "relative_path": "0.1.x/userguide/files/Coroutines_DelayedStart.cs"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "0.1.x/userguide/files/Coroutines_Events.cs",
+      "output": {
+        "resource": {
+          "relative_path": "0.1.x/userguide/files/Coroutines_Events.cs"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "0.1.x/userguide/files/Coroutines_Looping.cs",
+      "output": {
+        "resource": {
+          "relative_path": "0.1.x/userguide/files/Coroutines_Looping.cs"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "0.1.x/userguide/files/Coroutines_PausingAndResuming.cs",
+      "output": {
+        "resource": {
+          "relative_path": "0.1.x/userguide/files/Coroutines_PausingAndResuming.cs"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "0.1.x/userguide/files/Coroutines_ReturnValueMultiple.cs",
+      "output": {
+        "resource": {
+          "relative_path": "0.1.x/userguide/files/Coroutines_ReturnValueMultiple.cs"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "0.1.x/userguide/files/Coroutines_ReturnValueOnce.cs",
+      "output": {
+        "resource": {
+          "relative_path": "0.1.x/userguide/files/Coroutines_ReturnValueOnce.cs"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "0.1.x/userguide/files/Coroutines_StaticStart.cs",
+      "output": {
+        "resource": {
+          "relative_path": "0.1.x/userguide/files/Coroutines_StaticStart.cs"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "0.1.x/userguide/files/Coroutines_StoppingAndRestarting.cs",
+      "output": {
+        "resource": {
+          "relative_path": "0.1.x/userguide/files/Coroutines_StoppingAndRestarting.cs"
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -321,7 +407,53 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/toc.html",
-          "hash": "r5iV6TIDdOvJJhpCquKuoA=="
+          "hash": "qL/xQ1YhPO81EtGYb2kUvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "bugs.md",
+      "output": {
+        ".html": {
+          "relative_path": "bugs.html",
+          "hash": "KHE3ClQjpBoJZsG8XAV0QQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "contact.md",
+      "output": {
+        ".html": {
+          "relative_path": "contact.html",
+          "hash": "ceJANE5GR/1uz2+HiLm0og=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/download_button_off.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/download_button_off.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/download_button_on.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/download_button_on.png"
         }
       },
       "is_incremental": false,
@@ -487,7 +619,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "edJJcmuJE5SQpZrSgvjkXw=="
+          "hash": "Wyh9kgTdtilVvGZoRgpMtA=="
         }
       },
       "is_incremental": true,
@@ -499,7 +631,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "L+uEGsSPigKA7UxgdRc4sw=="
+          "hash": "/pegaiIyphRjCLD90oI2Jg=="
         }
       },
       "is_incremental": false,
@@ -519,7 +651,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 14,
-          "skipped_file_count": 14
+          "skipped_file_count": 13
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
