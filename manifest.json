@@ -430,10 +430,10 @@
       "output": {
         ".html": {
           "relative_path": "bugs.html",
-          "hash": "KHE3ClQjpBoJZsG8XAV0QQ=="
+          "hash": "Ty2LZw31KqOclvUIbV3S/Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -636,7 +636,7 @@
           "hash": "ROkDyEkdFMG3BTH19yrj/g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
