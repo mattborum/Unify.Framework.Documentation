@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutines.html",
-          "hash": "lWysST/dmZMGKTlgMWbOEQ=="
+          "hash": "CdOrFaV42Y5/TtabW3M1iQ=="
         }
       },
       "is_incremental": false,
@@ -614,15 +614,18 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Wyh9kgTdtilVvGZoRgpMtA=="
+          "hash": "thiq5xhXQzyM6uBnKQVXmw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -651,7 +654,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 14,
-          "skipped_file_count": 13
+          "skipped_file_count": 12
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
