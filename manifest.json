@@ -433,7 +433,7 @@
           "hash": "GMDJWP4pLP2H2FqVfchHIg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -625,18 +625,15 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ROkDyEkdFMG3BTH19yrj/g=="
+          "hash": "4G6gZr9l102c2wIzIIxt8A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
