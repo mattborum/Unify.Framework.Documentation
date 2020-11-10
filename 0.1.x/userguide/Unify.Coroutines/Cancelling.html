@@ -77,8 +77,6 @@ Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#U
 <li><strong>X</strong> to Stop the Unify Coroutine</li>
 <li><strong>C</strong> to Cancel the Unify Coroutine</li>
 </ul>
-<br>
-<p><a href="../files/Coroutines_Cancelling.cs"><img src="../../../images/download_button_off.png" onmouseover="this.src='../../../images/download_button_on.png'" onmouseout="this.src='../../../images/download_button_off.png'"></a></p>
 <pre><code>using System.Collections;
 using Unify.Coroutines;
 using UnityEngine;
@@ -89,7 +87,7 @@ public class Cancelling : MonoBehaviour
 
     void Start()
     {
-        myUnifyCoroutine = new UnifyCoroutine(WaitAndPrint(), name: &quot;Georgia&quot;) { failSilently = false };
+        myUnifyCoroutine = new UnifyCoroutine(WaitAndPrint(), name: &quot;Georgia&quot;) { failSilently = false, keepAlive = true };
      
         print(&quot;press S to START, X to STOP, C to CANCEL&quot;);
     }

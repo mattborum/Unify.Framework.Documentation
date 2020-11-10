@@ -77,15 +77,13 @@ IEnumerator SayHello()
 <pre><code>myUnifyCoroutine.startDelay = 2.5f; // 2.5 seconds
 </code></pre>
 <h3 id="example">Example</h3>
-<p>This Unify Coroutine has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 2.5 seconds and then prints the string <em>&quot;Hello, Unify!&quot;</em>, one letter at a time to the Unity Console at 1 second intervals.<br>
+<p>This Unify Coroutine has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 5 seconds and then prints the string <em>&quot;Hello, Unify!&quot;</em>, one letter at a time to the Unity Console at 1 second intervals.<br>
 Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'Dave'</strong> to demonstrate how Unify Coroutine instances are identified in <a href="#exceptions"><strong>exception messages</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:
 <br></p>
 <ul>
 <li><strong>S</strong> to Start</li>
 </ul>
-<br>
-<p><a href="../files/Coroutines_DelayedStart.cs"><img src="../../../images/download_button_off.png" onmouseover="this.src='../../../images/download_button_on.png'" onmouseout="this.src='../../../images/download_button_off.png'"></a></p>
 <pre><code>using System.Collections;
 using Unify.Coroutines;
 using UnityEngine;
@@ -96,15 +94,16 @@ public class DelayedStart : MonoBehaviour
 
     void Start()
     {
-        myUnifyCoroutine = new UnifyCoroutine(SayHello(), startDelay: 2.5f, name: &quot;Dave&quot;) { failSilently = false };
+        myUnifyCoroutine = new UnifyCoroutine(SayHello(), startDelay: 5f, name: &quot;Dave&quot;) { failSilently = false };
 
-        print(&quot;press S to START&quot;)
+        print(&quot;press S to START&quot;);
     }
 
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.S))
         {
+            print(&quot;starting Unify Coroutine in 5 seconds...&quot;);
             myUnifyCoroutine.Start();
         }
     }

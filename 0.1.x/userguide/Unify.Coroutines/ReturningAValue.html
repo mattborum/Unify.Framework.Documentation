@@ -87,8 +87,6 @@ It uses a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html
 <ul>
 <li><strong>S</strong> to Start the Unify Coroutine</li>
 </ul>
-<br>
-<p><a href="../files/Coroutines_ReturnValueOnce.cs"><img src="../../../images/download_button_off.png" onmouseover="this.src='../../../images/download_button_on.png'" onmouseout="this.src='../../../images/download_button_off.png'"></a></p>
 <pre><code>using System.Collections;
 using Unify.Coroutines;
 using UnityEngine;
@@ -133,8 +131,6 @@ Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#U
 <ul>
 <li><strong>S</strong> to Start the Unify Coroutine</li>
 </ul>
-<br>
-<p><a href="../files/Coroutines_ReturnValueMultiple.cs"><img src="../../../images/download_button_off.png" onmouseover="this.src='../../../images/download_button_on.png'" onmouseout="this.src='../../../images/download_button_off.png'"></a></p>
 <pre><code>using System.Collections;
 using Unify.Coroutines;
 using UnityEngine;
@@ -150,6 +146,8 @@ public class Coroutines_ReturnValueMultiple : MonoBehaviour
         myUnifyCoroutine.keepAlive = true;
 
         myUnifyCoroutine.ValueReturned += ValueReturnedHandler;
+
+        print(&quot;press S to START&quot;);
     }
 
     void Update()
