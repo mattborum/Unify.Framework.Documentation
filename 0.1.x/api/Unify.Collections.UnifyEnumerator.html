@@ -65,7 +65,8 @@
   
   <h1 id="Unify_Collections_UnifyEnumerator" data-uid="Unify.Collections.UnifyEnumerator" class="text-break">Class UnifyEnumerator
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Base class from which all Unify Enumerators should derive.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -117,7 +118,8 @@
   </h3>
   <a id="Unify_Collections_UnifyEnumerator_Current_" data-uid="Unify.Collections.UnifyEnumerator.Current*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_Current" data-uid="Unify.Collections.UnifyEnumerator.Current">Current</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current item pointed to by the <a class="xref" href="Unify.Collections.UnifyEnumerator.html">UnifyEnumerator</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -140,7 +142,8 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerator_currentIndex_" data-uid="Unify.Collections.UnifyEnumerator.currentIndex*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_currentIndex" data-uid="Unify.Collections.UnifyEnumerator.currentIndex">currentIndex</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. The index of the current item pointed to by the <a class="xref" href="Unify.Collections.UnifyEnumerator.html">UnifyEnumerator</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -163,7 +166,8 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerator_currentLoopCount_" data-uid="Unify.Collections.UnifyEnumerator.currentLoopCount*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_currentLoopCount" data-uid="Unify.Collections.UnifyEnumerator.currentLoopCount">currentLoopCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Keeps track of how many loops have completed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -186,7 +190,8 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerator_cursorDirection_" data-uid="Unify.Collections.UnifyEnumerator.cursorDirection*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_cursorDirection" data-uid="Unify.Collections.UnifyEnumerator.cursorDirection">cursorDirection</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The direction of the enumerator, -1 is backwards, 0 is static, 1 is forwards.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -209,7 +214,8 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerator_disposed_" data-uid="Unify.Collections.UnifyEnumerator.disposed*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_disposed" data-uid="Unify.Collections.UnifyEnumerator.disposed">disposed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A value indicating whether the enumerator has been disposed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -230,13 +236,14 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_UnifyEnumerator_EnumerableRange_" data-uid="Unify.Collections.UnifyEnumerator.EnumerableRange*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerator_EnumerableRange" data-uid="Unify.Collections.UnifyEnumerator.EnumerableRange">EnumerableRange</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Unify_Collections_UnifyEnumerator_enumerableRange_" data-uid="Unify.Collections.UnifyEnumerator.enumerableRange*"></a>
+  <h4 id="Unify_Collections_UnifyEnumerator_enumerableRange" data-uid="Unify.Collections.UnifyEnumerator.enumerableRange">enumerableRange</h4>
+  <div class="markdown level1 summary"><p>See <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnifyEnumerableRange EnumerableRange { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public UnifyEnumerableRange enumerableRange { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,7 +262,8 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerator_firstRun_" data-uid="Unify.Collections.UnifyEnumerator.firstRun*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_firstRun" data-uid="Unify.Collections.UnifyEnumerator.firstRun">firstRun</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A value indicating whether the enumerator has been run yet. Used to perform first time initialisation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -276,32 +284,10 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_UnifyEnumerator_historyStackSize_" data-uid="Unify.Collections.UnifyEnumerator.historyStackSize*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerator_historyStackSize" data-uid="Unify.Collections.UnifyEnumerator.historyStackSize">historyStackSize</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int historyStackSize { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Unify_Collections_UnifyEnumerator_isValid_" data-uid="Unify.Collections.UnifyEnumerator.isValid*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_isValid" data-uid="Unify.Collections.UnifyEnumerator.isValid">isValid</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Value indicating whether the <a class="xref" href="Unify.Collections.UnifyEnumerator.html">UnifyEnumerator</a> is in a valid state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,13 +308,14 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_UnifyEnumerator_loopCount_" data-uid="Unify.Collections.UnifyEnumerator.loopCount*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerator_loopCount" data-uid="Unify.Collections.UnifyEnumerator.loopCount">loopCount</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Unify_Collections_UnifyEnumerator_maxRewindItems_" data-uid="Unify.Collections.UnifyEnumerator.maxRewindItems*"></a>
+  <h4 id="Unify_Collections_UnifyEnumerator_maxRewindItems" data-uid="Unify.Collections.UnifyEnumerator.maxRewindItems">maxRewindItems</h4>
+  <div class="markdown level1 summary"><p>The maximum number of items kept in the history stack to allow rewinding of the enumerator. Must be zero or greater.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int loopCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int maxRewindItems { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,7 +334,8 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerator_parent_" data-uid="Unify.Collections.UnifyEnumerator.parent*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_parent" data-uid="Unify.Collections.UnifyEnumerator.parent">parent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The source collection of the enumerator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -370,7 +358,8 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerator_resetPending_" data-uid="Unify.Collections.UnifyEnumerator.resetPending*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_resetPending" data-uid="Unify.Collections.UnifyEnumerator.resetPending">resetPending</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A value indicating whether the enumerator is about to be reset. Allows for pre-reset tasks to be performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -393,17 +382,19 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Unify_Collections_UnifyEnumerator_ClearStack_" data-uid="Unify.Collections.UnifyEnumerator.ClearStack*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerator_ClearStack" data-uid="Unify.Collections.UnifyEnumerator.ClearStack">ClearStack()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Unify_Collections_UnifyEnumerator_ClearRewindStack_" data-uid="Unify.Collections.UnifyEnumerator.ClearRewindStack*"></a>
+  <h4 id="Unify_Collections_UnifyEnumerator_ClearRewindStack" data-uid="Unify.Collections.UnifyEnumerator.ClearRewindStack">ClearRewindStack()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Clears the rewind stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void ClearStack()</code></pre>
+    <pre><code class="lang-csharp hljs">protected void ClearRewindStack()</code></pre>
   </div>
   <a id="Unify_Collections_UnifyEnumerator_Dispose_" data-uid="Unify.Collections.UnifyEnumerator.Dispose*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_Dispose" data-uid="Unify.Collections.UnifyEnumerator.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Dispose.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -411,7 +402,8 @@
   </div>
   <a id="Unify_Collections_UnifyEnumerator_Dispose_" data-uid="Unify.Collections.UnifyEnumerator.Dispose*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_Dispose_System_Boolean_" data-uid="Unify.Collections.UnifyEnumerator.Dispose(System.Boolean)">Dispose(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Dispose managed objects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -436,7 +428,8 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerator_GetCurrentIndex_" data-uid="Unify.Collections.UnifyEnumerator.GetCurrentIndex*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_GetCurrentIndex" data-uid="Unify.Collections.UnifyEnumerator.GetCurrentIndex">GetCurrentIndex()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Gets the index of the current item that the enumerator is pointing to in the source collection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -453,7 +446,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The index of the current item.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -467,7 +461,8 @@
   </div>
   <a id="Unify_Collections_UnifyEnumerator_MoveNext_" data-uid="Unify.Collections.UnifyEnumerator.MoveNext*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_MoveNext" data-uid="Unify.Collections.UnifyEnumerator.MoveNext">MoveNext()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get the next item in the collection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -484,29 +479,33 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>True if the enumerator can be moved to the next element, otherwise false if the enumerator has finished.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_UnifyEnumerator_OnLoopFinished_" data-uid="Unify.Collections.UnifyEnumerator.OnLoopFinished*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_OnLoopFinished" data-uid="Unify.Collections.UnifyEnumerator.OnLoopFinished">OnLoopFinished()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when a looping <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> has successfully completed all passes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnLoopFinished()</code></pre>
   </div>
-  <a id="Unify_Collections_UnifyEnumerator_OnPassFinished_" data-uid="Unify.Collections.UnifyEnumerator.OnPassFinished*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerator_OnPassFinished" data-uid="Unify.Collections.UnifyEnumerator.OnPassFinished">OnPassFinished()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Unify_Collections_UnifyEnumerator_OnPassComplete_" data-uid="Unify.Collections.UnifyEnumerator.OnPassComplete*"></a>
+  <h4 id="Unify_Collections_UnifyEnumerator_OnPassComplete" data-uid="Unify.Collections.UnifyEnumerator.OnPassComplete">OnPassComplete()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when a looping <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> has successfully completed a pass.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnPassFinished()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void OnPassComplete()</code></pre>
   </div>
   <a id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_System_Object_Unify_Collections_UnifyCollectionChangedEventArgs_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged(System.Object,Unify.Collections.UnifyCollectionChangedEventArgs)">parent_CollectionChanged(Object, UnifyCollectionChangedEventArgs)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Handles the <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a> <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionChanged">CollectionChanged</a> event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -525,18 +524,21 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">sender</span></td>
-        <td></td>
+        <td><p>The source <a class="xref" href="Unify.Collections.IUnifyList.html">IUnifyList</a> raising the event.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Unify.Collections.UnifyCollectionChangedEventArgs.html">UnifyCollectionChangedEventArgs</a></td>
         <td><span class="parametername">e</span></td>
-        <td></td>
+        <td><p>Class holding data relating to the <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a> <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionChanged">CollectionChanged</a> event.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_Add_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged_Add*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_Add_Unify_Collections_UnifyCollectionChangedEventArgs_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged_Add(Unify.Collections.UnifyCollectionChangedEventArgs)">parent_CollectionChanged_Add(UnifyCollectionChangedEventArgs)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when the source <a class="xref" href="Unify.Collections.IUnifyList.html">IUnifyList</a> becomes invalidated by having an item added.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -555,13 +557,15 @@
       <tr>
         <td><a class="xref" href="Unify.Collections.UnifyCollectionChangedEventArgs.html">UnifyCollectionChangedEventArgs</a></td>
         <td><span class="parametername">e</span></td>
-        <td></td>
+        <td><p>Class holding data relating to the <a class="xref" href="Unify.Collections.Generic.IUnifyObservableCollection-1.html">IUnifyObservableCollection&lt;T&gt;</a> <a class="xref" href="Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionChanged">CollectionChanged</a> event.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_Clear_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged_Clear*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_Clear_Unify_Collections_UnifyCollectionChangedEventArgs_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged_Clear(Unify.Collections.UnifyCollectionChangedEventArgs)">parent_CollectionChanged_Clear(UnifyCollectionChangedEventArgs)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when the source <a class="xref" href="Unify.Collections.IUnifyList.html">IUnifyList</a> becomes invalidated by being cleared.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -580,13 +584,15 @@
       <tr>
         <td><a class="xref" href="Unify.Collections.UnifyCollectionChangedEventArgs.html">UnifyCollectionChangedEventArgs</a></td>
         <td><span class="parametername">e</span></td>
-        <td></td>
+        <td><p>Class holding data relating to the <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a> <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionChanged">CollectionChanged</a> event.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_Insert_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged_Insert*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_Insert_Unify_Collections_UnifyCollectionChangedEventArgs_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged_Insert(Unify.Collections.UnifyCollectionChangedEventArgs)">parent_CollectionChanged_Insert(UnifyCollectionChangedEventArgs)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when the source <a class="xref" href="Unify.Collections.IUnifyList.html">IUnifyList</a> becomes invalidated by having an item inserted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -605,13 +611,15 @@
       <tr>
         <td><a class="xref" href="Unify.Collections.UnifyCollectionChangedEventArgs.html">UnifyCollectionChangedEventArgs</a></td>
         <td><span class="parametername">e</span></td>
-        <td></td>
+        <td><p>Class holding data relating to the <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a> <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionChanged">CollectionChanged</a> event.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_Remove_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged_Remove*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_Remove_Unify_Collections_UnifyCollectionChangedEventArgs_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged_Remove(Unify.Collections.UnifyCollectionChangedEventArgs)">parent_CollectionChanged_Remove(UnifyCollectionChangedEventArgs)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when the source <a class="xref" href="Unify.Collections.IUnifyList.html">IUnifyList</a> becomes invalidated by having an item removed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -630,13 +638,15 @@
       <tr>
         <td><a class="xref" href="Unify.Collections.UnifyCollectionChangedEventArgs.html">UnifyCollectionChangedEventArgs</a></td>
         <td><span class="parametername">e</span></td>
-        <td></td>
+        <td><p>Class holding data relating to the <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a> <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionChanged">CollectionChanged</a> event.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_Reset_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged_Reset*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_parent_CollectionChanged_Reset_Unify_Collections_UnifyCollectionChangedEventArgs_" data-uid="Unify.Collections.UnifyEnumerator.parent_CollectionChanged_Reset(Unify.Collections.UnifyCollectionChangedEventArgs)">parent_CollectionChanged_Reset(UnifyCollectionChangedEventArgs)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when the source <a class="xref" href="Unify.Collections.IUnifyList.html">IUnifyList</a> becomes invalidated by being reset.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -655,13 +665,15 @@
       <tr>
         <td><a class="xref" href="Unify.Collections.UnifyCollectionChangedEventArgs.html">UnifyCollectionChangedEventArgs</a></td>
         <td><span class="parametername">e</span></td>
-        <td></td>
+        <td><p>Class holding data relating to the <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a> <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionChanged">CollectionChanged</a> event.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_UnifyEnumerator_Push_" data-uid="Unify.Collections.UnifyEnumerator.Push*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_Push_System_Object_" data-uid="Unify.Collections.UnifyEnumerator.Push(System.Object)">Push(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Put the current item on top of the rewind stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -680,13 +692,15 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><p>The item to be pushed onto the stack.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_UnifyEnumerator_Reset_" data-uid="Unify.Collections.UnifyEnumerator.Reset*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_Reset" data-uid="Unify.Collections.UnifyEnumerator.Reset">Reset()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resets the <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> to its start state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -695,7 +709,8 @@
   <h3 id="events">Events
   </h3>
   <h4 id="Unify_Collections_UnifyEnumerator_Invalidated" data-uid="Unify.Collections.UnifyEnumerator.Invalidated">Invalidated</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Callback when the <a class="xref" href="Unify.Collections.UnifyEnumerator.html">UnifyEnumerator</a> enters an invalid state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -717,7 +732,8 @@
     </tbody>
   </table>
   <h4 id="Unify_Collections_UnifyEnumerator_LoopFinished" data-uid="Unify.Collections.UnifyEnumerator.LoopFinished">LoopFinished</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Callback when all passes of the loop have successfully completed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -738,12 +754,13 @@
       </tr>
     </tbody>
   </table>
-  <h4 id="Unify_Collections_UnifyEnumerator_PassFinished" data-uid="Unify.Collections.UnifyEnumerator.PassFinished">PassFinished</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Unify_Collections_UnifyEnumerator_PassComplete" data-uid="Unify.Collections.UnifyEnumerator.PassComplete">PassComplete</h4>
+  <div class="markdown level1 summary"><p>Callback when a successful pass of the loop has completed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler PassFinished</code></pre>
+    <pre><code class="lang-csharp hljs">public event EventHandler PassComplete</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">

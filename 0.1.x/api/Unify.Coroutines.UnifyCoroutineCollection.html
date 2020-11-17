@@ -1,0 +1,1074 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UnifyCoroutineCollection
+   | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UnifyCoroutineCollection
+   | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="Unify.Coroutines.UnifyCoroutineCollection">
+  
+  
+  <h1 id="Unify_Coroutines_UnifyCoroutineCollection" data-uid="Unify.Coroutines.UnifyCoroutineCollection" class="text-break">Class UnifyCoroutineCollection
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a></div>
+    <div class="level2"><span class="xref">UnifyCoroutineCollection</span></div>
+      <div class="level3"><a class="xref" href="Unify.Coroutines.UnifyCoroutineQueue.html">UnifyCoroutineQueue</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a>&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Started">UnifyCoroutineBase.Started</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Paused">UnifyCoroutineBase.Paused</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resumed">UnifyCoroutineBase.Resumed</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stopped">UnifyCoroutineBase.Stopped</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancelled">UnifyCoroutineBase.Cancelled</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete">UnifyCoroutineBase.PassComplete</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished">UnifyCoroutineBase.Finished</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount">UnifyCoroutineBase.loopCount</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_currentPassCount">UnifyCoroutineBase.currentPassCount</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_coroutine">UnifyCoroutineBase.coroutine</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_firstRun">UnifyCoroutineBase.firstRun</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target">UnifyCoroutineBase.target</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_originalTarget">UnifyCoroutineBase.originalTarget</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_unifyCoroutine">UnifyCoroutineBase.unifyCoroutine</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name">UnifyCoroutineBase.name</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_state">UnifyCoroutineBase.state</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_useScaledTime">UnifyCoroutineBase.useScaledTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay">UnifyCoroutineBase.startDelay</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay">UnifyCoroutineBase.passDelay</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_OnStarted">UnifyCoroutineBase.OnStarted()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_OnPaused">UnifyCoroutineBase.OnPaused()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_OnResumed">UnifyCoroutineBase.OnResumed()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_OnCancelled">UnifyCoroutineBase.OnCancelled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_OnStopped">UnifyCoroutineBase.OnStopped()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_OnPassComplete">UnifyCoroutineBase.OnPassComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_OnFinished">UnifyCoroutineBase.OnFinished()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_WaitForDelay_System_Single_">UnifyCoroutineBase.WaitForDelay(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_CloneCoroutine__1___0_">UnifyCoroutineBase.CloneCoroutine&lt;T&gt;(T)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Unify.Coroutines.html">Unify.Coroutines</a></h6>
+  <h6><strong>Assembly</strong>: Unify.Coroutines.dll</h6>
+  <h5 id="Unify_Coroutines_UnifyCoroutineCollection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UnifyCoroutineCollection : UnifyCoroutineBase, IList&lt;UnifyCoroutineBase&gt;, ICollection&lt;UnifyCoroutineBase&gt;, IEnumerable&lt;UnifyCoroutineBase&gt;, IEnumerable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection__ctor_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection__ctor" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor">UnifyCoroutineCollection()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyCoroutineCollection()</code></pre>
+  </div>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection__ctor_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection__ctor_System_Collections_Generic_IEnumerable_Unify_Coroutines_UnifyCoroutineBase__" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor(System.Collections.Generic.IEnumerable{Unify.Coroutines.UnifyCoroutineBase})">UnifyCoroutineCollection(IEnumerable&lt;UnifyCoroutineBase&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyCoroutineCollection(IEnumerable&lt;UnifyCoroutineBase&gt; collection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a>&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection__ctor_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection__ctor_System_Int32_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor(System.Int32)">UnifyCoroutineCollection(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyCoroutineCollection(int capacity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">capacity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_m_unifyCoroutineList" data-uid="Unify.Coroutines.UnifyCoroutineCollection.m_unifyCoroutineList">m_unifyCoroutineList</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly UnifyList&lt;UnifyCoroutineBase&gt; m_unifyCoroutineList</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.Generic.UnifyList-1.html">UnifyList</a>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_waiting" data-uid="Unify.Coroutines.UnifyCoroutineCollection.waiting">waiting</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool waiting</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Count_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Count*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Count" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Count">Count</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_enumerableRange_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.enumerableRange*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_enumerableRange" data-uid="Unify.Coroutines.UnifyCoroutineCollection.enumerableRange">enumerableRange</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyEnumerableRange enumerableRange { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_failSilently_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.failSilently*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_failSilently" data-uid="Unify.Coroutines.UnifyCoroutineCollection.failSilently">failSilently</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool failSilently { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">UnifyCoroutineBase.failSilently</a></div>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_IsReadOnly_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.IsReadOnly*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_IsReadOnly" data-uid="Unify.Coroutines.UnifyCoroutineCollection.IsReadOnly">IsReadOnly</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Item_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Item*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Item_System_Int32_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Item(System.Int32)">Item[Int32]</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyCoroutineBase this[int index] { get; set; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_keepAlive_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.keepAlive*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_keepAlive" data-uid="Unify.Coroutines.UnifyCoroutineCollection.keepAlive">keepAlive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool keepAlive { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive">UnifyCoroutineBase.keepAlive</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Add_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Add*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Add_System_Collections_IEnumerator_System_Single_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Add(System.Collections.IEnumerator,System.Single)">Add(IEnumerator, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(IEnumerator _target, float _delay = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><span class="parametername">_target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">_delay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Add_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Add*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Add_Unify_Coroutines_UnifyCoroutineBase_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Add(Unify.Coroutines.UnifyCoroutineBase)">Add(UnifyCoroutineBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(UnifyCoroutineBase _target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a></td>
+        <td><span class="parametername">_target</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Cancel_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Cancel*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Cancel" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Cancel">Cancel()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Cancel()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancel">UnifyCoroutineBase.Cancel()</a></div>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Clear_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Clear*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Clear" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Clear">Clear()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Contains_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Contains*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Contains_Unify_Coroutines_UnifyCoroutineBase_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Contains(Unify.Coroutines.UnifyCoroutineBase)">Contains(UnifyCoroutineBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(UnifyCoroutineBase item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_CopyTo_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.CopyTo*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_CopyTo_Unify_Coroutines_UnifyCoroutineBase___System_Int32_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.CopyTo(Unify.Coroutines.UnifyCoroutineBase[],System.Int32)">CopyTo(UnifyCoroutineBase[], Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(UnifyCoroutineBase[] array, int arrayIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a>[]</td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">arrayIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_GetEnumerator_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.GetEnumerator*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_GetEnumerator" data-uid="Unify.Coroutines.UnifyCoroutineCollection.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;UnifyCoroutineBase&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_IndexOf_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.IndexOf*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_IndexOf_Unify_Coroutines_UnifyCoroutineBase_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.IndexOf(Unify.Coroutines.UnifyCoroutineBase)">IndexOf(UnifyCoroutineBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndexOf(UnifyCoroutineBase item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Insert_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Insert*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Insert_System_Int32_Unify_Coroutines_UnifyCoroutineBase_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Insert(System.Int32,Unify.Coroutines.UnifyCoroutineBase)">Insert(Int32, UnifyCoroutineBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insert(int index, UnifyCoroutineBase item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Pause_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Pause*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Pause" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Pause">Pause()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Pause()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause">UnifyCoroutineBase.Pause()</a></div>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Remove_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Remove*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Remove_Unify_Coroutines_UnifyCoroutineBase_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Remove(Unify.Coroutines.UnifyCoroutineBase)">Remove(UnifyCoroutineBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(UnifyCoroutineBase item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_RemoveAt_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.RemoveAt*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_RemoveAt_System_Int32_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.RemoveAt(System.Int32)">RemoveAt(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAt(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Resume_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Resume*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Resume" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Resume">Resume()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Resume()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume">UnifyCoroutineBase.Resume()</a></div>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_SetEnumerator_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.SetEnumerator*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_SetEnumerator_Unify_Collections_UnifyEnumeratorType_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.SetEnumerator(Unify.Collections.UnifyEnumeratorType)">SetEnumerator(UnifyEnumeratorType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEnumerator(UnifyEnumeratorType enumeratorType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.UnifyEnumeratorType.html">UnifyEnumeratorType</a></td>
+        <td><span class="parametername">enumeratorType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Start_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Start*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Start" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Start()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Start">UnifyCoroutineBase.Start()</a></div>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_StartUnifyCoroutine_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.StartUnifyCoroutine*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_StartUnifyCoroutine" data-uid="Unify.Coroutines.UnifyCoroutineCollection.StartUnifyCoroutine">StartUnifyCoroutine()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IEnumerator StartUnifyCoroutine()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_StartUnifyCoroutine">UnifyCoroutineBase.StartUnifyCoroutine()</a></div>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Stop_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Stop*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Stop" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Stop">Stop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Stop()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stop">UnifyCoroutineBase.Stop()</a></div>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_Target_Finished_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Target_Finished*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Target_Finished_System_Object_System_EventArgs_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Target_Finished(System.Object,System.EventArgs)">Target_Finished(Object, EventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Target_Finished(object sender, EventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_System_Collections_Generic_ICollection_Unify_Coroutines_UnifyCoroutineBase__Count_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.System#Collections#Generic#ICollection{Unify#Coroutines#UnifyCoroutineBase}#Count*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_System_Collections_Generic_ICollection_Unify_Coroutines_UnifyCoroutineBase__Count" data-uid="Unify.Coroutines.UnifyCoroutineCollection.System#Collections#Generic#ICollection{Unify#Coroutines#UnifyCoroutineBase}#Count">ICollection&lt;UnifyCoroutineBase&gt;.Count</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ICollection&lt;UnifyCoroutineBase&gt;.Count { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_System_Collections_Generic_IEnumerable_Unify_Coroutines_UnifyCoroutineBase__GetEnumerator_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.System#Collections#Generic#IEnumerable{Unify#Coroutines#UnifyCoroutineBase}#GetEnumerator*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_System_Collections_Generic_IEnumerable_Unify_Coroutines_UnifyCoroutineBase__GetEnumerator" data-uid="Unify.Coroutines.UnifyCoroutineCollection.System#Collections#Generic#IEnumerable{Unify#Coroutines#UnifyCoroutineBase}#GetEnumerator">IEnumerable&lt;UnifyCoroutineBase&gt;.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator&lt;UnifyCoroutineBase&gt; IEnumerable&lt;UnifyCoroutineBase&gt;.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html">UnifyCoroutineBase</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection_System_Collections_IEnumerable_GetEnumerator_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_System_Collections_IEnumerable_GetEnumerator" data-uid="Unify.Coroutines.UnifyCoroutineCollection.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unify.Collections.EnumerableExtensions.html#Unify_Collections_EnumerableExtensions_Flatten_System_Collections_IEnumerable_System_Collections_IList_">EnumerableExtensions.Flatten(IEnumerable, IList)</a>
+  </div>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

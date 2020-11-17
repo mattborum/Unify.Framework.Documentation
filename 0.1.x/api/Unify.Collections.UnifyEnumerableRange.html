@@ -65,7 +65,7 @@
   
   <h1 id="Unify_Collections_UnifyEnumerableRange" data-uid="Unify.Collections.UnifyEnumerableRange" class="text-break">Class UnifyEnumerableRange
   </h1>
-  <div class="markdown level0 summary"><p>Represents the enumerable range for a Unify Collection.</p>
+  <div class="markdown level0 summary"><p>Represents the enumerable range for a <a class="xref" href="Unify.Collections.IUnifyList.html">IUnifyList</a> or <a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList&lt;T&gt;</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -111,7 +111,7 @@
   </h3>
   <a id="Unify_Collections_UnifyEnumerableRange__ctor_" data-uid="Unify.Collections.UnifyEnumerableRange.#ctor*"></a>
   <h4 id="Unify_Collections_UnifyEnumerableRange__ctor_Unify_Collections_IUnifyObservableCollection_" data-uid="Unify.Collections.UnifyEnumerableRange.#ctor(Unify.Collections.IUnifyObservableCollection)">UnifyEnumerableRange(IUnifyObservableCollection)</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of a UnifyEnumerableRange.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -131,14 +131,14 @@
       <tr>
         <td><a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a></td>
         <td><span class="parametername">collection</span></td>
-        <td><p>The source collection.</p>
+        <td><p>The source <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a> collection.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_UnifyEnumerableRange__ctor_" data-uid="Unify.Collections.UnifyEnumerableRange.#ctor*"></a>
   <h4 id="Unify_Collections_UnifyEnumerableRange__ctor_Unify_Collections_IUnifyObservableCollection_System_Int32_" data-uid="Unify.Collections.UnifyEnumerableRange.#ctor(Unify.Collections.IUnifyObservableCollection,System.Int32)">UnifyEnumerableRange(IUnifyObservableCollection, Int32)</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of a UnifyEnumerableRange.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -158,7 +158,7 @@
       <tr>
         <td><a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a></td>
         <td><span class="parametername">collection</span></td>
-        <td><p>The source collection.</p>
+        <td><p>The source <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a> collection.</p>
 </td>
       </tr>
       <tr>
@@ -171,12 +171,12 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerableRange__ctor_" data-uid="Unify.Collections.UnifyEnumerableRange.#ctor*"></a>
   <h4 id="Unify_Collections_UnifyEnumerableRange__ctor_Unify_Collections_IUnifyObservableCollection_System_Int32_System_Int32_System_Int32_" data-uid="Unify.Collections.UnifyEnumerableRange.#ctor(Unify.Collections.IUnifyObservableCollection,System.Int32,System.Int32,System.Int32)">UnifyEnumerableRange(IUnifyObservableCollection, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of a UnifyEnumerableRange.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnifyEnumerableRange(IUnifyObservableCollection collection, int startIndex, int endIndex, int step = 1)</code></pre>
+    <pre><code class="lang-csharp hljs">public UnifyEnumerableRange(IUnifyObservableCollection collection, int startItemIndex, int endItemIndex, int step = 1)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,18 +191,18 @@
       <tr>
         <td><a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a></td>
         <td><span class="parametername">collection</span></td>
-        <td><p>The source collection.</p>
+        <td><p>The source <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a> collection.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">startIndex</span></td>
+        <td><span class="parametername">startItemIndex</span></td>
         <td><p>The starting index of the range.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">endIndex</span></td>
+        <td><span class="parametername">endItemIndex</span></td>
         <td><p>The end index of the range.</p>
 </td>
       </tr>
@@ -216,12 +216,12 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerableRange__ctor_" data-uid="Unify.Collections.UnifyEnumerableRange.#ctor*"></a>
   <h4 id="Unify_Collections_UnifyEnumerableRange__ctor_Unify_Collections_IUnifyObservableCollection_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Unify.Collections.UnifyEnumerableRange.#ctor(Unify.Collections.IUnifyObservableCollection,System.Int32,System.Int32,System.Int32,System.Int32)">UnifyEnumerableRange(IUnifyObservableCollection, Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of a UnifyEnumerableRange.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnifyEnumerableRange(IUnifyObservableCollection collection, int startIndex, int endIndex, int step, int loopCount = 1)</code></pre>
+    <pre><code class="lang-csharp hljs">public UnifyEnumerableRange(IUnifyObservableCollection collection, int startItemIndex, int endItemIndex, int step, int loopCount = 1)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,18 +236,18 @@
       <tr>
         <td><a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a></td>
         <td><span class="parametername">collection</span></td>
-        <td><p>The source collection.</p>
+        <td><p>The source <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a> collection.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">startIndex</span></td>
+        <td><span class="parametername">startItemIndex</span></td>
         <td><p>The starting index of the range.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">endIndex</span></td>
+        <td><span class="parametername">endItemIndex</span></td>
         <td><p>The end index of the range.</p>
 </td>
       </tr>
@@ -267,13 +267,13 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_DefaultEndIndex" data-uid="Unify.Collections.UnifyEnumerableRange.DefaultEndIndex">DefaultEndIndex</h4>
-  <div class="markdown level1 summary"><p>Default range end index value.</p>
+  <h4 id="Unify_Collections_UnifyEnumerableRange_DefaultEndItemIndex" data-uid="Unify.Collections.UnifyEnumerableRange.DefaultEndItemIndex">DefaultEndItemIndex</h4>
+  <div class="markdown level1 summary"><p>Default end index value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int DefaultEndIndex = -1</code></pre>
+    <pre><code class="lang-csharp hljs">public const int DefaultEndItemIndex = -1</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,7 +291,7 @@
     </tbody>
   </table>
   <h4 id="Unify_Collections_UnifyEnumerableRange_DefaultLoopCount" data-uid="Unify.Collections.UnifyEnumerableRange.DefaultLoopCount">DefaultLoopCount</h4>
-  <div class="markdown level1 summary"><p>Default range loop value.</p>
+  <div class="markdown level1 summary"><p>Default loop count value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -313,13 +313,13 @@
       </tr>
     </tbody>
   </table>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_DefaultStartIndex" data-uid="Unify.Collections.UnifyEnumerableRange.DefaultStartIndex">DefaultStartIndex</h4>
-  <div class="markdown level1 summary"><p>Default range start index value.</p>
+  <h4 id="Unify_Collections_UnifyEnumerableRange_DefaultStartItemIndex" data-uid="Unify.Collections.UnifyEnumerableRange.DefaultStartItemIndex">DefaultStartItemIndex</h4>
+  <div class="markdown level1 summary"><p>Default start index value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int DefaultStartIndex = -1</code></pre>
+    <pre><code class="lang-csharp hljs">public const int DefaultStartItemIndex = -1</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,7 +337,7 @@
     </tbody>
   </table>
   <h4 id="Unify_Collections_UnifyEnumerableRange_DefaultStep" data-uid="Unify.Collections.UnifyEnumerableRange.DefaultStep">DefaultStep</h4>
-  <div class="markdown level1 summary"><p>Default range step value.</p>
+  <div class="markdown level1 summary"><p>Default step value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -385,14 +385,14 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_UnifyEnumerableRange_endIndex_" data-uid="Unify.Collections.UnifyEnumerableRange.endIndex*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_endIndex" data-uid="Unify.Collections.UnifyEnumerableRange.endIndex">endIndex</h4>
-  <div class="markdown level1 summary"><p>The end index value of the range.</p>
+  <a id="Unify_Collections_UnifyEnumerableRange_endItemIndex_" data-uid="Unify.Collections.UnifyEnumerableRange.endItemIndex*"></a>
+  <h4 id="Unify_Collections_UnifyEnumerableRange_endItemIndex" data-uid="Unify.Collections.UnifyEnumerableRange.endItemIndex">endItemIndex</h4>
+  <div class="markdown level1 summary"><p>The index position of the last item in the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>. Must be greater than or equal to -1.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int endIndex { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int endItemIndex { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,7 +411,7 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerableRange_isValid_" data-uid="Unify.Collections.UnifyEnumerableRange.isValid*"></a>
   <h4 id="Unify_Collections_UnifyEnumerableRange_isValid" data-uid="Unify.Collections.UnifyEnumerableRange.isValid">isValid</h4>
-  <div class="markdown level1 summary"><p>Returns true if the Enumerable Range is in a valid state, otherwise false.</p>
+  <div class="markdown level1 summary"><p>Returns true if the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> is in a valid state, otherwise false.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -435,7 +435,7 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerableRange_loopCount_" data-uid="Unify.Collections.UnifyEnumerableRange.loopCount*"></a>
   <h4 id="Unify_Collections_UnifyEnumerableRange_loopCount" data-uid="Unify.Collections.UnifyEnumerableRange.loopCount">loopCount</h4>
-  <div class="markdown level1 summary"><p>The number of times the enumerable range should be repeated.</p>
+  <div class="markdown level1 summary"><p>The number of times the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> should be repeated. Must be greater than or equal to 0.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -457,14 +457,14 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_UnifyEnumerableRange_startIndex_" data-uid="Unify.Collections.UnifyEnumerableRange.startIndex*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_startIndex" data-uid="Unify.Collections.UnifyEnumerableRange.startIndex">startIndex</h4>
-  <div class="markdown level1 summary"><p>The start index value of the range.</p>
+  <a id="Unify_Collections_UnifyEnumerableRange_startItemIndex_" data-uid="Unify.Collections.UnifyEnumerableRange.startItemIndex*"></a>
+  <h4 id="Unify_Collections_UnifyEnumerableRange_startItemIndex" data-uid="Unify.Collections.UnifyEnumerableRange.startItemIndex">startItemIndex</h4>
+  <div class="markdown level1 summary"><p>The index position of the first item in the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>. Must be greater than or equal to -1.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int startIndex { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int startItemIndex { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -483,7 +483,7 @@
   </table>
   <a id="Unify_Collections_UnifyEnumerableRange_step_" data-uid="Unify.Collections.UnifyEnumerableRange.step*"></a>
   <h4 id="Unify_Collections_UnifyEnumerableRange_step" data-uid="Unify.Collections.UnifyEnumerableRange.step">step</h4>
-  <div class="markdown level1 summary"><p>The step value of the range.</p>
+  <div class="markdown level1 summary"><p>The step value of the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>. Must be greater than 0.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

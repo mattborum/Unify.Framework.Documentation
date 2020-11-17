@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Introduction to Unify Enumerators | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Introduction to Unify Enumerators | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="UnifyEnumerators">
+<h1 id="introduction-to-unify-enumerators">Introduction to Unify Enumerators</h1>
+
+<p><sup><font color="grey">Namespace: Unify.Collections</font></sup><br>
+<sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
+<p>This section provides examples to accompany the Unify API documentation on <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify Enumerators</strong></a>.</p>
+<p>To get you up and running quickly, examples have been kept as simple as possible, using only the Unity Console.</p>
+<p>Unify provides four enumerators; forwards, backwards, yo-yo and random.<br>
+Each enumerator has a generic and non-generic version, available through the following classes:</p>
+<ul>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html"><strong>UnifyForwardsEnumerator&lt;T&gt;</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyForwardsEnumerator.html"><strong>UnifyForwardsEnumerator</strong></a></li>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyBackwardsEnumerator-1.html"><strong>UnifyBackwardsEnumerator&lt;T&gt;</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyBackwardsEnumerator.html"><strong>UnifyBackwardsEnumerator</strong></a></li>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html"><strong>UnifyYoYoEnumerator&lt;T&gt;</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyYoYoEnumerator.html"><strong>UnifyYoYoEnumerator</strong></a></li>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>UnifyRandomEnumerator&lt;T&gt;</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyRandomEnumerator.html"><strong>UnifyRandomEnumerator</strong></a></li>
+</ul>
+<p>Unify Enumerators provide the ability to; iterate over just part of a collection, repeat the iteration and step over items at any specified interval.<br>
+This functionality is made possible by the <strong>Enumerable Range</strong> feature, which is provided by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> class that Unify Enumerators expose through the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_enumerableRange"><strong>enumerableRange</strong></a> property.</p>
+<h2 id="unify-forwards-enumerator">Unify Forwards Enumerator</h2>
+<p>This Unify Enumerator iterates over a collection from the start index to the end index, as specified by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a>.</p>
+<h2 id="unify-backwards-enumerator">Unify Backwards Enumerator</h2>
+<p>This Unify Enumerator iterates over a collection from the end index to the start index, as specified by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a>.</p>
+<h2 id="unify-yoyo-enumerator">Unify YoYo Enumerator</h2>
+<p>This Unify Enumerator iterates over a collection from the start index to the end index, and back to the start index again, as specified by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a>.</p>
+<h2 id="unify-random-enumerator">Unify Random Enumerator</h2>
+<p>This Unify Enumerator iterates over a collection randomly, visiting each item once, within and including the start and end range values specified by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a>.</p>
+<h2 id="events">Events</h2>
+<p>Unify Enumerators provide the following events:</p>
+<ul>
+<li><strong>PassComplete</strong></li>
+<li><strong>LoopFinished</strong></li>
+</ul>
+<h2 id="exceptions">Exceptions</h2>
+<p>Unify does not throw operational exceptions on Unify Enumerators, but will <strong>always</strong> throw exceptions when properties are set to an invalid value.<br>
+The Unify Enumerator properties that currently throw exceptions are:</p>
+<ul>
+<li><a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startItemIndex"><strong>startItemIndex</strong></a> - Must be greater than or equal to -1</li>
+<li><a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endItemIndex"><strong>endItemIndex</strong></a> - Must be greater than or equal to -1</li>
+<li><a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> - Must be greater than or equal to 0</li>
+<li><a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> - Must be greater than or equal to 1</li>
+</ul>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

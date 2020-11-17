@@ -65,7 +65,8 @@
   
   <h1 id="Unify_Collections_IUnifyEnumerator" data-uid="Unify.Collections.IUnifyEnumerator" class="text-break">Interface IUnifyEnumerator
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Supports iteration over a non-generic collection.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -96,13 +97,14 @@
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Unify_Collections_IUnifyEnumerator_EnumerableRange_" data-uid="Unify.Collections.IUnifyEnumerator.EnumerableRange*"></a>
-  <h4 id="Unify_Collections_IUnifyEnumerator_EnumerableRange" data-uid="Unify.Collections.IUnifyEnumerator.EnumerableRange">EnumerableRange</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Unify_Collections_IUnifyEnumerator_enumerableRange_" data-uid="Unify.Collections.IUnifyEnumerator.enumerableRange*"></a>
+  <h4 id="Unify_Collections_IUnifyEnumerator_enumerableRange" data-uid="Unify.Collections.IUnifyEnumerator.enumerableRange">enumerableRange</h4>
+  <div class="markdown level1 summary"><p>Holds range information for the collection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UnifyEnumerableRange EnumerableRange { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">UnifyEnumerableRange enumerableRange { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -115,17 +117,19 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a></td>
-        <td></td>
+        <td><p>Range information for the collection.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_IUnifyEnumerator_historyStackSize_" data-uid="Unify.Collections.IUnifyEnumerator.historyStackSize*"></a>
-  <h4 id="Unify_Collections_IUnifyEnumerator_historyStackSize" data-uid="Unify.Collections.IUnifyEnumerator.historyStackSize">historyStackSize</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Unify_Collections_IUnifyEnumerator_maxRewindItems_" data-uid="Unify.Collections.IUnifyEnumerator.maxRewindItems*"></a>
+  <h4 id="Unify_Collections_IUnifyEnumerator_maxRewindItems" data-uid="Unify.Collections.IUnifyEnumerator.maxRewindItems">maxRewindItems</h4>
+  <div class="markdown level1 summary"><p>The maximum number of items to keep in the rewind stack to allow rewinding of the enumerator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int historyStackSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">int maxRewindItems { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,14 +142,16 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The maximum size of the rewind stack.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="events">Events
   </h3>
   <h4 id="Unify_Collections_IUnifyEnumerator_LoopFinished" data-uid="Unify.Collections.IUnifyEnumerator.LoopFinished">LoopFinished</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Callback when all passes of the loop have successfully completed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

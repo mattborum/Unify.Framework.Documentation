@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creating and Using Unify Enumerators | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating and Using Unify Enumerators | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="creating-and-using-unify-enumerators">Creating and Using Unify Enumerators</h1>
+
+<p>This section provides examples to accompany the Unify API documentation on <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify Collections</strong></a>.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify.Collections</strong></a> namespace contains interfaces and classes to provide extra functionality to .NET collections.<br>
+The bulk of this functionality is made possible by <a class="xref" href="IntroductionToUnifyEnumerators.html"><strong>Unify Enumerators</strong></a>, which allow you to iterate over a collection in many different ways.</p>
+<p>To get you up and running quickly, examples have been kept as simple as possible, using only the Unity Console.</p>
+<h2 id="unify-enumerators">Unify Enumerators</h2>
+<p>Unify provides the following enumerators out of the box; forwards, backwards, yoyo and random, or, if you need something different you can write your own custom enumerator or <a class="xref" href="../../../contact.html"><strong>request</strong></a> one.</p>
+<p><a class="xref" href="IntroductionToUnifyEnumerators.html"><strong>Unify Enumerators</strong></a> are stand-alone. You can create an instance of a Unify Enumerator to operate on any Unify/.NET collection, including collections which .NET enumerators do not currently support, such as jagged arrays.</p>
+<p><a class="xref" href="IntroductionToUnifyEnumerators.html"><strong>Unify Enumerators</strong></a> can be reused, there is no need to create a <code>new()</code> enumerator or use <code>GetEnumerator()</code>, simply call the Unify Emumerator's <strong>Reset()</strong> method and use again.</p>
+<h2 id="enumerable-range">Enumerable Range</h2>
+<p><a class="xref" href="IntroductionToUnifyEnumerators.html"><strong>Unify Enumerators</strong></a> provide an <strong>Enumerable Range</strong> feature, this allows you to; iterate over just a portion of the underlying collection, repeat the iteration any number of times and step over items at any interval. The <strong>Enumerable Range</strong> is dynamic, allowing values to be changed at any time, even while iterating over a collection, and Unify will automatically grow and shrink the <strong>Enumerable Range</strong> as these values change or items are added, inserted and removed from the collection.</p>
+<h2 id="unify-collections">Unify Collections</h2>
+<p>All Unify Collections implement <a class="xref" href="IntroductionToUnifyEnumerators.html"><strong>Unify Enumerators</strong></a>.</p>
+<p>Unify Collections are observable through the <a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionChanged"><strong>CollectionChanged</strong></a> event. The <a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionChanged"><strong>CollectionChanged</strong></a> event is used to notify subscribers when items are added, inserted or removed, or when a collecton is cleared or reset.</p>
+<p>Unify Collections offer generic and non-generic versions of a collection.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify.Collections</strong></a> namespace currently offers two collections taking advantage of this extra functionality, the <strong>UnifyList</strong> and the generic <strong>UnifyList&lt;T&gt;</strong>.</p>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

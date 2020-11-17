@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using Enumerable Range | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using Enumerable Range | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="using-enumerable-range">Using Enumerable Range</h1>
+
+<p><sup><font color="grey">Namespace: Unify.Collections</font></sup><br>
+<sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
+<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>Enumerable Range</strong></a> feature allows Unify Enumerators to iterate over a whole collection or just part of a collection, repeat the iteration and step over items at a specified interval.</p>
+<h2 id="specifying-a-range">Specifying a Range</h2>
+<p>An enumerable range is defined by a start item and an end item; these values are initialised through the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startItemIndex"><strong>startItemIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endItemIndex"><strong>endItemIndex</strong></a> properties. It is the <strong>objects</strong> at these positions that Unify uses to maintain the enumerable range, not the index values themselves.</p>
+<p><img src="../../../images/enumerableRange_01.png" alt="Enumerable Range Image"></p>
+<p>The above image shows a list containing 4 strings with the values; <strong>&quot;two&quot;</strong>, <strong>&quot;four&quot;</strong>, <strong>&quot;six&quot;</strong> and <strong>&quot;eight&quot;</strong>; the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startItemIndex"><strong>startItemIndex</strong></a> is set to index position 1 which holds the value <strong>&quot;four&quot;</strong>; the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endItemIndex"><strong>endItemIndex</strong></a> is set to index position 2 which holds the value <strong>&quot;six&quot;</strong>.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> has been designed to be dynamic; as the underlying collection changes through items being added, inserted or removed, Unify will adjust the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startItemIndex"><strong>startItemIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endItemIndex"><strong>endItemIndex</strong></a> to always point to values between, and including, <strong>&quot;four&quot;</strong> and <strong>&quot;six&quot;</strong>.</p>
+<p>If the value <strong>&quot;five&quot;</strong> is inserted into the underlying list at index position 2, <code>list.Insert(2, &quot;five&quot;);</code>, Unify will adjust the enumerable range so the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endItemIndex"><strong>endItemIndex</strong></a> is still pointing to the value <strong>&quot;six&quot;</strong>:</p>
+<p><img src="../../../images/enumerableRange_02.png" alt="Enumerable Range Image"></p>
+<p>If we remove the item <strong>&quot;four&quot;</strong> from the underlying list at index position 1, <code>list.RemoveAt(1);</code>, the enumerable range will now look like this:</p>
+<p><img src="../../../images/enumerableRange_03.png" alt="Enumerable Range Image"></p>
+<p>If we now remove the item <strong>&quot;five&quot;</strong> from the underlying list at index position 1, <code>list.RemoveAt(1);</code>, the enumerable range will adjust again:</p>
+<p><img src="../../../images/enumerableRange_04.png" alt="Enumerable Range Image"></p>
+<p>At this stage the enumerable range only contains the item <strong>&quot;six&quot;</strong> at index position 1, so <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startItemIndex"><strong>startItemIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endItemIndex"><strong>endItemIndex</strong></a> are now pointing to the same item.</p>
+<p>If this one remaining item is removed the enumerable range becomes <em>empty</em> and cannot be used further.</p>
+<p><img src="../../../images/enumerableRange_05.png" alt="Enumerable Range Image"></p>
+<p>To specify an enumerable range that always starts from the beginning of a collection, or always ends at the last item of a collection, rather than track objects Unify provides the special value of <strong>-1</strong> for this purpose.</p>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

@@ -65,7 +65,9 @@
   
   <h1 id="Unify_Collections_UnifyYoYoEnumerator" data-uid="Unify.Collections.UnifyYoYoEnumerator" class="text-break">Class UnifyYoYoEnumerator
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Enumerator that moves over a generic Unify Collection in a Yo-Yo fashion.
+The enumerator moves over the collection, within the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> bounds, from the start index to the end index to the start index.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -82,6 +84,9 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_parent">UnifyEnumerator.parent</a>
+    </div>
     <div>
       <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_currentIndex">UnifyEnumerator.currentIndex</a>
     </div>
@@ -101,22 +106,16 @@
       <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_disposed">UnifyEnumerator.disposed</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_parent">UnifyEnumerator.parent</a>
-    </div>
-    <div>
       <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_LoopFinished">UnifyEnumerator.LoopFinished</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_PassFinished">UnifyEnumerator.PassFinished</a>
+      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_PassComplete">UnifyEnumerator.PassComplete</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_loopCount">UnifyEnumerator.loopCount</a>
+      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_enumerableRange">UnifyEnumerator.enumerableRange</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_EnumerableRange">UnifyEnumerator.EnumerableRange</a>
-    </div>
-    <div>
-      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_historyStackSize">UnifyEnumerator.historyStackSize</a>
+      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_maxRewindItems">UnifyEnumerator.maxRewindItems</a>
     </div>
     <div>
       <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Current">UnifyEnumerator.Current</a>
@@ -155,7 +154,7 @@
       <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Dispose_System_Boolean_">UnifyEnumerator.Dispose(Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_ClearStack">UnifyEnumerator.ClearStack()</a>
+      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_ClearRewindStack">UnifyEnumerator.ClearRewindStack()</a>
     </div>
     <div>
       <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_GetCurrentIndex">UnifyEnumerator.GetCurrentIndex()</a>
@@ -167,7 +166,7 @@
       <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_OnLoopFinished">UnifyEnumerator.OnLoopFinished()</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_OnPassFinished">UnifyEnumerator.OnPassFinished()</a>
+      <a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_OnPassComplete">UnifyEnumerator.OnPassComplete()</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -201,7 +200,8 @@
   </h3>
   <a id="Unify_Collections_UnifyYoYoEnumerator__ctor_" data-uid="Unify.Collections.UnifyYoYoEnumerator.#ctor*"></a>
   <h4 id="Unify_Collections_UnifyYoYoEnumerator__ctor_System_Collections_IEnumerable_" data-uid="Unify.Collections.UnifyYoYoEnumerator.#ctor(System.Collections.IEnumerable)">UnifyYoYoEnumerator(IEnumerable)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new instance of a <a class="xref" href="Unify.Collections.UnifyYoYoEnumerator.html">UnifyYoYoEnumerator</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -220,13 +220,15 @@
       <tr>
         <td><span class="xref">System.Collections.IEnumerable</span></td>
         <td><span class="parametername">items</span></td>
-        <td></td>
+        <td><p>The source <span class="xref">System.Collections.IEnumerable</span> to be enumerated.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_UnifyYoYoEnumerator__ctor_" data-uid="Unify.Collections.UnifyYoYoEnumerator.#ctor*"></a>
   <h4 id="Unify_Collections_UnifyYoYoEnumerator__ctor_Unify_Collections_IUnifyList_" data-uid="Unify.Collections.UnifyYoYoEnumerator.#ctor(Unify.Collections.IUnifyList)">UnifyYoYoEnumerator(IUnifyList)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new instance of a <a class="xref" href="Unify.Collections.UnifyYoYoEnumerator.html">UnifyYoYoEnumerator</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -245,7 +247,8 @@
       <tr>
         <td><a class="xref" href="Unify.Collections.IUnifyList.html">IUnifyList</a></td>
         <td><span class="parametername">parent</span></td>
-        <td></td>
+        <td><p>The source <a class="xref" href="Unify.Collections.IUnifyList.html">IUnifyList</a> to be enumerated.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -253,7 +256,8 @@
   </h3>
   <a id="Unify_Collections_UnifyYoYoEnumerator_Init_" data-uid="Unify.Collections.UnifyYoYoEnumerator.Init*"></a>
   <h4 id="Unify_Collections_UnifyYoYoEnumerator_Init" data-uid="Unify.Collections.UnifyYoYoEnumerator.Init">Init()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Initialise the enumerator when first run.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -263,7 +267,8 @@
   <div><a class="xref" href="Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Init">UnifyEnumerator.Init()</a></div>
   <a id="Unify_Collections_UnifyYoYoEnumerator_MoveNext_" data-uid="Unify.Collections.UnifyYoYoEnumerator.MoveNext*"></a>
   <h4 id="Unify_Collections_UnifyYoYoEnumerator_MoveNext" data-uid="Unify.Collections.UnifyYoYoEnumerator.MoveNext">MoveNext()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get the next item in the collection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -280,7 +285,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>True if the enumerator can be moved to the next element; otherwise, false.</p>
+</td>
       </tr>
     </tbody>
   </table>
