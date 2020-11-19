@@ -657,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/IntroductionToUnifyEnumerators.html",
-          "hash": "avoy/dcQxyQASlu1C4Fvow=="
+          "hash": "vRFa3ecHWXSh948Bq8/rFA=="
         }
       },
       "is_incremental": true,
@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/UsingEnumerableRange.html",
-          "hash": "vMLsheN2Zef7pz5SJiu1lQ=="
+          "hash": "9nEKBhUhk+6q+m2wRMJl/Q=="
         }
       },
       "is_incremental": false,
@@ -773,6 +773,17 @@
       "output": {
         "resource": {
           "relative_path": "images/enumerableRange_05.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/enumerableRange_anim.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/enumerableRange_anim.gif"
         }
       },
       "is_incremental": false,

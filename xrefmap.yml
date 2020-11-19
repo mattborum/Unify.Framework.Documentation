@@ -22,6 +22,9 @@ references:
 - uid: IntroductionToUnifyCoroutines
   name: Introduction to Unify Coroutines
   href: 0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutines.html
+- uid: IntroductionToUnifyEnumerators
+  name: Introduction to Unify Enumerators
+  href: 0.1.x/userguide/Unify.Enumerators/IntroductionToUnifyEnumerators.html
 - uid: Looping
   name: Looping a Unify Coroutine
   href: 0.1.x/userguide/Unify.Coroutines/Looping.html
@@ -4295,6 +4298,3 @@ references:
 - uid: UnifyCoroutineEvents
   name: Unify Coroutine Events
   href: 0.1.x/userguide/Unify.Coroutines/Events.html
-- uid: UnifyEnumerators
-  name: Introduction to Unify Enumerators
-  href: 0.1.x/userguide/Unify.Enumerators/IntroductionToUnifyEnumerators.html
