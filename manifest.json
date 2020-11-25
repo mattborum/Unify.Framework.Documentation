@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.IUnifyEnumerator-1.html",
-          "hash": "Zf3X8y9QZKGAx5rbUTQoGg=="
+          "hash": "jXHST/H/j4te4bsYL5LhQQ=="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyBackwardsEnumerator-1.html",
-          "hash": "2mvN2/RnHwtlzNuuGZUihg=="
+          "hash": "vnARy2xCPU9eo4AcCY3UAg=="
         }
       },
       "is_incremental": true,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html",
-          "hash": "OjPA0OaseNcMbq4lCF2jPQ=="
+          "hash": "wBVerUh7/BlJMprfSKqTnA=="
         }
       },
       "is_incremental": true,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html",
-          "hash": "V1u4g1mPjaFidxuAMXvoLA=="
+          "hash": "EA+/HnY/PEZTb7ckb7JGhQ=="
         }
       },
       "is_incremental": true,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html",
-          "hash": "0p7ytRzKdj0Yhp20rlajBw=="
+          "hash": "N/q4MD7cH0EwjbuXHxSyKg=="
         }
       },
       "is_incremental": true,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html",
-          "hash": "qHzywbDQTOKmsjEjua5dbw=="
+          "hash": "3iVOTOFAFH9SCqC752GlsQ=="
         }
       },
       "is_incremental": true,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.IUnifyEnumerator.html",
-          "hash": "+Rru63K2GdhWLg4vUmVsYw=="
+          "hash": "G3uX5KcoVEx6Tw4mvcz+FQ=="
         }
       },
       "is_incremental": true,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.UnifyBackwardsEnumerator.html",
-          "hash": "mYICjgScVwa0shFzw4KLmg=="
+          "hash": "1Lbz1XtnUSVfULCS3mHsNQ=="
         }
       },
       "is_incremental": true,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.UnifyCollectionChangedAction.html",
-          "hash": "ce2aaCbT1pZwVsqD3eqstg=="
+          "hash": "vqrfEm+1E9NGMeQyKEpl6A=="
         }
       },
       "is_incremental": true,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.UnifyEnumerableRange.html",
-          "hash": "Pdl2uOHWDbgJ5EyOF7wXRw=="
+          "hash": "IYB7SjZrgJ4A9wbzMQ1NPA=="
         }
       },
       "is_incremental": true,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.UnifyEnumerator.html",
-          "hash": "0BbB+7YuzI+ivUFW3Wj94w=="
+          "hash": "aHTP+bKx1Y0ESKv9I6oJ/Q=="
         }
       },
       "is_incremental": true,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.UnifyForwardsEnumerator.html",
-          "hash": "gwPcdihHRCZexu/ph0PuRA=="
+          "hash": "AnbfOx/AqlkMkTDy902Ncw=="
         }
       },
       "is_incremental": true,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.UnifyRandomEnumerator.html",
-          "hash": "WO3J1yNNqTgpo43DrysKfw=="
+          "hash": "yxpYV1507NbWaX+/wssI6A=="
         }
       },
       "is_incremental": true,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.UnifyYoYoEnumerator.html",
-          "hash": "cwNuqsYBusie5JNSriR31Q=="
+          "hash": "FftpckAXdtXqbMpQxeC9uQ=="
         }
       },
       "is_incremental": true,
@@ -645,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/CreatingAndUsingUnifyEnumerators.html",
-          "hash": "yiaiMtQkvyX1ck30f/R1Ug=="
+          "hash": "klvokTkpKMZJSo1FXTG0ug=="
         }
       },
       "is_incremental": true,
@@ -657,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/IntroductionToUnifyEnumerators.html",
-          "hash": "vRFa3ecHWXSh948Bq8/rFA=="
+          "hash": "dbEU7V9YwlzU0MxYKW4EfQ=="
         }
       },
       "is_incremental": true,
@@ -665,11 +665,23 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "0.1.x/userguide/Unify.Enumerators/UsingEnumerableRange.md",
+      "source_relative_path": "0.1.x/userguide/Unify.Enumerators/ModifyingACollection.md",
       "output": {
         ".html": {
-          "relative_path": "0.1.x/userguide/Unify.Enumerators/UsingEnumerableRange.html",
-          "hash": "z7MrUXxZAJnp7scmPOr6Cg=="
+          "relative_path": "0.1.x/userguide/Unify.Enumerators/ModifyingACollection.html",
+          "hash": "XuYit+/P4da/LyHfEWa+Kw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Enumerators/SpecifyingAnEnumerableRange.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Enumerators/SpecifyingAnEnumerableRange.html",
+          "hash": "krgAkMqYci2yHnmNFjRBvw=="
         }
       },
       "is_incremental": false,
@@ -693,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/toc.html",
-          "hash": "Lu5yRCMvjjX9dntnMCfLHA=="
+          "hash": "yUZZcSGhqnYcnZcLddq8ww=="
         }
       },
       "is_incremental": false,
@@ -721,6 +733,17 @@
         }
       },
       "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/enumerableRangeModify_anim.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/enumerableRangeModify_anim.gif"
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -980,8 +1003,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 19,
-          "skipped_file_count": 18
+          "total_file_count": 20,
+          "skipped_file_count": 19
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Specifying an Enumerable Range | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Specifying an Enumerable Range | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="specifying-an-enumerable-range">Specifying an Enumerable Range</h1>
+
+<p><sup><font color="grey">Namespace: Unify.Collections, Unify.Collections.Generic</font></sup><br>
+<sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
+<p>Unify Enumerators can iterate over a partial collection. This functionality is provided by the <strong>Enumerable Range</strong> feature, which is encapsulated in the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> class. Unify Enumerators expose this functionality through the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_enumerableRange"><strong>enumerableRange</strong></a> property.</p>
+<p>An enumerable range is defined by a start item and an end item; these values are initialised by their index position through the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> properties. As the underlying collection is modified the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> will adjust so it is always defined by the items between, and including, the initial start and end items. If either of the start or end items are removed, the new start or end item will become the next item inside the range. When all items in the range have been removed the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> becomes empty and cannot be used further.</p>
+<p>To specify an enumerable range that always starts from the first item of a collection, or always ends at the last item of a collection, regardless of any changes made, set the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and/or <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> properties to <strong>-1</strong>. This is the default setting.</p>
+<p>The following animation shows how the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> adjusts to maintain the range as the underlying collection is modified.</p>
+<p><img src="../../../images/enumerableRange_anim.gif" alt="Enumerable Range Animation"></p>
+<h2 id="looping-a-range">Looping a Range</h2>
+<p>Use the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property to specify how many times an enumeration should be repeated. This must be a value greater than or equal to 0.</p>
+<h2 id="stepping-over-a-range">Stepping over a Range</h2>
+<p>Items can be stepped over during an enumeration through the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> property. This must be a value greater than or equal to 1.</p>
+<h2 id="example">Example</h2>
+<p>This example uses the four generic Unify Enumerators, of type string, to demonstrate all the features of the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a>. The example iterates over a list of fruits, with the enumerable range specified using a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> of <strong>2</strong> and an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> of <strong>8</strong>, which includes all items between, and including, <strong>&quot;Banana&quot;</strong> and <strong>&quot;Cherry&quot;</strong>. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> value is set to <strong>2</strong>, which means the Unify Enumertors will iterate over every other item in the range.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>F</strong> to Start the Forwards Enumerator</li>
+<li><strong>B</strong> to Start the Backwards Enumerator</li>
+<li><strong>Y</strong> to Start the Yo-Yo Enumerator</li>
+<li><strong>R</strong> to Start the Random Enumerator</li>
+<li><strong>X</strong> to Reset all Enumerators</li>
+</ul>
+<pre><code>using System.Collections.Generic;
+using Unify.Collections.Generic;
+using UnityEngine;
+
+public class Enumerators_SpecifyingAnEnumerableRange : MonoBehaviour
+{
+    private IList&lt;string&gt; list;
+    private IUnifyEnumerator&lt;string&gt; forwards;
+    private IUnifyEnumerator&lt;string&gt; backwards;
+    private IUnifyEnumerator&lt;string&gt; yoyo;
+    private IUnifyEnumerator&lt;string&gt; random;
+
+    void Awake()
+    {
+        list = new List&lt;string&gt; { &quot;Apple&quot;, &quot;Orange&quot;, &quot;Banana&quot;, &quot;Pear&quot;, &quot;Grape&quot;, &quot;Plum&quot;, &quot;Lemon&quot;, &quot;Lime&quot;, &quot;Cherry&quot;, &quot;Mango&quot; };
+
+        forwards = new UnifyForwardsEnumerator&lt;string&gt;(list);
+        forwards.enumerableRange.startIndex = 2; // range starts at &quot;Banana&quot;
+        forwards.enumerableRange.endIndex = 8; // range ends at &quot;Cherry&quot;
+        forwards.enumerableRange.loopCount = 2; // repeat the enumeration twice
+        forwards.enumerableRange.step = 2; // iterate over every other item
+
+        backwards = new UnifyBackwardsEnumerator&lt;string&gt;(list);
+        backwards.enumerableRange.startIndex = 2;
+        backwards.enumerableRange.endIndex = 8;
+        backwards.enumerableRange.loopCount = 2;
+        backwards.enumerableRange.step = 2;
+
+        yoyo = new UnifyYoYoEnumerator&lt;string&gt;(list);
+        yoyo.enumerableRange.startIndex = 2;
+        yoyo.enumerableRange.endIndex = 8;
+        yoyo.enumerableRange.loopCount = 2;
+        yoyo.enumerableRange.step = 2;
+
+        random = new UnifyRandomEnumerator&lt;string&gt;(list);
+        random.enumerableRange.startIndex = 2;
+        random.enumerableRange.endIndex = 8;
+        random.enumerableRange.loopCount = 2;
+        random.enumerableRange.step = 2;
+
+        print(&quot;press F for FORWARDS, B for BACKWARDS, Y for YO-YO, R for RANDOM, X to RESET ALL ENUMERATORS&quot;);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            RunForwards();
+        }
+
+        if (Input.GetKeyUp(KeyCode.B))
+        {
+            RunBackwards();
+        }
+
+        if (Input.GetKeyUp(KeyCode.Y))
+        {
+            RunYoYo();
+        }
+
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            RunRandom();
+        }
+
+        if (Input.GetKeyUp(KeyCode.X))
+        {
+            ResetAll();
+        }
+    }
+
+    private void RunForwards()
+    {
+        print(&quot;--- Forwards Enumerator ---&quot;);
+        while (forwards.MoveNext())
+        {
+            print(forwards.Current);
+        }
+    }
+
+    private void RunBackwards()
+    {
+        print(&quot;--- Backwards Enumerator ---&quot;);
+        while (backwards.MoveNext())
+        {
+            print(backwards.Current);
+        }
+    }
+
+    private void RunYoYo()
+    {
+        print(&quot;--- Yo-Yo Enumerator ---&quot;);
+        while (yoyo.MoveNext())
+        {
+            print(yoyo.Current);
+        }
+    }
+
+    private void RunRandom()
+    {
+        print(&quot;--- Random Enumerator ---&quot;);
+        while (random.MoveNext())
+        {
+            print(random.Current);
+        }
+    }
+
+    private void ResetAll()
+    {
+        print(&quot;--- Resetting Enumerators ---&quot;);
+        forwards.Reset();
+        backwards.Reset();
+        yoyo.Reset();
+        random.Reset();
+    }
+}
+</code></pre>
+<h2 id="exceptions">Exceptions</h2>
+<p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
+<ul>
+<li>Setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property to a value less than 0 will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
+<li>Setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> property to a value less than 1 will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
+</ul>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a class="xref" href="ModifyingACollection.html"><strong>Modifying a Collection</strong></a></li>
+</ul>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

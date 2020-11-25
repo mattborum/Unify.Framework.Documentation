@@ -28,6 +28,9 @@ references:
 - uid: Looping
   name: Looping a Unify Coroutine
   href: 0.1.x/userguide/Unify.Coroutines/Looping.html
+- uid: ModifyingACollection
+  name: Modifying a Collection
+  href: 0.1.x/userguide/Unify.Enumerators/ModifyingACollection.html
 - uid: PausingandResuming
   name: Pausing and Resuming a Unify Coroutine
   href: 0.1.x/userguide/Unify.Coroutines/PausingAndResuming.html
@@ -507,91 +510,23 @@ references:
   fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).MoveNext
   nameWithType: UnifyEnumerator<T>.MoveNext
   nameWithType.vb: UnifyEnumerator(Of T).MoveNext
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Add(Unify.Collections.UnifyCollectionChangedEventArgs)
-  name: OnCollectionChanged_Add(UnifyCollectionChangedEventArgs)
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnCollectionChanged_Add_Unify_Collections_UnifyCollectionChangedEventArgs_
-  commentId: M:Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Add(Unify.Collections.UnifyCollectionChangedEventArgs)
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.OnCollectionChanged_Add(Unify.Collections.UnifyCollectionChangedEventArgs)
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).OnCollectionChanged_Add(Unify.Collections.UnifyCollectionChangedEventArgs)
-  nameWithType: UnifyEnumerator<T>.OnCollectionChanged_Add(UnifyCollectionChangedEventArgs)
-  nameWithType.vb: UnifyEnumerator(Of T).OnCollectionChanged_Add(UnifyCollectionChangedEventArgs)
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Add*
-  name: OnCollectionChanged_Add
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnCollectionChanged_Add_
-  commentId: Overload:Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Add
+- uid: Unify.Collections.Generic.UnifyEnumerator`1.moveNextWhenInvalidated
+  name: moveNextWhenInvalidated
+  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_moveNextWhenInvalidated
+  commentId: P:Unify.Collections.Generic.UnifyEnumerator`1.moveNextWhenInvalidated
+  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.moveNextWhenInvalidated
+  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).moveNextWhenInvalidated
+  nameWithType: UnifyEnumerator<T>.moveNextWhenInvalidated
+  nameWithType.vb: UnifyEnumerator(Of T).moveNextWhenInvalidated
+- uid: Unify.Collections.Generic.UnifyEnumerator`1.moveNextWhenInvalidated*
+  name: moveNextWhenInvalidated
+  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_moveNextWhenInvalidated_
+  commentId: Overload:Unify.Collections.Generic.UnifyEnumerator`1.moveNextWhenInvalidated
   isSpec: "True"
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.OnCollectionChanged_Add
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).OnCollectionChanged_Add
-  nameWithType: UnifyEnumerator<T>.OnCollectionChanged_Add
-  nameWithType.vb: UnifyEnumerator(Of T).OnCollectionChanged_Add
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Clear(Unify.Collections.UnifyCollectionChangedEventArgs)
-  name: OnCollectionChanged_Clear(UnifyCollectionChangedEventArgs)
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnCollectionChanged_Clear_Unify_Collections_UnifyCollectionChangedEventArgs_
-  commentId: M:Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Clear(Unify.Collections.UnifyCollectionChangedEventArgs)
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.OnCollectionChanged_Clear(Unify.Collections.UnifyCollectionChangedEventArgs)
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).OnCollectionChanged_Clear(Unify.Collections.UnifyCollectionChangedEventArgs)
-  nameWithType: UnifyEnumerator<T>.OnCollectionChanged_Clear(UnifyCollectionChangedEventArgs)
-  nameWithType.vb: UnifyEnumerator(Of T).OnCollectionChanged_Clear(UnifyCollectionChangedEventArgs)
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Clear*
-  name: OnCollectionChanged_Clear
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnCollectionChanged_Clear_
-  commentId: Overload:Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Clear
-  isSpec: "True"
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.OnCollectionChanged_Clear
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).OnCollectionChanged_Clear
-  nameWithType: UnifyEnumerator<T>.OnCollectionChanged_Clear
-  nameWithType.vb: UnifyEnumerator(Of T).OnCollectionChanged_Clear
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Insert(Unify.Collections.UnifyCollectionChangedEventArgs)
-  name: OnCollectionChanged_Insert(UnifyCollectionChangedEventArgs)
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnCollectionChanged_Insert_Unify_Collections_UnifyCollectionChangedEventArgs_
-  commentId: M:Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Insert(Unify.Collections.UnifyCollectionChangedEventArgs)
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.OnCollectionChanged_Insert(Unify.Collections.UnifyCollectionChangedEventArgs)
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).OnCollectionChanged_Insert(Unify.Collections.UnifyCollectionChangedEventArgs)
-  nameWithType: UnifyEnumerator<T>.OnCollectionChanged_Insert(UnifyCollectionChangedEventArgs)
-  nameWithType.vb: UnifyEnumerator(Of T).OnCollectionChanged_Insert(UnifyCollectionChangedEventArgs)
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Insert*
-  name: OnCollectionChanged_Insert
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnCollectionChanged_Insert_
-  commentId: Overload:Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Insert
-  isSpec: "True"
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.OnCollectionChanged_Insert
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).OnCollectionChanged_Insert
-  nameWithType: UnifyEnumerator<T>.OnCollectionChanged_Insert
-  nameWithType.vb: UnifyEnumerator(Of T).OnCollectionChanged_Insert
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Remove(Unify.Collections.UnifyCollectionChangedEventArgs)
-  name: OnCollectionChanged_Remove(UnifyCollectionChangedEventArgs)
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnCollectionChanged_Remove_Unify_Collections_UnifyCollectionChangedEventArgs_
-  commentId: M:Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Remove(Unify.Collections.UnifyCollectionChangedEventArgs)
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.OnCollectionChanged_Remove(Unify.Collections.UnifyCollectionChangedEventArgs)
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).OnCollectionChanged_Remove(Unify.Collections.UnifyCollectionChangedEventArgs)
-  nameWithType: UnifyEnumerator<T>.OnCollectionChanged_Remove(UnifyCollectionChangedEventArgs)
-  nameWithType.vb: UnifyEnumerator(Of T).OnCollectionChanged_Remove(UnifyCollectionChangedEventArgs)
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Remove*
-  name: OnCollectionChanged_Remove
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnCollectionChanged_Remove_
-  commentId: Overload:Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Remove
-  isSpec: "True"
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.OnCollectionChanged_Remove
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).OnCollectionChanged_Remove
-  nameWithType: UnifyEnumerator<T>.OnCollectionChanged_Remove
-  nameWithType.vb: UnifyEnumerator(Of T).OnCollectionChanged_Remove
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Reset(Unify.Collections.UnifyCollectionChangedEventArgs)
-  name: OnCollectionChanged_Reset(UnifyCollectionChangedEventArgs)
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnCollectionChanged_Reset_Unify_Collections_UnifyCollectionChangedEventArgs_
-  commentId: M:Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Reset(Unify.Collections.UnifyCollectionChangedEventArgs)
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.OnCollectionChanged_Reset(Unify.Collections.UnifyCollectionChangedEventArgs)
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).OnCollectionChanged_Reset(Unify.Collections.UnifyCollectionChangedEventArgs)
-  nameWithType: UnifyEnumerator<T>.OnCollectionChanged_Reset(UnifyCollectionChangedEventArgs)
-  nameWithType.vb: UnifyEnumerator(Of T).OnCollectionChanged_Reset(UnifyCollectionChangedEventArgs)
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Reset*
-  name: OnCollectionChanged_Reset
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnCollectionChanged_Reset_
-  commentId: Overload:Unify.Collections.Generic.UnifyEnumerator`1.OnCollectionChanged_Reset
-  isSpec: "True"
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.OnCollectionChanged_Reset
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).OnCollectionChanged_Reset
-  nameWithType: UnifyEnumerator<T>.OnCollectionChanged_Reset
-  nameWithType.vb: UnifyEnumerator(Of T).OnCollectionChanged_Reset
+  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.moveNextWhenInvalidated
+  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).moveNextWhenInvalidated
+  nameWithType: UnifyEnumerator<T>.moveNextWhenInvalidated
+  nameWithType.vb: UnifyEnumerator(Of T).moveNextWhenInvalidated
 - uid: Unify.Collections.Generic.UnifyEnumerator`1.OnEnumerableRange_Invalidated(System.Object,System.EventArgs)
   name: OnEnumerableRange_Invalidated(Object, EventArgs)
   href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnEnumerableRange_Invalidated_System_Object_System_EventArgs_
@@ -694,6 +629,74 @@ references:
   fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).parent_CollectionChanged
   nameWithType: UnifyEnumerator<T>.parent_CollectionChanged
   nameWithType.vb: UnifyEnumerator(Of T).parent_CollectionChanged
+- uid: Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Add(Unify.Collections.UnifyCollectionChangedEventArgs)
+  name: parent_CollectionChanged_Add(UnifyCollectionChangedEventArgs)
+  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Add_Unify_Collections_UnifyCollectionChangedEventArgs_
+  commentId: M:Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Add(Unify.Collections.UnifyCollectionChangedEventArgs)
+  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.parent_CollectionChanged_Add(Unify.Collections.UnifyCollectionChangedEventArgs)
+  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).parent_CollectionChanged_Add(Unify.Collections.UnifyCollectionChangedEventArgs)
+  nameWithType: UnifyEnumerator<T>.parent_CollectionChanged_Add(UnifyCollectionChangedEventArgs)
+  nameWithType.vb: UnifyEnumerator(Of T).parent_CollectionChanged_Add(UnifyCollectionChangedEventArgs)
+- uid: Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Add*
+  name: parent_CollectionChanged_Add
+  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Add_
+  commentId: Overload:Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Add
+  isSpec: "True"
+  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.parent_CollectionChanged_Add
+  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).parent_CollectionChanged_Add
+  nameWithType: UnifyEnumerator<T>.parent_CollectionChanged_Add
+  nameWithType.vb: UnifyEnumerator(Of T).parent_CollectionChanged_Add
+- uid: Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Clear(Unify.Collections.UnifyCollectionChangedEventArgs)
+  name: parent_CollectionChanged_Clear(UnifyCollectionChangedEventArgs)
+  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Clear_Unify_Collections_UnifyCollectionChangedEventArgs_
+  commentId: M:Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Clear(Unify.Collections.UnifyCollectionChangedEventArgs)
+  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.parent_CollectionChanged_Clear(Unify.Collections.UnifyCollectionChangedEventArgs)
+  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).parent_CollectionChanged_Clear(Unify.Collections.UnifyCollectionChangedEventArgs)
+  nameWithType: UnifyEnumerator<T>.parent_CollectionChanged_Clear(UnifyCollectionChangedEventArgs)
+  nameWithType.vb: UnifyEnumerator(Of T).parent_CollectionChanged_Clear(UnifyCollectionChangedEventArgs)
+- uid: Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Clear*
+  name: parent_CollectionChanged_Clear
+  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Clear_
+  commentId: Overload:Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Clear
+  isSpec: "True"
+  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.parent_CollectionChanged_Clear
+  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).parent_CollectionChanged_Clear
+  nameWithType: UnifyEnumerator<T>.parent_CollectionChanged_Clear
+  nameWithType.vb: UnifyEnumerator(Of T).parent_CollectionChanged_Clear
+- uid: Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Insert(Unify.Collections.UnifyCollectionChangedEventArgs)
+  name: parent_CollectionChanged_Insert(UnifyCollectionChangedEventArgs)
+  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Insert_Unify_Collections_UnifyCollectionChangedEventArgs_
+  commentId: M:Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Insert(Unify.Collections.UnifyCollectionChangedEventArgs)
+  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.parent_CollectionChanged_Insert(Unify.Collections.UnifyCollectionChangedEventArgs)
+  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).parent_CollectionChanged_Insert(Unify.Collections.UnifyCollectionChangedEventArgs)
+  nameWithType: UnifyEnumerator<T>.parent_CollectionChanged_Insert(UnifyCollectionChangedEventArgs)
+  nameWithType.vb: UnifyEnumerator(Of T).parent_CollectionChanged_Insert(UnifyCollectionChangedEventArgs)
+- uid: Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Insert*
+  name: parent_CollectionChanged_Insert
+  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Insert_
+  commentId: Overload:Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Insert
+  isSpec: "True"
+  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.parent_CollectionChanged_Insert
+  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).parent_CollectionChanged_Insert
+  nameWithType: UnifyEnumerator<T>.parent_CollectionChanged_Insert
+  nameWithType.vb: UnifyEnumerator(Of T).parent_CollectionChanged_Insert
+- uid: Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Remove(Unify.Collections.UnifyCollectionChangedEventArgs)
+  name: parent_CollectionChanged_Remove(UnifyCollectionChangedEventArgs)
+  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Remove_Unify_Collections_UnifyCollectionChangedEventArgs_
+  commentId: M:Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Remove(Unify.Collections.UnifyCollectionChangedEventArgs)
+  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.parent_CollectionChanged_Remove(Unify.Collections.UnifyCollectionChangedEventArgs)
+  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).parent_CollectionChanged_Remove(Unify.Collections.UnifyCollectionChangedEventArgs)
+  nameWithType: UnifyEnumerator<T>.parent_CollectionChanged_Remove(UnifyCollectionChangedEventArgs)
+  nameWithType.vb: UnifyEnumerator(Of T).parent_CollectionChanged_Remove(UnifyCollectionChangedEventArgs)
+- uid: Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Remove*
+  name: parent_CollectionChanged_Remove
+  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Remove_
+  commentId: Overload:Unify.Collections.Generic.UnifyEnumerator`1.parent_CollectionChanged_Remove
+  isSpec: "True"
+  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.parent_CollectionChanged_Remove
+  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).parent_CollectionChanged_Remove
+  nameWithType: UnifyEnumerator<T>.parent_CollectionChanged_Remove
+  nameWithType.vb: UnifyEnumerator(Of T).parent_CollectionChanged_Remove
 - uid: Unify.Collections.Generic.UnifyEnumerator`1.PassComplete
   name: PassComplete
   href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_PassComplete
@@ -1915,6 +1918,19 @@ references:
   isSpec: "True"
   fullName: Unify.Collections.IUnifyEnumerator.maxRewindItems
   nameWithType: IUnifyEnumerator.maxRewindItems
+- uid: Unify.Collections.IUnifyEnumerator.moveNextWhenInvalidated
+  name: moveNextWhenInvalidated
+  href: 0.1.x/api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_moveNextWhenInvalidated
+  commentId: P:Unify.Collections.IUnifyEnumerator.moveNextWhenInvalidated
+  fullName: Unify.Collections.IUnifyEnumerator.moveNextWhenInvalidated
+  nameWithType: IUnifyEnumerator.moveNextWhenInvalidated
+- uid: Unify.Collections.IUnifyEnumerator.moveNextWhenInvalidated*
+  name: moveNextWhenInvalidated
+  href: 0.1.x/api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_moveNextWhenInvalidated_
+  commentId: Overload:Unify.Collections.IUnifyEnumerator.moveNextWhenInvalidated
+  isSpec: "True"
+  fullName: Unify.Collections.IUnifyEnumerator.moveNextWhenInvalidated
+  nameWithType: IUnifyEnumerator.moveNextWhenInvalidated
 - uid: Unify.Collections.IUnifyList
   name: IUnifyList
   href: 0.1.x/api/Unify.Collections.IUnifyList.html
@@ -2014,12 +2030,6 @@ references:
   commentId: F:Unify.Collections.UnifyCollectionChangedAction.Remove
   fullName: Unify.Collections.UnifyCollectionChangedAction.Remove
   nameWithType: UnifyCollectionChangedAction.Remove
-- uid: Unify.Collections.UnifyCollectionChangedAction.Reset
-  name: Reset
-  href: 0.1.x/api/Unify.Collections.UnifyCollectionChangedAction.html#Unify_Collections_UnifyCollectionChangedAction_Reset
-  commentId: F:Unify.Collections.UnifyCollectionChangedAction.Reset
-  fullName: Unify.Collections.UnifyCollectionChangedAction.Reset
-  nameWithType: UnifyCollectionChangedAction.Reset
 - uid: Unify.Collections.UnifyCollectionChangedEventArgs
   name: UnifyCollectionChangedEventArgs
   href: 0.1.x/api/Unify.Collections.UnifyCollectionChangedEventArgs.html
@@ -2140,43 +2150,43 @@ references:
   isSpec: "True"
   fullName: Unify.Collections.UnifyEnumerableRange.Count
   nameWithType: UnifyEnumerableRange.Count
-- uid: Unify.Collections.UnifyEnumerableRange.DefaultEndItemIndex
-  name: DefaultEndItemIndex
-  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultEndItemIndex
-  commentId: F:Unify.Collections.UnifyEnumerableRange.DefaultEndItemIndex
-  fullName: Unify.Collections.UnifyEnumerableRange.DefaultEndItemIndex
-  nameWithType: UnifyEnumerableRange.DefaultEndItemIndex
+- uid: Unify.Collections.UnifyEnumerableRange.DefaultEndIndex
+  name: DefaultEndIndex
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultEndIndex
+  commentId: F:Unify.Collections.UnifyEnumerableRange.DefaultEndIndex
+  fullName: Unify.Collections.UnifyEnumerableRange.DefaultEndIndex
+  nameWithType: UnifyEnumerableRange.DefaultEndIndex
 - uid: Unify.Collections.UnifyEnumerableRange.DefaultLoopCount
   name: DefaultLoopCount
   href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultLoopCount
   commentId: F:Unify.Collections.UnifyEnumerableRange.DefaultLoopCount
   fullName: Unify.Collections.UnifyEnumerableRange.DefaultLoopCount
   nameWithType: UnifyEnumerableRange.DefaultLoopCount
-- uid: Unify.Collections.UnifyEnumerableRange.DefaultStartItemIndex
-  name: DefaultStartItemIndex
-  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultStartItemIndex
-  commentId: F:Unify.Collections.UnifyEnumerableRange.DefaultStartItemIndex
-  fullName: Unify.Collections.UnifyEnumerableRange.DefaultStartItemIndex
-  nameWithType: UnifyEnumerableRange.DefaultStartItemIndex
+- uid: Unify.Collections.UnifyEnumerableRange.DefaultStartIndex
+  name: DefaultStartIndex
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultStartIndex
+  commentId: F:Unify.Collections.UnifyEnumerableRange.DefaultStartIndex
+  fullName: Unify.Collections.UnifyEnumerableRange.DefaultStartIndex
+  nameWithType: UnifyEnumerableRange.DefaultStartIndex
 - uid: Unify.Collections.UnifyEnumerableRange.DefaultStep
   name: DefaultStep
   href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultStep
   commentId: F:Unify.Collections.UnifyEnumerableRange.DefaultStep
   fullName: Unify.Collections.UnifyEnumerableRange.DefaultStep
   nameWithType: UnifyEnumerableRange.DefaultStep
-- uid: Unify.Collections.UnifyEnumerableRange.endItemIndex
-  name: endItemIndex
-  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endItemIndex
-  commentId: P:Unify.Collections.UnifyEnumerableRange.endItemIndex
-  fullName: Unify.Collections.UnifyEnumerableRange.endItemIndex
-  nameWithType: UnifyEnumerableRange.endItemIndex
-- uid: Unify.Collections.UnifyEnumerableRange.endItemIndex*
-  name: endItemIndex
-  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endItemIndex_
-  commentId: Overload:Unify.Collections.UnifyEnumerableRange.endItemIndex
+- uid: Unify.Collections.UnifyEnumerableRange.endIndex
+  name: endIndex
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex
+  commentId: P:Unify.Collections.UnifyEnumerableRange.endIndex
+  fullName: Unify.Collections.UnifyEnumerableRange.endIndex
+  nameWithType: UnifyEnumerableRange.endIndex
+- uid: Unify.Collections.UnifyEnumerableRange.endIndex*
+  name: endIndex
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex_
+  commentId: Overload:Unify.Collections.UnifyEnumerableRange.endIndex
   isSpec: "True"
-  fullName: Unify.Collections.UnifyEnumerableRange.endItemIndex
-  nameWithType: UnifyEnumerableRange.endItemIndex
+  fullName: Unify.Collections.UnifyEnumerableRange.endIndex
+  nameWithType: UnifyEnumerableRange.endIndex
 - uid: Unify.Collections.UnifyEnumerableRange.Invalidated
   name: Invalidated
   href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_Invalidated
@@ -2209,19 +2219,19 @@ references:
   isSpec: "True"
   fullName: Unify.Collections.UnifyEnumerableRange.loopCount
   nameWithType: UnifyEnumerableRange.loopCount
-- uid: Unify.Collections.UnifyEnumerableRange.startItemIndex
-  name: startItemIndex
-  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startItemIndex
-  commentId: P:Unify.Collections.UnifyEnumerableRange.startItemIndex
-  fullName: Unify.Collections.UnifyEnumerableRange.startItemIndex
-  nameWithType: UnifyEnumerableRange.startItemIndex
-- uid: Unify.Collections.UnifyEnumerableRange.startItemIndex*
-  name: startItemIndex
-  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startItemIndex_
-  commentId: Overload:Unify.Collections.UnifyEnumerableRange.startItemIndex
+- uid: Unify.Collections.UnifyEnumerableRange.startIndex
+  name: startIndex
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex
+  commentId: P:Unify.Collections.UnifyEnumerableRange.startIndex
+  fullName: Unify.Collections.UnifyEnumerableRange.startIndex
+  nameWithType: UnifyEnumerableRange.startIndex
+- uid: Unify.Collections.UnifyEnumerableRange.startIndex*
+  name: startIndex
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex_
+  commentId: Overload:Unify.Collections.UnifyEnumerableRange.startIndex
   isSpec: "True"
-  fullName: Unify.Collections.UnifyEnumerableRange.startItemIndex
-  nameWithType: UnifyEnumerableRange.startItemIndex
+  fullName: Unify.Collections.UnifyEnumerableRange.startIndex
+  nameWithType: UnifyEnumerableRange.startIndex
 - uid: Unify.Collections.UnifyEnumerableRange.step
   name: step
   href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step
@@ -2441,6 +2451,32 @@ references:
   isSpec: "True"
   fullName: Unify.Collections.UnifyEnumerator.MoveNext
   nameWithType: UnifyEnumerator.MoveNext
+- uid: Unify.Collections.UnifyEnumerator.moveNextWhenInvalidated
+  name: moveNextWhenInvalidated
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_moveNextWhenInvalidated
+  commentId: P:Unify.Collections.UnifyEnumerator.moveNextWhenInvalidated
+  fullName: Unify.Collections.UnifyEnumerator.moveNextWhenInvalidated
+  nameWithType: UnifyEnumerator.moveNextWhenInvalidated
+- uid: Unify.Collections.UnifyEnumerator.moveNextWhenInvalidated*
+  name: moveNextWhenInvalidated
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_moveNextWhenInvalidated_
+  commentId: Overload:Unify.Collections.UnifyEnumerator.moveNextWhenInvalidated
+  isSpec: "True"
+  fullName: Unify.Collections.UnifyEnumerator.moveNextWhenInvalidated
+  nameWithType: UnifyEnumerator.moveNextWhenInvalidated
+- uid: Unify.Collections.UnifyEnumerator.OnInvalidated
+  name: OnInvalidated()
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_OnInvalidated
+  commentId: M:Unify.Collections.UnifyEnumerator.OnInvalidated
+  fullName: Unify.Collections.UnifyEnumerator.OnInvalidated()
+  nameWithType: UnifyEnumerator.OnInvalidated()
+- uid: Unify.Collections.UnifyEnumerator.OnInvalidated*
+  name: OnInvalidated
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_OnInvalidated_
+  commentId: Overload:Unify.Collections.UnifyEnumerator.OnInvalidated
+  isSpec: "True"
+  fullName: Unify.Collections.UnifyEnumerator.OnInvalidated
+  nameWithType: UnifyEnumerator.OnInvalidated
 - uid: Unify.Collections.UnifyEnumerator.OnLoopFinished
   name: OnLoopFinished()
   href: 0.1.x/api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_OnLoopFinished

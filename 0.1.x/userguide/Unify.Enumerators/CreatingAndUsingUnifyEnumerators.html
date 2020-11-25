@@ -61,11 +61,11 @@
             <article class="content wrap" id="_content" data-uid="CreatingAndUsingUnifyEnumerators">
 <h1 id="creating-and-using-unify-enumerators">Creating and Using Unify Enumerators</h1>
 
-<p><sup><font color="grey">Namespace: Unify.Collections</font></sup><br>
+<p><sup><font color="grey">Namespace: Unify.Collections, Unify.Collections.Generic</font></sup><br>
 <sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
-<p>To create a Unify Enumerator instance, use the <code>new()</code> operator and pass the source collection to the constructor. The source collection can be any class that implements either of .NET's <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable" target="_blank"><strong>IEnumerable</strong></a> or <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1" target="_blank"><strong>IEnumerable&lt;T&gt;</strong></a> interfaces, this includes any single-dimensional, multidimensional or jagged <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/" target="_blank"><strong>array</strong></a>, or any class that implements either of Unify's <a class="xref" href="../../api/Unify.Collections.IUnifyList.html"><strong>IUnifyList</strong></a> or <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyList-1.html"><strong>IUnifyList&lt;T&gt;</strong></a> interfaces.</p>
-<p>You can hold a reference to a Unify Enumerator in either; a concrete type matching the Unify Enumerator you are creating or either of Unify's <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html"><strong>IUnifyEnumerator</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyEnumerator-1.html"><strong>IUnifyEnumerator&lt;T&gt;</strong></a> interface types:</p>
-<pre><code>IList&lt;string&gt; list = new List&lt;string&gt; { &quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;, &quot;five&quot;, &quot;six&quot;, &quot;seven&quot;, &quot;eight&quot;, &quot;nine&quot;, &quot;ten&quot;, &quot;eleven&quot;, &quot;twelve&quot; };
+<p>Each Unify Enumerator provides a generic and non-generic version. To create a Unify Enumerator instance, use the <code>new()</code> operator and pass the source collection to the constructor. The source collection can be any class that implements either of .NET's <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable" target="_blank"><strong>IEnumerable</strong></a> or <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1" target="_blank"><strong>IEnumerable&lt;T&gt;</strong></a> interfaces, this includes any single-dimensional, multidimensional or jagged array, or any class that implements either of Unify's <a class="xref" href="../../api/Unify.Collections.IUnifyList.html"><strong>IUnifyList</strong></a> or <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyList-1.html"><strong>IUnifyList&lt;T&gt;</strong></a> interface types.</p>
+<p>A reference to a Unify Enumerator can be held in either; the concrete type matching the Unify Enumerator type or either of Unify's <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html"><strong>IUnifyEnumerator</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyEnumerator-1.html"><strong>IUnifyEnumerator&lt;T&gt;</strong></a> interface types:</p>
+<pre><code>IList&lt;string&gt; list = new List&lt;string&gt; { &quot;Apple&quot;, &quot;Orange&quot;, &quot;Banana&quot;, &quot;Pear&quot;, &quot;Grape&quot;, &quot;Plum&quot;, &quot;Lemon&quot;, &quot;Lime&quot;, &quot;Cherry&quot;, &quot;Mango&quot; };
 
 UnifyForwardsEnumerator forwards = new UnifyForwardsEnumerator(list);
 IUnifyEnumerator forwardsInterface = new UnifyForwardsEnumerator(list);
@@ -75,13 +75,17 @@ IUnifyEnumerator&lt;string&gt; backwardsGenericInterface = new UnifyBackwardsEnu
 </code></pre>
 <br>
 <p>When a Unify Enumerator is created, or after the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Reset"><strong>Reset()</strong></a> method is called, the Unify Enumerator is positioned before the first element of the collection, the first call to the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a> method moves the Unify Enumerator to the first element of the collection. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a> method returns <strong>true</strong> while the Unify Enumerator is pointing to a valid element; otherwise, <strong>false</strong> if the end of the collection has been reached.</p>
-<p>To access the object that the Unify Enumerator is positioned at, use the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator.current" target="_blank"><strong>Current</strong></a> property, which is of type <strong>object</strong> for a non-generic Unify Enumerator and of type <strong>T</strong> for a generic Unify Enumerator. The <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator.current" target="_blank"><strong>Current</strong></a> property returns the same value until the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a> method is called, then the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator.current" target="_blank"><strong>Current</strong></a> property is set to the next element.</p>
+<p>To access the object that the Unify Enumerator is positioned at, use the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Current"><strong>Current</strong></a> property, which is of type <strong>object</strong> for a non-generic Unify Enumerator and of type <strong>T</strong> for a generic Unify Enumerator. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Current"><strong>Current</strong></a> property returns the same value until the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a> method is called, then the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Current"><strong>Current</strong></a> property is set to the next element.</p>
 <p>To use the Unify Enumerator again, call the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Reset"><strong>Reset()</strong></a> method.</p>
 <h3 id="example">Example</h3>
-<p>This Unify Enumerator example uses a generic <a class="xref" href="../../api/Unify.Collections.Generic.UnifyBackwardsEnumerator-1.html"><strong>UnifyBackwardsEnumerator&lt;T&gt;</strong></a> of type string, to iterate backwards over a list containing the numbers 1 to 12 as words. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Reset"><strong>Reset()</strong></a> method is called after the first iteration to use the Unify Enumerator a second time.</p>
+<p>This Unify Enumerator example demonstrates the four generic Unify Enumerators, of type string, to iterate over a .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;string&gt;</strong></a> containing the numbers 1 to 5 as words.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
-<li><strong>S</strong> to Start</li>
+<li><strong>F</strong> to Start the Forwards Enumerator</li>
+<li><strong>B</strong> to Start the Backwards Enumerator</li>
+<li><strong>Y</strong> to Start the YoYo Enumerator</li>
+<li><strong>R</strong> to Start the Random Enumerator</li>
+<li><strong>X</strong> to Reset all Enumerators</li>
 </ul>
 <pre><code>using System.Collections.Generic;
 using Unify.Collections.Generic;
@@ -89,37 +93,95 @@ using UnityEngine;
 
 public class Enumerators_CreateAndUse : MonoBehaviour
 {
+    private UnifyForwardsEnumerator&lt;string&gt; forwards;
+    private UnifyBackwardsEnumerator&lt;string&gt; backwards;
+    private UnifyYoYoEnumerator&lt;string&gt; yoyo;
+    private UnifyRandomEnumerator&lt;string&gt; random;
+    private IList&lt;string&gt; list;
+
     void Start()
     {
-        print(&quot;press S to START&quot;);
+        list = new List&lt;string&gt; { &quot;One&quot;, &quot;Two&quot;, &quot;Three&quot;, &quot;Four&quot;, &quot;Five&quot; };
+
+        forwards = new UnifyForwardsEnumerator&lt;string&gt;(list);
+        backwards = new UnifyBackwardsEnumerator&lt;string&gt;(list);
+        yoyo = new UnifyYoYoEnumerator&lt;string&gt;(list);
+        random = new UnifyRandomEnumerator&lt;string&gt;(list);
+
+        print(&quot;press F for FORWARDS, B for BACKWARDS, Y for YOYO, R for RANDOM, X to RESET ALL ENUMERATORS&quot;);
     }
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.F))
         {
-            CreateAndUse();
+            RunForwards();
+        }
+
+        if (Input.GetKeyUp(KeyCode.B))
+        {
+            RunBackwards();
+        }
+
+        if (Input.GetKeyUp(KeyCode.Y))
+        {
+            RunYoYo();
+        }
+
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            RunRandom();
+        }
+
+        if (Input.GetKeyUp(KeyCode.X))
+        {
+            ResetAll();
         }
     }
 
-    private void CreateAndUse()
+    private void RunForwards()
     {
-        IList&lt;string&gt; list = new List&lt;string&gt; { &quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;, &quot;five&quot;, &quot;six&quot;, &quot;seven&quot;, &quot;eight&quot;, &quot;nine&quot;, &quot;ten&quot;, &quot;eleven&quot;, &quot;twelve&quot; };
-        UnifyBackwardsEnumerator&lt;string&gt; backwards = new UnifyBackwardsEnumerator&lt;string&gt;(list);
+        print(&quot;--- Forwards Enumerator ---&quot;);
+        while (forwards.MoveNext())
+        {
+            print(forwards.Current);
+        }
+    }
 
+    private void RunBackwards()
+    {
+        print(&quot;--- Backwards Enumerator ---&quot;);
         while (backwards.MoveNext())
         {
             print(backwards.Current);
         }
+    }
 
-        print(&quot;Resetting enumerator...&quot;);
+    private void RunYoYo()
+    {
+        print(&quot;--- YoYo Enumerator ---&quot;);
+        while (yoyo.MoveNext())
+        {
+            print(yoyo.Current);
+        }
+    }
 
+    private void RunRandom()
+    {
+        print(&quot;--- Random Enumerator ---&quot;);
+        while (random.MoveNext())
+        {
+            print(random.Current);
+        }
+    }
+
+    private void ResetAll()
+    {
+        print(&quot;--- Resetting Enumerators ---&quot;);
+        forwards.Reset();
         backwards.Reset();
-
-        while (backwards.MoveNext())
-        {
-            print(backwards.Current);
-        }
+        yoyo.Reset();
+        random.Reset();
     }
 }
 </code></pre>

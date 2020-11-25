@@ -332,6 +332,32 @@
       </tr>
     </tbody>
   </table>
+  <a id="Unify_Collections_UnifyEnumerator_moveNextWhenInvalidated_" data-uid="Unify.Collections.UnifyEnumerator.moveNextWhenInvalidated*"></a>
+  <h4 id="Unify_Collections_UnifyEnumerator_moveNextWhenInvalidated" data-uid="Unify.Collections.UnifyEnumerator.moveNextWhenInvalidated">moveNextWhenInvalidated</h4>
+  <div class="markdown level1 summary"><p>Determines if the enumerator should attempt to move to the next valid item when it becomes invalidated through the underlying collection being modified.
+The default value is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool moveNextWhenInvalidated { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if MoveNext() is called when invalidated; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Unify_Collections_UnifyEnumerator_parent_" data-uid="Unify.Collections.UnifyEnumerator.parent*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_parent" data-uid="Unify.Collections.UnifyEnumerator.parent">parent</h4>
   <div class="markdown level1 summary"><p>The source collection of the enumerator.</p>
@@ -484,6 +510,15 @@
       </tr>
     </tbody>
   </table>
+  <a id="Unify_Collections_UnifyEnumerator_OnInvalidated_" data-uid="Unify.Collections.UnifyEnumerator.OnInvalidated*"></a>
+  <h4 id="Unify_Collections_UnifyEnumerator_OnInvalidated" data-uid="Unify.Collections.UnifyEnumerator.OnInvalidated">OnInvalidated()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when the source <a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator&lt;T&gt;</a> becomes invalidated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnInvalidated()</code></pre>
+  </div>
   <a id="Unify_Collections_UnifyEnumerator_OnLoopFinished_" data-uid="Unify.Collections.UnifyEnumerator.OnLoopFinished*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_OnLoopFinished" data-uid="Unify.Collections.UnifyEnumerator.OnLoopFinished">OnLoopFinished()</h4>
   <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when a looping <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> has successfully completed all passes.</p>
