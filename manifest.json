@@ -669,10 +669,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/LoopingUnifyEnumerators.html",
-          "hash": "x/emC0GFT2BOJ/ZjDwZFZg=="
+          "hash": "oMNeSvMG3LykzAUMBeNreA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -696,7 +696,7 @@
           "hash": "ZF2m2embzk/D8s0Z+VW24Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
