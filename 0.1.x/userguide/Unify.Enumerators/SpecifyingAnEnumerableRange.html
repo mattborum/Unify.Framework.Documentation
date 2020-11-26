@@ -68,12 +68,8 @@
 <p>To specify an enumerable range that always starts from the first item of a collection, or always ends at the last item of a collection, regardless of any changes made, set the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and/or <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> properties to <strong>-1</strong>. This is the default setting.</p>
 <p>The following animation shows how the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> adjusts to maintain the range as the underlying collection is modified.</p>
 <p><img src="../../../images/enumerableRange_anim.gif" alt="Enumerable Range Animation"></p>
-<h3 id="looping-a-range">Looping a Range</h3>
-<p>Use the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property to specify how many times an enumeration should be repeated. This must be a value greater than or equal to 0.</p>
-<h3 id="stepping-over-a-range">Stepping over a Range</h3>
-<p>Items can be stepped over during an enumeration through the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> property. This must be a value greater than or equal to 1.</p>
 <h3 id="example">Example</h3>
-<p>This example uses the four generic Unify Enumerators, of type string, to demonstrate all the features of the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a>. The example iterates over a list of fruits, with the enumerable range specified using a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> of <strong>2</strong> and an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> of <strong>8</strong>, which includes all items between, and including, <strong>&quot;Banana&quot;</strong> and <strong>&quot;Cherry&quot;</strong>. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> value is set to <strong>2</strong>, which means the Unify Enumertors will iterate over every other item in the range.</p>
+<p>This example uses the four generic Unify Enumerators, of type string, to demonstrate iterating over an enumerable range. The example iterates over a list of fruits; <strong>&quot;Apple&quot;</strong>, <strong>&quot;Orange&quot;</strong>, <strong>&quot;Banana&quot;</strong>, <strong>&quot;Pear&quot;</strong>, <strong>&quot;Grape&quot;</strong>, <strong>&quot;Plum&quot;</strong>, <strong>&quot;Lemon&quot;</strong>, <strong>&quot;Lime&quot;</strong>, <strong>&quot;Cherry&quot;</strong> and <strong>&quot;Mango&quot;</strong>, with the enumerable range having a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> of <strong>2</strong> and an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> of <strong>8</strong>, which includes all items between, and including, <strong>&quot;Banana&quot;</strong> and <strong>&quot;Cherry&quot;</strong>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
 <li><strong>F</strong> to Start the Forwards Enumerator</li>
@@ -100,27 +96,19 @@ public class Enumerators_SpecifyingAnEnumerableRange : MonoBehaviour
 
         forwards = new UnifyForwardsEnumerator&lt;string&gt;(list);
         forwards.enumerableRange.startIndex = 2; // range starts at &quot;Banana&quot;
-        forwards.enumerableRange.endIndex = 8; // range ends at &quot;Cherry&quot;
-        forwards.enumerableRange.loopCount = 2; // repeat the enumeration twice
-        forwards.enumerableRange.step = 2; // iterate over every other item
+        forwards.enumerableRange.endIndex = 12; // range ends at &quot;Blueberry&quot;
 
         backwards = new UnifyBackwardsEnumerator&lt;string&gt;(list);
         backwards.enumerableRange.startIndex = 2;
-        backwards.enumerableRange.endIndex = 8;
-        backwards.enumerableRange.loopCount = 2;
-        backwards.enumerableRange.step = 2;
+        backwards.enumerableRange.endIndex = 12;
 
         yoyo = new UnifyYoYoEnumerator&lt;string&gt;(list);
         yoyo.enumerableRange.startIndex = 2;
-        yoyo.enumerableRange.endIndex = 8;
-        yoyo.enumerableRange.loopCount = 2;
-        yoyo.enumerableRange.step = 2;
+        yoyo.enumerableRange.endIndex = 12;
 
         random = new UnifyRandomEnumerator&lt;string&gt;(list);
         random.enumerableRange.startIndex = 2;
-        random.enumerableRange.endIndex = 8;
-        random.enumerableRange.loopCount = 2;
-        random.enumerableRange.step = 2;
+        random.enumerableRange.endIndex = 12;
 
         print(&quot;press F for FORWARDS, B for BACKWARDS, Y for YO-YO, R for RANDOM, X to RESET ALL ENUMERATORS&quot;);
     }
@@ -173,7 +161,7 @@ public class Enumerators_SpecifyingAnEnumerableRange : MonoBehaviour
 
     private void RunYoYo()
     {
-        print(&quot;--- Yo-Yo Enumerator ---&quot;);
+        print(&quot;--- YoYo Enumerator ---&quot;);
         while (yoyo.MoveNext())
         {
             print(yoyo.Current);
