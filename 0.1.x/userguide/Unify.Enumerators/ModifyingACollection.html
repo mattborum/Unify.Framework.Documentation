@@ -59,7 +59,7 @@
         <div class="article row grid-right">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="ModifyingACollection">
-<h1 id="modifying-a-collection">Modifying a Collection</h1>
+<h2 id="modifying-a-collection">Modifying a Collection</h2>
 
 <p><sup><font color="grey">Namespace: Unify.Collections, Unify.Collections.Generic</font></sup><br>
 <sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
@@ -74,8 +74,8 @@
 <p>A special case occurs when the Unify Enumerator's <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Current"><strong>Current</strong></a> item is removed. In this scenario, the Unify Enumerator will rewind over previously iterated items to position itself at the last known valid item; if there are no valid items available, Unify will use the enumerator's <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a> method as a last attempt to ensure a valid item is available. To prevent this behaviour, set the <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_moveNextWhenInvalidated"><strong>moveNextWhenInvalidated</strong></a> property to <strong>false</strong>; in this case the Unify Enumerator will remain in an invalid state until it is manually adjusted. Unify Enumerator's provide an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_isValid"><strong>isValid</strong></a> flag to test for validity. The default value for <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_moveNextWhenInvalidated"><strong>moveNextWhenInvalidated</strong></a> is <strong>true</strong>.</p>
 <p>The following animation shows how Unify adjusts it's position as the underlying collection is modified.</p>
 <p><img src="../../../images/enumerableRangeModify_anim.gif" alt="Enumerable Range Animation"></p>
-<h2 id="example">Example</h2>
-<p>This example demonstrates how a Unify Enumerator behaves as items are added and removed from the underlying collection; an <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyList-1.html"><strong>IUnifyList&lt;string&gt;</strong></a>, containing the numbers 0-9 as words, is used as the source collection for a generic <a class="xref" href="../../api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html"><strong>UnifyForwardsEnumerator&lt;string&gt;</strong></a> enumerator type. It allows the Unify Enumerator to be controlled atomically, while observing the internal state at each operation.</p>
+<h3 id="example">Example</h3>
+<p>This example demonstrates how a Unify Enumerator behaves as items are added and removed from the underlying collection; an <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyList-1.html"><strong>IUnifyList&lt;string&gt;</strong></a>, containing the numbers 0-9 as words, is used as the source collection for a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html"><strong>UnifyForwardsEnumerator&lt;string&gt;</strong></a> enumerator type. It allows the Unify Enumerator to be controlled atomically, while observing the internal state at each operation. Error checking has been omitted to demonstrate exceptions, as described <a href="#exceptions"><strong>below</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
 <li>C to Print the Unify Enumerator's current item</li>
@@ -200,7 +200,7 @@ public class Enumerators_ModifyingACollection : MonoBehaviour
 
     private void PrintCurrent()
     {
-        print(enumerator.isValid ? $&quot;Current Item: {enumerator.Current}&quot; : &quot;--- Enumerator is in an invalid state ---&quot;);
+        print($&quot;Current Item: {enumerator.Current}&quot;);
     }
 
     private void PrintList()
@@ -222,7 +222,7 @@ public class Enumerators_ModifyingACollection : MonoBehaviour
 }
 
 </code></pre>
-<h2 id="exceptions">Exceptions</h2>
+<h3 id="exceptions">Exceptions</h3>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
 <li>Accessing the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Current"><strong>Current</strong></a> item when the Unify Enumerator is in an invalid state will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
