@@ -1931,6 +1931,12 @@ references:
   isSpec: "True"
   fullName: Unify.Collections.IUnifyEnumerator.moveNextWhenInvalidated
   nameWithType: IUnifyEnumerator.moveNextWhenInvalidated
+- uid: Unify.Collections.IUnifyEnumerator.PassComplete
+  name: PassComplete
+  href: 0.1.x/api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_PassComplete
+  commentId: E:Unify.Collections.IUnifyEnumerator.PassComplete
+  fullName: Unify.Collections.IUnifyEnumerator.PassComplete
+  nameWithType: IUnifyEnumerator.PassComplete
 - uid: Unify.Collections.IUnifyList
   name: IUnifyList
   href: 0.1.x/api/Unify.Collections.IUnifyList.html

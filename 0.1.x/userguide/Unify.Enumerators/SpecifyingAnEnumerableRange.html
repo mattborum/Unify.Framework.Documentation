@@ -69,7 +69,7 @@
 <p>The following animation shows how the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> adjusts to maintain the range as the underlying collection is modified.</p>
 <p><img src="../../../images/enumerableRange_anim.gif" alt="Enumerable Range Animation"></p>
 <h3 id="example">Example</h3>
-<p>This example uses the four generic Unify Enumerators, of type string, to demonstrate iterating over an enumerable range. The example iterates over a list of fruits; <strong>&quot;Apple&quot;</strong>, <strong>&quot;Orange&quot;</strong>, <strong>&quot;Banana&quot;</strong>, <strong>&quot;Pear&quot;</strong>, <strong>&quot;Grape&quot;</strong>, <strong>&quot;Plum&quot;</strong>, <strong>&quot;Lemon&quot;</strong>, <strong>&quot;Lime&quot;</strong>, <strong>&quot;Cherry&quot;</strong> and <strong>&quot;Mango&quot;</strong>, with the enumerable range having a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> of <strong>2</strong> and an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> of <strong>8</strong>, which includes all items between, and including, <strong>&quot;Banana&quot;</strong> and <strong>&quot;Cherry&quot;</strong>.</p>
+<p>This example uses the four generic Unify Enumerators, with type <strong>T</strong> of string, to demonstrate iterating over an enumerable range. The example iterates over a list of fruits; <strong>&quot;Apple&quot;</strong>, <strong>&quot;Orange&quot;</strong>, <strong>&quot;Banana&quot;</strong>, <strong>&quot;Pear&quot;</strong>, <strong>&quot;Grape&quot;</strong>, <strong>&quot;Plum&quot;</strong>, <strong>&quot;Lemon&quot;</strong>, <strong>&quot;Lime&quot;</strong>, <strong>&quot;Cherry&quot;</strong> and <strong>&quot;Mango&quot;</strong>, with the enumerable range having a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> of <strong>2</strong> and an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> of <strong>8</strong>, which includes all items between, and including, <strong>&quot;Banana&quot;</strong> and <strong>&quot;Cherry&quot;</strong>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
 <li><strong>F</strong> to Start the Forwards Enumerator</li>
@@ -96,19 +96,19 @@ public class Enumerators_SpecifyingAnEnumerableRange : MonoBehaviour
 
         forwards = new UnifyForwardsEnumerator&lt;string&gt;(list);
         forwards.enumerableRange.startIndex = 2; // range starts at &quot;Banana&quot;
-        forwards.enumerableRange.endIndex = 12; // range ends at &quot;Blueberry&quot;
+        forwards.enumerableRange.endIndex = 8; // range ends at &quot;Cherry&quot;
 
         backwards = new UnifyBackwardsEnumerator&lt;string&gt;(list);
         backwards.enumerableRange.startIndex = 2;
-        backwards.enumerableRange.endIndex = 12;
+        backwards.enumerableRange.endIndex = 8;
 
         yoyo = new UnifyYoYoEnumerator&lt;string&gt;(list);
         yoyo.enumerableRange.startIndex = 2;
-        yoyo.enumerableRange.endIndex = 12;
+        yoyo.enumerableRange.endIndex = 8;
 
         random = new UnifyRandomEnumerator&lt;string&gt;(list);
         random.enumerableRange.startIndex = 2;
-        random.enumerableRange.endIndex = 12;
+        random.enumerableRange.endIndex = 8
 
         print(&quot;press F for FORWARDS, B for BACKWARDS, Y for YO-YO, R for RANDOM, X to RESET ALL ENUMERATORS&quot;);
     }
