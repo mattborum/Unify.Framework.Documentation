@@ -75,7 +75,7 @@
 <p>The following animation shows how Unify Enumerators adjust their position as the underlying collection is modified.</p>
 <p><img src="../../../images/enumerableRangeModify_anim.gif" alt="Enumerable Range Animation"></p>
 <h3 id="example">Example</h3>
-<p>This example demonstrates how Unify Enumerators behave as items are added and removed from the underlying collection; an <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyList-1.html"><strong>IUnifyList&lt;string&gt;</strong></a>, containing the numbers 0-9 as words, is used as the source collection for a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html"><strong>UnifyForwardsEnumerator&lt;T&gt;</strong></a>, with a generic type <strong>T</strong> of string. It allows the Unify Enumerator to be controlled atomically, while observing the internal state at each operation. Error checking has been omitted to demonstrate exceptions, as described <a href="#exceptions"><strong>below</strong></a>.</p>
+<p>This example demonstrates how Unify Enumerators behave as items are added and removed from the underlying collection. An <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyList-1.html"><strong>IUnifyList&lt;string&gt;</strong></a>, containing the numbers 0-9 as words, is used as the source collection for a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html"><strong>UnifyForwardsEnumerator&lt;T&gt;</strong></a>, with a generic type <strong>T</strong> of string. It allows the Unify Enumerator to be controlled atomically, while observing the internal state at each operation. Error checking has been omitted to demonstrate exceptions, as described <a href="#exceptions"><strong>below</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
 <li><strong>C</strong> to Print the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Current"><strong>Current</strong></a> item</li>
@@ -83,8 +83,8 @@
 <li><strong>P</strong> to Print the collection - the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Current"><strong>Current</strong></a> item is shown in square brackets and uppercase, e.g. [ZERO]</li>
 <li><strong>T</strong> to Toggle the value of the <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_moveNextWhenInvalidated"><strong>moveNextWhenInvalidated</strong></a> flag</li>
 <li><strong>X</strong> to Reset the Enumerator</li>
-<li><strong>A</strong>+<strong>0-9</strong> Add that number as a word to the collection, e.g. holding <strong>A</strong> and pressing <strong>4</strong> will add <strong>&quot;four&quot;</strong> to the collection</li>
-<li><strong>R</strong>+<strong>0-9</strong> Remove that number from the collection, e.g. holding <strong>R</strong> and pressing <strong>2</strong> will remove <strong>&quot;two&quot;</strong> from the collection</li>
+<li><strong>A</strong>+<strong>0-9</strong> to Add that number as a word to the collection, e.g. holding <strong>A</strong> and pressing <strong>4</strong> will add <strong>&quot;four&quot;</strong> to the collection</li>
+<li><strong>R</strong>+<strong>0-9</strong> to Remove that number from the collection, e.g. holding <strong>R</strong> and pressing <strong>2</strong> will remove <strong>&quot;two&quot;</strong> from the collection</li>
 </ul>
 <pre><code>using System;
 using System.Text;
