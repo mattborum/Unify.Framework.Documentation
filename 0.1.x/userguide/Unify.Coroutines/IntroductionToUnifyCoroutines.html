@@ -59,11 +59,11 @@
         <div class="article row grid-right">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="IntroductionToUnifyCoroutines">
-<h1 id="introduction-to-unify-coroutines">Introduction to Unify Coroutines</h1>
+<h2 id="introduction-to-unify-coroutines">Introduction to Unify Coroutines</h2>
 
 <p>This section provides examples to accompany the Unify API documentation on <a class="xref" href="../../api/Unify.Coroutines.html"><strong>Unify Coroutines</strong></a>.</p>
 <p>To get you up and running quickly, examples have been kept as simple as possible, using only the Unity Console.</p>
-<h2 id="functionality">Functionality</h2>
+<h3 id="functionality">Functionality</h3>
 <p>Unify Coroutines add the ability to:</p>
 <ul>
 <li><strong>Delay Starting Coroutines</strong></li>
@@ -74,7 +74,7 @@
 <li><strong>Return a Value from a Coroutine</strong></li>
 <li><strong>Loop a Coroutine</strong></li>
 </ul>
-<h2 id="events">Events</h2>
+<h3 id="events">Events</h3>
 <p>Unify Coroutines also provide the following events:</p>
 <ul>
 <li><strong>Started</strong></li>
@@ -86,18 +86,18 @@
 <li><strong>LoopComplete</strong></li>
 <li><strong>Finished</strong></li>
 </ul>
-<h2 id="exceptions">Exceptions</h2>
+<h3 id="exceptions">Exceptions</h3>
 <p>Unify will throw an exception when a method call could not be completed successfully, for example, a Unify Coroutine can only be paused when it is running, so trying to pause a Unify Coroutine that is not running will result in an exception. To suppress these exceptions Unify Coroutines provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> property, which must be set to <strong>true</strong>. When the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> property is set to <strong>true</strong> Unify will, where possible, return a <strong>bool</strong> value to indicate success or failure of the operation. Unify Coroutines provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property which is used in exception messages to help identify the Unify Coroutine instance throwing the exception. See the <a class="xref" href="../../api/index.html"><strong>API Documentation</strong></a> for details.</p>
 <p>However, Unify will <strong>always</strong> throw an exception when trying to set a <strong>property</strong> or a <strong>parameter</strong> to an invalid value.</p>
-<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
-<h3 id="whats-the-difference-between-pause-stop-and-cancel">What's the difference between Pause, Stop and Cancel?</h3>
-<h4 id="pause"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a></h4>
+<h3 id="frequently-asked-questions">Frequently Asked Questions</h3>
+<h4 id="whats-the-difference-between-pause-stop-and-cancel">What's the difference between Pause, Stop and Cancel?</h4>
+<h5 id="pause"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a></h5>
 <p>Temporarily halts execution until the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume"><strong>Resume()</strong></a> method is called. Execution resumes from the point the Unify Coroutine was paused.</p>
-<h4 id="stop"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stop"><strong>Stop()</strong></a></h4>
+<h5 id="stop"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Stop"><strong>Stop()</strong></a></h5>
 <p>Halts execution. The Unify Coroutine can be restarted with the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Start"><strong>Start()</strong></a> method. Execution starts from the beginning.</p>
-<h4 id="cancel"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancel"><strong>Cancel()</strong></a></h4>
+<h5 id="cancel"><a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Cancel"><strong>Cancel()</strong></a></h5>
 <p>Permanently halts execution. The Unify Coroutine cannot be resumed or restarted.</p>
-<h2 id="known-issues">Known Issues</h2>
+<h3 id="known-issues">Known Issues</h3>
 <p>If the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Pause"><strong>Pause()</strong></a> method is called while a Unify Coroutine is executing a <a href="https://docs.unity3d.com/ScriptReference/CustomYieldInstruction.html" target="_blank"><strong>CustomYieldInstruction</strong></a>, such as <a href="https://docs.unity3d.com/ScriptReference/WaitForSeconds.html" target="_blank"><strong>WaitForSeconds()</strong></a>
 , this does not currently pause the <a href="https://docs.unity3d.com/ScriptReference/CustomYieldInstruction.html" target="_blank"><strong>CustomYieldInstruction</strong></a>.</p>
 </article>
