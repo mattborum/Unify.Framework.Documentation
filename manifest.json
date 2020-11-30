@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.IUnifyList-1.html",
-          "hash": "ewbFxUh/ZWe1oPD1AwviZQ=="
+          "hash": "u/B4XrWzNoaF4I2ruoZxdw=="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.IUnifyObservableCollection-1.html",
-          "hash": "30M/IO3oJ80s4yFL4kYS8g=="
+          "hash": "mBy7QH31CnDHekQyJaTGEw=="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,19 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyBackwardsEnumerator-1.html",
-          "hash": "vnARy2xCPU9eo4AcCY3UAg=="
+          "hash": "iOYJpRP4s0J+muLcmvgKLg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyCollectionChangedEventArgs-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyCollectionChangedEventArgs-1.html",
+          "hash": "uR13dEXa8EombBCI3lggjw=="
         }
       },
       "is_incremental": true,
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html",
-          "hash": "wBVerUh7/BlJMprfSKqTnA=="
+          "hash": "IPNkAUQrAkZyuaNQ652C2A=="
         }
       },
       "is_incremental": true,
@@ -93,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html",
-          "hash": "EA+/HnY/PEZTb7ckb7JGhQ=="
+          "hash": "+MUmiq0Jui83qBJKhgwCBw=="
         }
       },
       "is_incremental": true,
@@ -105,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyList-1.html",
-          "hash": "Y7EdGfKz/gFmjvwyWanfdA=="
+          "hash": "LVnO0HrbLse8mfV+DSo0OA=="
         }
       },
       "is_incremental": true,
@@ -129,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html",
-          "hash": "N/q4MD7cH0EwjbuXHxSyKg=="
+          "hash": "4aJkbonNF+cAoUGksxmFuw=="
         }
       },
       "is_incremental": true,
@@ -141,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html",
-          "hash": "3iVOTOFAFH9SCqC752GlsQ=="
+          "hash": "SXZf9kdvCf0qTDUlpxHsYg=="
         }
       },
       "is_incremental": true,
@@ -153,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.html",
-          "hash": "dv9h5sqO25q0a2c75NdHHA=="
+          "hash": "6NLMnBzIVqiDzlPDoYz31g=="
         }
       },
       "is_incremental": true,
@@ -189,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.IUnifyList.html",
-          "hash": "hM7+G3aNmfAsWgt66+Qqow=="
+          "hash": "IwxR3+koKWNB76zO/+Wj/g=="
         }
       },
       "is_incremental": true,
@@ -201,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.IUnifyObservableCollection.html",
-          "hash": "2WeRKuWO9mBn26wXLa6geQ=="
+          "hash": "LXj/qcGSbDxpfZo6+RwX7g=="
         }
       },
       "is_incremental": true,
@@ -237,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.UnifyCollectionChangedEventArgs.html",
-          "hash": "7/p19qqFlJ0lyyCxh9aWmA=="
+          "hash": "BB9CJ+PphA0ib+WFXhDszQ=="
         }
       },
       "is_incremental": true,
@@ -297,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.UnifyList.html",
-          "hash": "RFfTr29ay65+4yLkUxwCrA=="
+          "hash": "4GiItUnD94xB0Ork75EnIA=="
         }
       },
       "is_incremental": true,
@@ -501,10 +513,34 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/toc.html",
-          "hash": "8NAnH1Xnk95mTXdxPiUdYg=="
+          "hash": "a1eqcfU+AOj9cJWl1KflYg=="
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Collections/Events.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Collections/Events.html",
+          "hash": "nTw6cRecj6gKSxZCUT5/Tg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Collections/FlatteningAnIEnumerableType.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Collections/FlatteningAnIEnumerableType.html",
+          "hash": "GaaWtAwc2xw4m1iHrZEL5A=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -513,7 +549,19 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Collections/IntroductionToUnifyCollections.html",
-          "hash": "3cjHvYRv2P+K07J0kvfHcQ=="
+          "hash": "KnRZgdEWfrDPDOT5T1JEWA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Collections/UsingUnifyListAndUnifyListT.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Collections/UsingUnifyListAndUnifyListT.html",
+          "hash": "c2qbhMy7CH+SXuViQ5U6HA=="
         }
       },
       "is_incremental": true,
@@ -561,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/Events.html",
-          "hash": "0PnxuxpBdG2NWpWba8yXfQ=="
+          "hash": "+PhGmPt/n2UwcCZ8YVv3LQ=="
         }
       },
       "is_incremental": true,
@@ -648,7 +696,7 @@
           "hash": "MKQon4b9A8tDuW9NOgERAg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -708,7 +756,7 @@
           "hash": "Fi9StmHffprJ4cRlXKm31A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -729,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/toc.html",
-          "hash": "4be0k2yXTv0wPP/HZcRxtA=="
+          "hash": "Wx0pMmcI9u8mLBZEiN/Gfg=="
         }
       },
       "is_incremental": false,
@@ -937,6 +985,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/flattenJaggedError.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/flattenJaggedError.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/linkedin_off_40x40.png",
       "output": {
         "resource": {
@@ -1027,14 +1086,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 22,
-          "skipped_file_count": 20
+          "total_file_count": 25,
+          "skipped_file_count": 25
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 40,
-          "skipped_file_count": 40
+          "total_file_count": 41,
+          "skipped_file_count": 41
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

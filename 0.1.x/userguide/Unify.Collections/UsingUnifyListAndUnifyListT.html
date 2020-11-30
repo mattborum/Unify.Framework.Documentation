@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using UnifyList and UnifyList&lt;T&gt; | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using UnifyList and UnifyList&lt;T&gt; | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="using-unifylist-and-unifylistt">Using UnifyList and UnifyList&lt;T&gt;</h2>
+
+<p>The <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a> has been designed to be interchangable with the .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> through the implementation of the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" target="_blank"><strong>IList&lt;T&gt;</strong></a> interface. Unify also provides a non-generic <a class="xref" href="../../api/Unify.Collections.UnifyList.html"><strong>UnifyList</strong></a>, which implements the .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist" target="_blank"><strong>IList</strong></a> interface.</p>
+<p>To create an instance of a <a class="xref" href="../../api/Unify.Collections.UnifyList.html"><strong>UnifyList</strong></a> or <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>, use the <code>new()</code> operator and constructor in the same way as a native .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> constructor; Unify List constructors provide the same parameter options as .NET List <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.-ctor" target="_blank"><strong>constructors</strong></a>, with the added ability to take multi-dimensional and jagged arrays as the source collection; which .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.-ctor" target="_blank"><strong>constructors</strong></a> do not support. When a multi-dimensional or jagged array is used as the source collection for a <a class="xref" href="../../api/Unify.Collections.UnifyList.html"><strong>UnifyList</strong></a> or <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>, Unify will
+<a class="xref" href="FlatteningAnIEnumerableType.html"><strong>flatten</strong></a> the original source collection to populate the new Unify List.</p>
+<h3 id="example-one">Example One</h3>
+<p>This example demonstrates the interchangability between <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a> and .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a>. A list of each type is created and populated with a list of cities where a <a href="https://unity.com/" target="_blank"><strong>Unity</strong></a> office is located. The operations; <strong>Contains</strong>, <strong>Insert</strong>, <strong>Remove</strong> and <strong>RemoveAt</strong> are used to manipulate each list and show their behaviour is identical.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>D</strong> to run the .NET list example</li>
+<li><strong>U</strong> to run the Unify list example</li>
+</ul>
+<pre><code>using System;
+using System.Collections.Generic;
+using Unify.Collections.Generic;
+using UnityEngine;
+
+public class Collections_Using : MonoBehaviour
+{
+    private IList&lt;string&gt; dotnetList;
+    private IUnifyList&lt;string&gt; unifyList;
+
+    void Awake()
+    {
+        string[] cities = { &quot;New York&quot;, &quot;Stockholm&quot;, &quot;Brighton&quot;, &quot;Berlin&quot; };
+        dotnetList = new List&lt;string&gt;(cities);
+        unifyList = new UnifyList&lt;string&gt;(cities);
+
+        print(&quot;press D for .NET, U for Unify&quot;);
+    }
+
+    void Update()
+    {
+    	if (Input.GetKeyUp(KeyCode.D))
+        {
+            RunDemo(dotnetList, &quot;.NET&quot;);
+        }
+
+        if (Input.GetKeyUp(KeyCode.U))
+        {
+            RunDemo(unifyList, &quot;Unify&quot;);
+        }
+    }
+
+    private void RunDemo(IList&lt;string&gt; list, string listType)
+    {
+        print($&quot;----- {listType} Demo -----&quot;);
+        PrintList(list);
+
+        print($&quot;Contains 'Helsinki': {list.Contains(&quot;Helsinki&quot;)}&quot;);
+        print($&quot;Contains 'Brighton': {list.Contains(&quot;Brighton&quot;)}&quot;);
+        print(&quot;-------------------------&quot;);
+
+        print(&quot;Insert(2, \&quot;Los Angeles\&quot;)&quot;);
+        list.Insert(2, &quot;Los Angeles&quot;);
+        PrintList(list);
+
+        print(&quot;Remove(\&quot;Stockholm\&quot;)&quot;);
+        list.Remove(&quot;Stockholm&quot;);
+        PrintList(list);
+
+        print(&quot;RemoveAt(3)&quot;);
+        list.RemoveAt(3);
+        PrintList(list);
+        print($&quot;--------- Done ----------{Environment.NewLine}{Environment.NewLine}&quot;);
+    }
+
+    private void PrintList(IList&lt;string&gt; list)
+    {
+        for (int i = 0; i &lt; list.Count; i++)
+        {
+            print(list[i]);
+        }
+        print(&quot;-------------------------&quot;);
+    }
+}
+</code></pre>
+<h3 id="example-two">Example Two</h3>
+<p>The second example shows how 2d and jagged arrays can be used to populate a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>A</strong> to initialise the Unify List with a 2d array</li>
+<li><strong>J</strong> to initialise the Unify List with a jagged array</li>
+</ul>
+<pre><code>using System.Collections.Generic;
+using Unify.Collections.Generic;
+using UnityEngine;
+
+public class Collections_Using_ExampleTwo : MonoBehaviour
+{
+    private IUnifyList&lt;string&gt; listFrom2dArray;
+    private IUnifyList&lt;string&gt; listFromJaggedArray;
+
+    void Awake()
+    {
+        listFrom2dArray = new UnifyList&lt;string&gt;(new string[,]
+        {
+            { &quot;New York&quot;, &quot;Austin&quot;, &quot;Boston&quot;, &quot;Denver&quot; },
+            { &quot;Copenhagen&quot;, &quot;Ghent&quot;, &quot;Munich&quot;, &quot;Vilnius&quot; },
+            { &quot;Dundee&quot;, &quot;Southampton&quot;, &quot;Slough&quot;, &quot;London&quot; }
+        });
+
+        listFromJaggedArray = new UnifyList&lt;string&gt;(new string[][]
+        {
+            new string[] { &quot;Beijing&quot;, &quot;Bellevue&quot;, &quot;Berlin&quot;, &quot;Boston&quot;, &quot;Brighton&quot;, &quot;Burbank&quot; }, 
+            new string[] { &quot;Ghent&quot;, &quot;Grenoble&quot;, &quot;Guangzhou&quot; },
+            new string[] { &quot;Montreal&quot;, &quot;Munich&quot; } 
+        });
+ 
+        print(&quot;press A for 2D Array, J for Jagged Array&quot;);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            print(&quot;----- 2D Array -----&quot;);
+            for (int i = 0; i &lt; listFrom2dArray.Count; i++)
+            {
+                print($&quot;index: {i} value: {listFrom2dArray[i]}&quot;);
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.J))
+        {
+            print(&quot;----- Jagged Array -----&quot;);
+            for (int i = 0; i &lt; listFromJaggedArray.Count; i++)
+            {
+                print($&quot;index: {i} value: {listFromJaggedArray[i]}&quot;);
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a class="xref" href="FlatteningAnIEnumerableType.html"><strong>Flattening an IEnumerable Type</strong></a></li>
+</ul>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

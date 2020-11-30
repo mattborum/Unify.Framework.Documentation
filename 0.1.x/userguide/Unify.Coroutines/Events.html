@@ -102,7 +102,7 @@ private void StartedEventHandler(object sender, UnifyCoroutineEventArgs e)
     print(&quot;* STARTED EVENT HANDLER *&quot;);
 }
 </code></pre>
-<p>If you subscribed to a Unify Coroutine event using either an anonymous method or lambda expression, then it is not possible to unsubscribe from that event unless you have a reference to the original method which was used to subscribe:</p>
+<p>If a Unify Coroutine event is subscribed to via either an anonymous method or lambda expression, then it is not possible to unsubscribe from that event unless using a reference to the original method which was used to subscribe:</p>
 <h4 id="anonymous-method-1">Anonymous Method</h4>
 <pre><code>private EventHandler&lt;UnifyCoroutineEventArgs&gt; myUnifyCoroutineEventDelegate;
 myUnifyCoroutineEventDelegate = delegate { print(&quot;* STARTED EVENT HANDLER *&quot;); };

@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Unify Collection Events | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Unify Collection Events | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="unify-collection-events">Unify Collection Events</h2>
+
+<p>Unify Collections provide the following events:</p>
+<ul>
+<li><a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html"><strong>CollectionChanged</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html"><strong>CollectionChanged&lt;T&gt;</strong></a> - triggered when an item is added, inserted or removed</li>
+<li><a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionCleared"><strong>CollectionCleared</strong></a> - triggered when either a generic Unify Collection's <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.clear" target="_blank"><strong>Clear()</strong></a> method, or non-generic Unify Collection's <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist.clear" target="_blank"><strong>Clear()</strong></a> method is called</li>
+</ul>
+<p>This functionality is exposed through the <a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html"><strong>IUnifyObservableCollection</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html"><strong>IUnifyObservableCollection&lt;T&gt;</strong></a> interface types, which all Unify Collections implement.</p>
+<h3 id="subscribing-to-unify-collection-events">Subscribing to Unify Collection events</h3>
+<p>There are three ways to subscribe to Unify Collection events; programmatically, anonymous methods and lambda expressions:</p>
+<h4 id="programmatically">Programmatically</h4>
+<pre><code>myUnifyCollection.CollectionChanged += CollectionChangedEventHandler;
+
+private void CollectionChangedEventHandler(object sender, UnifyCollectionChangedEventArgs e)
+{
+	print(&quot;* UNIFY COLLECTION CHANGED EVENT HANDLER *&quot;);
+}
+</code></pre>
+<h4 id="anonymous-method">Anonymous Method</h4>
+<pre><code>myUnifyCollection.CollectionChanged += delegate(object sender, UnifyCollectionChangedEventArgs e)
+{
+	print(&quot;* UNIFY COLLECTION CHANGED EVENT HANDLER *&quot;);
+};
+</code></pre>
+<h4 id="lambda-expression">Lambda Expression</h4>
+<pre><code>myUnifyCollection.CollectionChanged += (sender, e) =&gt;
+{
+	print(&quot;* UNIFY COLLECTION CHANGED EVENT HANDLER *&quot;);
+};
+</code></pre>
+<p>If a Unify Collection event is subscribed to via either an anonymous method or lambda expression, then it is not possible to unsubscribe from that event unless using a reference to the original method which was used to subscribe:</p>
+<h4 id="anonymous-method-1">Anonymous Method</h4>
+<pre><code>private EventHandler&lt;UnifyCollectionChangedEventArgs&gt; myUnifyCollectionChangedEventDelegate;
+myUnifyCollectionChangedEventDelegate = delegate { print(&quot;* UNIFY COLLECTION CHANGED EVENT HANDLER *&quot;); };
+
+myUnifyCollection.CollectionChanged += myUnifyCollectionChangedEventDelegate;  // Subscribe
+myUnifyCollection.CollectionChanged -= myUnifyCollectionChangedEventDelegate;  // Unsubscribe
+</code></pre>
+<h4 id="lambda-expression-1">Lambda Expression</h4>
+<pre><code>private EventHandler&lt;UnifyCollectionChangedEventArgs&gt; myUnifyCollectionChangedEventDelegate;
+myUnifyCollectionChangedEventDelegate = (sender, args) =&gt; { print(&quot;* UNIFY COLLECTION CHANGED EVENT HANDLER *&quot;); };
+
+myUnifyCollection.CollectionChanged += myUnifyCollectionChangedEventDelegate;  // Subscribe
+myUnifyCollection.CollectionChanged -= myUnifyCollectionChangedEventDelegate;  // Unsubscribe
+</code></pre>
+<h3 id="eventargs">EventArgs</h3>
+<p>Unify Collections provide generic <a class="xref" href="../../api/Unify.Collections.Generic.UnifyCollectionChangedEventArgs-1.html"><strong>UnifyCollectionChangedEventArgs&lt;T&gt;</strong></a> and non-generic <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html"><strong>UnifyCollectionChangedEventArgs</strong></a> classes, an instance of which is passed to event handlers. This class provides information about the change to the collection; the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_action"><strong>action</strong></a> property is a <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedAction.html"><strong>UnifyCollectionChangedAction</strong></a> type, that specifies the action causing the change; the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_item"><strong>item</strong></a> property, of type <strong>T</strong> for generic collections and of type <strong>object</strong> for non-generic collections, contain the item responsible for the change and the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_index"><strong>index</strong></a> property is the index position of that item.</p>
+<h3 id="example">Example</h3>
+<p>Attach the script below to a GameObject and press:</p>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

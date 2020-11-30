@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Flattening an IEnumerable Type | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Flattening an IEnumerable Type | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="FlatteningAnIEnumerableType">
+<h2 id="flattening-an-ienumerable-type">Flattening an IEnumerable Type</h2>
+
+<p>The <a class="xref" href="../../api/Unify.Collections.EnumerableExtensions.html#Unify_Collections_EnumerableExtensions_Flatten_"><strong>Flatten()</strong></a> extension method takes an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable" target="_blank"><strong>IEnumerable</strong></a> type and returns the one-dimensional, or flattened, version as an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist" target="_blank"><strong>IList</strong></a> type.</p>
+<p>Currently, a .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> does not accept a jagged array as a source collection through the constructor. If we have a jagged array:</p>
+<pre><code>private string[][] jaggedArray = new string[][]
+{
+	new string[] { &quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot; },
+	new string[] { &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot; },
+	new string[] { &quot;October&quot;, &quot;November&quot;, &quot;December&quot; }
+};
+</code></pre>
+<p>The following .NET code will not compile:</p>
+<p><img src="../../../images/flattenJaggedError.png" alt="FlattenJaggedError"></p>
+<p>If we use the same jagged array with a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>, the code will now compile:</p>
+<pre><code>private string[][] jaggedArray = new string[][]
+{
+	new string[] { &quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot; },
+	new string[] { &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot; },
+	new string[] { &quot;October&quot;, &quot;November&quot;, &quot;December&quot; }
+};
+
+IUnifyList&lt;string&gt; unifyList = new UnifyList&lt;string&gt;(jaggedArray);
+
+for (int i = 0; i &lt; unifyList.Count; i++)
+{
+	print($&quot;{i + 1}: {unifyList[i]}&quot;);
+}
+
+/*
+	Output:
+		1: January
+		2: February
+		3: March
+		4: April
+		5: May
+		6: June
+		7: July
+		8: August
+		9: September
+		10: October
+		11: November
+		12: December
+*/
+</code></pre>
+<p>If a jagged array of type <strong>object</strong> is passed to the constructor of a generic <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>, only items of type <strong>T</strong> will be flattened and used to populate the <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>:</p>
+<pre><code>private object[][] jaggedArray = new object[][]
+{
+	new object[] { 1, &quot;One&quot;, 2, &quot;Two&quot;, 3, &quot;Three&quot;, 4, &quot;Four&quot;, 5, &quot;Five&quot; },
+	new object[] { 6, &quot;Six&quot;, 7, &quot;Seven&quot;, 8, &quot;Eight&quot;, 9, &quot;Nine&quot; },
+	new object[] { 10, &quot;Ten&quot;, 11, &quot;Eleven&quot;, 12, &quot;Twelve&quot; }
+};
+
+private IUnifyList&lt;int&gt; myList = new UnifyList&lt;int&gt;(jaggedArray);
+</code></pre>
+<p>The jagged array above, of type <strong>object</strong>, contains both integer and string types; <code>myList</code> has a generic type <strong>T</strong> of <strong>int</strong> so will only be populated by the integer values in the jagged array; <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, <strong>7</strong>, <strong>8</strong>, <strong>9</strong>, <strong>10</strong>, <strong>11</strong> and <strong>12</strong>.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.EnumerableExtensions.html#Unify_Collections_EnumerableExtensions_Flatten_"><strong>Flatten()</strong></a> extension method can also be used in isolation. The following code flattens the mixed type jagged array above into an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" target="_blank"><strong>IList&lt;string&gt;</strong></a> with the values; <strong>&quot;One&quot;</strong>, <strong>&quot;Two&quot;</strong>, <strong>&quot;Three&quot;</strong>, <strong>&quot;Four&quot;</strong>, <strong>&quot;Five&quot;</strong>, <strong>&quot;Six&quot;</strong>, <strong>&quot;Seven&quot;</strong>, <strong>&quot;Eight&quot;</strong>, <strong>&quot;Nine&quot;</strong>, <strong>&quot;Ten&quot;</strong>, <strong>&quot;Eleven&quot;</strong> and <strong>&quot;Twelve&quot;</strong>:</p>
+<pre><code>IList&lt;string&gt; netList = jaggedArray.Flatten().OfType&lt;string&gt;().ToList();
+
+foreach (string s in netList)
+{
+	print(s);
+}
+</code></pre>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
