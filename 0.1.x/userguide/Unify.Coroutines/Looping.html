@@ -59,7 +59,7 @@
         <div class="article row grid-right">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="Looping">
-<h2 id="looping-a-unify-coroutine">Looping a Unify Coroutine</h2>
+<h1 id="looping-a-unify-coroutine">Looping a Unify Coroutine</h1>
 
 <p>Unify Coroutines provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> property to specify the number times the Coroutine should be executed. To loop execution of a Unify Coroutine infinitely, set the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> property to <strong>-1</strong>.<br>
 To enable this functionality, either the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> property <strong>or</strong> the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property <strong>must</strong> be initialised <strong>before</strong> starting the Unify Coroutine for the first time.</p>
@@ -82,10 +82,10 @@ private IEnumerator CountToTen()
 <pre><code>myUnifyCoroutine.loopCount = 3;
 myUnifyCoroutine.passDelay = 1.5f; // 1.5 seconds delay between each pass
 </code></pre>
-<h3 id="events">Events</h3>
+<h2 id="events">Events</h2>
 <p>Unify Coroutines provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete"><strong>passComplete</strong></a> event that is triggered after each pass of the loop.</p>
 <p>See: How to <a class="xref" href="Events.html#subscribing-to-unify-coroutine-events"><strong>subscribe</strong></a> to and <a class="xref" href="Events.html#unsubscribing-from-unify-coroutine-events"><strong>unsubscribe</strong></a> from Unify Coroutine events.</p>
-<h3 id="example">Example</h3>
+<h2 id="example">Example</h2>
 <p>This Unify Coroutine example calculates the first 10 numbers in the Fibonacci Sequence and prints each value to the Unity Console at intervals of 0.3 seconds.<br>
 The Unify Coroutine is repeated 3 times with a 2.5 second delay between each pass of the loop. Here, the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties are initialised through the Unify Coroutine constructor.<br>
 Also, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow looping and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'Ginny'</strong> to demonstrate how Unify Coroutine instances are identified in <a href="#exceptions"><strong>exception messages</strong></a>.</p>
@@ -146,7 +146,7 @@ public class Coroutines_Looping : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="exceptions">Exceptions</h3>
+<h2 id="exceptions">Exceptions</h2>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
 <li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter</li>

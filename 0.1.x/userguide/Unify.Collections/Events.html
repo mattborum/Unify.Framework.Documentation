@@ -59,7 +59,7 @@
         <div class="article row grid-right">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="unify-collection-events">Unify Collection Events</h2>
+<h1 id="unify-collection-events">Unify Collection Events</h1>
 
 <p>Unify Collections provide the following events:</p>
 <ul>
@@ -67,9 +67,9 @@
 <li><a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionCleared"><strong>CollectionCleared</strong></a> - triggered when either a generic Unify Collection's <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.clear" target="_blank"><strong>Clear()</strong></a> method, or non-generic Unify Collection's <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist.clear" target="_blank"><strong>Clear()</strong></a> method is called</li>
 </ul>
 <p>This functionality is exposed through the <a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html"><strong>IUnifyObservableCollection</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html"><strong>IUnifyObservableCollection&lt;T&gt;</strong></a> interface types, which all Unify Collections implement.</p>
-<h3 id="subscribing-to-unify-collection-events">Subscribing to Unify Collection events</h3>
+<h2 id="subscribing-to-unify-collection-events">Subscribing to Unify Collection events</h2>
 <p>There are three ways to subscribe to Unify Collection events; programmatically, anonymous methods and lambda expressions:</p>
-<h4 id="programmatically">Programmatically</h4>
+<h3 id="programmatically">Programmatically</h3>
 <pre><code>myUnifyCollection.CollectionChanged += CollectionChangedEventHandler;
 
 private void CollectionChangedEventHandler(object sender, UnifyCollectionChangedEventArgs e)
@@ -77,36 +77,36 @@ private void CollectionChangedEventHandler(object sender, UnifyCollectionChanged
 	print(&quot;* UNIFY COLLECTION CHANGED EVENT HANDLER *&quot;);
 }
 </code></pre>
-<h4 id="anonymous-method">Anonymous Method</h4>
+<h3 id="anonymous-method">Anonymous Method</h3>
 <pre><code>myUnifyCollection.CollectionChanged += delegate(object sender, UnifyCollectionChangedEventArgs e)
 {
 	print(&quot;* UNIFY COLLECTION CHANGED EVENT HANDLER *&quot;);
 };
 </code></pre>
-<h4 id="lambda-expression">Lambda Expression</h4>
+<h3 id="lambda-expression">Lambda Expression</h3>
 <pre><code>myUnifyCollection.CollectionChanged += (sender, e) =&gt;
 {
 	print(&quot;* UNIFY COLLECTION CHANGED EVENT HANDLER *&quot;);
 };
 </code></pre>
 <p>If a Unify Collection event is subscribed to via either an anonymous method or lambda expression, then it is not possible to unsubscribe from that event unless using a reference to the original method which was used to subscribe:</p>
-<h4 id="anonymous-method-1">Anonymous Method</h4>
+<h3 id="anonymous-method-1">Anonymous Method</h3>
 <pre><code>private EventHandler&lt;UnifyCollectionChangedEventArgs&gt; myUnifyCollectionChangedEventDelegate;
 myUnifyCollectionChangedEventDelegate = delegate { print(&quot;* UNIFY COLLECTION CHANGED EVENT HANDLER *&quot;); };
 
 myUnifyCollection.CollectionChanged += myUnifyCollectionChangedEventDelegate;  // Subscribe
 myUnifyCollection.CollectionChanged -= myUnifyCollectionChangedEventDelegate;  // Unsubscribe
 </code></pre>
-<h4 id="lambda-expression-1">Lambda Expression</h4>
+<h3 id="lambda-expression-1">Lambda Expression</h3>
 <pre><code>private EventHandler&lt;UnifyCollectionChangedEventArgs&gt; myUnifyCollectionChangedEventDelegate;
 myUnifyCollectionChangedEventDelegate = (sender, args) =&gt; { print(&quot;* UNIFY COLLECTION CHANGED EVENT HANDLER *&quot;); };
 
 myUnifyCollection.CollectionChanged += myUnifyCollectionChangedEventDelegate;  // Subscribe
 myUnifyCollection.CollectionChanged -= myUnifyCollectionChangedEventDelegate;  // Unsubscribe
 </code></pre>
-<h3 id="eventargs">EventArgs</h3>
+<h2 id="eventargs">EventArgs</h2>
 <p>Unify Collections provide generic <a class="xref" href="../../api/Unify.Collections.Generic.UnifyCollectionChangedEventArgs-1.html"><strong>UnifyCollectionChangedEventArgs&lt;T&gt;</strong></a> and non-generic <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html"><strong>UnifyCollectionChangedEventArgs</strong></a> classes, an instance of which is passed to event handlers. These classes provide information about the change to the collection; the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_action"><strong>action</strong></a> property is a <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedAction.html"><strong>UnifyCollectionChangedAction</strong></a> type, that specifies the operation causing the change; the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_item"><strong>item</strong></a> property, of type <strong>T</strong> for generic collections and of type <strong>object</strong> for non-generic collections, contains the item responsible for the change and the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_index"><strong>index</strong></a> property is the index position of that item.</p>
-<h3 id="example">Example</h3>
+<h2 id="example">Example</h2>
 <p>This example uses a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>, with a generic type <strong>T</strong> of <strong>char</strong>, initialised with the values; <strong>'A'</strong>, <strong>'B'</strong>, <strong>'C'</strong>, <strong>'D'</strong>, <strong>'E'</strong>, to demonstrate the <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionChanged"><strong>CollectionChanged</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionCleared"><strong>CollectionCleared</strong></a> events.  Items can be added, inserted or removed from the collection causing the <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionChanged"><strong>CollectionChanged</strong></a> event to be triggered, and the collection can be cleared to trigger the <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionCleared"><strong>CollectionCleared</strong></a> event.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
@@ -203,10 +203,10 @@ public class Collections_Events : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="exceptions">Exceptions</h3>
+<h2 id="exceptions">Exceptions</h2>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
-<li>Calling <strong>Remove()</strong> or <strong>RemoveAt()</strong> when the collection is empty will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
+<li>Removing an item from an empty collection will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
 </ul>
 </article>
           </div>

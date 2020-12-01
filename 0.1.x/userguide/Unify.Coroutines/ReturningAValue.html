@@ -59,7 +59,7 @@
         <div class="article row grid-right">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="returning-a-value-from-a-unify-coroutine">Returning a value from a Unify Coroutine</h2>
+<h1 id="returning-a-value-from-a-unify-coroutine">Returning a value from a Unify Coroutine</h1>
 
 <p>To return a value from a Unify Coroutine, you should use the generic <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;T&gt;</strong></a> class.
 The generic type parameter <strong>&lt;T&gt;</strong> represents the type of the value to be returned.
@@ -75,12 +75,12 @@ IEnumerator SayHello()
     yield return  &quot;Hello, Unify!&quot;;
 }
 </code></pre>
-<h3 id="capturing-the-return-value">Capturing the return value</h3>
+<h2 id="capturing-the-return-value">Capturing the return value</h2>
 <p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;T&gt;</strong></a> class provides a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1_ValueReturned"><strong>ValueReturned</strong></a> event for capturing return values.<br>
 The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1_ValueReturned"><strong>ValueReturned</strong></a> event is fired <strong>every time</strong> a value of type <strong>&lt;T&gt;</strong> is returned from a <code>yield return</code> statement.</p>
 <p>An instance of <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs-1.html"><strong>UnifyCoroutineEventArgs&lt;T&gt;</strong></a> is passed to the event handler, the return value is held in the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineEventArgs-1.html#Unify_Coroutines_UnifyCoroutineEventArgs_1_returnValue"><strong>returnValue</strong></a> property, which is of type <strong>&lt;T&gt;</strong>.</p>
 <p>See: How to <a class="xref" href="Events.html#subscribing-to-unify-coroutine-events"><strong>subscribe</strong></a> to and <a class="xref" href="Events.html#unsubscribing-from-unify-coroutine-events"><strong>unsubscribe</strong></a> from Unify Coroutine events.</p>
-<h3 id="example-one">Example One</h3>
+<h2 id="example-one">Example One</h2>
 <p>This Unify Coroutine example has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 2 seconds and then returns a string with the value <strong><em>&quot;Hello, Unify!&quot;</em></strong>.
 It uses a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;string&gt;</strong></a> instance to return a value of type <strong>string</strong> and a lambda expression as the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1_ValueReturned"><strong>ValueReturned</strong></a> event handler to capture the return value and print it to the Unity Console. Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
@@ -123,7 +123,7 @@ public class Coroutines_ReturnValueOnce : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="example-two">Example Two</h3>
+<h2 id="example-two">Example Two</h2>
 <p>This Unify Coroutine example counts from 1 to 30 and, at 1 second intervals, returns an integer value every time the counter is a multiple of 3.<br>
 It uses a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;int&gt;</strong></a> instance to return a value of type <strong>integer</strong> and a programmatical event handler to capture the return value and print it to the Unity Console.<br>
 Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>.</p>
@@ -177,7 +177,7 @@ public class Coroutines_ReturnValueMultiple : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="exceptions">Exceptions</h3>
+<h2 id="exceptions">Exceptions</h2>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
 <li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter</li>

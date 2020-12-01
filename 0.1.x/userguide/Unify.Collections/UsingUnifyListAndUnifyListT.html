@@ -59,12 +59,12 @@
         <div class="article row grid-right">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="using-unifylist-and-unifylistt">Using UnifyList and UnifyList&lt;T&gt;</h2>
+<h1 id="using-unifylist-and-unifylistt">Using UnifyList and UnifyList&lt;T&gt;</h1>
 
 <p>The <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a> has been designed to be interchangable with the .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> through the implementation of the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" target="_blank"><strong>IList&lt;T&gt;</strong></a> interface. Unify also provides a non-generic <a class="xref" href="../../api/Unify.Collections.UnifyList.html"><strong>UnifyList</strong></a>, which implements the .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist" target="_blank"><strong>IList</strong></a> interface.</p>
 <p>To create an instance of a <a class="xref" href="../../api/Unify.Collections.UnifyList.html"><strong>UnifyList</strong></a> or <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>, use the <code>new()</code> operator and constructor in the same way as a native .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> constructor; Unify List constructors provide the same parameter options as .NET List <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.-ctor" target="_blank"><strong>constructors</strong></a>, with the added ability to take multi-dimensional and jagged arrays as the source collection; which .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.-ctor" target="_blank"><strong>constructors</strong></a> do not support. When a multi-dimensional or jagged array is used as the source collection for a <a class="xref" href="../../api/Unify.Collections.UnifyList.html"><strong>UnifyList</strong></a> or <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>, Unify will
 <a class="xref" href="FlatteningAnIEnumerableType.html"><strong>flatten</strong></a> the original source collection to populate the new Unify List.</p>
-<h3 id="example-one">Example One</h3>
+<h2 id="example-one">Example One</h2>
 <p>This example demonstrates the interchangability between <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a> and .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a>. A list of each type is created and populated with a list of cities where a <a href="https://unity.com/" target="_blank"><strong>Unity</strong></a> office is located. The operations; <strong>Contains</strong>, <strong>Insert</strong>, <strong>Remove</strong> and <strong>RemoveAt</strong> are used to manipulate each list and show their behaviour is identical.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
@@ -136,7 +136,7 @@ public class Collections_Using : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="example-two">Example Two</h3>
+<h2 id="example-two">Example Two</h2>
 <p>The second example shows how two-dimensional and jagged arrays can be used to populate a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
@@ -193,7 +193,7 @@ public class Collections_Using_ExampleTwo : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="see-also">See Also</h3>
+<h2 id="see-also">See Also</h2>
 <ul>
 <li><a class="xref" href="FlatteningAnIEnumerableType.html"><strong>Flattening an IEnumerable Type</strong></a></li>
 </ul>

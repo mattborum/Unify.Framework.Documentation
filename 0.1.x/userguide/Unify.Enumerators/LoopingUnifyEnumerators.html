@@ -59,18 +59,18 @@
         <div class="article row grid-right">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="looping-unify-enumerators">Looping Unify Enumerators</h2>
+<h1 id="looping-unify-enumerators">Looping Unify Enumerators</h1>
 
 <p><sup><font color="grey">Namespace: Unify.Collections, Unify.Collections.Generic</font></sup><br>
 <sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
 <p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html"><strong>UnifyEnumerableRange</strong></a> class provides a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_loopCount"><strong>loopCount</strong></a> property to specify how many times a Unify Enumerator should repeat an iteration. The default setting for <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_loopCount"><strong>loopCount</strong></a> is <strong>1</strong>.</p>
-<h3 id="events">Events</h3>
+<h2 id="events">Events</h2>
 <p>Unify Enumerators provide the following events:</p>
 <ul>
 <li><a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_PassComplete"><strong>PassComplete</strong></a> - triggered each time a looping Unify Enumerator successfully completes a pass of the loop</li>
 <li><a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_LoopFinished"><strong>LoopFinished</strong></a> - triggered when a looping Unify Enumerator successfully completes all passes in a loop</li>
 </ul>
-<h3 id="example">Example</h3>
+<h2 id="example">Example</h2>
 <p>This example demonstrates each of the Unify Enumerator types, with a generic type <strong>T</strong> of string, to iterate over a list containing the colours of the rainbow; <strong>&quot;Red&quot;</strong>, <strong>&quot;Orange&quot;</strong>, <strong>&quot;Yellow&quot;</strong>, <strong>&quot;Green&quot;</strong>, <strong>&quot;Blue&quot;</strong>, <strong>&quot;Indigo&quot;</strong> and <strong>&quot;Violet&quot;</strong>. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_loopCount"><strong>loopCount</strong></a> property is set to <strong>2</strong> to repeat the enumeration twice. To demonstrate when Unify Enumerator events are triggered, the <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_PassComplete"><strong>PassComplete</strong></a> and <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_LoopFinished"><strong>LoopFinished</strong></a> events are used to print a message to the Unity Console.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
@@ -169,7 +169,7 @@ public class Enumerators_LoopingUnifyEnumerators : MonoBehaviour
 }
 
 </code></pre>
-<h3 id="exceptions">Exceptions</h3>
+<h2 id="exceptions">Exceptions</h2>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
 <li>Setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_loopCount"><strong>loopCount</strong></a> property to a value of <strong>less than 0</strong> will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>

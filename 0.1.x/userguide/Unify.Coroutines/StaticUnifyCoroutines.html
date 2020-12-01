@@ -59,7 +59,7 @@
         <div class="article row grid-right">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="static-unify-coroutines">Static Unify Coroutines</h2>
+<h1 id="static-unify-coroutines">Static Unify Coroutines</h1>
 
 <p>Unify Coroutines provide a static <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>Start()</strong></a> method that enables the starting of a Unify Coroutine without needing to create an instance.<br>
 Static Unify Coroutines still offer <a class="xref" href="DelayedStart.html"><strong>delayed start</strong></a> and <a class="xref" href="Looping.html"><strong>looping</strong></a> functionality through the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a>, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties, values for which can be passed into the static <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>Start()</strong></a> method as parameters.<br>
@@ -77,7 +77,7 @@ IEnumerator SayHello()
     yield return null;
 }
 </code></pre>
-<h3 id="example-one">Example One</h3>
+<h2 id="example-one">Example One</h2>
 <p>This Unify Coroutine example uses a standard <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html"><strong>Unify Coroutine</strong></a> to count from 1 to 10 and print the square of each value to the Unity Console at 1 second intervals. The Unify Coroutine has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 1 second, a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> of 3 and a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> of 2.5 seconds.
 The static <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>Start()</strong></a> method is used to begin execution of the Unify Coroutine.
 Here, the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished"><strong>Finished</strong></a> event handler is subscribed to using a lambda expression through the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#Unify_Coroutines_UnifyCoroutine_Start_"><strong>finishedEventHandler</strong></a> parameter, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>, and the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'William'</strong> to demonstrate how Unify Coroutine instances are identified in <a href="#exceptions"><strong>exception messages</strong></a>.</p>
@@ -124,7 +124,7 @@ public class Coroutines_StaticStart : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="example-two">Example Two</h3>
+<h2 id="example-two">Example Two</h2>
 <p>This Unify Coroutine example shows how to return a value from a static Unify Coroutine. It is the same example as <a href="#example-one"><strong>above</strong></a> but uses a generic <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html"><strong>UnifyCoroutine&lt;T&gt;</strong></a> to return the value, rather than print it to the Unity Console from within the Coroutine. The return value is picked up by the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine-1.html#Unify_Coroutines_UnifyCoroutine_1_ValueReturned"><strong>ValueReturned</strong></a> event handler which is passed as a lambda expression through the constructor.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
@@ -173,7 +173,7 @@ public class Coroutines_StaticStartReturnValue : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="exceptions">Exceptions</h3>
+<h2 id="exceptions">Exceptions</h2>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
 <li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter</li>

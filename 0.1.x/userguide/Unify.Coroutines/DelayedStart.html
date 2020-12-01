@@ -59,7 +59,7 @@
         <div class="article row grid-right">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="DelayedStart">
-<h2 id="delayed-start-of-a-unify-coroutine">Delayed Start of a Unify Coroutine</h2>
+<h1 id="delayed-start-of-a-unify-coroutine">Delayed Start of a Unify Coroutine</h1>
 
 <p>A Unify Coroutine has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property to allow delaying execution from when the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Start"><strong>Start()</strong></a> method is called.</p>
 <p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property can be set in two ways:
@@ -76,7 +76,7 @@ IEnumerator SayHello()
 <p>Set the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property directly:</p>
 <pre><code>myUnifyCoroutine.startDelay = 2.5f; // 2.5 seconds
 </code></pre>
-<h3 id="example">Example</h3>
+<h2 id="example">Example</h2>
 <p>This Unify Coroutine has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 5 seconds and then prints the string <em>&quot;Hello, Unify!&quot;</em>, one letter at a time to the Unity Console at 1 second intervals.<br>
 The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'Dave'</strong> to demonstrate how Unify Coroutine instances are identified in exception messages and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow exceptions to be triggered, as described <a href="#exceptions"><strong>below</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:
@@ -120,7 +120,7 @@ public class DelayedStart : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="exceptions">Exceptions</h3>
+<h2 id="exceptions">Exceptions</h2>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
 <li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter</li>
