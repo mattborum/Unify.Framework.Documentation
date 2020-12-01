@@ -81,10 +81,6 @@
     <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;T&gt;</div>
     <div><a class="xref" href="Unify.Collections.Generic.IUnifyEnumerable-1.html">IUnifyEnumerable</a>&lt;T&gt;</div>
     <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</div>
-    <div><a class="xref" href="Unify.Collections.IUnifyList.html">IUnifyList</a></div>
-    <div><span class="xref">System.Collections.IList</span></div>
-    <div><a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a></div>
-    <div><span class="xref">System.Collections.ICollection</span></div>
     <div><a class="xref" href="Unify.Collections.IUnifyEnumerable.html">IUnifyEnumerable</a></div>
     <div><span class="xref">System.Collections.IEnumerable</span></div>
   </div>
@@ -116,7 +112,7 @@
   <h6><strong>Assembly</strong>: Unify.Collections.dll</h6>
   <h5 id="Unify_Collections_Generic_UnifyList_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UnifyList&lt;T&gt; : IUnifyList&lt;T&gt;, IList&lt;T&gt;, IUnifyObservableCollection&lt;T&gt;, ICollection&lt;T&gt;, IUnifyEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;, IUnifyList, IList, IUnifyObservableCollection, ICollection, IUnifyEnumerable, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public class UnifyList&lt;T&gt; : IUnifyList&lt;T&gt;, IList&lt;T&gt;, IUnifyObservableCollection&lt;T&gt;, ICollection&lt;T&gt;, IUnifyEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;, IUnifyEnumerable, IEnumerable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,7 +255,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnifyEnumerableRange enumerableRange { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public UnifyEnumerableRangeBase enumerableRange { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -271,33 +267,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a></td>
+        <td><a class="xref" href="Unify.Collections.UnifyEnumerableRangeBase.html">UnifyEnumerableRangeBase</a></td>
         <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_Generic_UnifyList_1_IsFixedSize_" data-uid="Unify.Collections.Generic.UnifyList`1.IsFixedSize*"></a>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_IsFixedSize" data-uid="Unify.Collections.Generic.UnifyList`1.IsFixedSize">IsFixedSize</h4>
-  <div class="markdown level1 summary"><p>Gets a value indicating whether the <a class="xref" href="Unify.Collections.Generic.UnifyList-1.html">UnifyList&lt;T&gt;</a> has a fixed size.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsFixedSize { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if the <a class="xref" href="Unify.Collections.Generic.UnifyList-1.html">UnifyList&lt;T&gt;</a> has a fixed size; otherwise, false.</p>
-</td>
       </tr>
     </tbody>
   </table>
@@ -309,30 +280,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_Generic_UnifyList_1_IsSynchronized_" data-uid="Unify.Collections.Generic.UnifyList`1.IsSynchronized*"></a>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_IsSynchronized" data-uid="Unify.Collections.Generic.UnifyList`1.IsSynchronized">IsSynchronized</h4>
-  <div class="markdown level1 summary"><p>Access to a <a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList&lt;T&gt;</a> is not synchronized (thread safe), so always returns false.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsSynchronized { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,30 +339,6 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_Generic_UnifyList_1_SyncRoot_" data-uid="Unify.Collections.Generic.UnifyList`1.SyncRoot*"></a>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_SyncRoot" data-uid="Unify.Collections.Generic.UnifyList`1.SyncRoot">SyncRoot</h4>
-  <div class="markdown level1 summary"><p>Gets an object that can be used to synchronize access to the <a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList&lt;T&gt;</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object SyncRoot { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <a id="Unify_Collections_Generic_UnifyList_1_Add_" data-uid="Unify.Collections.Generic.UnifyList`1.Add*"></a>
@@ -445,52 +368,10 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_Generic_UnifyList_1_Add_" data-uid="Unify.Collections.Generic.UnifyList`1.Add*"></a>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_Add_System_Object_" data-uid="Unify.Collections.Generic.UnifyList`1.Add(System.Object)">Add(Object)</h4>
-  <div class="markdown level1 summary"><p>Adds an item to the <a class="xref" href="Unify.Collections.Generic.UnifyList-1.html">UnifyList&lt;T&gt;</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Add(object value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>The item to insert.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>The position into which the new element was inserted, or -1 to indicate the item was not inserted into the collection.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Unify_Collections_Generic_UnifyList_1_Clear_" data-uid="Unify.Collections.Generic.UnifyList`1.Clear*"></a>
   <h4 id="Unify_Collections_Generic_UnifyList_1_Clear" data-uid="Unify.Collections.Generic.UnifyList`1.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all items from the list.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -539,49 +420,6 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_Generic_UnifyList_1_Contains_" data-uid="Unify.Collections.Generic.UnifyList`1.Contains*"></a>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_Contains_System_Object_" data-uid="Unify.Collections.Generic.UnifyList`1.Contains(System.Object)">Contains(Object)</h4>
-  <div class="markdown level1 summary"><p>Determines whether the <a class="xref" href="Unify.Collections.Generic.UnifyList-1.html">UnifyList&lt;T&gt;</a> contains a specific value.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Contains(object value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>The item to check.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if the item is found in the <a class="xref" href="Unify.Collections.Generic.UnifyList-1.html">UnifyList&lt;T&gt;</a>; otherwise, false.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Unify_Collections_Generic_UnifyList_1_CopyTo_" data-uid="Unify.Collections.Generic.UnifyList`1.CopyTo*"></a>
   <h4 id="Unify_Collections_Generic_UnifyList_1_CopyTo__0___System_Int32_" data-uid="Unify.Collections.Generic.UnifyList`1.CopyTo(`0[],System.Int32)">CopyTo(T[], Int32)</h4>
   <div class="markdown level1 summary"><p>Copies the list to the given array.</p>
@@ -610,39 +448,6 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">arrayIndex</span></td>
-        <td><p>The index to start copying from.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_Generic_UnifyList_1_CopyTo_" data-uid="Unify.Collections.Generic.UnifyList`1.CopyTo*"></a>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_CopyTo_System_Array_System_Int32_" data-uid="Unify.Collections.Generic.UnifyList`1.CopyTo(System.Array,System.Int32)">CopyTo(Array, Int32)</h4>
-  <div class="markdown level1 summary"><p>Copies the elements of the <a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList&lt;T&gt;</a> to an array, starting at a particular array index.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CopyTo(Array array, int index)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Array</span></td>
-        <td><span class="parametername">array</span></td>
-        <td><p>The destination array.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">index</span></td>
         <td><p>The index to start copying from.</p>
 </td>
       </tr>
@@ -991,49 +796,6 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_Generic_UnifyList_1_IndexOf_" data-uid="Unify.Collections.Generic.UnifyList`1.IndexOf*"></a>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_IndexOf_System_Object_" data-uid="Unify.Collections.Generic.UnifyList`1.IndexOf(System.Object)">IndexOf(Object)</h4>
-  <div class="markdown level1 summary"><p>Determines the index of a specific item in the <a class="xref" href="Unify.Collections.Generic.UnifyList-1.html">UnifyList&lt;T&gt;</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int IndexOf(object value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>The item to check.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>The index of the item if found in the list; otherwise, -1.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Unify_Collections_Generic_UnifyList_1_Insert_" data-uid="Unify.Collections.Generic.UnifyList`1.Insert*"></a>
   <h4 id="Unify_Collections_Generic_UnifyList_1_Insert_System_Int32__0_" data-uid="Unify.Collections.Generic.UnifyList`1.Insert(System.Int32,`0)">Insert(Int32, T)</h4>
   <div class="markdown level1 summary"><p>Inserts a new item into the list.</p>
@@ -1062,39 +824,6 @@
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">item</span></td>
-        <td><p>The item to insert.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_Generic_UnifyList_1_Insert_" data-uid="Unify.Collections.Generic.UnifyList`1.Insert*"></a>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_Insert_System_Int32_System_Object_" data-uid="Unify.Collections.Generic.UnifyList`1.Insert(System.Int32,System.Object)">Insert(Int32, Object)</h4>
-  <div class="markdown level1 summary"><p>Inserts an item into the <a class="xref" href="Unify.Collections.Generic.UnifyList-1.html">UnifyList&lt;T&gt;</a> at the specified index.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Insert(int index, object value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">index</span></td>
-        <td><p>The index of the item to be inserted.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">value</span></td>
         <td><p>The item to insert.</p>
 </td>
       </tr>
@@ -1139,33 +868,6 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><p>True if the item was removed, otherwise false.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_Generic_UnifyList_1_Remove_" data-uid="Unify.Collections.Generic.UnifyList`1.Remove*"></a>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_Remove_System_Object_" data-uid="Unify.Collections.Generic.UnifyList`1.Remove(System.Object)">Remove(Object)</h4>
-  <div class="markdown level1 summary"><p>Removes the first occurrence of a specific object from the <a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList&lt;T&gt;</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Remove(object value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>The item to be removed.</p>
 </td>
       </tr>
     </tbody>
@@ -1464,29 +1166,6 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_Generic_UnifyList_1_System_Collections_ICollection_Count_" data-uid="Unify.Collections.Generic.UnifyList`1.System#Collections#ICollection#Count*"></a>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_System_Collections_ICollection_Count" data-uid="Unify.Collections.Generic.UnifyList`1.System#Collections#ICollection#Count">ICollection.Count</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int ICollection.Count { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Unify_Collections_Generic_UnifyList_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="Unify.Collections.Generic.UnifyList`1.System#Collections#IEnumerable#GetEnumerator*"></a>
   <h4 id="Unify_Collections_Generic_UnifyList_1_System_Collections_IEnumerable_GetEnumerator" data-uid="Unify.Collections.Generic.UnifyList`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
   <div class="markdown level1 summary"></div>
@@ -1506,46 +1185,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.IEnumerator</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_Generic_UnifyList_1_System_Collections_IList_Item_" data-uid="Unify.Collections.Generic.UnifyList`1.System#Collections#IList#Item*"></a>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_System_Collections_IList_Item_System_Int32_" data-uid="Unify.Collections.Generic.UnifyList`1.System#Collections#IList#Item(System.Int32)">IList.Item[Int32]</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">object IList.this[int index] { get; set; }</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1823,28 +1462,6 @@
       </tr>
     </tbody>
   </table>
-  <h4 id="Unify_Collections_Generic_UnifyList_1_Unify_Collections_IUnifyObservableCollection_CollectionChanged" data-uid="Unify.Collections.Generic.UnifyList`1.Unify#Collections#IUnifyObservableCollection#CollectionChanged">IUnifyObservableCollection.CollectionChanged</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event EventHandler&lt;UnifyCollectionChangedEventArgs&gt; IUnifyObservableCollection.CollectionChanged</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Collections.UnifyCollectionChangedEventArgs.html">UnifyCollectionChangedEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList&lt;T&gt;</a>
@@ -1863,18 +1480,6 @@
   </div>
   <div>
       <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
-  </div>
-  <div>
-      <a class="xref" href="Unify.Collections.IUnifyList.html">IUnifyList</a>
-  </div>
-  <div>
-      <span class="xref">System.Collections.IList</span>
-  </div>
-  <div>
-      <a class="xref" href="Unify.Collections.IUnifyObservableCollection.html">IUnifyObservableCollection</a>
-  </div>
-  <div>
-      <span class="xref">System.Collections.ICollection</span>
   </div>
   <div>
       <a class="xref" href="Unify.Collections.IUnifyEnumerable.html">IUnifyEnumerable</a>

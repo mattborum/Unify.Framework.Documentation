@@ -61,8 +61,8 @@
             <article class="content wrap" id="_content" data-uid="FlatteningAnIEnumerableType">
 <h2 id="flattening-an-ienumerable-type">Flattening an IEnumerable Type</h2>
 
-<p>The <a class="xref" href="../../api/Unify.Collections.EnumerableExtensions.html#Unify_Collections_EnumerableExtensions_Flatten_"><strong>Flatten()</strong></a> extension method takes an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable" target="_blank"><strong>IEnumerable</strong></a> type and returns the one-dimensional, or flattened, version as an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist" target="_blank"><strong>IList</strong></a> type.</p>
-<p>Currently, a .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> does not accept a jagged array as a source collection through the constructor. If we have a jagged array:</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.EnumerableExtensions.html#Unify_Collections_EnumerableExtensions_Flatten_"><strong>Flatten()</strong></a> extension method takes an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable" target="_blank"><strong>IEnumerable</strong></a> type and returns a one-dimensional, or flattened, version as an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist" target="_blank"><strong>IList</strong></a> type.</p>
+<p>Currently, a .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> does not accept a two-dimensional array or a jagged array as a source collection through the constructor. Trying to initialise a .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> with a jagged array will produce a compiler error:</p>
 <pre><code>private string[][] jaggedArray = new string[][]
 {
 	new string[] { &quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot; },
@@ -70,7 +70,6 @@
 	new string[] { &quot;October&quot;, &quot;November&quot;, &quot;December&quot; }
 };
 </code></pre>
-<p>The following .NET code will not compile:</p>
 <p><img src="../../../images/flattenJaggedError.png" alt="FlattenJaggedError"></p>
 <p>If we use the same jagged array with a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>, the code will now compile:</p>
 <pre><code>private string[][] jaggedArray = new string[][]

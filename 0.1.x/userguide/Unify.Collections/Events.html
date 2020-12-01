@@ -105,9 +105,109 @@ myUnifyCollection.CollectionChanged += myUnifyCollectionChangedEventDelegate;  /
 myUnifyCollection.CollectionChanged -= myUnifyCollectionChangedEventDelegate;  // Unsubscribe
 </code></pre>
 <h3 id="eventargs">EventArgs</h3>
-<p>Unify Collections provide generic <a class="xref" href="../../api/Unify.Collections.Generic.UnifyCollectionChangedEventArgs-1.html"><strong>UnifyCollectionChangedEventArgs&lt;T&gt;</strong></a> and non-generic <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html"><strong>UnifyCollectionChangedEventArgs</strong></a> classes, an instance of which is passed to event handlers. This class provides information about the change to the collection; the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_action"><strong>action</strong></a> property is a <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedAction.html"><strong>UnifyCollectionChangedAction</strong></a> type, that specifies the action causing the change; the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_item"><strong>item</strong></a> property, of type <strong>T</strong> for generic collections and of type <strong>object</strong> for non-generic collections, contain the item responsible for the change and the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_index"><strong>index</strong></a> property is the index position of that item.</p>
+<p>Unify Collections provide generic <a class="xref" href="../../api/Unify.Collections.Generic.UnifyCollectionChangedEventArgs-1.html"><strong>UnifyCollectionChangedEventArgs&lt;T&gt;</strong></a> and non-generic <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html"><strong>UnifyCollectionChangedEventArgs</strong></a> classes, an instance of which is passed to event handlers. These classes provide information about the change to the collection; the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_action"><strong>action</strong></a> property is a <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedAction.html"><strong>UnifyCollectionChangedAction</strong></a> type, that specifies the operation causing the change; the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_item"><strong>item</strong></a> property, of type <strong>T</strong> for generic collections and of type <strong>object</strong> for non-generic collections, contains the item responsible for the change and the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_index"><strong>index</strong></a> property is the index position of that item.</p>
 <h3 id="example">Example</h3>
+<p>This example uses a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>, with a generic type <strong>T</strong> of <strong>char</strong>, initialised with the values; <strong>'A'</strong>, <strong>'B'</strong>, <strong>'C'</strong>, <strong>'D'</strong>, <strong>'E'</strong>, to demonstrate the <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionChanged"><strong>CollectionChanged</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionCleared"><strong>CollectionCleared</strong></a> events.  Items can be added, inserted or removed from the collection causing the <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionChanged"><strong>CollectionChanged</strong></a> event to be triggered, and the collection can be cleared to trigger the <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionCleared"><strong>CollectionCleared</strong></a> event.</p>
 <p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>A</strong> to Add an item to end of the list</li>
+<li><strong>C</strong> to Clear the list</li>
+<li><strong>I</strong> to Insert an item into the list at a random position</li>
+<li><strong>R</strong> to Remove an item from the list at a random position</li>
+<li><strong>P</strong> to Print the list</li>
+</ul>
+<pre><code>using System;
+using System.Text;
+using Random = System.Random;
+using Unify.Collections.Generic;
+using UnityEngine;
+
+public class Collections_Events : MonoBehaviour
+{
+    private IUnifyList&lt;char&gt; list;
+    private Random rnd;
+
+    void Awake()
+    {
+        rnd = new Random();
+        list = new UnifyList&lt;char&gt; { 'A', 'B', 'C', 'D', 'E' };
+
+        list.CollectionChanged += list_CollectionChanged;
+        list.CollectionCleared += (sender, args) =&gt;
+        {
+            print(&quot;--- Collection Cleared ---&quot;);
+            PrintList();
+            print(Environment.NewLine);
+        };
+
+        print(&quot;press A to Add(), C to Clear(), R to RemoveAt(), I to Insert(), P to Print List&quot;);
+        PrintList();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            char c = Convert.ToChar(rnd.Next(65, 91));
+            list.Add(c);
+        }
+
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            list.Clear();
+        }
+
+        if (Input.GetKeyUp(KeyCode.I))
+        {
+            int i = rnd.Next(0, list.Count);
+            char c = Convert.ToChar(rnd.Next(65, 91));
+            list.Insert(i, c);
+        }
+
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            int r = rnd.Next(0, list.Count);
+            list.RemoveAt(r);
+        }
+
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            PrintList();
+        }
+    }
+
+
+    private void list_CollectionChanged(object sender, UnifyCollectionChangedEventArgs&lt;char&gt; e)
+    {
+        print(&quot;--- Collection Changed Event ---&quot;);
+        print($&quot;Action: {e.action},  Item: {e.item},  Index: {e.index}&quot;);
+        PrintList();
+        print(Environment.NewLine);
+    }
+
+    private void PrintList()
+    {
+        StringBuilder sb = new StringBuilder(&quot;Current List: &quot;);
+
+        for (int i = 0; i &lt; list.Count; i++)
+        {
+            sb.Append(list[i]);
+
+            if (i &lt; list.Count - 1)
+            {
+                sb.Append(&quot;, &quot;);
+            }
+        }
+
+        print(sb);
+    }
+}
+</code></pre>
+<h3 id="exceptions">Exceptions</h3>
+<p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
+<ul>
+<li>Calling <strong>Remove()</strong> or <strong>RemoveAt()</strong> when the collection is empty will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
+</ul>
 </article>
           </div>
         </div>
