@@ -267,14 +267,6 @@ references:
   fullName.vb: Unify.Collections.Generic.UnifyCollectionChangedEventArgs(Of T).UnifyCollectionChangedEventArgs()
   nameWithType: UnifyCollectionChangedEventArgs<T>.UnifyCollectionChangedEventArgs()
   nameWithType.vb: UnifyCollectionChangedEventArgs(Of T).UnifyCollectionChangedEventArgs()
-- uid: Unify.Collections.Generic.UnifyCollectionChangedEventArgs`1.#ctor(Unify.Collections.UnifyCollectionChangedAction)
-  name: UnifyCollectionChangedEventArgs(UnifyCollectionChangedAction)
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyCollectionChangedEventArgs-1.html#Unify_Collections_Generic_UnifyCollectionChangedEventArgs_1__ctor_Unify_Collections_UnifyCollectionChangedAction_
-  commentId: M:Unify.Collections.Generic.UnifyCollectionChangedEventArgs`1.#ctor(Unify.Collections.UnifyCollectionChangedAction)
-  fullName: Unify.Collections.Generic.UnifyCollectionChangedEventArgs<T>.UnifyCollectionChangedEventArgs(Unify.Collections.UnifyCollectionChangedAction)
-  fullName.vb: Unify.Collections.Generic.UnifyCollectionChangedEventArgs(Of T).UnifyCollectionChangedEventArgs(Unify.Collections.UnifyCollectionChangedAction)
-  nameWithType: UnifyCollectionChangedEventArgs<T>.UnifyCollectionChangedEventArgs(UnifyCollectionChangedAction)
-  nameWithType.vb: UnifyCollectionChangedEventArgs(Of T).UnifyCollectionChangedEventArgs(UnifyCollectionChangedAction)
 - uid: Unify.Collections.Generic.UnifyCollectionChangedEventArgs`1.#ctor(Unify.Collections.UnifyCollectionChangedAction,`0,System.Int32)
   name: UnifyCollectionChangedEventArgs(UnifyCollectionChangedAction, T, Int32)
   href: 0.1.x/api/Unify.Collections.Generic.UnifyCollectionChangedEventArgs-1.html#Unify_Collections_Generic_UnifyCollectionChangedEventArgs_1__ctor_Unify_Collections_UnifyCollectionChangedAction__0_System_Int32_
@@ -617,23 +609,6 @@ references:
   fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).LoopFinished
   nameWithType: UnifyEnumerator<T>.LoopFinished
   nameWithType.vb: UnifyEnumerator(Of T).LoopFinished
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.maxRewindItems
-  name: maxRewindItems
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_maxRewindItems
-  commentId: P:Unify.Collections.Generic.UnifyEnumerator`1.maxRewindItems
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.maxRewindItems
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).maxRewindItems
-  nameWithType: UnifyEnumerator<T>.maxRewindItems
-  nameWithType.vb: UnifyEnumerator(Of T).maxRewindItems
-- uid: Unify.Collections.Generic.UnifyEnumerator`1.maxRewindItems*
-  name: maxRewindItems
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_maxRewindItems_
-  commentId: Overload:Unify.Collections.Generic.UnifyEnumerator`1.maxRewindItems
-  isSpec: "True"
-  fullName: Unify.Collections.Generic.UnifyEnumerator<T>.maxRewindItems
-  fullName.vb: Unify.Collections.Generic.UnifyEnumerator(Of T).maxRewindItems
-  nameWithType: UnifyEnumerator<T>.maxRewindItems
-  nameWithType.vb: UnifyEnumerator(Of T).maxRewindItems
 - uid: Unify.Collections.Generic.UnifyEnumerator`1.MoveNext
   name: MoveNext()
   href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_MoveNext
@@ -1920,19 +1895,6 @@ references:
   commentId: E:Unify.Collections.IUnifyEnumerator.LoopFinished
   fullName: Unify.Collections.IUnifyEnumerator.LoopFinished
   nameWithType: IUnifyEnumerator.LoopFinished
-- uid: Unify.Collections.IUnifyEnumerator.maxRewindItems
-  name: maxRewindItems
-  href: 0.1.x/api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_maxRewindItems
-  commentId: P:Unify.Collections.IUnifyEnumerator.maxRewindItems
-  fullName: Unify.Collections.IUnifyEnumerator.maxRewindItems
-  nameWithType: IUnifyEnumerator.maxRewindItems
-- uid: Unify.Collections.IUnifyEnumerator.maxRewindItems*
-  name: maxRewindItems
-  href: 0.1.x/api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_maxRewindItems_
-  commentId: Overload:Unify.Collections.IUnifyEnumerator.maxRewindItems
-  isSpec: "True"
-  fullName: Unify.Collections.IUnifyEnumerator.maxRewindItems
-  nameWithType: IUnifyEnumerator.maxRewindItems
 - uid: Unify.Collections.IUnifyEnumerator.moveNextWhenInvalidated
   name: moveNextWhenInvalidated
   href: 0.1.x/api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_moveNextWhenInvalidated
