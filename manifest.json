@@ -84,7 +84,7 @@
           "hash": "Q47NblDCsDgx9okUZfhkqw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -180,7 +180,7 @@
           "hash": "Wi/r2uf82FWmXnvAgRqZtQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -264,7 +264,7 @@
           "hash": "BB9CJ+PphA0ib+WFXhDszQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -372,7 +372,7 @@
           "hash": "nLdrMmIHfIVc2p9EDSK2vw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -552,7 +552,7 @@
           "hash": "UjEqFobtterUG63BNtjlpw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -577,6 +577,18 @@
         }
       },
       "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Collections/UsingUnifyEnumeratorsWithUnifyCollections.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Collections/UsingUnifyEnumeratorsWithUnifyCollections.html",
+          "hash": "cJTs4YA9bnPf7N0PXi+Q9Q=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -717,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/CreatingAndUsingUnifyEnumerators.html",
-          "hash": "yZFm+8LKeZOp5BCL4S65hw=="
+          "hash": "rvgyKTwauBswtnmXrs0BTA=="
         }
       },
       "is_incremental": true,
@@ -741,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/LoopingUnifyEnumerators.html",
-          "hash": "LUSRrvKwTjXVtlUSJZ79tg=="
+          "hash": "pT7GLdYobiGV2OzImhutSg=="
         }
       },
       "is_incremental": true,
@@ -765,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/SpecifyingAnEnumerableRange.html",
-          "hash": "r1XdkEBd4lnod8w5VRhhTQ=="
+          "hash": "ShlFFxV26zNw8fJqQen8dQ=="
         }
       },
       "is_incremental": true,
@@ -777,7 +789,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/SteppingUnifyEnumerators.html",
-          "hash": "pmpnVL3SbAslSzR7lD1VZQ=="
+          "hash": "cdlYuK9B1UYiSHgL09xing=="
         }
       },
       "is_incremental": true,
@@ -801,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/toc.html",
-          "hash": "Wx0pMmcI9u8mLBZEiN/Gfg=="
+          "hash": "X4/5eZ4TfCk0nlaSeNML1Q=="
         }
       },
       "is_incremental": false,
@@ -1110,14 +1122,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 25,
+          "total_file_count": 26,
           "skipped_file_count": 25
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 43,
-          "skipped_file_count": 42
+          "skipped_file_count": 43
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

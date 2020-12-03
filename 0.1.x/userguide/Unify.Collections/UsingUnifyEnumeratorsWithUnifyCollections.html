@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using Unify Enumerators with Unify Collections | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using Unify Enumerators with Unify Collections | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="using-unify-enumerators-with-unify-collections">Using Unify Enumerators with Unify Collections</h1>
+
+<p>Unify Enumerators are designed to work seamlessly with Unify Collections and .NET.</p>
+<p>The <code>foreach</code> statement works with Unify in the same way as it does with .NET:</p>
+<pre><code>UnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Hearts&quot;, &quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Clubs&quot; };
+
+foreach (string s in list)
+{
+    print(s);
+}
+
+/*  Produces the following output:
+ *
+ *  Hearts
+ *  Diamonds
+ *  Spades
+ *  Clubs
+ */
+</code></pre>
+<p>The <code>GetEnumerator()</code> method also works in the same way as .NET:</p>
+<pre><code>UnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Hearts&quot;, &quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Clubs&quot; };
+IUnifyEnumerator&lt;string&gt; enumerator = list.GetEnumerator();
+
+while (enumerator.MoveNext())
+{
+    print(enumerator.Current);
+}
+
+/*  Produces the following output:
+ *
+ *  Hearts
+ *  Diamonds
+ *  Spades
+ *  Clubs
+ */
+</code></pre>
+<p>Enumerable collections in Unify provide an additional method, <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_"><strong>SetEnumerator()</strong></a>, to specify the default enumerator for the collection. An instance of the current default enumerator will be returned by the <code>GetEnumerator()</code> method and is also the one used by the <code>foreach</code> statement. The <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_"><strong>SetEnumerator()</strong></a> method takes a value from the enum class, <a class="xref" href="../../api/Unify.Collections.UnifyEnumeratorType.html"><strong>UnifyEnumeratorType</strong></a>, and can be any one of the built-in Unify Enumerator types; <strong>Forwards</strong>, <strong>Backwards</strong>, <strong>YoYo</strong> or <strong>Random</strong>.</p>
+<pre><code>UnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Hearts&quot;, &quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Clubs&quot; };
+
+list.SetEnumerator(UnifyEnumeratorType.Backwards); // set the default enumerator to Backwards
+
+print(&quot;foreach&quot;);
+foreach (string s in list)
+{
+    print($&quot;foreach: {s}&quot;);
+}
+
+IUnifyEnumerator&lt;string&gt; enumerator = list.GetEnumerator();
+
+print(Environment.NewLine);
+print(&quot;while&quot;);
+while (enumerator.MoveNext())
+{
+    print($&quot;while: {enumerator.Current}&quot;);
+}
+
+/*  Produces the following output:
+ *
+ * foreach: Clubs
+ * foreach: Spades
+ * foreach: Diamonds
+ * foreach: Hearts
+ *
+ * while: Clubs
+ * while: Spades
+ * while: Diamonds
+ * while: Hearts
+ */
+</code></pre>
+<p>The <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_"><strong>SetEnumerator()</strong></a> method also provides overloads to specify values for the enumerator's <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html"><strong>EnumerableRange</strong></a>; these overloaded methods allow <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_startIndex"><strong>startIndex</strong></a>, <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_endIndex"><strong>endIndex</strong></a>, <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_loopCount"><strong>loopCount</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_step"><strong>step</strong></a> properties to be specified. This code snippet uses a list of computer game characters; <strong>&quot;Mario&quot;</strong>, <strong>&quot;Sonic&quot;</strong>, <strong>&quot;Kirby&quot;</strong>, <strong>&quot;Yoshi&quot;</strong>, <strong>&quot;Luigi&quot;</strong>, <strong>&quot;Master Chief&quot;</strong>, <strong>&quot;Solid Snake&quot;</strong>, <strong>&quot;Pikachu&quot;</strong>, <strong>&quot;Bowser&quot;</strong>, <strong>&quot;Link&quot;</strong>, and specifies the enumerable range with a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_startIndex"><strong>startIndex</strong></a> of <strong>2</strong>, an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_endIndex"><strong>endIndex</strong></a> of <strong>6</strong> and a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_step"><strong>step</strong></a> value of <strong>2</strong>. This gives an enumerable range with the values; <strong>&quot;Kirby&quot;</strong>, <strong>&quot;Luigi&quot;</strong>, <strong>&quot;Solid Snake&quot;</strong> which the <a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>UnifyRandomEnumerator&lt;T&gt;</strong></a> will use to iterate over:</p>
+<pre><code>UnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Mario&quot;, &quot;Sonic&quot;, &quot;Kirby&quot;, &quot;Yoshi&quot;, &quot;Luigi&quot;, &quot;Master Chief&quot;, &quot;Solid Snake&quot;, &quot;Pikachu&quot;, &quot;Bowser&quot;, &quot;Link&quot; };
+
+list.SetEnumerator(UnifyEnumeratorType.Random, 2, 6, 2);
+
+foreach (string s in list)
+{
+	print($&quot;foreach: {s}&quot;);
+}
+</code></pre>
+<p>The Unify Enumerator's <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_GetEnumerator"><strong>GetEnumerator()</strong></a> method also provides overloads. The <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_GetEnumerator_"><strong>GetEnumerator(UnifyEnumeratorType)</strong></a> overload returns an instance of any of the built-in Unify Enumerator types, via the <a class="xref" href="../../api/Unify.Collections.UnifyEnumeratorType.html"><strong>UnifyEnumeratorType</strong></a> parameter, <strong>without</strong> changing the collection's default enumerator. It also allows an enumerable range to be defined in the same way as the <a href="Unify.Collections.IUnifyEnumerable.SetEnumerator*"><strong>SetEnumerator()</strong></a> method, again this does <strong>not</strong> change the default enumerator's enumerable range values:</p>
+<pre><code>IUnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Hamlet&quot;, &quot;Macbeth&quot;, &quot;Romeo and Juliet&quot;, &quot;Julius Caesar&quot;, &quot;A Midsummer Night's Dream&quot; };
+        
+// get a Backwards enumerator instance for 'list', leaving the default enumerator unchanged
+// set the enumerable range for the backwards enumerator as all items from, and including, index 2 to index 5; &quot;Romeo and Juliet&quot;, &quot;Julius Caesar&quot;, &quot;A Midsummer Night's Dream&quot;
+IUnifyEnumerator&lt;string&gt; enumerator = list.GetEnumerator(UnifyEnumeratorType.Backwards, 2, 5);
+
+print(&quot;Default Enumerator:&quot;);
+
+foreach (string s in list)
+{
+    print(s);
+}
+
+print(Environment.NewLine);
+print(&quot;GetEnumerator(UnifyEnumeratorType.Backwards, 2, 5)&quot;);
+
+while (enumerator.MoveNext())
+{
+    print(enumerator.Current);
+}
+
+/* Produces the following output:
+ *
+ * Default Enumerator:
+ * Hamlet
+ * Macbeth
+ * Romeo and Juliet
+ * Julius Caesar
+ * A Midsummer Night's Dream
+ *
+ * GetEnumerator(UnifyEnumeratorType.Backwards, 2, 5)
+ * A Midsummer Night's Dream
+ * Julius Caesar
+ * Romeo and Juliet
+ *
+ */
+</code></pre>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

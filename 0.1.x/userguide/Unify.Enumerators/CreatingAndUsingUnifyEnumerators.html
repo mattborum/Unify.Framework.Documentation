@@ -64,14 +64,16 @@
 <p><sup><font color="grey">Namespace: Unify.Collections, Unify.Collections.Generic</font></sup><br>
 <sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
 <p>Each Unify Enumerator provides a generic and non-generic version. To create a Unify Enumerator instance, use the <code>new()</code> operator and pass the source collection to the constructor. The source collection can be any class that implements either of .NET's <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable" target="_blank"><strong>IEnumerable</strong></a> or <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1" target="_blank"><strong>IEnumerable&lt;T&gt;</strong></a> interfaces, this includes any single-dimensional, multidimensional or jagged array, or any class that implements either of Unify's <a class="xref" href="../../api/Unify.Collections.IUnifyList.html"><strong>IUnifyList</strong></a> or <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyList-1.html"><strong>IUnifyList&lt;T&gt;</strong></a> interface types.</p>
-<p>A reference to a Unify Enumerator can be held in either; the concrete type matching the Unify Enumerator type or either of Unify's <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html"><strong>IUnifyEnumerator</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyEnumerator-1.html"><strong>IUnifyEnumerator&lt;T&gt;</strong></a> interface types:</p>
+<p>A reference to a Unify Enumerator can be held in either; the concrete type matching the Unify Enumerator type, either of Unify's <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html"><strong>IUnifyEnumerator</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyEnumerator-1.html"><strong>IUnifyEnumerator&lt;T&gt;</strong></a> interface types, or either of .NET's <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator" target="_blank"><strong>IEnumerator</strong></a> and <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1" target="_blank"><strong>IEnumerator&lt;T&gt;</strong></a> interface types:</p>
 <pre><code>IList&lt;string&gt; list = new List&lt;string&gt; { &quot;Apple&quot;, &quot;Orange&quot;, &quot;Banana&quot;, &quot;Pear&quot;, &quot;Grape&quot;, &quot;Plum&quot;, &quot;Lemon&quot;, &quot;Lime&quot;, &quot;Cherry&quot;, &quot;Mango&quot; };
 
-UnifyForwardsEnumerator forwards = new UnifyForwardsEnumerator(list);
-IUnifyEnumerator forwardsInterface = new UnifyForwardsEnumerator(list);
-
-UnifyBackwardsEnumerator&lt;string&gt; backwardsGeneric = new UnifyBackwardsEnumerator&lt;string&gt;(list);
+UnifyForwardsEnumerator&lt;string&gt; forwardsGeneric = new UnifyForwardsEnumerator&lt;string&gt;(list);
+UnifyForwardsEnumerator forwardsNonGeneric = new UnifyForwardsEnumerator&lt;string&gt;(list);
 IUnifyEnumerator&lt;string&gt; backwardsGenericInterface = new UnifyBackwardsEnumerator&lt;string&gt;(list);
+IUnifyEnumerator backwardsNonGenericInterface = new UnifyBackwardsEnumerator&lt;string&gt;(list);
+
+IEnumerator dotNetForwardsNonGeneric = new UnifyForwardsEnumerator&lt;string&gt;(list);
+IEnumerator&lt;string&gt; dotNetBackwardsGeneric = new UnifyBackwardsEnumerator&lt;string&gt;(list);
 </code></pre>
 <br>
 <p>When a Unify Enumerator is created, or after the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Reset"><strong>Reset()</strong></a> method is called, the Unify Enumerator is positioned before the first element of the collection, the first call to the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a> method moves the Unify Enumerator to the first element of the collection. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a> method returns <strong>true</strong> while the Unify Enumerator is pointing to a valid element; otherwise, <strong>false</strong> if the end of the collection has been reached.</p>
