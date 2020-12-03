@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Introduction to Unify Collections | Unify Framework </title>
+    <title>Unify Coroutine Collection | Unify Framework </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Introduction to Unify Collections | Unify Framework ">
+    <meta name="title" content="Unify Coroutine Collection | Unify Framework ">
     <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -59,15 +59,11 @@
         <div class="article row grid-right">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="introduction-to-unify-collections">Introduction to Unify Collections</h1>
+<h1 id="unify-coroutine-collection">Unify Coroutine Collection</h1>
 
-<p><sup><font color="grey">Namespace: Unify.Collections, Unify.Collections.Generic</font></sup><br>
-<sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
-<p>This section provides examples to accompany the Unify API documentation on <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify Collections</strong></a>. The <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify.Collections</strong></a> namespace contains interfaces and classes to provide extra functionality to .NET collections, the bulk of which is implmented through <a class="xref" href="../Unify.Enumerators/IntroductionToUnifyEnumerators.html"><strong>Unify Enumerators</strong></a>.</p>
-<p>To get you up and running quickly, examples have been kept as simple as possible, using only the Unity Console.</p>
-<p>Unify Collections are observable; a <a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionChanged"><strong>CollectionChanged</strong></a> event is used to notify subscribers when items are added, inserted, removed, or when a collecton is cleared or reset.</p>
-<p>The <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify.Collections</strong></a> namespace currently offers two collections with this extra functionality, the <a class="xref" href="../../api/Unify.Collections.UnifyList.html"><strong>UnifyList</strong></a> and the generic <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>.</p>
-<p>All Unify Collections implement <a class="xref" href="../Unify.Enumerators/IntroductionToUnifyEnumerators.html"><strong>Unify Enumerators</strong></a>.</p>
+<p><sup><font color="grey">Namespace: Unify.Coroutines</font></sup><br>
+<sup><font color="grey">Assembly: Unify.Coroutines.dll</font></sup></p>
+<p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html"><strong>UnifyCoroutineCollection</strong></a> class is a specialised container created to control a group of <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>Unify Coroutines</strong></a> as if they were a single Unify Coroutine; it is both an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>IList&lt;T&gt;</strong></a>, with a generic type <strong>T</strong> of <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>UnifyCoroutineBase</strong></a>, and a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>UnifyCoroutine</strong></a>. This means it behaves, and can be used, in the same way as a generic .NET list and has all the functionality of a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>Unify Coroutine</strong></a>; it can be paused, resumed, cancelled and reused just like a Unify Coroutine and also provides <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html"><strong>EnumerableRange</strong></a> functionality.</p>
 </article>
           </div>
         </div>

@@ -61,6 +61,8 @@
             <article class="content wrap" id="_content" data-uid="FlatteningAnIEnumerableType">
 <h1 id="flattening-an-ienumerable-type">Flattening an IEnumerable Type</h1>
 
+<p><sup><font color="grey">Namespace: Unify.Collections, Unify.Collections.Generic</font></sup><br>
+<sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
 <p>The <a class="xref" href="../../api/Unify.Collections.EnumerableExtensions.html#Unify_Collections_EnumerableExtensions_Flatten_"><strong>Flatten()</strong></a> extension method takes an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable" target="_blank"><strong>IEnumerable</strong></a> type and returns a one-dimensional, or flattened, version as an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist" target="_blank"><strong>IList</strong></a> type.</p>
 <p>Currently, a .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> does not accept a two-dimensional array or a jagged array as a source collection through the constructor. Trying to initialise a .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;T&gt;</strong></a> with a jagged array will produce a compiler error:</p>
 <pre><code>private string[][] jaggedArray = new string[][]
