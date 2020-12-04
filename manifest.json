@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutine-1.html",
-          "hash": "tYVS2tnB0kCX//Uf/4rndg=="
+          "hash": "lN2sdUVbDob7rqyanaP1aQ=="
         }
       },
       "is_incremental": true,
@@ -417,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutine.html",
-          "hash": "Aj3sXlelnTYRamitZRQw2g=="
+          "hash": "yAKID0hAgk4AbJXBVR0Now=="
         }
       },
       "is_incremental": true,
@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineCollection.html",
-          "hash": "PwtBFAJJEg2MKWSUw1HGqA=="
+          "hash": "WkC+9sjgYoJYS84mTomsJQ=="
         }
       },
       "is_incremental": true,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Coroutines.UnifyCoroutineQueue.html",
-          "hash": "XEcFzBP52QMarUQnGi7h5g=="
+          "hash": "p5kI7Qj5+te8987PDxFX7A=="
         }
       },
       "is_incremental": true,
@@ -541,6 +541,18 @@
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/IntroductionToUnifyCoroutineCollection.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/IntroductionToUnifyCoroutineCollection.html",
+          "hash": "P9tTrR37O6uDVYmrhPgGOQ=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -653,6 +665,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutineCollection.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutineCollection.html",
+          "hash": "YPkSSUB4oeTJXmvbkuewxA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "0.1.x/userguide/Unify.Coroutines/IntroductionToUnifyCoroutines.md",
       "output": {
         ".html": {
@@ -729,7 +753,43 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Coroutines/UnifyCoroutineCollection.html",
-          "hash": "kwGiWxjnibb71JwYJrSV+w=="
+          "hash": "CU/oXgDb/mNYMzpscVXCgA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/UnifyCoroutineCollectionCreatingAndStarting.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/UnifyCoroutineCollectionCreatingAndStarting.html",
+          "hash": "FSepl6f8/vMS2hgi/f+XZA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/UnifyCoroutineCollectionDelayedStart.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/UnifyCoroutineCollectionDelayedStart.html",
+          "hash": "xykPdYFEodijDJmYNjjnpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Coroutines/UnifyCoroutineCollectionPausingAndResuming.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Coroutines/UnifyCoroutineCollectionPausingAndResuming.html",
+          "hash": "1A7Wk0SK3axCQE3x/frCGA=="
         }
       },
       "is_incremental": false,
@@ -837,7 +897,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/toc.html",
-          "hash": "GzIoWfKGSN6MAC2TJLIIvg=="
+          "hash": "6ebQEjvKQOFbdMuWZdeW4w=="
         }
       },
       "is_incremental": false,
@@ -950,6 +1010,28 @@
       "output": {
         "resource": {
           "relative_path": "images/exception_cancel.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/exception_coroutineCollection_AddNull.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/exception_coroutineCollection_AddNull.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/exception_coroutineCollection_Resume.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/exception_coroutineCollection_Resume.png"
         }
       },
       "is_incremental": false,
@@ -1146,8 +1228,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 28,
-          "skipped_file_count": 27
+          "total_file_count": 33,
+          "skipped_file_count": 32
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

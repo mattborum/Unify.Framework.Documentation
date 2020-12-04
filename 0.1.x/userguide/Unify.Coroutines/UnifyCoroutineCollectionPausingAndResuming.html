@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pausing and Resuming a Unify Coroutine Collection | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Pausing and Resuming a Unify Coroutine Collection | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="pausing-and-resuming-a-unify-coroutine-collection">Pausing and Resuming a Unify Coroutine Collection</h1>
+
+<p><sup><font color="grey">Namespace: Unify.Coroutines</font></sup><br>
+<sup><font color="grey">Assembly: Unify.Coroutines.dll</font></sup></p>
+<p>Unify Coroutine Collections can be paused and resumed in the same way a Unify Coroutine can be <a class="xref" href="PausingAndResuming.html"><strong>paused and resumed</strong></a>.</p>
+<h2 id="example">Example</h2>
+<p>Here, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'Nicholas Francis'</strong> to demonstrate how Unify Coroutine Collection instances are identified in <a href="#exceptions"><strong>exception messages</strong></a>.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>S</strong> to Start</li>
+<li><strong>P</strong> to Pause</li>
+<li><strong>R</strong> to Resume</li>
+</ul>
+<pre><code>using System.Collections;
+using Random = System.Random;
+using Unify.Coroutines;
+using UnityEngine;
+
+public class Coroutines_Collection_PausingAndResuming : MonoBehaviour
+{
+    private UnifyCoroutineCollection collection;
+    private Random random = new Random();
+
+    void Awake()
+    {
+        collection = new UnifyCoroutineCollection(name: &quot;Nicholas Francis&quot;);
+        collection.failSilently = false;
+
+        collection.Add(CountToSixty());
+        collection.Add(PrintRandomLetter());
+        collection.Add(SayHello());
+
+        print(&quot;press S to START, P to PAUSE, R to RESUME&quot;);
+    }
+    
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            print(&quot;--- Start ---&quot;);
+            collection.Start();
+        }
+
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            print(&quot;--- Paused ---&quot;);
+            collection.Pause();
+        }
+
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            print(&quot;--- Resumed ---&quot;);
+            collection.Resume();
+        }
+    }
+
+    private IEnumerator CountToSixty()
+    {
+        for (int i = 1; i &lt;= 60; i++)
+        {
+            print(i);
+            yield return new WaitForSecondsRealtime(1f);
+        }
+    }
+
+    private IEnumerator PrintRandomLetter()
+    {
+        for (int i = 0; i &lt;= 30; i++)
+        {
+            int c = random.Next(65, 91);
+            print((char)c);
+            yield return new WaitForSecondsRealtime(2f);
+        }
+    }
+
+    private IEnumerator SayHello()
+    {
+        for (int i = 0; i &lt; 10; i++)
+        {
+            print(&quot;Hello!&quot;);
+            yield return new WaitForSecondsRealtime(5f);
+        }
+    }
+}
+
+</code></pre>
+<h2 id="exceptions">Exceptions</h2>
+<p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
+<ul>
+<li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter of a Unify Coroutine Collection <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutine.html#constructors"><strong>constructor</strong></a>, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#collection-initializers" target="_blank"><strong>collection initialiser</strong></a> or <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html#Unify_Coroutines_UnifyCoroutineCollection_Add_"><strong>Add()</strong></a> method</li>
+</ul>
+<p>Exceptions will be thrown under the following circumstances, <strong>only</strong> if <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> is <strong>false</strong>:</p>
+<ul>
+<li><strong>Pausing</strong> a Unify Coroutine Collection that is in a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_state"><strong>state</strong></a> other than <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Running</strong></a></li>
+<li><strong>Resuming</strong> a Unify Coroutine Collection that is in a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_state"><strong>state</strong></a> other than <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Paused</strong></a></li>
+</ul>
+<br>
+<p>Unify will provide information in the exception message to help you find the cause of the error, for example:</p>
+<p><img src="../../../images/exception_coroutineCollection_Resume.png" alt="Exception Image"></p>
+<p>This message tells us the exception was caused by calling the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Resume"><strong>Resume()</strong></a> method on a Unify Coroutine Collection that was already in a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Paused</strong></a> <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_state"><strong>state</strong></a>, and that <strong>'Nicholas Francis'</strong> was the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> of the offending Unify Coroutine Collection instance.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a class="xref" href="IntroductionToUnifyCoroutines.html#whats-the-difference-between-pause-stop-and-cancel"><strong>What's the difference between Pause, Stop and Cancel?</strong></a></li>
+</ul>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

@@ -3807,12 +3807,6 @@ references:
   commentId: T:Unify.Coroutines.UnifyCoroutineCollection
   fullName: Unify.Coroutines.UnifyCoroutineCollection
   nameWithType: UnifyCoroutineCollection
-- uid: Unify.Coroutines.UnifyCoroutineCollection.#ctor
-  name: UnifyCoroutineCollection()
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineCollection.html#Unify_Coroutines_UnifyCoroutineCollection__ctor
-  commentId: M:Unify.Coroutines.UnifyCoroutineCollection.#ctor
-  fullName: Unify.Coroutines.UnifyCoroutineCollection.UnifyCoroutineCollection()
-  nameWithType: UnifyCoroutineCollection.UnifyCoroutineCollection()
 - uid: Unify.Coroutines.UnifyCoroutineCollection.#ctor(System.Collections.Generic.IEnumerable{Unify.Coroutines.UnifyCoroutineBase})
   name: UnifyCoroutineCollection(IEnumerable<UnifyCoroutineBase>)
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineCollection.html#Unify_Coroutines_UnifyCoroutineCollection__ctor_System_Collections_Generic_IEnumerable_Unify_Coroutines_UnifyCoroutineBase__
@@ -3828,6 +3822,12 @@ references:
   commentId: M:Unify.Coroutines.UnifyCoroutineCollection.#ctor(System.Int32)
   fullName: Unify.Coroutines.UnifyCoroutineCollection.UnifyCoroutineCollection(System.Int32)
   nameWithType: UnifyCoroutineCollection.UnifyCoroutineCollection(Int32)
+- uid: Unify.Coroutines.UnifyCoroutineCollection.#ctor(System.Single,System.Int32,System.Single,System.String)
+  name: UnifyCoroutineCollection(Single, Int32, Single, String)
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineCollection.html#Unify_Coroutines_UnifyCoroutineCollection__ctor_System_Single_System_Int32_System_Single_System_String_
+  commentId: M:Unify.Coroutines.UnifyCoroutineCollection.#ctor(System.Single,System.Int32,System.Single,System.String)
+  fullName: Unify.Coroutines.UnifyCoroutineCollection.UnifyCoroutineCollection(System.Single, System.Int32, System.Single, System.String)
+  nameWithType: UnifyCoroutineCollection.UnifyCoroutineCollection(Single, Int32, Single, String)
 - uid: Unify.Coroutines.UnifyCoroutineCollection.#ctor*
   name: UnifyCoroutineCollection
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineCollection.html#Unify_Coroutines_UnifyCoroutineCollection__ctor_
@@ -3835,12 +3835,12 @@ references:
   isSpec: "True"
   fullName: Unify.Coroutines.UnifyCoroutineCollection.UnifyCoroutineCollection
   nameWithType: UnifyCoroutineCollection.UnifyCoroutineCollection
-- uid: Unify.Coroutines.UnifyCoroutineCollection.Add(System.Collections.IEnumerator,System.Single)
-  name: Add(IEnumerator, Single)
-  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineCollection.html#Unify_Coroutines_UnifyCoroutineCollection_Add_System_Collections_IEnumerator_System_Single_
-  commentId: M:Unify.Coroutines.UnifyCoroutineCollection.Add(System.Collections.IEnumerator,System.Single)
-  fullName: Unify.Coroutines.UnifyCoroutineCollection.Add(System.Collections.IEnumerator, System.Single)
-  nameWithType: UnifyCoroutineCollection.Add(IEnumerator, Single)
+- uid: Unify.Coroutines.UnifyCoroutineCollection.Add(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.String)
+  name: Add(IEnumerator, Single, Int32, Single, String)
+  href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineCollection.html#Unify_Coroutines_UnifyCoroutineCollection_Add_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_String_
+  commentId: M:Unify.Coroutines.UnifyCoroutineCollection.Add(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.String)
+  fullName: Unify.Coroutines.UnifyCoroutineCollection.Add(System.Collections.IEnumerator, System.Single, System.Int32, System.Single, System.String)
+  nameWithType: UnifyCoroutineCollection.Add(IEnumerator, Single, Int32, Single, String)
 - uid: Unify.Coroutines.UnifyCoroutineCollection.Add(Unify.Coroutines.UnifyCoroutineBase)
   name: Add(UnifyCoroutineBase)
   href: 0.1.x/api/Unify.Coroutines.UnifyCoroutineCollection.html#Unify_Coroutines_UnifyCoroutineCollection_Add_Unify_Coroutines_UnifyCoroutineBase_

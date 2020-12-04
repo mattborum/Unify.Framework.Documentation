@@ -198,14 +198,6 @@
   <h3 id="constructors">Constructors
   </h3>
   <a id="Unify_Coroutines_UnifyCoroutineCollection__ctor_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor*"></a>
-  <h4 id="Unify_Coroutines_UnifyCoroutineCollection__ctor" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor">UnifyCoroutineCollection()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnifyCoroutineCollection()</code></pre>
-  </div>
-  <a id="Unify_Coroutines_UnifyCoroutineCollection__ctor_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor*"></a>
   <h4 id="Unify_Coroutines_UnifyCoroutineCollection__ctor_System_Collections_Generic_IEnumerable_Unify_Coroutines_UnifyCoroutineBase__" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor(System.Collections.Generic.IEnumerable{Unify.Coroutines.UnifyCoroutineBase})">UnifyCoroutineCollection(IEnumerable&lt;UnifyCoroutineBase&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -251,6 +243,46 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">capacity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Coroutines_UnifyCoroutineCollection__ctor_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection__ctor_System_Single_System_Int32_System_Single_System_String_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.#ctor(System.Single,System.Int32,System.Single,System.String)">UnifyCoroutineCollection(Single, Int32, Single, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyCoroutineCollection(float startDelay = 0F, int loopCount = 1, float passDelay = 0F, string name = &quot;UnnamedUnifyCoroutine&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">startDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">loopCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">passDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -465,12 +497,12 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Unify_Coroutines_UnifyCoroutineCollection_Add_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Add*"></a>
-  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Add_System_Collections_IEnumerator_System_Single_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Add(System.Collections.IEnumerator,System.Single)">Add(IEnumerator, Single)</h4>
+  <h4 id="Unify_Coroutines_UnifyCoroutineCollection_Add_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_String_" data-uid="Unify.Coroutines.UnifyCoroutineCollection.Add(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.String)">Add(IEnumerator, Single, Int32, Single, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Add(IEnumerator _target, float _delay = 0F)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Add(IEnumerator _target, float startDelay = 0F, int loopCount = 1, float passDelay = 0F, string name = &quot;UnnamedUnifyCoroutine&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -489,7 +521,22 @@
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">_delay</span></td>
+        <td><span class="parametername">startDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">loopCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">passDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
     </tbody>
