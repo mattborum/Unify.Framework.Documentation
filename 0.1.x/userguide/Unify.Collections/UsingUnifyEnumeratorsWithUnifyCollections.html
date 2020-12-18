@@ -65,7 +65,7 @@
 <sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
 <p>Unify Enumerators are designed to work seamlessly with Unify Collections and .NET.</p>
 <p>The <code>foreach</code> statement works with Unify in the same way as it does with .NET:</p>
-<pre><code>UnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Hearts&quot;, &quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Clubs&quot; };
+<pre><code>UnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Untitled Goose Game&quot;, &quot;Hearthstone&quot;, &quot;Subnautica&quot;, &quot;Kerbal Space Program&quot; };
 
 foreach (string s in list)
 {
@@ -74,14 +74,14 @@ foreach (string s in list)
 
 /*  Produces the following output:
  *
- *  Hearts
- *  Diamonds
- *  Spades
- *  Clubs
+ *  Untitled Goose Game
+ *  Hearthstone
+ *  Subnautica
+ *  Kerbal Space Program
  */
 </code></pre>
-<p>The <code>GetEnumerator()</code> method also works in the same way as .NET:</p>
-<pre><code>UnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Hearts&quot;, &quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Clubs&quot; };
+<p>The <code>GetEnumerator()</code> method also works with Unify in the same way as .NET:</p>
+<pre><code>UnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Untitled Goose Game&quot;, &quot;Hearthstone&quot;, &quot;Subnautica&quot;, &quot;Kerbal Space Program&quot; };
 IUnifyEnumerator&lt;string&gt; enumerator = list.GetEnumerator();
 
 while (enumerator.MoveNext())
@@ -91,14 +91,15 @@ while (enumerator.MoveNext())
 
 /*  Produces the following output:
  *
- *  Hearts
- *  Diamonds
- *  Spades
- *  Clubs
+ *  Untitled Goose Game
+ *  Hearthstone
+ *  Subnautica
+ *  Kerbal Space Program
  */
 </code></pre>
-<p>Enumerable collections in Unify provide an additional method, <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_"><strong>SetEnumerator()</strong></a>, to specify the default enumerator for the collection. An instance of the current default enumerator will be returned by the <code>GetEnumerator()</code> method and is also the one used by the <code>foreach</code> statement. The <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_"><strong>SetEnumerator()</strong></a> method takes a value from the enum class, <a class="xref" href="../../api/Unify.Collections.UnifyEnumeratorType.html"><strong>UnifyEnumeratorType</strong></a>, and can be any one of the built-in Unify Enumerator types; <strong>Forwards</strong>, <strong>Backwards</strong>, <strong>YoYo</strong> or <strong>Random</strong>.</p>
-<pre><code>UnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Hearts&quot;, &quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Clubs&quot; };
+<p>The <code>foreach</code> and <code>GetEnumerator()</code> examples above both use a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html"><strong>UnifyEnumerator</strong></a>. An instance of the current default enumerator is returned by the <code>GetEnumerator()</code> method, which also provides the <code>foreach</code> statement with a Unify Enumerator. The default Unify Enumerator for any <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html"><strong>IUnifyEnumerable</strong></a> type is a <a class="xref" href="../../api/Unify.Collections.UnifyForwardsEnumerator.html"><strong>UnifyForwardsEnumerator</strong></a> instance.</p>
+<p>To change which Unify Enumerator is used, <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html"><strong>IUnifyEnumerable</strong></a> types in Unify provide a <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_"><strong>SetEnumerator(UnifyEnumeratorType)</strong></a> method, the <a class="xref" href="../../api/Unify.Collections.UnifyEnumeratorType.html"><strong>UnifyEnumeratorType</strong></a> parameter is used to specify the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html"><strong>UnifyEnumerator</strong></a>, and can be any one of the built-in Unify Enumerator types; <strong>Forwards</strong>, <strong>Backwards</strong>, <strong>YoYo</strong> or <strong>Random</strong>.</p>
+<pre><code>UnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Hollow Knight&quot;, &quot;Cuphead&quot;, &quot;Firewatch&quot;, &quot;Rust&quot;, &quot;Monument Valley&quot; };
 
 list.SetEnumerator(UnifyEnumeratorType.Backwards); // set the default enumerator to Backwards
 
@@ -119,63 +120,80 @@ while (enumerator.MoveNext())
 
 /*  Produces the following output:
  *
- * foreach: Clubs
- * foreach: Spades
- * foreach: Diamonds
- * foreach: Hearts
+ * foreach: Monument Valley
+ * foreach: Rust
+ * foreach: Firewatch
+ * foreach: Cuphead
+ * foreach: Hollow Knight
  *
- * while: Clubs
- * while: Spades
- * while: Diamonds
- * while: Hearts
+ * while: Monument Valley
+ * while: Rust
+ * while: Firewatch
+ * while: Cuphead
+ * while: Hollow Knight
  */
 </code></pre>
-<p>The <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_"><strong>SetEnumerator()</strong></a> method also provides overloads to specify values for the enumerator's <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html"><strong>EnumerableRange</strong></a>; these overloaded methods allow <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_startIndex"><strong>startIndex</strong></a>, <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_endIndex"><strong>endIndex</strong></a>, <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_loopCount"><strong>loopCount</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_step"><strong>step</strong></a> properties to be specified. This code snippet uses a list of computer game characters; <strong>&quot;Mario&quot;</strong>, <strong>&quot;Sonic&quot;</strong>, <strong>&quot;Kirby&quot;</strong>, <strong>&quot;Yoshi&quot;</strong>, <strong>&quot;Luigi&quot;</strong>, <strong>&quot;Master Chief&quot;</strong>, <strong>&quot;Solid Snake&quot;</strong>, <strong>&quot;Pikachu&quot;</strong>, <strong>&quot;Bowser&quot;</strong>, <strong>&quot;Link&quot;</strong>, and specifies the enumerable range with a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_startIndex"><strong>startIndex</strong></a> of <strong>2</strong>, an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_endIndex"><strong>endIndex</strong></a> of <strong>6</strong> and a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_step"><strong>step</strong></a> value of <strong>2</strong>. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRangeBase.html#Unify_Collections_UnifyEnumerableRangeBase_loopCount"><strong>loopCount</strong></a> property is not specified so will remain at it's default value of <strong>1</strong>. This gives an enumerable range containing the values; <strong>&quot;Kirby&quot;</strong>, <strong>&quot;Luigi&quot;</strong> and <strong>&quot;Solid Snake&quot;</strong>, which the <a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>UnifyRandomEnumerator&lt;T&gt;</strong></a> will use to iterate over:</p>
+<p>The <strong>SetEnumerator()</strong> method also provides an overload, <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_"><strong>SetEnumerator(UnifyEnumeratorType, UnifyEnumerableRange)</strong></a>, that allows the Unify Enumerator's <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>EnumerableRange</strong></a> values to be set at the same time.</p>
+<p>This code snippet uses a list of computer game characters; <strong>&quot;Mario&quot;</strong>, <strong>&quot;Sonic&quot;</strong>, <strong>&quot;Kirby&quot;</strong>, <strong>&quot;Yoshi&quot;</strong>, <strong>&quot;Luigi&quot;</strong>, <strong>&quot;Master Chief&quot;</strong>, <strong>&quot;Solid Snake&quot;</strong>, <strong>&quot;Pikachu&quot;</strong>, <strong>&quot;Bowser&quot;</strong>, <strong>&quot;Link&quot;</strong>, and specifies the enumerable range with a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> of <strong>2</strong>, an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> of <strong>6</strong> and a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> value of <strong>2</strong>. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property is not specified so will remain at it's default value of <strong>1</strong>. This gives an enumerable range containing the values; <strong>&quot;Kirby&quot;</strong>, <strong>&quot;Luigi&quot;</strong> and <strong>&quot;Solid Snake&quot;</strong>, which a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>UnifyRandomEnumerator&lt;T&gt;</strong></a> instance will use to iterate over:</p>
 <pre><code>UnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Mario&quot;, &quot;Sonic&quot;, &quot;Kirby&quot;, &quot;Yoshi&quot;, &quot;Luigi&quot;, &quot;Master Chief&quot;, &quot;Solid Snake&quot;, &quot;Pikachu&quot;, &quot;Bowser&quot;, &quot;Link&quot; };
 
-list.SetEnumerator(UnifyEnumeratorType.Random, 2, 6, 2);
+list.SetEnumerator(UnifyEnumeratorType.Random, new UnifyEnumerableRange(startIndex:2, endIndex:6, step:2));
 
 foreach (string s in list)
 {
 	print($&quot;foreach: {s}&quot;);
 }
-</code></pre>
-<p>The Unify Enumerator's <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_GetEnumerator"><strong>GetEnumerator()</strong></a> method also provides overloads. The <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_GetEnumerator_"><strong>GetEnumerator(UnifyEnumeratorType)</strong></a> overload returns an instance of any of the built-in Unify Enumerator types, via the <a class="xref" href="../../api/Unify.Collections.UnifyEnumeratorType.html"><strong>UnifyEnumeratorType</strong></a> parameter, <strong>without</strong> changing the collection's default enumerator. It also allows an enumerable range to be defined in the same way as the <a href="Unify.Collections.IUnifyEnumerable.SetEnumerator*"><strong>SetEnumerator()</strong></a> method, again this does <strong>not</strong> change the default enumerator's enumerable range values:</p>
-<pre><code>IUnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Hamlet&quot;, &quot;Macbeth&quot;, &quot;Romeo and Juliet&quot;, &quot;Julius Caesar&quot;, &quot;A Midsummer Night's Dream&quot; };
-        
-// get a Backwards enumerator instance for 'list', leaving the default enumerator unchanged
-// set the enumerable range for the backwards enumerator as all items from, and including, index 2 to index 5; &quot;Romeo and Juliet&quot;, &quot;Julius Caesar&quot;, &quot;A Midsummer Night's Dream&quot;
-IUnifyEnumerator&lt;string&gt; enumerator = list.GetEnumerator(UnifyEnumeratorType.Backwards, 2, 5);
 
-print(&quot;Default Enumerator:&quot;);
+/* Produces output similar to the following:
+ *
+ * foreach: Luigi
+ * foreach: Solid Snake
+ * foreach: Kirby
+ */
+</code></pre>
+<p>The Unify Enumerator's <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_GetEnumerator"><strong>GetEnumerator()</strong></a> method also provides an overload, <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_GetEnumerator_"><strong>GetEnumerator(UnifyEnumeratorType)</strong></a>, that returns an instance of any of the built-in Unify Enumerator types, via the <a class="xref" href="../../api/Unify.Collections.UnifyEnumeratorType.html"><strong>UnifyEnumeratorType</strong></a> parameter, <strong>without</strong> changing the collection's default enumerator or <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>EnumerableRange</strong></a> values:</p>
+<pre><code>IUnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;My Friend Pedro&quot;, &quot;Pillars of Eternity&quot;, &quot;Cities: Skylines&quot;, &quot;Ori and the Blind Forest&quot;, &quot;Risk of Rain 2&quot; };
+
+IUnifyEnumerator&lt;string&gt; enumerator = list.GetEnumerator(UnifyEnumeratorType.Backwards);
+enumerator.startIndex = 1;
+enumerator.endIndex = 3;
+
+print(&quot;Default Enumerator&quot;);
+print(&quot;------------------&quot;);
 
 foreach (string s in list)
 {
-    print(s);
+	print(s);
 }
 
 print(Environment.NewLine);
-print(&quot;GetEnumerator(UnifyEnumeratorType.Backwards, 2, 5)&quot;);
+print(&quot;GetEnumerator(UnifyEnumeratorType.Backwards)&quot;);
+print(&quot;startIndex = 1, endIndex = 3&quot;);
+print(&quot;--------------------------------------------&quot;);
 
 while (enumerator.MoveNext())
 {
-    print(enumerator.Current);
+	print(enumerator.Current);
 }
+
+enumerator.Dispose();
 
 /* Produces the following output:
  *
- * Default Enumerator:
- * Hamlet
- * Macbeth
- * Romeo and Juliet
- * Julius Caesar
- * A Midsummer Night's Dream
+ * Default Enumerator
+ * ------------------
+ * My Friend Pedro
+ * Pillars of Eternity
+ * Cities: Skylines
+ * Ori and the Blind Forest
+ * Risk of Rain 2
  *
- * GetEnumerator(UnifyEnumeratorType.Backwards, 2, 5)
- * A Midsummer Night's Dream
- * Julius Caesar
- * Romeo and Juliet
- *
+ * GetEnumerator(UnifyEnumeratorType.Backwards)
+ * startIndex = 1, endIndex = 3
+ * --------------------------------------------
+ * Ori and the Blind Forest
+ * Cities: Skylines
+ * Pillars of Eternity
  */
 </code></pre>
 </article>

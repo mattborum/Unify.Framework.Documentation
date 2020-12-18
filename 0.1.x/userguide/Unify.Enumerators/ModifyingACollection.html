@@ -71,23 +71,24 @@
 <li>If an item is removed before the current item position; the pointer will move to the left to maintain the current item position</li>
 <li>If an item is inserted or removed after the current item position; the pointer remains unchanged</li>
 </ul>
-<p>A special case occurs when the item the Unify Enumerator is currently positioned at is removed. In this scenario, the Unify Enumerator will rewind over previously iterated items to position itself at the last known valid item; if there are no valid items available, Unify will use the enumerator's <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a> method in a last attempt to ensure a valid item is available. To prevent this behaviour, set the Unify Enumerator's <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_moveNextWhenInvalidated"><strong>moveNextWhenInvalidated</strong></a> property to <strong>false</strong>; in this case the Unify Enumerator will remain in an invalid state until <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a> is called manually; the default value for <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_moveNextWhenInvalidated"><strong>moveNextWhenInvalidated</strong></a> is <strong>true</strong>. Unify Enumerator's provide an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_isValid"><strong>isValid</strong></a> flag to test for validity.</p>
+<p>A special case occurs when the item the Unify Enumerator is currently positioned at is removed. In this scenario, the Unify Enumerator will rewind over previously iterated items to position itself at the last known valid item; if there are no valid items available, Unify will use the enumerator's <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a> method in a last attempt to ensure a valid item is available. To prevent this behaviour, set the Unify Enumerator's <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_invalidatedAction"><strong>invalidatedAction</strong></a> property to <strong>DoNothing</strong>; in this case the Unify Enumerator will remain in an invalid state until <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a> is called manually; the default value for <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_invalidatedAction"><strong>invalidatedAction</strong></a> is <strong>MoveNext</strong>. Unify Enumerator's provide an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_isValid"><strong>isValid</strong></a> flag to test for validity.</p>
 <p>The following animation shows how Unify Enumerators adjust their position as the underlying collection is modified.</p>
 <p><img src="../../../images/enumerableRangeModify_anim.gif" alt="Enumerable Range Animation"></p>
 <h2 id="example">Example</h2>
-<p>This example demonstrates how Unify Enumerators behave as items are added and removed from the underlying collection. An <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyList-1.html"><strong>IUnifyList&lt;string&gt;</strong></a>, containing the numbers 0-9 as words, is used as the source collection for a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html"><strong>UnifyForwardsEnumerator&lt;T&gt;</strong></a>, with a generic type <strong>T</strong> of string. It allows the Unify Enumerator to be controlled atomically, while observing the internal state at each operation. Error checking has been omitted to demonstrate exceptions, as described <a href="#exceptions"><strong>below</strong></a>.</p>
+<p>This example demonstrates how Unify Enumerators behave as items are added/inserted and removed from the underlying collection. An <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyList-1.html"><strong>IUnifyList&lt;string&gt;</strong></a>, containing the numbers 0-9 as words; <strong>&quot;ZERO&quot;</strong>, <strong>&quot;ONE&quot;</strong>, <strong>&quot;TWO&quot;</strong>, <strong>&quot;THREE&quot;</strong>, <strong>&quot;FOUR&quot;</strong>, <strong>&quot;FIVE&quot;</strong>, <strong>&quot;SIX&quot;</strong>, <strong>&quot;SEVEN&quot;</strong>, <strong>&quot;EIGHT&quot;</strong> and <strong>&quot;NINE&quot;</strong>, is used as the source collection for a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html"><strong>UnifyForwardsEnumerator&lt;T&gt;</strong></a>, with a generic type <strong>T</strong> of string. It allows the Unify Enumerator to be controlled atomically, while observing the internal state at each operation. Error checking has been omitted to demonstrate exceptions, as described <a href="#exceptions"><strong>below</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
 <li><strong>C</strong> to Print the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Current"><strong>Current</strong></a> item</li>
 <li><strong>M</strong> to Call <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_MoveNext"><strong>MoveNext()</strong></a></li>
 <li><strong>P</strong> to Print the collection - the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerator.html#Unify_Collections_UnifyEnumerator_Current"><strong>Current</strong></a> item is shown in square brackets and uppercase, e.g. [ZERO]</li>
-<li><strong>T</strong> to Toggle the value of the <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_moveNextWhenInvalidated"><strong>moveNextWhenInvalidated</strong></a> flag</li>
+<li><strong>T</strong> to Toggle the value of the <a class="xref" href="../../api/Unify.Collections.UnifyEnumeratorInvalidatedAction.html"><strong>UnifyEnumeratorInvalidatedAction</strong></a> betweem <strong>MoveNext</strong> and <strong>DoNothing</strong></li>
 <li><strong>X</strong> to Reset the Enumerator</li>
 <li><strong>A</strong>+<strong>0-9</strong> to Add that number as a word to the collection, e.g. holding <strong>A</strong> and pressing <strong>4</strong> will add <strong>&quot;four&quot;</strong> to the collection</li>
 <li><strong>R</strong>+<strong>0-9</strong> to Remove that number from the collection, e.g. holding <strong>R</strong> and pressing <strong>2</strong> will remove <strong>&quot;two&quot;</strong> from the collection</li>
 </ul>
 <pre><code>using System;
 using System.Text;
+using Unify.Collections;
 using Unify.Collections.Generic;
 using UnityEngine;
 
@@ -102,9 +103,9 @@ public class Enumerators_ModifyingACollection : MonoBehaviour
     void Awake()
     {
         list = new UnifyList&lt;string&gt;(numbers);
-        enumerator = new UnifyForwardsEnumerator&lt;string&gt;(list);
+        enumerator = new UnifyBackwardsEnumerator&lt;string&gt;(list);
 
-        print(&quot;press C to print Current item, M to MoveNext(), P to print list, T to toggle moveNextWhenInvalidated flag, X to Reset enumerator&quot;);
+        print(&quot;press C to print Current item, M to MoveNext(), P to print list, T to toggle InvalidatedAction between MoveNext and DoNothing, X to Reset enumerator&quot;);
         print(&quot;press A+[0-9] to Add that number to the list, R+[0-9] to Remove that number from the list&quot;);
         print(Environment.NewLine);
         PrintList();
@@ -121,6 +122,7 @@ public class Enumerators_ModifyingACollection : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.M))
         {
+            print(&quot;--- Move Next ---&quot;);
             enumerator.MoveNext();
             PrintList();
         }
@@ -171,8 +173,8 @@ public class Enumerators_ModifyingACollection : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.T))
         {
             moveNextWhenInvalidToggle = !moveNextWhenInvalidToggle;
-            print($&quot;--- moveNextWhenInvalid = {moveNextWhenInvalidToggle} ---&quot;);
-            enumerator.moveNextWhenInvalidated = moveNextWhenInvalidToggle;
+            enumerator.invalidatedAction = (moveNextWhenInvalidToggle) ? UnifyEnumeratorInvalidatedAction.MoveNext : UnifyEnumeratorInvalidatedAction.DoNothing;
+            print($&quot;--- Invalidated Action = {enumerator.invalidatedAction} ---&quot;);
         }
 
         if (Input.GetKeyUp(KeyCode.X))
@@ -200,7 +202,8 @@ public class Enumerators_ModifyingACollection : MonoBehaviour
 
     private void PrintCurrent()
     {
-        print($&quot;Current Item: {enumerator.Current}&quot;);
+        string c = enumerator.isValid ? enumerator.Current : &quot;INVALID&quot;;
+        print($&quot;Current Item: {c}&quot;);
     }
 
     private void PrintList()
@@ -214,12 +217,12 @@ public class Enumerators_ModifyingACollection : MonoBehaviour
 
             if (i &lt; list.Count - 1)
                 sb.Append(&quot;, &quot;);
+
         }
 
         print(sb);
     }
 }
-
 </code></pre>
 <h2 id="exceptions">Exceptions</h2>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>

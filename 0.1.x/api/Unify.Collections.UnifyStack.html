@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class UnifyEnumerableRange
+    <title>Class UnifyStack
    | Unify Framework </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class UnifyEnumerableRange
+    <meta name="title" content="Class UnifyStack
    | Unify Framework ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -60,17 +60,19 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-12">
-            <article class="content wrap" id="_content" data-uid="Unify.Collections.UnifyEnumerableRange">
+            <article class="content wrap" id="_content" data-uid="Unify.Collections.UnifyStack">
   
   
-  <h1 id="Unify_Collections_UnifyEnumerableRange" data-uid="Unify.Collections.UnifyEnumerableRange" class="text-break">Class UnifyEnumerableRange
+  <h1 id="Unify_Collections_UnifyStack" data-uid="Unify.Collections.UnifyStack" class="text-break">Class UnifyStack
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Generic stack that holds a specified maximum number of items. When the stack is full, older items are removed to make way for newly added items.
+Credit: <a href="https://ntsblog.homedev.com.au/index.php/2010/05/06/c-stack-with-maximum-limit/">https://ntsblog.homedev.com.au/index.php/2010/05/06/c-stack-with-maximum-limit/</a></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UnifyEnumerableRange</span></div>
+    <div class="level1"><span class="xref">UnifyStack</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -98,19 +100,20 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Unify.Collections.html">Unify.Collections</a></h6>
   <h6><strong>Assembly</strong>: Unify.Collections.dll</h6>
-  <h5 id="Unify_Collections_UnifyEnumerableRange_syntax">Syntax</h5>
+  <h5 id="Unify_Collections_UnifyStack_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UnifyEnumerableRange</code></pre>
+    <pre><code class="lang-csharp hljs">public class UnifyStack</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <a id="Unify_Collections_UnifyEnumerableRange__ctor_" data-uid="Unify.Collections.UnifyEnumerableRange.#ctor*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerableRange__ctor_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Unify.Collections.UnifyEnumerableRange.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">UnifyEnumerableRange(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Unify_Collections_UnifyStack__ctor_" data-uid="Unify.Collections.UnifyStack.#ctor*"></a>
+  <h4 id="Unify_Collections_UnifyStack__ctor_System_Int32_" data-uid="Unify.Collections.UnifyStack.#ctor(System.Int32)">UnifyStack(Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of a <a class="xref" href="Unify.Collections.UnifyStack.html">UnifyStack</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnifyEnumerableRange(int startIndex = -1, int endIndex = -1, int step = 1, int loopCount = 1)</code></pre>
+    <pre><code class="lang-csharp hljs">public UnifyStack(int maxSize)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,129 +127,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">startIndex</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">endIndex</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">step</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">loopCount</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="fields">Fields
-  </h3>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_DefaultEndIndex" data-uid="Unify.Collections.UnifyEnumerableRange.DefaultEndIndex">DefaultEndIndex</h4>
-  <div class="markdown level1 summary"><p>The default end index value of an enumerable range.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int DefaultEndIndex = -1</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_DefaultLoopCount" data-uid="Unify.Collections.UnifyEnumerableRange.DefaultLoopCount">DefaultLoopCount</h4>
-  <div class="markdown level1 summary"><p>The default loop count value of an enumerable range.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int DefaultLoopCount = 1</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_DefaultStartIndex" data-uid="Unify.Collections.UnifyEnumerableRange.DefaultStartIndex">DefaultStartIndex</h4>
-  <div class="markdown level1 summary"><p>The default start index value of an enumerable range.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int DefaultStartIndex = -1</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_DefaultStep" data-uid="Unify.Collections.UnifyEnumerableRange.DefaultStep">DefaultStep</h4>
-  <div class="markdown level1 summary"><p>The default step value of an enumerable range.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int DefaultStep = 1</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><span class="parametername">maxSize</span></td>
+        <td><p>The maximum number of items the <a class="xref" href="Unify.Collections.UnifyStack.html">UnifyStack</a> can hold.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="Unify_Collections_UnifyEnumerableRange_endIndex_" data-uid="Unify.Collections.UnifyEnumerableRange.endIndex*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_endIndex" data-uid="Unify.Collections.UnifyEnumerableRange.endIndex">endIndex</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Unify_Collections_UnifyStack_Count_" data-uid="Unify.Collections.UnifyStack.Count*"></a>
+  <h4 id="Unify_Collections_UnifyStack_Count" data-uid="Unify.Collections.UnifyStack.Count">Count</h4>
+  <div class="markdown level1 summary"><p>The number of items in the stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int endIndex { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +159,14 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_UnifyEnumerableRange_loopCount_" data-uid="Unify.Collections.UnifyEnumerableRange.loopCount*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_loopCount" data-uid="Unify.Collections.UnifyEnumerableRange.loopCount">loopCount</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Unify_Collections_UnifyStack_maxSize_" data-uid="Unify.Collections.UnifyStack.maxSize*"></a>
+  <h4 id="Unify_Collections_UnifyStack_maxSize" data-uid="Unify.Collections.UnifyStack.maxSize">maxSize</h4>
+  <div class="markdown level1 summary"><p>The maximum number of items the stack can hold.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int loopCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int maxSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,38 +183,45 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_UnifyEnumerableRange_startIndex_" data-uid="Unify.Collections.UnifyEnumerableRange.startIndex*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_startIndex" data-uid="Unify.Collections.UnifyEnumerableRange.startIndex">startIndex</h4>
-  <div class="markdown level1 summary"></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Unify_Collections_UnifyStack_Clear_" data-uid="Unify.Collections.UnifyStack.Clear*"></a>
+  <h4 id="Unify_Collections_UnifyStack_Clear" data-uid="Unify.Collections.UnifyStack.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Removes all items from the stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int startIndex { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <a id="Unify_Collections_UnifyStack_Contains_" data-uid="Unify.Collections.UnifyStack.Contains*"></a>
+  <h4 id="Unify_Collections_UnifyStack_Contains_System_Object_" data-uid="Unify.Collections.UnifyStack.Contains(System.Object)">Contains(Object)</h4>
+  <div class="markdown level1 summary"><p>Determines whether an item is on the stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The item to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_UnifyEnumerableRange_step_" data-uid="Unify.Collections.UnifyEnumerableRange.step*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerableRange_step" data-uid="Unify.Collections.UnifyEnumerableRange.step">step</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int step { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -327,8 +231,143 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the item is found on the stack; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_UnifyStack_GetEnumerator_" data-uid="Unify.Collections.UnifyStack.GetEnumerator*"></a>
+  <h4 id="Unify_Collections_UnifyStack_GetEnumerator" data-uid="Unify.Collections.UnifyStack.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><p>An enumerator for the stack.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_UnifyStack_Peek_" data-uid="Unify.Collections.UnifyStack.Peek*"></a>
+  <h4 id="Unify_Collections_UnifyStack_Peek" data-uid="Unify.Collections.UnifyStack.Peek">Peek()</h4>
+  <div class="markdown level1 summary"><p>Returns the topmost item on the stack without removing it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Peek()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The first item on the stack.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>Thrown if the stack is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_UnifyStack_Pop_" data-uid="Unify.Collections.UnifyStack.Pop*"></a>
+  <h4 id="Unify_Collections_UnifyStack_Pop" data-uid="Unify.Collections.UnifyStack.Pop">Pop()</h4>
+  <div class="markdown level1 summary"><p>Removes the item on the top of the stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Pop()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The first item on the stack.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>Thrown if the stack is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_UnifyStack_Push_" data-uid="Unify.Collections.UnifyStack.Push*"></a>
+  <h4 id="Unify_Collections_UnifyStack_Push_System_Object_" data-uid="Unify.Collections.UnifyStack.Push(System.Object)">Push(Object)</h4>
+  <div class="markdown level1 summary"><p>Puts the specified item at the top of the stack and removes the last value in the stack if the <a class="xref" href="Unify.Collections.UnifyStack.html#Unify_Collections_UnifyStack_maxSize">maxSize</a> has been reached.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Push(object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The item to put on the stack.</p>
+</td>
       </tr>
     </tbody>
   </table>

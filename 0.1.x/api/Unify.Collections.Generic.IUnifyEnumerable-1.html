@@ -77,16 +77,7 @@
       <a class="xref" href="Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_Unify_Collections_UnifyEnumeratorType_">IUnifyEnumerable.SetEnumerator(UnifyEnumeratorType)</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_Unify_Collections_UnifyEnumeratorType_System_Int32_">IUnifyEnumerable.SetEnumerator(UnifyEnumeratorType, Int32)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_Unify_Collections_UnifyEnumeratorType_System_Int32_System_Int32_">IUnifyEnumerable.SetEnumerator(UnifyEnumeratorType, Int32, Int32)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_Unify_Collections_UnifyEnumeratorType_System_Int32_System_Int32_System_Int32_">IUnifyEnumerable.SetEnumerator(UnifyEnumeratorType, Int32, Int32, Int32)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_Unify_Collections_UnifyEnumeratorType_System_Int32_System_Int32_System_Int32_System_Int32_">IUnifyEnumerable.SetEnumerator(UnifyEnumeratorType, Int32, Int32, Int32, Int32)</a>
+      <a class="xref" href="Unify.Collections.IUnifyEnumerable.html#Unify_Collections_IUnifyEnumerable_SetEnumerator_Unify_Collections_UnifyEnumeratorType_Unify_Collections_UnifyEnumerableRange_">IUnifyEnumerable.SetEnumerator(UnifyEnumeratorType, UnifyEnumerableRange)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Unify.Collections.Generic.html">Unify.Collections.Generic</a></h6>
@@ -115,7 +106,7 @@
   </h3>
   <a id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator_" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator*"></a>
   <h4 id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator">GetEnumerator()</h4>
-  <div class="markdown level1 summary"><p>Returns a new instance of the current <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> with <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> values initialised.</p>
+  <div class="markdown level1 summary"><p>Returns a new instance of the current <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -140,7 +131,7 @@
   </table>
   <a id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator_" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator*"></a>
   <h4 id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator_Unify_Collections_UnifyEnumeratorType_" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator(Unify.Collections.UnifyEnumeratorType)">GetEnumerator(UnifyEnumeratorType)</h4>
-  <div class="markdown level1 summary"><p>Returns a new instance of the given <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> type, with the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> values specified.</p>
+  <div class="markdown level1 summary"><p>Returns a new instance of the given <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -176,240 +167,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator</a>&lt;T&gt;</td>
-        <td><p>An instance implementing <a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator&lt;T&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator_" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator*"></a>
-  <h4 id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator_Unify_Collections_UnifyEnumeratorType_System_Int32_" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator(Unify.Collections.UnifyEnumeratorType,System.Int32)">GetEnumerator(UnifyEnumeratorType, Int32)</h4>
-  <div class="markdown level1 summary"><p>Returns a new instance of the given <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> type, with the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> values specified.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IUnifyEnumerator&lt;T&gt; GetEnumerator(UnifyEnumeratorType enumeratorType, int loopCount)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unify.Collections.UnifyEnumeratorType.html">UnifyEnumeratorType</a></td>
-        <td><span class="parametername">enumeratorType</span></td>
-        <td><p>Enum value representing the type of <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> to create.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">loopCount</span></td>
-        <td><p>The number of times to repeat the enumeration.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator</a>&lt;T&gt;</td>
-        <td><p>An instance implementing <a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator&lt;T&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator_" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator*"></a>
-  <h4 id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator_Unify_Collections_UnifyEnumeratorType_System_Int32_System_Int32_" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator(Unify.Collections.UnifyEnumeratorType,System.Int32,System.Int32)">GetEnumerator(UnifyEnumeratorType, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Returns a new instance of the given <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> type, with the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> values specified.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IUnifyEnumerator&lt;T&gt; GetEnumerator(UnifyEnumeratorType enumeratorType, int startIndex, int endIndex)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unify.Collections.UnifyEnumeratorType.html">UnifyEnumeratorType</a></td>
-        <td><span class="parametername">enumeratorType</span></td>
-        <td><p>Enum value representing the type of <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> to create.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">startIndex</span></td>
-        <td><p>The start index of the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">endIndex</span></td>
-        <td><p>The end index of the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator</a>&lt;T&gt;</td>
-        <td><p>An instance implementing <a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator&lt;T&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator_" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator*"></a>
-  <h4 id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator_Unify_Collections_UnifyEnumeratorType_System_Int32_System_Int32_System_Int32_" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator(Unify.Collections.UnifyEnumeratorType,System.Int32,System.Int32,System.Int32)">GetEnumerator(UnifyEnumeratorType, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Returns a new instance of the given <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> type, with the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> values specified.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IUnifyEnumerator&lt;T&gt; GetEnumerator(UnifyEnumeratorType enumeratorType, int startIndex, int endIndex, int step)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unify.Collections.UnifyEnumeratorType.html">UnifyEnumeratorType</a></td>
-        <td><span class="parametername">enumeratorType</span></td>
-        <td><p>Enum value representing the type of <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> to create.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">startIndex</span></td>
-        <td><p>The start index of the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">endIndex</span></td>
-        <td><p>The end index of the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">step</span></td>
-        <td><p>The step value of the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator</a>&lt;T&gt;</td>
-        <td><p>An instance implementing <a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator&lt;T&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator_" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator*"></a>
-  <h4 id="Unify_Collections_Generic_IUnifyEnumerable_1_GetEnumerator_Unify_Collections_UnifyEnumeratorType_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Unify.Collections.Generic.IUnifyEnumerable`1.GetEnumerator(Unify.Collections.UnifyEnumeratorType,System.Int32,System.Int32,System.Int32,System.Int32)">GetEnumerator(UnifyEnumeratorType, Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Returns a new instance of the given <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> type, with the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> values specified.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IUnifyEnumerator&lt;T&gt; GetEnumerator(UnifyEnumeratorType enumeratorType, int startIndex, int endIndex, int step, int loopCount)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unify.Collections.UnifyEnumeratorType.html">UnifyEnumeratorType</a></td>
-        <td><span class="parametername">enumeratorType</span></td>
-        <td><p>Enum value representing the type of <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> to create.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">startIndex</span></td>
-        <td><p>The start index of the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">endIndex</span></td>
-        <td><p>The end index of the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">step</span></td>
-        <td><p>The step value of the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">loopCount</span></td>
-        <td><p>The number of times to repeat the enumeration.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator</a>&lt;T&gt;</td>
-        <td><p>An instance implementing <a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator&lt;T&gt;</a>.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>

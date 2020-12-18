@@ -66,8 +66,8 @@
 <p>To delay the start of a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html"><strong>UnifyCoroutineCollection</strong></a>, use the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property in the same way as a Unify Coroutine <a class="xref" href="DelayedStart.html"><strong>delayed start</strong></a>. The Unify Coroutine Collection's <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> value delays the start of all Unify Coroutines in the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html"><strong>UnifyCoroutineCollection</strong></a>, it does not change the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> value for each Unify Coroutine in the collection; so once the Unify Coroutine Collection's <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> has expired, <strong>then</strong> the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> for each individual Unify Coroutine in the collection will be applied. For example, if a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html"><strong>UnifyCoroutineCollection</strong></a> has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 1 second and a Unify Coroutine in the collection has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 2 seconds, then it will be a total of 3 seconds before Unify starts that Unify Coroutine.</p>
 <h2 id="example">Example</h2>
 <p>This example uses two Unify Coroutines; <strong>SayHello()</strong>, which has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 1 second, and <strong>SayWorld()</strong>, which has a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 3 seconds. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html"><strong>UnifyCoroutineCollection</strong></a> is given a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> of 2 seconds; this means the <strong>SayHello()</strong> Unify Coroutine will start after 3 seconds and the <strong>SayWorld()</strong> Unify Coroutine will start after 5 seconds.</p>
-<p>A <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#collection-initializers" target="_blank"><strong>Collection Initialiser</strong></a> is used to demonstrate how to populate a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html"><strong>UnifyCoroutineCollection</strong></a> with a Unify Coroutine target and it's <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> value via the Unify Collection's <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html#constructors"><strong>Constructor</strong></a>. Also, a commented out example of using <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#collection-initializers" target="_blank"><strong>Collection Initialiser</strong></a> syntax is shown which allows named parameters.</p>
-<p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'Dave'</strong> to demonstrate how Unify Coroutine instances are identified in exception messages and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow exceptions to be triggered, as described <a href="#exceptions"><strong>below</strong></a>.</p>
+<p>A <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#collection-initializers" target="_blank"><strong>Collection Initialiser</strong></a> is used to demonstrate how to populate a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html"><strong>UnifyCoroutineCollection</strong></a> with a Unify Coroutine target and it's <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> value via the Unify Collection's <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html#constructors"><strong>Constructor</strong></a>.</p>
+<p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'John Riccitiello'</strong> to demonstrate how Unify Coroutine Collection instances are identified in exception messages and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow exceptions to be triggered, as described <a href="#exceptions"><strong>below</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
 <li><strong>S</strong> to Start</li>
@@ -83,17 +83,9 @@ public class Coroutines_Collection_DelayedStart : MonoBehaviour
 
     void Awake()
     {
-        collection = new UnifyCoroutineCollection { {  SayHello(), 1f }, { SayWorld(), 3f } };
-
-        // Unify Coroutine Collections can also be initialised this way which allows named parameters:
-        // collection = new UnifyCoroutineCollection
-        // {
-        //     new UnifyCoroutine(SayHello(), startDelay: 1f),
-        //     new UnifyCoroutine(SayWorld(), startDelay: 3f),
-        // };
-
+        collection = new UnifyCoroutineCollection { { SayHello(), 1f }, { SayWorld(), 3f } };
         collection.startDelay = 2f;
-        
+
         print(&quot;press S to START&quot;);
     }
 
@@ -118,7 +110,6 @@ public class Coroutines_Collection_DelayedStart : MonoBehaviour
         print(&quot;World&quot;);
     }
 }
-
 </code></pre>
 <h2 id="exceptions">Exceptions</h2>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
@@ -132,8 +123,8 @@ public class Coroutines_Collection_DelayedStart : MonoBehaviour
 </ul>
 <br>
 <p>Unify will provide information in the exception message to help you find the cause of the error, for example:</p>
-<p><img src="../../../images/exception_startDelay.png" alt="Exception Image"></p>
-<p>This message tells us the exception was caused by setting the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_startDelay"><strong>startDelay</strong></a> property to a negative value, and that <strong>'Dave'</strong> was the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> of the offending Unify Coroutine Collection instance.</p>
+<p><img src="../../../images/exception_coroutineCollection_Started.png" alt="Exception Image"></p>
+<p>This message tells us the exception was caused by calling the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html#Unify_Coroutines_UnifyCoroutineCollection_Start"><strong>Start()</strong></a> method on a Unify Coroutine Collection that was already <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineState.html"><strong>Running</strong></a>, and that <strong>'John Riccitiello'</strong> was the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> of the offending Unify Coroutine Collection instance.</p>
 <h2 id="see-also">See Also</h2>
 <ul>
 <li><a class="xref" href="DelayedStart.html"><strong>Unify Coroutines - Delayed Start</strong></a></li>

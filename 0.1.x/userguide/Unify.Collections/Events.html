@@ -63,10 +63,9 @@
 
 <p><sup><font color="grey">Namespace: Unify.Collections, Unify.Collections.Generic</font></sup><br>
 <sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
-<p>Unify Collections provide the following events:</p>
+<p>Unify Collections provide the following event:</p>
 <ul>
-<li><a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html"><strong>CollectionChanged</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html"><strong>CollectionChanged&lt;T&gt;</strong></a> - triggered when an item is added, inserted or removed</li>
-<li><a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionCleared"><strong>CollectionCleared</strong></a> - triggered when either a generic Unify Collection's <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.clear" target="_blank"><strong>Clear()</strong></a> method, or non-generic Unify Collection's <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist.clear" target="_blank"><strong>Clear()</strong></a> method is called</li>
+<li><a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html"><strong>CollectionChanged</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html"><strong>CollectionChanged&lt;T&gt;</strong></a> - triggered when an item is added, inserted, removed or the Unify Collection is cleared</li>
 </ul>
 <p>This functionality is exposed through the <a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html"><strong>IUnifyObservableCollection</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html"><strong>IUnifyObservableCollection&lt;T&gt;</strong></a> interface types, which all Unify Collections implement.</p>
 <h2 id="subscribing-to-unify-collection-events">Subscribing to Unify Collection events</h2>
@@ -109,7 +108,7 @@ myUnifyCollection.CollectionChanged -= myUnifyCollectionChangedEventDelegate;  /
 <h2 id="eventargs">EventArgs</h2>
 <p>Unify Collections provide generic <a class="xref" href="../../api/Unify.Collections.Generic.UnifyCollectionChangedEventArgs-1.html"><strong>UnifyCollectionChangedEventArgs&lt;T&gt;</strong></a> and non-generic <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html"><strong>UnifyCollectionChangedEventArgs</strong></a> classes, an instance of which is passed to event handlers. These classes provide information about the change to the collection; the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_action"><strong>action</strong></a> property is a <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedAction.html"><strong>UnifyCollectionChangedAction</strong></a> type, that specifies the operation causing the change; the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_item"><strong>item</strong></a> property, of type <strong>T</strong> for generic collections and of type <strong>object</strong> for non-generic collections, contains the item responsible for the change and the <a class="xref" href="../../api/Unify.Collections.UnifyCollectionChangedEventArgs.html#Unify_Collections_UnifyCollectionChangedEventArgs_index"><strong>index</strong></a> property is the index position of that item.</p>
 <h2 id="example">Example</h2>
-<p>This example uses a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>, with a generic type <strong>T</strong> of <strong>char</strong>, initialised with the values; <strong>'A'</strong>, <strong>'B'</strong>, <strong>'C'</strong>, <strong>'D'</strong>, <strong>'E'</strong>, to demonstrate the <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionChanged"><strong>CollectionChanged</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionCleared"><strong>CollectionCleared</strong></a> events.  Items can be added, inserted or removed from the collection causing the <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionChanged"><strong>CollectionChanged</strong></a> event to be triggered, and the collection can be cleared to trigger the <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionCleared"><strong>CollectionCleared</strong></a> event.</p>
+<p>This example uses a <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>, with a generic type <strong>T</strong> of <strong>char</strong>, initialised with the values; <strong>'A'</strong>, <strong>'B'</strong>, <strong>'C'</strong>, <strong>'D'</strong>, <strong>'E'</strong>, to demonstrate the <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionChanged"><strong>CollectionChanged</strong></a> event.  Items can be added, inserted or removed from the collection and the collection can be cleared causing the <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html#Unify_Collections_Generic_IUnifyObservableCollection_1_CollectionChanged"><strong>CollectionChanged</strong></a> event to be triggered.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
 <li><strong>A</strong> to Add an item to end of the list</li>
@@ -135,12 +134,6 @@ public class Collections_Events : MonoBehaviour
         list = new UnifyList&lt;char&gt; { 'A', 'B', 'C', 'D', 'E' };
 
         list.CollectionChanged += list_CollectionChanged;
-        list.CollectionCleared += (sender, args) =&gt;
-        {
-            print(&quot;--- Collection Cleared ---&quot;);
-            PrintList();
-            print(Environment.NewLine);
-        };
 
         print(&quot;press A to Add(), C to Clear(), R to RemoveAt(), I to Insert(), P to Print List&quot;);
         PrintList();
