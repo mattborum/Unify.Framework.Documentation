@@ -71,6 +71,18 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html#Unify_Collections_IUnifyEnumerableRange_startIndex">IUnifyEnumerableRange.startIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html#Unify_Collections_IUnifyEnumerableRange_endIndex">IUnifyEnumerableRange.endIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html#Unify_Collections_IUnifyEnumerableRange_step">IUnifyEnumerableRange.step</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html#Unify_Collections_IUnifyEnumerableRange_loopCount">IUnifyEnumerableRange.loopCount</a>
+    </div>
+    <div>
       <span class="xref">System.Collections.IEnumerator.MoveNext()</span>
     </div>
     <div>
@@ -87,33 +99,10 @@
   <h6><strong>Assembly</strong>: Unify.Collections.dll</h6>
   <h5 id="Unify_Collections_IUnifyEnumerator_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IUnifyEnumerator : IEnumerator, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IUnifyEnumerator : IUnifyEnumerableRange, IEnumerator, IDisposable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Unify_Collections_IUnifyEnumerator_endIndex_" data-uid="Unify.Collections.IUnifyEnumerator.endIndex*"></a>
-  <h4 id="Unify_Collections_IUnifyEnumerator_endIndex" data-uid="Unify.Collections.IUnifyEnumerator.endIndex">endIndex</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int endIndex { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Unify_Collections_IUnifyEnumerator_invalidatedAction_" data-uid="Unify.Collections.IUnifyEnumerator.invalidatedAction*"></a>
   <h4 id="Unify_Collections_IUnifyEnumerator_invalidatedAction" data-uid="Unify.Collections.IUnifyEnumerator.invalidatedAction">invalidatedAction</h4>
   <div class="markdown level1 summary"><p>Specifies the action the enumerator should perform when it becomes invalidated through the underlying collection being modified.
@@ -142,7 +131,7 @@ The default value is <a class="xref" href="Unify.Collections.UnifyEnumeratorInva
   </table>
   <a id="Unify_Collections_IUnifyEnumerator_isValid_" data-uid="Unify.Collections.IUnifyEnumerator.isValid*"></a>
   <h4 id="Unify_Collections_IUnifyEnumerator_isValid" data-uid="Unify.Collections.IUnifyEnumerator.isValid">isValid</h4>
-  <div class="markdown level1 summary"><p>A value indicating if the <a class="xref" href="Unify.Collections.UnifyEnumerator.html">UnifyEnumerator</a> is in a valid state, true if value; false, otherwise.</p>
+  <div class="markdown level1 summary"><p>A value indicating if the Unify Enumerator is in a valid state, true if value; false, otherwise.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -164,59 +153,14 @@ The default value is <a class="xref" href="Unify.Collections.UnifyEnumeratorInva
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Collections_IUnifyEnumerator_loopCount_" data-uid="Unify.Collections.IUnifyEnumerator.loopCount*"></a>
-  <h4 id="Unify_Collections_IUnifyEnumerator_loopCount" data-uid="Unify.Collections.IUnifyEnumerator.loopCount">loopCount</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Unify_Collections_IUnifyEnumerator_maxRewindItems_" data-uid="Unify.Collections.IUnifyEnumerator.maxRewindItems*"></a>
+  <h4 id="Unify_Collections_IUnifyEnumerator_maxRewindItems" data-uid="Unify.Collections.IUnifyEnumerator.maxRewindItems">maxRewindItems</h4>
+  <div class="markdown level1 summary"><p>The maximum number of items to store for rewinding the enumerator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int loopCount { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_IUnifyEnumerator_startIndex_" data-uid="Unify.Collections.IUnifyEnumerator.startIndex*"></a>
-  <h4 id="Unify_Collections_IUnifyEnumerator_startIndex" data-uid="Unify.Collections.IUnifyEnumerator.startIndex">startIndex</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int startIndex { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Unify_Collections_IUnifyEnumerator_step_" data-uid="Unify.Collections.IUnifyEnumerator.step*"></a>
-  <h4 id="Unify_Collections_IUnifyEnumerator_step" data-uid="Unify.Collections.IUnifyEnumerator.step">step</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int step { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">int maxRewindItems { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,7 +180,7 @@ The default value is <a class="xref" href="Unify.Collections.UnifyEnumeratorInva
   <h3 id="events">Events
   </h3>
   <h4 id="Unify_Collections_IUnifyEnumerator_Finished" data-uid="Unify.Collections.IUnifyEnumerator.Finished">Finished</h4>
-  <div class="markdown level1 summary"><p>Callback when all passes of the loop have successfully completed.</p>
+  <div class="markdown level1 summary"><p>Callback when the enumerator has successfully completed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -259,7 +203,7 @@ The default value is <a class="xref" href="Unify.Collections.UnifyEnumeratorInva
     </tbody>
   </table>
   <h4 id="Unify_Collections_IUnifyEnumerator_Invalidated" data-uid="Unify.Collections.IUnifyEnumerator.Invalidated">Invalidated</h4>
-  <div class="markdown level1 summary"><p>Callback when the <a class="xref" href="Unify.Collections.UnifyEnumerator.html">UnifyEnumerator</a> enters an invalid state.</p>
+  <div class="markdown level1 summary"><p>Callback when the Unify Enumerator enters an invalid state.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

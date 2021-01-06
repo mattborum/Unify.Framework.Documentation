@@ -80,6 +80,7 @@ The enumerator moves over the collection, within the <a class="xref" href="Unify
     <div><a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator</a>&lt;T&gt;</div>
     <div><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;T&gt;</div>
     <div><a class="xref" href="Unify.Collections.IUnifyEnumerator.html">IUnifyEnumerator</a></div>
+    <div><a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html">IUnifyEnumerableRange</a></div>
     <div><span class="xref">System.Collections.IEnumerator</span></div>
     <div><span class="xref">System.IDisposable</span></div>
   </div>
@@ -101,7 +102,7 @@ The enumerator moves over the collection, within the <a class="xref" href="Unify
       <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent">UnifyEnumerator&lt;T&gt;.parent</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_historyStack">UnifyEnumerator&lt;T&gt;.historyStack</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_rewindStack">UnifyEnumerator&lt;T&gt;.rewindStack</a>
     </div>
     <div>
       <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_currentIndex">UnifyEnumerator&lt;T&gt;.currentIndex</a>
@@ -135,6 +136,9 @@ The enumerator moves over the collection, within the <a class="xref" href="Unify
     </div>
     <div>
       <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_isValid">UnifyEnumerator&lt;T&gt;.isValid</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_maxRewindItems">UnifyEnumerator&lt;T&gt;.maxRewindItems</a>
     </div>
     <div>
       <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_invalidatedAction">UnifyEnumerator&lt;T&gt;.invalidatedAction</a>
@@ -210,7 +214,7 @@ The enumerator moves over the collection, within the <a class="xref" href="Unify
   <h6><strong>Assembly</strong>: Unify.Collections.dll</h6>
   <h5 id="Unify_Collections_Generic_UnifyYoYoEnumerator_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class UnifyYoYoEnumerator&lt;T&gt; : UnifyEnumerator&lt;T&gt;, IUnifyEnumerator&lt;T&gt;, IEnumerator&lt;T&gt;, IUnifyEnumerator, IEnumerator, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class UnifyYoYoEnumerator&lt;T&gt; : UnifyEnumerator&lt;T&gt;, IUnifyEnumerator&lt;T&gt;, IEnumerator&lt;T&gt;, IUnifyEnumerator, IUnifyEnumerableRange, IEnumerator, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,7 +236,7 @@ The enumerator moves over the collection, within the <a class="xref" href="Unify
   </h3>
   <a id="Unify_Collections_Generic_UnifyYoYoEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyYoYoEnumerator`1.#ctor*"></a>
   <h4 id="Unify_Collections_Generic_UnifyYoYoEnumerator_1__ctor_System_Collections_Generic_IEnumerable__0__" data-uid="Unify.Collections.Generic.UnifyYoYoEnumerator`1.#ctor(System.Collections.Generic.IEnumerable{`0})">UnifyYoYoEnumerator(IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of a <a class="xref" href="Unify.Collections.UnifyYoYoEnumerator.html">UnifyYoYoEnumerator</a>.</p>
+  <div class="markdown level1 summary"><p>Creates a new instance of a Unify YoYo Enumerator.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -259,7 +263,7 @@ The enumerator moves over the collection, within the <a class="xref" href="Unify
   </table>
   <a id="Unify_Collections_Generic_UnifyYoYoEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyYoYoEnumerator`1.#ctor*"></a>
   <h4 id="Unify_Collections_Generic_UnifyYoYoEnumerator_1__ctor_System_Collections_IEnumerable_" data-uid="Unify.Collections.Generic.UnifyYoYoEnumerator`1.#ctor(System.Collections.IEnumerable)">UnifyYoYoEnumerator(IEnumerable)</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of a <a class="xref" href="Unify.Collections.UnifyYoYoEnumerator.html">UnifyYoYoEnumerator</a>.</p>
+  <div class="markdown level1 summary"><p>Creates a new instance of a Unify YoYo Enumerator.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -286,7 +290,7 @@ The enumerator moves over the collection, within the <a class="xref" href="Unify
   </table>
   <a id="Unify_Collections_Generic_UnifyYoYoEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyYoYoEnumerator`1.#ctor*"></a>
   <h4 id="Unify_Collections_Generic_UnifyYoYoEnumerator_1__ctor_Unify_Collections_Generic_IUnifyList__0__" data-uid="Unify.Collections.Generic.UnifyYoYoEnumerator`1.#ctor(Unify.Collections.Generic.IUnifyList{`0})">UnifyYoYoEnumerator(IUnifyList&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of a <a class="xref" href="Unify.Collections.UnifyYoYoEnumerator.html">UnifyYoYoEnumerator</a>.</p>
+  <div class="markdown level1 summary"><p>Creates a new instance of a Unify YoYo Enumerator.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -360,6 +364,9 @@ The enumerator moves over the collection, within the <a class="xref" href="Unify
   </div>
   <div>
       <a class="xref" href="Unify.Collections.IUnifyEnumerator.html">IUnifyEnumerator</a>
+  </div>
+  <div>
+      <a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html">IUnifyEnumerableRange</a>
   </div>
   <div>
       <span class="xref">System.Collections.IEnumerator</span>

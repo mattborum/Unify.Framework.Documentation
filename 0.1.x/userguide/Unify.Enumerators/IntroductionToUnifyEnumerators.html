@@ -66,12 +66,12 @@
 <p>This section provides examples to accompany the Unify API documentation on <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify Enumerators</strong></a>.</p>
 <p>To get you up and running quickly, examples have been kept as simple as possible, using only the Unity Console.</p>
 <p>Unify Enumerators allow the underlying collection to be modified while iterating; items can be added, inserted or removed during the iteration process, and Unify will adjust the enumerator on-the-fly. They also provide the ability to iterate over a whole collection, a partial collection, loop an iteration and step over items at a specified interval. This functionality is provided by Unify's <strong>Enumerable Range</strong> feature.</p>
-<p>Unify provides four types of enumerators out-of-the-box; <strong>Forwards</strong>, <strong>Backwards</strong>, <strong>Yo-Yo</strong> and <strong>Random</strong>. Each of the four Unify Enumerator types offer a generic and non-generic version, available through the following classes:</p>
+<p>Unify provides four types of enumerators out-of-the-box; <strong>Forwards</strong>, <strong>Backwards</strong>, <strong>Yo-Yo</strong> and <strong>Random</strong>, available through the following classes:</p>
 <ul>
-<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html"><strong>UnifyForwardsEnumerator&lt;T&gt;</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyForwardsEnumerator.html"><strong>UnifyForwardsEnumerator</strong></a></li>
-<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyBackwardsEnumerator-1.html"><strong>UnifyBackwardsEnumerator&lt;T&gt;</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyBackwardsEnumerator.html"><strong>UnifyBackwardsEnumerator</strong></a></li>
-<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html"><strong>UnifyYoYoEnumerator&lt;T&gt;</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyYoYoEnumerator.html"><strong>UnifyYoYoEnumerator</strong></a></li>
-<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>UnifyRandomEnumerator&lt;T&gt;</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyRandomEnumerator.html"><strong>UnifyRandomEnumerator</strong></a></li>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html"><strong>UnifyForwardsEnumerator&lt;T&gt;</strong></a></li>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyBackwardsEnumerator-1.html"><strong>UnifyBackwardsEnumerator&lt;T&gt;</strong></a></li>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html"><strong>UnifyYoYoEnumerator&lt;T&gt;</strong></a></li>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>UnifyRandomEnumerator&lt;T&gt;</strong></a></li>
 </ul>
 <h2 id="unify-forwards-enumerator">Unify Forwards Enumerator</h2>
 <p>Moves over a collection from the start of the enumerable range to the end of the enumerable range.</p>
@@ -85,7 +85,7 @@
 <p>Unify Enumerators provide the following events:</p>
 <ul>
 <li><strong>PassComplete</strong> - triggered each time a looping Unify Enumerator completes a pass of the loop</li>
-<li><strong>LoopFinished</strong> - triggered when a looping Unify Enumerator has completed all passes in the loop</li>
+<li><strong>Finished</strong> - triggered when a Unify Enumerator has completed all passes of a loop</li>
 </ul>
 <h2 id="exceptions">Exceptions</h2>
 <p>Unify will <strong>always</strong> throw an exception when trying to set properties or parameters to an invalid value. Specific details are provided in each relevant section.</p>

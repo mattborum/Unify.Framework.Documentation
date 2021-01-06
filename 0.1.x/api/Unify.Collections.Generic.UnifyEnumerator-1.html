@@ -82,6 +82,7 @@
     <div><a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator</a>&lt;T&gt;</div>
     <div><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;T&gt;</div>
     <div><a class="xref" href="Unify.Collections.IUnifyEnumerator.html">IUnifyEnumerator</a></div>
+    <div><a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html">IUnifyEnumerableRange</a></div>
     <div><span class="xref">System.Collections.IEnumerator</span></div>
     <div><span class="xref">System.IDisposable</span></div>
   </div>
@@ -113,7 +114,7 @@
   <h6><strong>Assembly</strong>: Unify.Collections.dll</h6>
   <h5 id="Unify_Collections_Generic_UnifyEnumerator_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class UnifyEnumerator&lt;T&gt; : IUnifyEnumerator&lt;T&gt;, IEnumerator&lt;T&gt;, IUnifyEnumerator, IEnumerator, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class UnifyEnumerator&lt;T&gt; : IUnifyEnumerator&lt;T&gt;, IEnumerator&lt;T&gt;, IUnifyEnumerator, IUnifyEnumerableRange, IEnumerator, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -222,13 +223,13 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <h4 id="Unify_Collections_Generic_UnifyEnumerator_1_historyStack" data-uid="Unify.Collections.Generic.UnifyEnumerator`1.historyStack">historyStack</h4>
+  <h4 id="Unify_Collections_Generic_UnifyEnumerator_1_rewindStack" data-uid="Unify.Collections.Generic.UnifyEnumerator`1.rewindStack">rewindStack</h4>
   <div class="markdown level1 summary"><p>INTERNAL USE. Used to store the history of the enumeration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly UnifyStack&lt;T&gt; historyStack</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly UnifyStack&lt;T&gt; rewindStack</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,7 +273,7 @@
   </table>
   <a id="Unify_Collections_Generic_UnifyEnumerator_1_currentIndex_" data-uid="Unify.Collections.Generic.UnifyEnumerator`1.currentIndex*"></a>
   <h4 id="Unify_Collections_Generic_UnifyEnumerator_1_currentIndex" data-uid="Unify.Collections.Generic.UnifyEnumerator`1.currentIndex">currentIndex</h4>
-  <div class="markdown level1 summary"><p>INTERNAL USE. The index of the current item pointed to by the <a class="xref" href="Unify.Collections.UnifyEnumerator.html">UnifyEnumerator</a>.</p>
+  <div class="markdown level1 summary"><p>INTERNAL USE. The index of the current item pointed to by the Unify Enumerator.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -442,7 +443,7 @@ The default value is <a class="xref" href="Unify.Collections.UnifyEnumeratorInva
   </table>
   <a id="Unify_Collections_Generic_UnifyEnumerator_1_isValid_" data-uid="Unify.Collections.Generic.UnifyEnumerator`1.isValid*"></a>
   <h4 id="Unify_Collections_Generic_UnifyEnumerator_1_isValid" data-uid="Unify.Collections.Generic.UnifyEnumerator`1.isValid">isValid</h4>
-  <div class="markdown level1 summary"><p>Value indicating whether the <a class="xref" href="Unify.Collections.UnifyEnumerator.html">UnifyEnumerator</a> is in a valid state.</p>
+  <div class="markdown level1 summary"><p>Value indicating whether the Unify Enumerator is in a valid state.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -472,6 +473,29 @@ The default value is <a class="xref" href="Unify.Collections.UnifyEnumeratorInva
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int loopCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumerator_1_maxRewindItems_" data-uid="Unify.Collections.Generic.UnifyEnumerator`1.maxRewindItems*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumerator_1_maxRewindItems" data-uid="Unify.Collections.Generic.UnifyEnumerator`1.maxRewindItems">maxRewindItems</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int maxRewindItems { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -942,7 +966,7 @@ The default value is <a class="xref" href="Unify.Collections.UnifyEnumeratorInva
   </h3>
   <a id="Unify_Collections_Generic_UnifyEnumerator_1_System_Collections_IEnumerator_Current_" data-uid="Unify.Collections.Generic.UnifyEnumerator`1.System#Collections#IEnumerator#Current*"></a>
   <h4 id="Unify_Collections_Generic_UnifyEnumerator_1_System_Collections_IEnumerator_Current" data-uid="Unify.Collections.Generic.UnifyEnumerator`1.System#Collections#IEnumerator#Current">IEnumerator.Current</h4>
-  <div class="markdown level1 summary"><p>The current item pointed to by the <a class="xref" href="Unify.Collections.UnifyEnumerator.html">UnifyEnumerator</a>.</p>
+  <div class="markdown level1 summary"><p>The current item pointed to by the Unify Enumerator.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -973,6 +997,9 @@ The default value is <a class="xref" href="Unify.Collections.UnifyEnumeratorInva
   </div>
   <div>
       <a class="xref" href="Unify.Collections.IUnifyEnumerator.html">IUnifyEnumerator</a>
+  </div>
+  <div>
+      <a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html">IUnifyEnumerableRange</a>
   </div>
   <div>
       <span class="xref">System.Collections.IEnumerator</span>

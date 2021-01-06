@@ -180,13 +180,35 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <h4 id="Unify_Collections_UnifyEnumerator_historyStack" data-uid="Unify.Collections.UnifyEnumerator.historyStack">historyStack</h4>
+  <h4 id="Unify_Collections_UnifyEnumerator_DefaultMaxRewindSize" data-uid="Unify.Collections.UnifyEnumerator.DefaultMaxRewindSize">DefaultMaxRewindSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DefaultMaxRewindSize = 32</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Collections_UnifyEnumerator_rewindStack" data-uid="Unify.Collections.UnifyEnumerator.rewindStack">rewindStack</h4>
   <div class="markdown level1 summary"><p>INTERNAL USE. Used to store the history of the enumeration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly UnifyStack historyStack</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly UnifyStack rewindStack</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -447,6 +469,29 @@ The default value is <a class="xref" href="Unify.Collections.UnifyEnumeratorInva
       </tr>
     </tbody>
   </table>
+  <a id="Unify_Collections_UnifyEnumerator_maxRewindSize_" data-uid="Unify.Collections.UnifyEnumerator.maxRewindSize*"></a>
+  <h4 id="Unify_Collections_UnifyEnumerator_maxRewindSize" data-uid="Unify.Collections.UnifyEnumerator.maxRewindSize">maxRewindSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int maxRewindSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Unify_Collections_UnifyEnumerator_parent_" data-uid="Unify.Collections.UnifyEnumerator.parent*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_parent" data-uid="Unify.Collections.UnifyEnumerator.parent">parent</h4>
   <div class="markdown level1 summary"><p>INTERNAL USE. The source collection of the enumerator.</p>
@@ -545,14 +590,14 @@ The default value is <a class="xref" href="Unify.Collections.UnifyEnumeratorInva
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Unify_Collections_UnifyEnumerator_ClearHistoryStack_" data-uid="Unify.Collections.UnifyEnumerator.ClearHistoryStack*"></a>
-  <h4 id="Unify_Collections_UnifyEnumerator_ClearHistoryStack" data-uid="Unify.Collections.UnifyEnumerator.ClearHistoryStack">ClearHistoryStack()</h4>
-  <div class="markdown level1 summary"><p>INTERNAL USE. Clears the history stack.</p>
+  <a id="Unify_Collections_UnifyEnumerator_ClearRewindStack_" data-uid="Unify.Collections.UnifyEnumerator.ClearRewindStack*"></a>
+  <h4 id="Unify_Collections_UnifyEnumerator_ClearRewindStack" data-uid="Unify.Collections.UnifyEnumerator.ClearRewindStack">ClearRewindStack()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Clears the rewind stack.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void ClearHistoryStack()</code></pre>
+    <pre><code class="lang-csharp hljs">protected void ClearRewindStack()</code></pre>
   </div>
   <a id="Unify_Collections_UnifyEnumerator_Dispose_" data-uid="Unify.Collections.UnifyEnumerator.Dispose*"></a>
   <h4 id="Unify_Collections_UnifyEnumerator_Dispose" data-uid="Unify.Collections.UnifyEnumerator.Dispose">Dispose()</h4>
