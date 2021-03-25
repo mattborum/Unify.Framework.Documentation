@@ -61,6 +61,11 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="introduction-to-unify-coroutine-collection">Introduction to Unify Coroutine Collection</h1>
 
+<p><sup><font color="grey">Namespace: Unify.Coroutines</font></sup><br>
+<sup><font color="grey">Assembly: Unify.Coroutines.dll</font></sup></p>
+<p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html"><strong>UnifyCoroutineCollection</strong></a> class is a specialised container created to control a group of <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>Unify Coroutines</strong></a> as if they were a single Unify Coroutine. This collection accepts any class derived from
+<a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>UnifyCoroutineBase</strong></a>, this includes generic and non-generic Unify Coroutines. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html"><strong>UnifyCoroutineCollection</strong></a> class also derives from <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>UnifyCoroutineBase</strong></a>, making it also a Unify Coroutine. This means it has all the functionality of a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>UnifyCoroutine</strong></a>; it can be paused, resumed, cancelled and reused; the difference being operations work on all Unify Coroutines in the collection.</p>
+<p>As the Unify Coroutine Collection class is also a Unify Coroutine, this allows a Unify Coroutine Collection to be added to a Unify Coroutine Collection.</p>
 </article>
           </div>
         </div>

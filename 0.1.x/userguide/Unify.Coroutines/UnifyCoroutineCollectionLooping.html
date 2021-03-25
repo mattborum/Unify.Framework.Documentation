@@ -63,10 +63,148 @@
 
 <p><sup><font color="grey">Namespace: Unify.Coroutines</font></sup><br>
 <sup><font color="grey">Assembly: Unify.Coroutines.dll</font></sup></p>
-<p>Looping a Unify Coroutine Collection is achieved through the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> property, the same way a Unify Coroutine is <a class="xref" href="Looping.html"><strong>looped</strong></a>; the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> property specifies how many times the Unify Coroutine Collection should be repeated. One pass of a Unify Coroutine Collection loop is considered completed when <strong>all</strong> Unify Coroutines in the collection are finished. Only Unify Coroutines in the collection whose <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property has a value of <strong>true</strong> will be repeated.</p>
+<p>Looping a Unify Coroutine Collection is achieved through the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> property, the same way a Unify Coroutine is <a class="xref" href="Looping.html"><strong>looped</strong></a>; the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> property specifies how many times the Unify Coroutine Collection should be repeated. One pass of a Unify Coroutine Collection loop is considered completed when <strong>all</strong> Unify Coroutines in the collection are finished. Only Unify Coroutines in the collection whose <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property has a value of <strong>true</strong> will be repeated.</p>
 <p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> property is used to delay the starting of the next pass in the loop.</p>
-<p>##Example</p>
+<h2 id="example-one">Example One</h2>
+<p>This example adds three Unify Coroutines to a Unify Coroutine Collection; <strong>&quot;PrintDaysOfWeek()&quot;</strong>, <strong>&quot;PrintColoursOfTheRainbow()&quot;</strong> and <strong>&quot;SayHello()&quot;</strong>. Each Coroutine runs for a different length of time to demonstrate that the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete"><strong>PassComplete</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished"><strong>Finished</strong></a> events are triggered only when <strong>all</strong> Unify Coroutines in the Unify Coroutine Collection have finished. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property of the <strong>&quot;SayHello()&quot;</strong> Unify Coroutine is set to false to show how to prevent Unify Coroutines in a Unify Coroutine Collection from looping.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>S</strong> to Start the Unify Coroutine Collection</li>
+</ul>
+<pre><code>using System.Collections;
+using Unify.Coroutines;
+using UnityEngine;
+
+public class Coroutines_Collection_Looping_One : MonoBehaviour
+{
+    private UnifyCoroutineCollection collection;
+
+    void Awake()
+    {
+        collection = new UnifyCoroutineCollection { loopCount = 3, name = &quot;Martyn&quot; };
+
+        collection.PassComplete += (sender, args) =&gt; { print(&quot;--- Pass Complete ---&quot;); };
+        collection.Finished += (sender, args) =&gt; { print(&quot;--- Finished ---&quot;); }; 
+
+        collection.Add(new UnifyCoroutine(PrintDaysOfWeek()) { keepAlive = true } );
+        collection.Add(new UnifyCoroutine(PrintColoursOfTheRainbow()) { keepAlive = true });
+        collection.Add(new UnifyCoroutine(SayHello()) { keepAlive = false });
+
+        print(&quot;press S to START&quot;);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            collection.Start();
+        }
+    }
+
+    private IEnumerator PrintDaysOfWeek()
+    {
+        string[] days = { &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot; };
+        foreach (string day in days)
+        {
+            print(day);
+            yield return new WaitForSecondsRealtime(0.4f);
+        }
+    }
+
+    private IEnumerator PrintColoursOfTheRainbow()
+    {
+        string[] colours = { &quot;Red&quot;, &quot;Orange&quot;, &quot;Yellow&quot;, &quot;Green&quot;, &quot;Blue&quot;, &quot;Indigo&quot;, &quot;Violet&quot; };
+        foreach (string colour in colours)
+        {
+            print(colour);
+            yield return new WaitForSecondsRealtime(1f);
+        }
+    }
+
+    private IEnumerator SayHello()
+    {
+        for (int i = 0; i &lt; 10; i++)
+        {
+            print(&quot;Hello, World!&quot;);
+            yield return new WaitForSecondsRealtime(0.9f);
+        }
+    }
+}
+</code></pre>
+<h2 id="example-two">Example Two</h2>
+<p>This example shows how a looping Unify Coroutine Collection behaves when it contains a looping Unify Coroutine. Two Unify Coroutines, <strong>CountToThree()</strong> and <strong>SayHello()</strong>, are added the collection.  <strong>CountToThree()</strong> has a <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> of <strong>3</strong> and a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> of 2.5 seconds; it also uses the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete"><strong>PassComplete</strong></a> event to print a message to the Unity Console at the end of each pass. <strong>SayHello()</strong> prints a greeting to the Unity Console in 5 languages; <strong>English</strong>, <strong>French</strong>, <strong>Spanish</strong>, <strong>German</strong> and <strong>Italian</strong>. The <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> property of <strong>SayHello()</strong> is not set, so the default value of <strong>1</strong> will be used.</p>
+<p>The Unify Coroutine Collection has a <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> value of <strong>2</strong> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> value of 5 seconds; it's <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete"><strong>PassComplete</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished"><strong>Finished</strong></a> events are used to print a message to the Unity Console to demonstrate how a Unify Coroutine Collection waits for all Unify Coroutines to finish before considering a pass of the loop completed.</p>
+<p>In this scenario, the Unify Coroutine Collection will consider the <strong>3</strong> loops of <strong>CountToThree()</strong> as <em>one pass</em> of it's own <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> value of <strong>2</strong>. <strong>SayHello()</strong> will be kept waiting until <strong>CountToThree()</strong> has completed one pass, which is <strong>3</strong> loops.</p>
+<p>Attach the script below to a GameObject and press:</p>
+<ul>
+<li><strong>S</strong> to Start the Unify Coroutine Collection</li>
+</ul>
+<pre><code>using System.Collections;
+using Unify.Coroutines;
+using UnityEngine;
+
+public class Coroutines_Collection_Looping_Two : MonoBehaviour
+{
+    private UnifyCoroutineCollection collection;
+
+    void Awake()
+    {
+        collection = new UnifyCoroutineCollection(loopCount: 2, passDelay: 5f)
+        {
+            new UnifyCoroutine(CountToThree(), loopCount: 3, passDelay: 2.5f, keepAlive: true,
+                passCompleteEventHandler: (s, e) =&gt;
+                {
+                    print(&quot;--- CountToThree() Pass Complete ---&quot;);
+                }),
+            new UnifyCoroutine(SayHello()) { keepAlive = true }
+        };
+
+        collection.PassComplete += (sender, args) =&gt; { print(&quot;--- Collection PassComplete ---&quot;); };
+        collection.Finished += (sender, args) =&gt; { print(&quot;--- Collection Finished ---&quot;); };
+
+        print(&quot;press S to START&quot;);
+    }
+
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            collection.Start();
+        }
+    }
+
+    private IEnumerator SayHello()
+    {
+        string[] s = { &quot;Hello&quot;, &quot;Bonjour&quot;, &quot;Hola&quot;, &quot;Hallo&quot;, &quot;Buongiorno&quot; };
+        for (int i = 0; i &lt; s.Length; i++)
+        {
+            print(s[i]);
+            yield return new WaitForSecondsRealtime(1.2f);
+        }
+    }
+
+    private IEnumerator CountToThree()
+    {
+        for (int i = 1; i &lt;= 3; i++)
+        {
+            print(i);
+            yield return new WaitForSecondsRealtime(0.8f);
+        }
+    }
+}
+</code></pre>
 <h2 id="exceptions">Exceptions</h2>
+<p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
+<ul>
+<li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter</li>
+<li>Passing a value of <strong>less than 0</strong> to the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> property or parameter</li>
+<li>Passing a value of <strong>less than 0</strong> to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> property or parameter</li>
+</ul>
+<br>
+<p>Unify will provide information in the exception message to help you find the cause of the error, for example:</p>
+<p><img src="../../../images/exception_coroutineCollection_loopCount.png" alt="Exception Image"></p>
+<p>This message tells us the exception was caused by setting the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> property to a value of <strong>less than 0</strong>, and that <strong>'Martyn'</strong> was the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> of the offending Unify Coroutine Collection instance.</p>
 <h2 id="see-also">See Also</h2>
 <ul>
 <li><a class="xref" href="Looping.html"><strong>Unify Coroutines - Looping</strong></a></li>

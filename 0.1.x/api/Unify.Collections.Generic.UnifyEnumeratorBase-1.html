@@ -1,0 +1,1351 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UnifyEnumeratorBase&lt;T&gt;
+   | Unify Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UnifyEnumeratorBase&lt;T&gt;
+   | Unify Framework ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/unify_48x48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1">
+  
+  
+  <h1 id="Unify_Collections_Generic_UnifyEnumeratorBase_1" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1" class="text-break">Class UnifyEnumeratorBase&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Base class from which all Unify Enumerators should derive.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UnifyEnumeratorBase&lt;T&gt;</span></div>
+      <div class="level2"><a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator</a>&lt;T&gt;</div>
+      <div class="level2"><a class="xref" href="Unify.Collections.Generic.UnifyRandomEnumerator-1.html">UnifyRandomEnumerator&lt;T&gt;</a></div>
+      <div class="level2"><a class="xref" href="Unify.Collections.Generic.UnifyYoYoEnumerator-1.html">UnifyYoYoEnumerator&lt;T&gt;</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator</a>&lt;T&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;T&gt;</div>
+    <div><a class="xref" href="Unify.Collections.IUnifyEnumerator.html">IUnifyEnumerator</a></div>
+    <div><span class="xref">System.Collections.IEnumerator</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Unify.Collections.Generic.html">Unify.Collections.Generic</a></h6>
+  <h6><strong>Assembly</strong>: Unify.Collections.dll</h6>
+  <h5 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class UnifyEnumeratorBase&lt;T&gt; : IUnifyEnumerator&lt;T&gt;, IEnumerator&lt;T&gt;, IUnifyEnumerator, IEnumerator, IDisposable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor">UnifyEnumeratorBase()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnifyEnumeratorBase()</code></pre>
+  </div>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_System_Collections_Generic_IEnumerable__0__" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor(System.Collections.Generic.IEnumerable{`0})">UnifyEnumeratorBase(IEnumerable&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a new instance of a Unify Enumerator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnifyEnumeratorBase(IEnumerable&lt;T&gt; items)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The source collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_System_Collections_Generic_IEnumerable__0__System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32,System.Int32,System.Int32,System.Int32)">UnifyEnumeratorBase(IEnumerable&lt;T&gt;, Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnifyEnumeratorBase(IEnumerable&lt;T&gt; items, int startIndex = 2147483647, int endIndex = -2147483648, int step = 1, int loopCount = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">endIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">step</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">loopCount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_System_Collections_Generic_IEnumerable__0__Unify_Collections_UnifyEnumerableRange_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor(System.Collections.Generic.IEnumerable{`0},Unify.Collections.UnifyEnumerableRange)">UnifyEnumeratorBase(IEnumerable&lt;T&gt;, UnifyEnumerableRange)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnifyEnumeratorBase(IEnumerable&lt;T&gt; items, UnifyEnumerableRange range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a></td>
+        <td><span class="parametername">range</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_System_Collections_IEnumerable_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor(System.Collections.IEnumerable)">UnifyEnumeratorBase(IEnumerable)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnifyEnumeratorBase(IEnumerable collection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerable</span></td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_System_Collections_IEnumerable_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor(System.Collections.IEnumerable,System.Int32,System.Int32,System.Int32,System.Int32)">UnifyEnumeratorBase(IEnumerable, Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnifyEnumeratorBase(IEnumerable collection, int startIndex = 2147483647, int endIndex = -2147483648, int step = 1, int loopCount = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerable</span></td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">endIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">step</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">loopCount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_System_Collections_IEnumerable_Unify_Collections_UnifyEnumerableRange_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor(System.Collections.IEnumerable,Unify.Collections.UnifyEnumerableRange)">UnifyEnumeratorBase(IEnumerable, UnifyEnumerableRange)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnifyEnumeratorBase(IEnumerable collection, UnifyEnumerableRange range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerable</span></td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a></td>
+        <td><span class="parametername">range</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_Unify_Collections_Generic_IUnifyList__0__" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor(Unify.Collections.Generic.IUnifyList{`0})">UnifyEnumeratorBase(IUnifyList&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnifyEnumeratorBase(IUnifyList&lt;T&gt; parent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList</a>&lt;T&gt;</td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_Unify_Collections_Generic_IUnifyList__0__System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor(Unify.Collections.Generic.IUnifyList{`0},System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">UnifyEnumeratorBase(IUnifyList&lt;T&gt;, Int32, Int32, Int32, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnifyEnumeratorBase(IUnifyList&lt;T&gt; parent, int startIndex = 2147483647, int endIndex = -2147483648, int step = 1, int loopCount = 1, bool locked = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList</a>&lt;T&gt;</td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">endIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">step</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">loopCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">locked</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1__ctor_Unify_Collections_Generic_IUnifyList__0__Unify_Collections_UnifyEnumerableRange_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.#ctor(Unify.Collections.Generic.IUnifyList{`0},Unify.Collections.UnifyEnumerableRange)">UnifyEnumeratorBase(IUnifyList&lt;T&gt;, UnifyEnumerableRange)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnifyEnumeratorBase(IUnifyList&lt;T&gt; parent, UnifyEnumerableRange range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList</a>&lt;T&gt;</td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a></td>
+        <td><span class="parametername">range</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_historyStack" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.historyStack">historyStack</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Used to store the history of the enumeration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly UnifyStack&lt;UnifyEnumeratorBase&lt;T&gt;.UnifyEnumeratorFrame&gt; historyStack</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.Generic.UnifyStack-1.html">UnifyStack</a>&lt;<a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.UnifyEnumeratorFrame.html">UnifyEnumeratorBase.UnifyEnumeratorFrame</a>&lt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_items" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.items">items</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IList&lt;T&gt; items</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Current_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Current*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Current" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Current">Current</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Current { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_currentLoopCount_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.currentLoopCount*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_currentLoopCount" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.currentLoopCount">currentLoopCount</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Keeps track of how many loops have completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int currentLoopCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_cursorDirection_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.cursorDirection*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_cursorDirection" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.cursorDirection">cursorDirection</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. The direction of the enumerator's cursor, -1 is backwards, 0 is static, 1 is forwards.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int cursorDirection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_disposed_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.disposed*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_disposed" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.disposed">disposed</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. A value indicating whether the enumerator has been disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool disposed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_endIndex_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.endIndex*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_endIndex" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.endIndex">endIndex</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int endIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_firstRun_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.firstRun*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_firstRun" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.firstRun">firstRun</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. A value indicating whether the enumerator has been run yet. Used to perform first time initialisation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool firstRun { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_isValid_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.isValid*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_isValid" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.isValid">isValid</h4>
+  <div class="markdown level1 summary"><p>Value indicating whether the Unify Enumerator is in a valid state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool isValid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_locked_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.locked*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_locked" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.locked">locked</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool locked { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_loopCount_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.loopCount*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_loopCount" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.loopCount">loopCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int loopCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_parent_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.parent*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_parent" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.parent">parent</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. The source collection of the enumerator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IUnifyList&lt;T&gt; parent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_resetPending_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.resetPending*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_resetPending" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.resetPending">resetPending</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. A value indicating whether the enumerator is about to be reset. Allows for pre-reset tasks to be performed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool resetPending { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_startIndex_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.startIndex*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_startIndex" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.startIndex">startIndex</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int startIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_step_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.step*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_step" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.step">step</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int step { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_ClearHistoryStack_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.ClearHistoryStack*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_ClearHistoryStack" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.ClearHistoryStack">ClearHistoryStack()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Clears the rewind stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ClearHistoryStack()</code></pre>
+  </div>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Dispose_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Dispose*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Dispose" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Dispose.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Dispose_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Dispose*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Dispose_System_Boolean_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Dispose managed objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_GetCurrent_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.GetCurrent*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_GetCurrent" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.GetCurrent">GetCurrent()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnifyEnumeratorBase&lt;T&gt;.UnifyEnumeratorFrame GetCurrent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.UnifyEnumeratorFrame.html">UnifyEnumeratorBase.UnifyEnumeratorFrame</a>&lt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_GetCurrentIndex_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.GetCurrentIndex*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_GetCurrentIndex" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.GetCurrentIndex">GetCurrentIndex()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Gets the index of the current item that the enumerator is pointing to in the source collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int GetCurrentIndex()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The index of the current item.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsInRange_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsInRange*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsInRange_System_Int32_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsInRange(System.Int32)">IndexIsInRange(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IndexIsInRange(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsInRange_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsInRange*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsInRange_System_Int32_System_Int32_System_Int32_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsInRange(System.Int32,System.Int32,System.Int32)">IndexIsInRange(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IndexIsInRange(int index, int startIndex, int endIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">endIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsValid_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsValid*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsValid_System_Int32_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsValid(System.Int32)">IndexIsValid(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IndexIsValid(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Init_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Init*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Init" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Init">Init()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Used to initialise a Unify Enumerator before it is <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_firstRun">firstRun</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void Init()</code></pre>
+  </div>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_MoveNext_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.MoveNext*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_MoveNext" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.MoveNext">MoveNext()</h4>
+  <div class="markdown level1 summary"><p>Get the next item in the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool MoveNext()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_MovePrevious_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.MovePrevious*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_MovePrevious" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.MovePrevious">MovePrevious()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MovePrevious()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_OnFinished_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.OnFinished*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_OnFinished" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.OnFinished">OnFinished()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when a looping <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> has successfully completed all passes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnFinished()</code></pre>
+  </div>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_OnInvalidated_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.OnInvalidated*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_OnInvalidated" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.OnInvalidated">OnInvalidated()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when the source <a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator&lt;T&gt;</a> becomes invalidated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnInvalidated()</code></pre>
+  </div>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_OnPassComplete_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.OnPassComplete*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_OnPassComplete" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.OnPassComplete">OnPassComplete()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when a looping <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> has successfully completed a pass.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnPassComplete()</code></pre>
+  </div>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_OnResetFailed_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.OnResetFailed*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_OnResetFailed" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.OnResetFailed">OnResetFailed()</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Event handler for when a looping <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> has successfully completed a pass.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnResetFailed()</code></pre>
+  </div>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Push_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Push*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Push__0_System_Int32_System_Int32_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Push(`0,System.Int32,System.Int32)">Push(T, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>INTERNAL USE. Put the current item on top of the rewind stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Push(T item, int cursorDirection, int currentLoopCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item to be pushed onto the stack.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">cursorDirection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">currentLoopCount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Push_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Push*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Push_Unify_Collections_Generic_UnifyEnumeratorBase__0__UnifyEnumeratorFrame_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Push(Unify.Collections.Generic.UnifyEnumeratorBase{`0}.UnifyEnumeratorFrame)">Push(UnifyEnumeratorBase&lt;T&gt;.UnifyEnumeratorFrame)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Push(UnifyEnumeratorBase&lt;T&gt;.UnifyEnumeratorFrame frame)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.UnifyEnumeratorFrame.html">UnifyEnumeratorBase.UnifyEnumeratorFrame</a>&lt;&gt;</td>
+        <td><span class="parametername">frame</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Reset_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Reset*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Reset" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Reset">Reset()</h4>
+  <div class="markdown level1 summary"><p>Resets the <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator&lt;T&gt;</a> to its start state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Reset()</code></pre>
+  </div>
+  <h3 id="events">Events
+  </h3>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Finished" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Finished">Finished</h4>
+  <div class="markdown level1 summary"><p>Callback when all passes of the loop have successfully completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler Finished</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_Invalidated" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.Invalidated">Invalidated</h4>
+  <div class="markdown level1 summary"><p>Callback when the enumerator becomes invalid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler Invalidated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_PassComplete" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.PassComplete">PassComplete</h4>
+  <div class="markdown level1 summary"><p>Callback when a successful pass of the loop has completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler PassComplete</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_ResetFailed" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.ResetFailed">ResetFailed</h4>
+  <div class="markdown level1 summary"><p>Callback when the enumerator becomes invalid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler ResetFailed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Unify_Collections_Generic_UnifyEnumeratorBase_1_System_Collections_IEnumerator_Current_" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.System#Collections#IEnumerator#Current*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyEnumeratorBase_1_System_Collections_IEnumerator_Current" data-uid="Unify.Collections.Generic.UnifyEnumeratorBase`1.System#Collections#IEnumerator#Current">IEnumerator.Current</h4>
+  <div class="markdown level1 summary"><p>The current item pointed to by the Unify Enumerator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IEnumerator.Current { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerator&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="Unify.Collections.IUnifyEnumerator.html">IUnifyEnumerator</a>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerator</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2020 Matt Borum
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

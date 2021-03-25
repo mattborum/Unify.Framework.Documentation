@@ -65,27 +65,28 @@
 <sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
 <p>This section provides examples to accompany the Unify API documentation on <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify Enumerators</strong></a>.</p>
 <p>To get you up and running quickly, examples have been kept as simple as possible, using only the Unity Console.</p>
-<p>Unify Enumerators allow the underlying collection to be modified while iterating; items can be added, inserted or removed during the iteration process, and Unify will adjust the enumerator on-the-fly. They also provide the ability to iterate over a whole collection, a partial collection, loop an iteration and step over items at a specified interval. This functionality is provided by Unify's <strong>Enumerable Range</strong> feature.</p>
-<p>Unify provides four types of enumerators out-of-the-box; <strong>Forwards</strong>, <strong>Backwards</strong>, <strong>Yo-Yo</strong> and <strong>Random</strong>, available through the following classes:</p>
+<p>As well as having the basic functionality of iterating over a collection, Unify Enumerators also provide the following features:</p>
 <ul>
-<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyForwardsEnumerator-1.html"><strong>UnifyForwardsEnumerator&lt;T&gt;</strong></a></li>
-<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyBackwardsEnumerator-1.html"><strong>UnifyBackwardsEnumerator&lt;T&gt;</strong></a></li>
-<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html"><strong>UnifyYoYoEnumerator&lt;T&gt;</strong></a></li>
-<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>UnifyRandomEnumerator&lt;T&gt;</strong></a></li>
+<li>Modification of the underlying collection is allowed</li>
+<li>Iterate over a partial collection</li>
+<li>Looping an iteration</li>
+<li>Stepping over items at a specified interval</li>
+<li>Iterating backwards</li>
+<li>A MovePrevious() method for fine-grained control</li>
+<li>Re-use through the Reset() method</li>
 </ul>
-<h2 id="unify-forwards-enumerator">Unify Forwards Enumerator</h2>
-<p>Moves over a collection from the start of the enumerable range to the end of the enumerable range.</p>
-<h2 id="unify-backwards-enumerator">Unify Backwards Enumerator</h2>
-<p>Moves over a collection from the end of the enumerable range to the start of the enumerable range.</p>
-<h2 id="unify-yo-yo-enumerator">Unify Yo-Yo Enumerator</h2>
-<p>Moves over a collection from the start of the enumerable range to the end of the enumerable range and back to the start again.</p>
-<h2 id="unify-random-enumerator">Unify Random Enumerator</h2>
-<p>Moves over a collection randomly, within the bounds of the specified enumerable range, visiting each item once.</p>
-<h2 id="events">Events</h2>
 <p>Unify Enumerators provide the following events:</p>
 <ul>
-<li><strong>PassComplete</strong> - triggered each time a looping Unify Enumerator completes a pass of the loop</li>
-<li><strong>Finished</strong> - triggered when a Unify Enumerator has completed all passes of a loop</li>
+<li><strong>PassComplete</strong> - triggered each time a looping Unify Enumerator successfully completes a pass while looping</li>
+<li><strong>Invalidated</strong> - triggered when a Unify Enumerator has no valid next item to move to</li>
+<li><strong>ResetFailed</strong> - triggered when a Unify Enumerator remains in an invalid state after calling Reset()</li>
+<li><strong>Finished</strong> - triggered when a Unify Enumerator successfully completes all passes of a loop</li>
+</ul>
+<p>Unify provides three types of enumerators out-of-the-box; <strong>Default</strong>, <strong>Yo-Yo</strong> and <strong>Random</strong>, available through the following classes:</p>
+<ul>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyEnumerator-1.html"><strong>UnifyEnumerator&lt;T&gt;</strong></a></li>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html"><strong>UnifyYoYoEnumerator&lt;T&gt;</strong></a></li>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>UnifyRandomEnumerator&lt;T&gt;</strong></a></li>
 </ul>
 <h2 id="exceptions">Exceptions</h2>
 <p>Unify will <strong>always</strong> throw an exception when trying to set properties or parameters to an invalid value. Specific details are provided in each relevant section.</p>

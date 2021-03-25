@@ -63,11 +63,11 @@
 
 <p><sup><font color="grey">Namespace: Unify.Coroutines</font></sup><br>
 <sup><font color="grey">Assembly: Unify.Coroutines.dll</font></sup></p>
-<p>Unify Coroutines provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> property to specify the number times the Coroutine should be executed. To enable this functionality, either the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> property <strong>or</strong> the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property <strong>must</strong> be initialised <strong>before</strong> starting the Unify Coroutine for the first time.</p>
+<p>Unify Coroutines provide a <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> property to specify the number times the Coroutine should be executed. To enable this functionality, either the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> property <strong>or</strong> the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> property <strong>must</strong> be initialised <strong>before</strong> starting the Unify Coroutine for the first time.</p>
 <p>Unify Coroutines also provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> property to allow a delay between each pass (execution of the Unify Coroutine).</p>
-<p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties can be set in two ways:
+<p>The <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties can be set in two ways:
 <br></p>
-<p>Pass <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> and/or <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> as parameters to the constructor:</p>
+<p>Pass <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> and/or <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> as parameters to the constructor:</p>
 <pre><code>UnifyCoroutine myUnifyCoroutine = new UnifyCoroutine(CountToTen(), loopCount: 3, passDelay: 1.5f);
 
 private IEnumerator CountToTen()
@@ -79,16 +79,15 @@ private IEnumerator CountToTen()
     }
 }
 </code></pre>
-<p>Set the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> and/or <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties directly:</p>
+<p>Set the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> and/or <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties directly:</p>
 <pre><code>myUnifyCoroutine.loopCount = 3;
 myUnifyCoroutine.passDelay = 1.5f; // 1.5 seconds delay between each pass
 </code></pre>
 <h2 id="events">Events</h2>
 <p>Unify Coroutines provide a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_PassComplete"><strong>passComplete</strong></a> event that is triggered after each pass of the loop.</p>
-<p>See: How to <a class="xref" href="Events.html#subscribing-to-unify-coroutine-events"><strong>subscribe</strong></a> to and <a class="xref" href="Events.html#unsubscribing-from-unify-coroutine-events"><strong>unsubscribe</strong></a> from Unify Coroutine events.</p>
 <h2 id="example">Example</h2>
 <p>This Unify Coroutine example calculates the first 10 numbers in the Fibonacci Sequence and prints each value to the Unity Console at intervals of 0.3 seconds.<br>
-The Unify Coroutine is repeated 3 times with a 2.5 second delay between each pass of the loop. Here, the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties are initialised through the Unify Coroutine constructor.<br>
+The Unify Coroutine is repeated 3 times with a 2.5 second delay between each pass of the loop. Here, the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> properties are initialised through the Unify Coroutine constructor.<br>
 Also, <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_keepAlive"><strong>keepAlive</strong></a> has been set to <strong>true</strong> to allow looping and <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> has been set to <strong>false</strong> to allow you to trigger exceptions as described <a href="#exceptions"><strong>below</strong></a>. The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> property has been set to <strong>'Ginny'</strong> to demonstrate how Unify Coroutine instances are identified in <a href="#exceptions"><strong>exception messages</strong></a>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
@@ -151,13 +150,17 @@ public class Coroutines_Looping : MonoBehaviour
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
 <li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter</li>
-<li>Passing a value of <strong>less than -1</strong> to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> property or parameter</li>
+<li>Passing a value of <strong>less than -1</strong> to the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> property or parameter</li>
 <li>Passing a value of <strong>less than 0</strong> to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_passDelay"><strong>passDelay</strong></a> property or parameter</li>
 </ul>
 <br>
 <p>Unify will provide information in the exception message to help you find the cause of the error, for example:</p>
 <p><img src="../../../images/exception_loopCount.png" alt="Exception Image"></p>
-<p>This message tells us the exception was caused by setting the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount"><strong>loopCount</strong></a> property to a value of <strong>less than -1</strong>, and that <strong>'Ginny'</strong> was the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> of the offending Unify Coroutine instance.</p>
+<p>This message tells us the exception was caused by setting the <a href="xref:Unify.Coroutines.UnifyCoroutineBase.loopCount"><strong>loopCount</strong></a> property to a value of <strong>less than -1</strong>, and that <strong>'Ginny'</strong> was the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> of the offending Unify Coroutine instance.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a class="xref" href="../UserGuideIntroduction.html#events"><strong>Subscribing to Unify Events</strong></a></li>
+</ul>
 </article>
           </div>
         </div>

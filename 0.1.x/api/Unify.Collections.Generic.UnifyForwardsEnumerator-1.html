@@ -80,6 +80,7 @@
     <div><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;T&gt;</div>
     <div><a class="xref" href="Unify.Collections.IUnifyEnumerator.html">IUnifyEnumerator</a></div>
     <div><a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html">IUnifyEnumerableRange</a></div>
+    <div><a class="xref" href="Unify.Collections.IUnifyLoopable.html">IUnifyLoopable</a></div>
     <div><span class="xref">System.Collections.IEnumerator</span></div>
     <div><span class="xref">System.IDisposable</span></div>
   </div>
@@ -99,6 +100,9 @@
     </div>
     <div>
       <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent">UnifyEnumerator&lt;T&gt;.parent</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_enumerableRange">UnifyEnumerator&lt;T&gt;.enumerableRange</a>
     </div>
     <div>
       <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_rewindStack">UnifyEnumerator&lt;T&gt;.rewindStack</a>
@@ -173,21 +177,6 @@
       <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnInvalidated">UnifyEnumerator&lt;T&gt;.OnInvalidated()</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_System_Object_Unify_Collections_Generic_UnifyCollectionChangedEventArgs__0__">UnifyEnumerator&lt;T&gt;.parent_CollectionChanged(Object, UnifyCollectionChangedEventArgs&lt;T&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Add_System_Int32_">UnifyEnumerator&lt;T&gt;.parent_CollectionChanged_Add(Int32)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Clear">UnifyEnumerator&lt;T&gt;.parent_CollectionChanged_Clear()</a>
-    </div>
-    <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Insert_System_Int32_">UnifyEnumerator&lt;T&gt;.parent_CollectionChanged_Insert(Int32)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Remove_System_Int32_">UnifyEnumerator&lt;T&gt;.parent_CollectionChanged_Remove(Int32)</a>
-    </div>
-    <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
@@ -213,7 +202,7 @@
   <h6><strong>Assembly</strong>: Unify.Collections.dll</h6>
   <h5 id="Unify_Collections_Generic_UnifyForwardsEnumerator_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class UnifyForwardsEnumerator&lt;T&gt; : UnifyEnumerator&lt;T&gt;, IUnifyEnumerator&lt;T&gt;, IEnumerator&lt;T&gt;, IUnifyEnumerator, IUnifyEnumerableRange, IEnumerator, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class UnifyForwardsEnumerator&lt;T&gt; : UnifyEnumerator&lt;T&gt;, IUnifyEnumerator&lt;T&gt;, IEnumerator&lt;T&gt;, IUnifyEnumerator, IUnifyEnumerableRange, IUnifyLoopable, IEnumerator, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -366,6 +355,9 @@
   </div>
   <div>
       <a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html">IUnifyEnumerableRange</a>
+  </div>
+  <div>
+      <a class="xref" href="Unify.Collections.IUnifyLoopable.html">IUnifyLoopable</a>
   </div>
   <div>
       <span class="xref">System.Collections.IEnumerator</span>

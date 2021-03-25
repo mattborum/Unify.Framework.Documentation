@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Introduction to Unify Collections | Unify Framework </title>
+    <title>Introduction to Unify Coroutine Queues | Unify Framework </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Introduction to Unify Collections | Unify Framework ">
+    <meta name="title" content="Introduction to Unify Coroutine Queues | Unify Framework ">
     <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -58,16 +58,14 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-12">
-            <article class="content wrap" id="_content" data-uid="IntroductionToUnifyCollections">
-<h1 id="introduction-to-unify-collections">Introduction to Unify Collections</h1>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="introduction-to-unify-coroutine-queues">Introduction to Unify Coroutine Queues</h1>
 
-<p><sup><font color="grey">Namespace: Unify.Collections, Unify.Collections.Generic</font></sup><br>
-<sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
-<p>This section provides examples to accompany the Unify API documentation on <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify Collections</strong></a>. The <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify.Collections</strong></a> namespace contains interfaces and classes to provide extra functionality to .NET collections, the bulk of which is implmented through <a class="xref" href="../Unify.Enumerators/IntroductionToUnifyEnumerators.html"><strong>Unify Enumerators</strong></a>.</p>
-<p>To get you up and running quickly, examples have been kept as simple as possible, using only the Unity Console.</p>
-<p>Unify Collections are observable; a <a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html#Unify_Collections_IUnifyObservableCollection_CollectionChanged"><strong>CollectionChanged</strong></a> event is used to notify subscribers when items are added, inserted, removed, or when a collecton is cleared or reset.</p>
-<p>The <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify.Collections</strong></a> namespace currently offers two collections with this extra functionality, the <a href="xref:Unify.Collections.UnifyList"><strong>UnifyList</strong></a> and the generic <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a>.</p>
-<p>All Unify Collections implement <a class="xref" href="../Unify.Enumerators/IntroductionToUnifyEnumerators.html"><strong>Unify Enumerators</strong></a>.</p>
+<p><sup><font color="grey">Namespace: Unify.Coroutines</font></sup><br>
+<sup><font color="grey">Assembly: Unify.Coroutines.dll</font></sup></p>
+<p>The <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineQueue.html"><strong>UnifyCoroutineQueue</strong></a> is a specialised container created to execute a group of <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>Unify Coroutines</strong></a> in sequence. When the Unify Coroutine Queue is started the first Unify Coroutine in the queue will be executed, only when that has finished will the next Unify Coroutine be started.</p>
+<p>This collection accepts any class derived from <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>UnifyCoroutineBase</strong></a>, this includes generic and non-generic Unify Coroutines. The <a href="xref:Unify.Coroutines.UnifyCoroutineCollection"><strong>UnifyCoroutineCollection</strong></a> class also derives from <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>UnifyCoroutineBase</strong></a>, making it also a Unify Coroutine. This means it has all the functionality of a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html"><strong>UnifyCoroutine</strong></a>; it can be paused, resumed, cancelled and reused; the difference being operations work on all Unify Coroutines in the queue.</p>
+<p>As a Unify Coroutine Queue is also a Unify Coroutine, this means a Unify Coroutine Queue can be added to another Unify Coroutine Queue or a Unify Coroutine Collection.</p>
 </article>
           </div>
         </div>

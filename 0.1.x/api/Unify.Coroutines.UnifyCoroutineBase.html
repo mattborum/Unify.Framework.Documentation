@@ -74,8 +74,7 @@
     <div class="level1"><span class="xref">UnifyCoroutineBase</span></div>
       <div class="level2"><a class="xref" href="Unify.Coroutines.UnifyCoroutine.html">UnifyCoroutine</a></div>
       <div class="level2"><a class="xref" href="Unify.Coroutines.UnifyCoroutine-1.html">UnifyCoroutine&lt;T&gt;</a></div>
-      <div class="level2"><a class="xref" href="Unify.Coroutines.UnifyCoroutineCollection.html">UnifyCoroutineCollection</a></div>
-      <div class="level2"><a class="xref" href="Unify.Coroutines.UnifyTimer.html">UnifyTimer</a></div>
+      <div class="level2"><a class="xref" href="Unify.Coroutines.UnifyCoroutineList.html">UnifyCoroutineList</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -166,7 +165,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool failSilently { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool failSilently { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -216,7 +215,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool keepAlive { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool keepAlive { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,13 +249,13 @@
       </tr>
     </tbody>
   </table>
-  <a id="Unify_Coroutines_UnifyCoroutineBase_loopCount_" data-uid="Unify.Coroutines.UnifyCoroutineBase.loopCount*"></a>
-  <h4 id="Unify_Coroutines_UnifyCoroutineBase_loopCount" data-uid="Unify.Coroutines.UnifyCoroutineBase.loopCount">loopCount</h4>
+  <a id="Unify_Coroutines_UnifyCoroutineBase_m_loopCount_" data-uid="Unify.Coroutines.UnifyCoroutineBase.m_loopCount*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutineBase_m_loopCount" data-uid="Unify.Coroutines.UnifyCoroutineBase.m_loopCount">m_loopCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int loopCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected int m_loopCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -269,8 +268,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Number of times to execute the Unify Coroutine.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -293,8 +291,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>The name of the Unify Coroutine.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -390,8 +387,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unify.Coroutines.UnifyCoroutineState.html">UnifyCoroutineState</a></td>
-        <td><p>The current state of the Unify Coroutine.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -737,7 +733,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if the Unify Coroutine started successfully. Otherwise, false. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
+        <td><p>True if the Unify Coroutine started successfully; otherwise, false. See <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently">failSilently</a>.</p>
 </td>
       </tr>
     </tbody>

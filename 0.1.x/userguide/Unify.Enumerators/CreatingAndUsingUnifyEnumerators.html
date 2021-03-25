@@ -68,14 +68,14 @@
 <pre><code>IList&lt;string&gt; list = new List&lt;string&gt; { &quot;Apple&quot;, &quot;Orange&quot;, &quot;Banana&quot;, &quot;Pear&quot;, &quot;Grape&quot;, &quot;Plum&quot;, &quot;Lemon&quot;, &quot;Lime&quot;, &quot;Cherry&quot;, &quot;Mango&quot; };
 
 // Matching concrete types
-UnifyForwardsEnumerator&lt;string&gt; forwardsGeneric = new UnifyForwardsEnumerator&lt;string&gt;(list);
+UnifyEnumerator&lt;string&gt; defaultGeneric = new UnifyEnumerator&lt;string&gt;(list);
 
 // Unify Interface types
-IUnifyEnumerator&lt;string&gt; backwardsGenericInterface = new UnifyBackwardsEnumerator&lt;string&gt;(list);
-IUnifyEnumerator foo = new UnifyRandomEnumerator&lt;string&gt;(list);
+IUnifyEnumerator&lt;string&gt; defaultGenericInterface = new UnifyYoYoEnumerator&lt;string&gt;(list);
+IUnifyEnumerator defaultNonGenericInterface = new UnifyRandomEnumerator&lt;string&gt;(list);
 
 // .NET interface types
-IEnumerator&lt;string&gt; dotNetGenericHoldingUnifyGeneric = new UnifyBackwardsEnumerator&lt;string&gt;(list);
+IEnumerator&lt;string&gt; dotNetGenericHoldingUnifyGeneric = new UnifyEnumerator&lt;string&gt;(list);
 IEnumerator dotNetNonGenericHoldingUnifyGeneric = new UnifyRandomEnumerator&lt;string&gt;(list);
 </code></pre>
 <br>
@@ -83,11 +83,10 @@ IEnumerator dotNetNonGenericHoldingUnifyGeneric = new UnifyRandomEnumerator&lt;s
 <p>The Unify Enumerator's <a href="xref:Unify.Collections.UnifyEnumerator.Current"><strong>Current</strong></a> property is used to access the object the Unify Enumerator is positioned at, this is of type <strong>object</strong> for the non-generic <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html"><strong>IUnifyEnumerator</strong></a> type and of type <strong>T</strong> for the generic <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyEnumerator-1.html"><strong>IUnifyEnumerator&lt;T&gt;</strong></a> type. The <a href="xref:Unify.Collections.UnifyEnumerator.Current"><strong>Current</strong></a> property returns the same value until the <a href="xref:Unify.Collections.UnifyEnumerator.MoveNext"><strong>MoveNext()</strong></a> method is called, then <a href="xref:Unify.Collections.UnifyEnumerator.Current"><strong>Current</strong></a> is set to the next element.</p>
 <p>To use the Unify Enumerator again, call the <a href="xref:Unify.Collections.UnifyEnumerator.Reset"><strong>Reset()</strong></a> method.</p>
 <h2 id="example">Example</h2>
-<p>This example demonstrates each of the built-in Unify Enumerator types, with a generic type <strong>T</strong> of string, to iterate over a .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;string&gt;</strong></a> containing the numbers 1 to 5 as words; <strong>&quot;ONE&quot;</strong>, <strong>&quot;TWO&quot;</strong>, <strong>&quot;THREE&quot;</strong>, <strong>&quot;FOUR&quot;</strong> and <strong>&quot;FIVE&quot;</strong>.</p>
+<p>This example demonstrates each of the built-in Unify Enumerator types, with a generic type <strong>T</strong> of string, to iterate over a .NET <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1" target="_blank"><strong>List&lt;string&gt;</strong></a> containing the words; <strong>&quot;SAY&quot;</strong>, <strong>&quot;HELLO&quot;</strong>, <strong>&quot;TO&quot;</strong>, <strong>&quot;UNIFY&quot;</strong> and <strong>&quot;ENUMERATORS&quot;</strong>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
-<li><strong>F</strong> to <strong>Start</strong> the Forwards Enumerator</li>
-<li><strong>B</strong> to <strong>Start</strong> the Backwards Enumerator</li>
+<li><strong>D</strong> to <strong>Start</strong> the Default Enumerator</li>
 <li><strong>Y</strong> to <strong>Start</strong> the Yo-Yo Enumerator</li>
 <li><strong>R</strong> to <strong>Start</strong> the Random Enumerator</li>
 <li><strong>X</strong> to <strong>Reset</strong> all Enumerators</li>
@@ -98,34 +97,27 @@ using UnityEngine;
 
 public class Enumerators_CreateAndUse : MonoBehaviour
 {
-    private UnifyForwardsEnumerator&lt;string&gt; forwards;
-    private UnifyBackwardsEnumerator&lt;string&gt; backwards;
+    private UnifyEnumerator&lt;string&gt; unifyDefaultEnumerator;
     private UnifyYoYoEnumerator&lt;string&gt; yoyo;
     private UnifyRandomEnumerator&lt;string&gt; random;
     private IList&lt;string&gt; list;
 
     void Start()
     {
-        list = new List&lt;string&gt; { &quot;One&quot;, &quot;Two&quot;, &quot;Three&quot;, &quot;Four&quot;, &quot;Five&quot; };
+        list = new List&lt;string&gt; { &quot;Say&quot;, &quot;Hello&quot;, &quot;To&quot;, &quot;Unify&quot;, &quot;Enumerators&quot; };
 
-        forwards = new UnifyForwardsEnumerator&lt;string&gt;(list);
-        backwards = new UnifyBackwardsEnumerator&lt;string&gt;(list);
+        unifyDefaultEnumerator = new UnifyEnumerator&lt;string&gt;(list);
         yoyo = new UnifyYoYoEnumerator&lt;string&gt;(list);
         random = new UnifyRandomEnumerator&lt;string&gt;(list);
 
-        print(&quot;press F for FORWARDS, B for BACKWARDS, Y for YO-YO, R for RANDOM, X to RESET ALL ENUMERATORS&quot;);
+        print(&quot;press D for DEFAULT, Y for YO-YO, R for RANDOM, X to RESET ALL ENUMERATORS&quot;);
     }
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.F))
+        if (Input.GetKeyUp(KeyCode.D))
         {
-            RunForwards();
-        }
-
-        if (Input.GetKeyUp(KeyCode.B))
-        {
-            RunBackwards();
+            RunDefault();
         }
 
         if (Input.GetKeyUp(KeyCode.Y))
@@ -144,21 +136,12 @@ public class Enumerators_CreateAndUse : MonoBehaviour
         }
     }
 
-    private void RunForwards()
+    private void RunDefault()
     {
-        print(&quot;--- Forwards Enumerator ---&quot;);
-        while (forwards.MoveNext())
+        print(&quot;--- Default Enumerator ---&quot;);
+        while (unifyDefaultEnumerator.MoveNext())
         {
-            print(forwards.Current);
-        }
-    }
-
-    private void RunBackwards()
-    {
-        print(&quot;--- Backwards Enumerator ---&quot;);
-        while (backwards.MoveNext())
-        {
-            print(backwards.Current);
+            print(unifyDefaultEnumerator.Current);
         }
     }
 
@@ -183,8 +166,7 @@ public class Enumerators_CreateAndUse : MonoBehaviour
     private void ResetAll()
     {
         print(&quot;--- Resetting Enumerators ---&quot;);
-        forwards.Reset();
-        backwards.Reset();
+        unifyDefaultEnumerator.Reset();
         yoyo.Reset();
         random.Reset();
     }

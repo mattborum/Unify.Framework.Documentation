@@ -98,9 +98,6 @@
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_Finished">UnifyCoroutineBase.Finished</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_loopCount">UnifyCoroutineBase.loopCount</a>
-    </div>
-    <div>
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_currentPassCount">UnifyCoroutineBase.currentPassCount</a>
     </div>
     <div>
@@ -117,6 +114,9 @@
     </div>
     <div>
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_unifyCoroutine">UnifyCoroutineBase.unifyCoroutine</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_m_loopCount">UnifyCoroutineBase.m_loopCount</a>
     </div>
     <div>
       <a class="xref" href="Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name">UnifyCoroutineBase.name</a>
@@ -237,12 +237,12 @@
     <pre><code class="lang-csharp hljs">protected UnifyCoroutine()</code></pre>
   </div>
   <a id="Unify_Coroutines_UnifyCoroutine_1__ctor_" data-uid="Unify.Coroutines.UnifyCoroutine`1.#ctor*"></a>
-  <h4 id="Unify_Coroutines_UnifyCoroutine_1__ctor_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_String_" data-uid="Unify.Coroutines.UnifyCoroutine`1.#ctor(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.String)">UnifyCoroutine(IEnumerator, Single, Int32, Single, String)</h4>
+  <h4 id="Unify_Coroutines_UnifyCoroutine_1__ctor_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_Boolean_System_Boolean_System_Boolean_System_String_System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__0___" data-uid="Unify.Coroutines.UnifyCoroutine`1.#ctor(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.Boolean,System.Boolean,System.Boolean,System.String,System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs{`0}})">UnifyCoroutine(IEnumerator, Single, Int32, Single, Boolean, Boolean, Boolean, String, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&lt;T&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnifyCoroutine(IEnumerator target, float startDelay = 0F, int loopCount = 1, float passDelay = 0F, string name = &quot;UnnamedUnifyCoroutine&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public UnifyCoroutine(IEnumerator target, float startDelay = 0F, int loopCount = 1, float passDelay = 0F, bool keepAlive = false, bool failSilently = false, bool useScaledTime = false, string name = &quot;UnnamedUnifyCoroutine&quot;, EventHandler&lt;UnifyCoroutineEventArgs&gt; startedEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; pausedEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; resumedEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; stoppedEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; cancelledEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; passCompleteEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; finishedEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&lt;T&gt;&gt; valueReturnedHandler = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,23 +279,103 @@
 </td>
       </tr>
       <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">keepAlive</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">failSilently</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">useScaledTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
         <td><p>The name of the Unify Coroutine.</p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">startedEventHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">pausedEventHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">resumedEventHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">stoppedEventHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">cancelledEventHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">passCompleteEventHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">finishedEventHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs-1.html">UnifyCoroutineEventArgs</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">valueReturnedHandler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Unify_Coroutines_UnifyCoroutine_1_loopCount_" data-uid="Unify.Coroutines.UnifyCoroutine`1.loopCount*"></a>
+  <h4 id="Unify_Coroutines_UnifyCoroutine_1_loopCount" data-uid="Unify.Coroutines.UnifyCoroutine`1.loopCount">loopCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int loopCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
   <a id="Unify_Coroutines_UnifyCoroutine_1_Start_" data-uid="Unify.Coroutines.UnifyCoroutine`1.Start*"></a>
-  <h4 id="Unify_Coroutines_UnifyCoroutine_1_Start_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_String_System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__0___System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__" data-uid="Unify.Coroutines.UnifyCoroutine`1.Start(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.String,System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs{`0}},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs})">Start(IEnumerator, Single, Int32, Single, String, EventHandler&lt;UnifyCoroutineEventArgs&lt;T&gt;&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;)</h4>
+  <h4 id="Unify_Coroutines_UnifyCoroutine_1_Start_System_Collections_IEnumerator_System_Single_System_Int32_System_Single_System_Boolean_System_Boolean_System_Boolean_System_String_System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__System_EventHandler_Unify_Coroutines_UnifyCoroutineEventArgs__0___" data-uid="Unify.Coroutines.UnifyCoroutine`1.Start(System.Collections.IEnumerator,System.Single,System.Int32,System.Single,System.Boolean,System.Boolean,System.Boolean,System.String,System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs},System.EventHandler{Unify.Coroutines.UnifyCoroutineEventArgs{`0}})">Start(IEnumerator, Single, Int32, Single, Boolean, Boolean, Boolean, String, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&gt;, EventHandler&lt;UnifyCoroutineEventArgs&lt;T&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Starts a Unify Coroutine.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Start(IEnumerator target, float startDelay = 0F, int loopCount = 1, float passDelay = 0F, string name = &quot;UnnamedUnifyCoroutine&quot;, EventHandler&lt;UnifyCoroutineEventArgs&lt;T&gt;&gt; valueReturnedHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; passCompleteEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; finishedEventHandler = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool Start(IEnumerator target, float startDelay = 0F, int loopCount = 1, float passDelay = 0F, bool keepAlive = false, bool failSilently = false, bool useScaledTime = false, string name = &quot;UnnamedUnifyCoroutine&quot;, EventHandler&lt;UnifyCoroutineEventArgs&gt; startedEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; pausedEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; resumedEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; stoppedEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; cancelledEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; passCompleteEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&gt; finishedEventHandler = null, EventHandler&lt;UnifyCoroutineEventArgs&lt;T&gt;&gt; valueReturnedHandler = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,16 +412,50 @@
 </td>
       </tr>
       <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">keepAlive</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">failSilently</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">useScaledTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
         <td><p>The name of the Unify Coroutine.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs-1.html">UnifyCoroutineEventArgs</a>&lt;T&gt;&gt;</td>
-        <td><span class="parametername">valueReturnedHandler</span></td>
-        <td><p>Callback when a value of type T is returned.</p>
-</td>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">startedEventHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">pausedEventHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">resumedEventHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">stoppedEventHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
+        <td><span class="parametername">cancelledEventHandler</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
@@ -353,6 +467,12 @@
         <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs.html">UnifyCoroutineEventArgs</a>&gt;</td>
         <td><span class="parametername">finishedEventHandler</span></td>
         <td><p>Callback when the Unify Coroutine has finished.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Unify.Coroutines.UnifyCoroutineEventArgs-1.html">UnifyCoroutineEventArgs</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">valueReturnedHandler</span></td>
+        <td><p>Callback when a value of type T is returned.</p>
 </td>
       </tr>
     </tbody>

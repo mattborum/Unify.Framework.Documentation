@@ -58,9 +58,56 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-12">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="UserGuideIntroduction">
 <h1 id="user-guide-introduction">User Guide Introduction</h1>
 
+<h2 id="events">Events</h2>
+<h3 id="subscribing-to-unify-events">Subscribing to Unify events</h3>
+<p>There are three ways to subscribe to Unify/C# events; programmatically, anonymous methods and lambda expressions. The following example code snippets use Unify Coroutine <a class="xref" href="../api/Unify.Coroutines.UnifyCoroutineBase.html#events"><strong>events</strong></a> to show this:</p>
+<h3 id="programmatically">Programmatically</h3>
+<pre><code>myUnifyCoroutine.Started += StartedEventHandler;
+
+private void StartedEventHandler(object sender, UnifyCoroutineEventArgs e)
+{
+	print(&quot;* STARTED EVENT HANDLER *&quot;);
+}
+</code></pre>
+<h4 id="anonymous-method">Anonymous Method</h4>
+<pre><code>myUnifyCoroutine.Started += delegate(object sender, UnifyCoroutineEventArgs e)
+{
+	print(&quot;* STARTED EVENT HANDLER *&quot;);
+};
+</code></pre>
+<h4 id="lambda-expression">Lambda Expression</h4>
+<pre><code>myUnifyCoroutine.Started += (sender, e) =&gt;
+{
+	print(&quot;* STARTED EVENT HANDLER *&quot;);
+};
+</code></pre>
+<h3 id="unsubscribing-from-unify-events">Unsubscribing from Unify events</h3>
+<h4 id="programmatically-1">Programmatically</h4>
+<pre><code>myUnifyCoroutine.Started -= StartedEventHandler;
+
+private void StartedEventHandler(object sender, UnifyCoroutineEventArgs e)
+{
+    print(&quot;* STARTED EVENT HANDLER *&quot;);
+}
+</code></pre>
+<p>If a Unify event is subscribed to via either an anonymous method or lambda expression, then it is not possible to unsubscribe from that event unless using a reference to the original method which was used to subscribe:</p>
+<h4 id="anonymous-method-1">Anonymous Method</h4>
+<pre><code>private EventHandler&lt;UnifyCoroutineEventArgs&gt; myUnifyCoroutineEventDelegate;
+myUnifyCoroutineEventDelegate = delegate { print(&quot;* STARTED EVENT HANDLER *&quot;); };
+
+myUnifyCoroutine.Started += myUnifyCoroutineEventDelegate;  // Subscribe
+myUnifyCoroutine.Started -= myUnifyCoroutineEventDelegate;  // Unsubscribe
+</code></pre>
+<h4 id="lambda-expression-1">Lambda Expression</h4>
+<pre><code>private EventHandler&lt;UnifyCoroutineEventArgs&gt; myUnifyCoroutineEventDelegate;
+myUnifyCoroutineEventDelegate = (sender, args) =&gt; { print(* STARTED EVENT HANDLER *); };
+
+myUnifyCoroutine.Started += myUnifyCoroutineEventDelegate; // Subscribe
+myUnifyCoroutine.Started -= myUnifyCoroutineEventDelegate; // Unsubscribe
+</code></pre>
 </article>
           </div>
         </div>

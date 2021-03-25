@@ -63,7 +63,7 @@
 
 <p><sup><font color="grey">Namespace: Unify.Coroutines</font></sup><br>
 <sup><font color="grey">Assembly: Unify.Coroutines.dll</font></sup></p>
-<p>This example shows how to create and start a <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html"><strong>UnifyCoroutineCollection</strong></a>. It demonstrates adding Unify Coroutines using <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#collection-initializers" target="_blank"><strong>Collection Initialisers</strong></a> and also through the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icollection-1.add" target="_blank"><strong>ICollection&lt;T&gt;.Add(T)</strong></a> method.</p>
+<p>This example shows how to create and start a <a href="xref:Unify.Coroutines.UnifyCoroutineCollection"><strong>UnifyCoroutineCollection</strong></a>. It demonstrates adding Unify Coroutines using <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#collection-initializers" target="_blank"><strong>Collection Initialisers</strong></a> and also through the <a href="xref:Unify.Coroutines.UnifyCoroutineCollection.Add*"><strong>Add()</strong></a> method.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
 <li><strong>S</strong> to Start</li>
@@ -127,7 +127,7 @@ public class Coroutines_Collection_CreatingAndStarting : MonoBehaviour
 <h2 id="exceptions">Exceptions</h2>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
-<li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter of the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html#Unify_Coroutines_UnifyCoroutineCollection_Add_"><strong>Add()</strong></a> method or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#collection-initializers" target="_blank"><strong>Collection Initialiser</strong></a>.</li>
+<li>Passing a <strong>null</strong> value to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_target"><strong>target</strong></a> parameter of the <a href="xref:Unify.Coroutines.UnifyCoroutineCollection.Add*"><strong>Add()</strong></a> method or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#collection-initializers" target="_blank"><strong>Collection Initialiser</strong></a>.</li>
 </ul>
 <p>Exceptions will be thrown under the following circumstances, <strong>only</strong> if <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_failSilently"><strong>failSilently</strong></a> is <strong>false</strong>:</p>
 <ul>
@@ -136,7 +136,7 @@ public class Coroutines_Collection_CreatingAndStarting : MonoBehaviour
 <br>
 <p>Unify will provide information in the exception message to help you find the cause of the error, for example:</p>
 <p><img src="../../../images/exception_coroutineCollection_AddNull.png" alt="Exception Image"></p>
-<p>This message tells us the exception was caused by passing a <strong>null</strong> reference to the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineCollection.html#Unify_Coroutines_UnifyCoroutineCollection_Add_"><strong>Add()</strong></a> method on a Unify Coroutine Collection, and that <strong>'David Helgason'</strong> was the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> of the offending Unify Coroutine Collection instance.</p>
+<p>This message tells us the exception was caused by passing a <strong>null</strong> reference to the <a href="xref:Unify.Coroutines.UnifyCoroutineCollection.Add*"><strong>Add()</strong></a> method on a Unify Coroutine Collection, and that <a href="https://www.huffpost.com/entry/ceo-talk-david-helgason_b_5a369cb8e4b0e7f1200cfbfa" target="_blank"><strong>'David Helgason'</strong></a> was the <a class="xref" href="../../api/Unify.Coroutines.UnifyCoroutineBase.html#Unify_Coroutines_UnifyCoroutineBase_name"><strong>name</strong></a> of the offending Unify Coroutine Collection instance.</p>
 <h2 id="see-also">See Also</h2>
 <ul>
 <li><a class="xref" href="CreatingAndStarting.html"><strong>Unify Coroutines - Creating and Starting</strong></a></li>

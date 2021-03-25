@@ -65,13 +65,12 @@
   
   <h1 id="Unify_Collections_Generic_UnifyRandomEnumerator_1" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1" class="text-break">Class UnifyRandomEnumerator&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>The enumerator moves over the collection, within the <a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a> bounds, randomly, visiting each item once.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html">UnifyEnumerator</a>&lt;T&gt;</div>
+    <div class="level1"><a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html">UnifyEnumeratorBase</a>&lt;T&gt;</div>
     <div class="level2"><span class="xref">UnifyRandomEnumerator&lt;T&gt;</span></div>
   </div>
   <div classs="implements">
@@ -79,113 +78,118 @@
     <div><a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator</a>&lt;T&gt;</div>
     <div><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;T&gt;</div>
     <div><a class="xref" href="Unify.Collections.IUnifyEnumerator.html">IUnifyEnumerator</a></div>
-    <div><a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html">IUnifyEnumerableRange</a></div>
     <div><span class="xref">System.Collections.IEnumerator</span></div>
     <div><span class="xref">System.IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_startIndex">UnifyEnumerator&lt;T&gt;.startIndex</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_parent">UnifyEnumeratorBase&lt;T&gt;.parent</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_endIndex">UnifyEnumerator&lt;T&gt;.endIndex</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_historyStack">UnifyEnumeratorBase&lt;T&gt;.historyStack</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_step">UnifyEnumerator&lt;T&gt;.step</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_currentLoopCount">UnifyEnumeratorBase&lt;T&gt;.currentLoopCount</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_loopCount">UnifyEnumerator&lt;T&gt;.loopCount</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_cursorDirection">UnifyEnumeratorBase&lt;T&gt;.cursorDirection</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent">UnifyEnumerator&lt;T&gt;.parent</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_firstRun">UnifyEnumeratorBase&lt;T&gt;.firstRun</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_rewindStack">UnifyEnumerator&lt;T&gt;.rewindStack</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_resetPending">UnifyEnumeratorBase&lt;T&gt;.resetPending</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_currentIndex">UnifyEnumerator&lt;T&gt;.currentIndex</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_disposed">UnifyEnumeratorBase&lt;T&gt;.disposed</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_currentLoopCount">UnifyEnumerator&lt;T&gt;.currentLoopCount</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_items">UnifyEnumeratorBase&lt;T&gt;.items</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_cursorDirection">UnifyEnumerator&lt;T&gt;.cursorDirection</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_Current">UnifyEnumeratorBase&lt;T&gt;.Current</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_firstRun">UnifyEnumerator&lt;T&gt;.firstRun</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_Invalidated">UnifyEnumeratorBase&lt;T&gt;.Invalidated</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_resetPending">UnifyEnumerator&lt;T&gt;.resetPending</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_ResetFailed">UnifyEnumeratorBase&lt;T&gt;.ResetFailed</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_disposed">UnifyEnumerator&lt;T&gt;.disposed</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_PassComplete">UnifyEnumeratorBase&lt;T&gt;.PassComplete</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_Current">UnifyEnumerator&lt;T&gt;.Current</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_Finished">UnifyEnumeratorBase&lt;T&gt;.Finished</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_PassComplete">UnifyEnumerator&lt;T&gt;.PassComplete</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_startIndex">UnifyEnumeratorBase&lt;T&gt;.startIndex</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_Finished">UnifyEnumerator&lt;T&gt;.Finished</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_endIndex">UnifyEnumeratorBase&lt;T&gt;.endIndex</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_Invalidated">UnifyEnumerator&lt;T&gt;.Invalidated</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_step">UnifyEnumeratorBase&lt;T&gt;.step</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_isValid">UnifyEnumerator&lt;T&gt;.isValid</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_loopCount">UnifyEnumeratorBase&lt;T&gt;.loopCount</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_maxRewindItems">UnifyEnumerator&lt;T&gt;.maxRewindItems</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_locked">UnifyEnumeratorBase&lt;T&gt;.locked</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_invalidatedAction">UnifyEnumerator&lt;T&gt;.invalidatedAction</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_isValid">UnifyEnumeratorBase&lt;T&gt;.isValid</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_System_Collections_IEnumerator_Current">UnifyEnumerator&lt;T&gt;.IEnumerator.Current</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_System_Collections_IEnumerator_Current">UnifyEnumeratorBase&lt;T&gt;.IEnumerator.Current</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_Reset">UnifyEnumerator&lt;T&gt;.Reset()</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_Reset">UnifyEnumeratorBase&lt;T&gt;.Reset()</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_Dispose">UnifyEnumerator&lt;T&gt;.Dispose()</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_Dispose">UnifyEnumeratorBase&lt;T&gt;.Dispose()</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_Dispose_System_Boolean_">UnifyEnumerator&lt;T&gt;.Dispose(Boolean)</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_Dispose_System_Boolean_">UnifyEnumeratorBase&lt;T&gt;.Dispose(Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_ClearHistoryStack">UnifyEnumerator&lt;T&gt;.ClearHistoryStack()</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_ClearHistoryStack">UnifyEnumeratorBase&lt;T&gt;.ClearHistoryStack()</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_GetCurrentIndex">UnifyEnumerator&lt;T&gt;.GetCurrentIndex()</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_GetCurrentIndex">UnifyEnumeratorBase&lt;T&gt;.GetCurrentIndex()</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_Push__0_">UnifyEnumerator&lt;T&gt;.Push(T)</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_GetCurrent">UnifyEnumeratorBase&lt;T&gt;.GetCurrent()</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnFinished">UnifyEnumerator&lt;T&gt;.OnFinished()</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsInRange_System_Int32_">UnifyEnumeratorBase&lt;T&gt;.IndexIsInRange(Int32)</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnPassComplete">UnifyEnumerator&lt;T&gt;.OnPassComplete()</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsInRange_System_Int32_System_Int32_System_Int32_">UnifyEnumeratorBase&lt;T&gt;.IndexIsInRange(Int32, Int32, Int32)</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_OnInvalidated">UnifyEnumerator&lt;T&gt;.OnInvalidated()</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsValid_System_Int32_">UnifyEnumeratorBase&lt;T&gt;.IndexIsValid(Int32)</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_System_Object_Unify_Collections_Generic_UnifyCollectionChangedEventArgs__0__">UnifyEnumerator&lt;T&gt;.parent_CollectionChanged(Object, UnifyCollectionChangedEventArgs&lt;T&gt;)</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_MovePrevious">UnifyEnumeratorBase&lt;T&gt;.MovePrevious()</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Add_System_Int32_">UnifyEnumerator&lt;T&gt;.parent_CollectionChanged_Add(Int32)</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_Push__0_System_Int32_System_Int32_">UnifyEnumeratorBase&lt;T&gt;.Push(T, Int32, Int32)</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Clear">UnifyEnumerator&lt;T&gt;.parent_CollectionChanged_Clear()</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_Push_Unify_Collections_Generic_UnifyEnumeratorBase__0__UnifyEnumeratorFrame_">UnifyEnumeratorBase&lt;T&gt;.Push(UnifyEnumeratorBase.UnifyEnumeratorFrame&lt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Insert_System_Int32_">UnifyEnumerator&lt;T&gt;.parent_CollectionChanged_Insert(Int32)</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_OnInvalidated">UnifyEnumeratorBase&lt;T&gt;.OnInvalidated()</a>
     </div>
     <div>
-      <a class="xref" href="Unify.Collections.Generic.UnifyEnumerator-1.html#Unify_Collections_Generic_UnifyEnumerator_1_parent_CollectionChanged_Remove_System_Int32_">UnifyEnumerator&lt;T&gt;.parent_CollectionChanged_Remove(Int32)</a>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_OnResetFailed">UnifyEnumeratorBase&lt;T&gt;.OnResetFailed()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_OnPassComplete">UnifyEnumeratorBase&lt;T&gt;.OnPassComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_OnFinished">UnifyEnumeratorBase&lt;T&gt;.OnFinished()</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -213,7 +217,7 @@
   <h6><strong>Assembly</strong>: Unify.Collections.dll</h6>
   <h5 id="Unify_Collections_Generic_UnifyRandomEnumerator_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class UnifyRandomEnumerator&lt;T&gt; : UnifyEnumerator&lt;T&gt;, IUnifyEnumerator&lt;T&gt;, IEnumerator&lt;T&gt;, IUnifyEnumerator, IUnifyEnumerableRange, IEnumerator, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class UnifyRandomEnumerator&lt;T&gt; : UnifyEnumeratorBase&lt;T&gt;, IUnifyEnumerator&lt;T&gt;, IEnumerator&lt;T&gt;, IUnifyEnumerator, IEnumerator, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,8 +230,7 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The object type that the generic Unify Collection holds.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -235,8 +238,7 @@
   </h3>
   <a id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor*"></a>
   <h4 id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_System_Collections_Generic_IEnumerable__0__" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor(System.Collections.Generic.IEnumerable{`0})">UnifyRandomEnumerator(IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of a Unify Random Enumerator.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -255,14 +257,90 @@
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">items</span></td>
-        <td><p>The source collection to iterate over.</p>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_System_Collections_Generic_IEnumerable__0__System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32,System.Int32,System.Int32,System.Int32)">UnifyRandomEnumerator(IEnumerable&lt;T&gt;, Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of a UnifyForwardsEnumerator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyRandomEnumerator(IEnumerable&lt;T&gt; items, int startIndex = 2147483647, int endIndex = -2147483648, int step = 1, int loopCount = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The source collection to be enumerated.</p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">endIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">step</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">loopCount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_System_Collections_Generic_IEnumerable__0__Unify_Collections_UnifyEnumerableRange_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor(System.Collections.Generic.IEnumerable{`0},Unify.Collections.UnifyEnumerableRange)">UnifyRandomEnumerator(IEnumerable&lt;T&gt;, UnifyEnumerableRange)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyRandomEnumerator(IEnumerable&lt;T&gt; items, UnifyEnumerableRange range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a></td>
+        <td><span class="parametername">range</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor*"></a>
   <h4 id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_System_Collections_IEnumerable_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor(System.Collections.IEnumerable)">UnifyRandomEnumerator(IEnumerable)</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of a Unify Random Enumerator.</p>
+  <div class="markdown level1 summary"><p>Creates a new instance of a UnifyForwardsEnumerator.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -282,15 +360,89 @@
       <tr>
         <td><span class="xref">System.Collections.IEnumerable</span></td>
         <td><span class="parametername">collection</span></td>
-        <td><p>The source collection to iterate over.</p>
+        <td><p>The source collection to be enumerated.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_System_Collections_IEnumerable_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor(System.Collections.IEnumerable,System.Int32,System.Int32,System.Int32,System.Int32)">UnifyRandomEnumerator(IEnumerable, Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyRandomEnumerator(IEnumerable collection, int startIndex = 2147483647, int endIndex = -2147483648, int step = 1, int loopCount = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerable</span></td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">endIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">step</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">loopCount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_System_Collections_IEnumerable_Unify_Collections_UnifyEnumerableRange_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor(System.Collections.IEnumerable,Unify.Collections.UnifyEnumerableRange)">UnifyRandomEnumerator(IEnumerable, UnifyEnumerableRange)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyRandomEnumerator(IEnumerable collection, UnifyEnumerableRange range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerable</span></td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a></td>
+        <td><span class="parametername">range</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor*"></a>
   <h4 id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_Unify_Collections_Generic_IUnifyList__0__" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor(Unify.Collections.Generic.IUnifyList{`0})">UnifyRandomEnumerator(IUnifyList&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of a Unify Random Enumerator.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -309,8 +461,87 @@
       <tr>
         <td><a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList</a>&lt;T&gt;</td>
         <td><span class="parametername">parent</span></td>
-        <td><p>The source collection to iterate over.</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_Unify_Collections_Generic_IUnifyList__0__System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor(Unify.Collections.Generic.IUnifyList{`0},System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">UnifyRandomEnumerator(IUnifyList&lt;T&gt;, Int32, Int32, Int32, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyRandomEnumerator(IUnifyList&lt;T&gt; parent, int startIndex = 2147483647, int endIndex = -2147483648, int step = 1, int loopCount = 1, bool locked = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList</a>&lt;T&gt;</td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">endIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">step</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">loopCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">locked</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor*"></a>
+  <h4 id="Unify_Collections_Generic_UnifyRandomEnumerator_1__ctor_Unify_Collections_Generic_IUnifyList__0__Unify_Collections_UnifyEnumerableRange_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.#ctor(Unify.Collections.Generic.IUnifyList{`0},Unify.Collections.UnifyEnumerableRange)">UnifyRandomEnumerator(IUnifyList&lt;T&gt;, UnifyEnumerableRange)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnifyRandomEnumerator(IUnifyList&lt;T&gt; parent, UnifyEnumerableRange range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.Generic.IUnifyList-1.html">IUnifyList</a>&lt;T&gt;</td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unify.Collections.UnifyEnumerableRange.html">UnifyEnumerableRange</a></td>
+        <td><span class="parametername">range</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -318,19 +549,17 @@
   </h3>
   <a id="Unify_Collections_Generic_UnifyRandomEnumerator_1_Init_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.Init*"></a>
   <h4 id="Unify_Collections_Generic_UnifyRandomEnumerator_1_Init" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.Init">Init()</h4>
-  <div class="markdown level1 summary"><p>INTERNAL USE. Initialise the enumerator when first run.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void Init()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Unify.Collections.Generic.UnifyEnumerator&lt;T&gt;.Init()</span></div>
+  <div><span class="xref">Unify.Collections.Generic.UnifyEnumeratorBase&lt;T&gt;.Init()</span></div>
   <a id="Unify_Collections_Generic_UnifyRandomEnumerator_1_MoveNext_" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.MoveNext*"></a>
   <h4 id="Unify_Collections_Generic_UnifyRandomEnumerator_1_MoveNext" data-uid="Unify.Collections.Generic.UnifyRandomEnumerator`1.MoveNext">MoveNext()</h4>
-  <div class="markdown level1 summary"><p>Get the next item in the collection.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -347,13 +576,12 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if the enumerator can be moved to the next element, otherwise false if the enumerator has finished.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Unify.Collections.Generic.UnifyEnumerator&lt;T&gt;.MoveNext()</span></div>
+  <div><span class="xref">Unify.Collections.Generic.UnifyEnumeratorBase&lt;T&gt;.MoveNext()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Unify.Collections.Generic.IUnifyEnumerator-1.html">IUnifyEnumerator&lt;T&gt;</a>
@@ -363,9 +591,6 @@
   </div>
   <div>
       <a class="xref" href="Unify.Collections.IUnifyEnumerator.html">IUnifyEnumerator</a>
-  </div>
-  <div>
-      <a class="xref" href="Unify.Collections.IUnifyEnumerableRange.html">IUnifyEnumerableRange</a>
   </div>
   <div>
       <span class="xref">System.Collections.IEnumerator</span>
