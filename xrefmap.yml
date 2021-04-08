@@ -19,6 +19,9 @@ references:
 - uid: DelayedStart
   name: Delayed Start of a Unify Coroutine
   href: 0.1.x/userguide/Unify.Coroutines/DelayedStart.html
+- uid: EnumeratorEvents
+  name: Unify Enumerator Events
+  href: 0.1.x/userguide/Unify.Enumerators/Events.html
 - uid: FlatteningAnIEnumerableType
   name: Flattening an IEnumerable Type
   href: 0.1.x/userguide/Unify.Collections/FlatteningAnIEnumerableType.html
@@ -647,31 +650,6 @@ references:
   fullName.vb: Unify.Collections.Generic.UnifyEnumeratorBase(Of T).historyStack
   nameWithType: UnifyEnumeratorBase<T>.historyStack
   nameWithType.vb: UnifyEnumeratorBase(Of T).historyStack
-- uid: Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsInRange(System.Int32)
-  name: IndexIsInRange(Int32)
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsInRange_System_Int32_
-  commentId: M:Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsInRange(System.Int32)
-  fullName: Unify.Collections.Generic.UnifyEnumeratorBase<T>.IndexIsInRange(System.Int32)
-  fullName.vb: Unify.Collections.Generic.UnifyEnumeratorBase(Of T).IndexIsInRange(System.Int32)
-  nameWithType: UnifyEnumeratorBase<T>.IndexIsInRange(Int32)
-  nameWithType.vb: UnifyEnumeratorBase(Of T).IndexIsInRange(Int32)
-- uid: Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsInRange(System.Int32,System.Int32,System.Int32)
-  name: IndexIsInRange(Int32, Int32, Int32)
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsInRange_System_Int32_System_Int32_System_Int32_
-  commentId: M:Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsInRange(System.Int32,System.Int32,System.Int32)
-  fullName: Unify.Collections.Generic.UnifyEnumeratorBase<T>.IndexIsInRange(System.Int32, System.Int32, System.Int32)
-  fullName.vb: Unify.Collections.Generic.UnifyEnumeratorBase(Of T).IndexIsInRange(System.Int32, System.Int32, System.Int32)
-  nameWithType: UnifyEnumeratorBase<T>.IndexIsInRange(Int32, Int32, Int32)
-  nameWithType.vb: UnifyEnumeratorBase(Of T).IndexIsInRange(Int32, Int32, Int32)
-- uid: Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsInRange*
-  name: IndexIsInRange
-  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsInRange_
-  commentId: Overload:Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsInRange
-  isSpec: "True"
-  fullName: Unify.Collections.Generic.UnifyEnumeratorBase<T>.IndexIsInRange
-  fullName.vb: Unify.Collections.Generic.UnifyEnumeratorBase(Of T).IndexIsInRange
-  nameWithType: UnifyEnumeratorBase<T>.IndexIsInRange
-  nameWithType.vb: UnifyEnumeratorBase(Of T).IndexIsInRange
 - uid: Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsValid(System.Int32)
   name: IndexIsValid(Int32)
   href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsValid_System_Int32_
@@ -680,6 +658,14 @@ references:
   fullName.vb: Unify.Collections.Generic.UnifyEnumeratorBase(Of T).IndexIsValid(System.Int32)
   nameWithType: UnifyEnumeratorBase<T>.IndexIsValid(Int32)
   nameWithType.vb: UnifyEnumeratorBase(Of T).IndexIsValid(Int32)
+- uid: Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsValid(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: IndexIsValid(Int32, Int32, Int32, Int32)
+  href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsValid_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsValid(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: Unify.Collections.Generic.UnifyEnumeratorBase<T>.IndexIsValid(System.Int32, System.Int32, System.Int32, System.Int32)
+  fullName.vb: Unify.Collections.Generic.UnifyEnumeratorBase(Of T).IndexIsValid(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: UnifyEnumeratorBase<T>.IndexIsValid(Int32, Int32, Int32, Int32)
+  nameWithType.vb: UnifyEnumeratorBase(Of T).IndexIsValid(Int32, Int32, Int32, Int32)
 - uid: Unify.Collections.Generic.UnifyEnumeratorBase`1.IndexIsValid*
   name: IndexIsValid
   href: 0.1.x/api/Unify.Collections.Generic.UnifyEnumeratorBase-1.html#Unify_Collections_Generic_UnifyEnumeratorBase_1_IndexIsValid_
@@ -2368,12 +2354,6 @@ references:
   commentId: M:Unify.Collections.UnifyEnumerableRange.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)
   fullName: Unify.Collections.UnifyEnumerableRange.UnifyEnumerableRange(System.Int32, System.Int32, System.Int32, System.Int32, System.Boolean)
   nameWithType: UnifyEnumerableRange.UnifyEnumerableRange(Int32, Int32, Int32, Int32, Boolean)
-- uid: Unify.Collections.UnifyEnumerableRange.#ctor(Unify.Collections.UnifyEnumerableRange)
-  name: UnifyEnumerableRange(UnifyEnumerableRange)
-  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange__ctor_Unify_Collections_UnifyEnumerableRange_
-  commentId: M:Unify.Collections.UnifyEnumerableRange.#ctor(Unify.Collections.UnifyEnumerableRange)
-  fullName: Unify.Collections.UnifyEnumerableRange.UnifyEnumerableRange(Unify.Collections.UnifyEnumerableRange)
-  nameWithType: UnifyEnumerableRange.UnifyEnumerableRange(UnifyEnumerableRange)
 - uid: Unify.Collections.UnifyEnumerableRange.#ctor*
   name: UnifyEnumerableRange
   href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange__ctor_
@@ -2381,12 +2361,18 @@ references:
   isSpec: "True"
   fullName: Unify.Collections.UnifyEnumerableRange.UnifyEnumerableRange
   nameWithType: UnifyEnumerableRange.UnifyEnumerableRange
-- uid: Unify.Collections.UnifyEnumerableRange.DefaultEndIndex
-  name: DefaultEndIndex
-  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultEndIndex
-  commentId: F:Unify.Collections.UnifyEnumerableRange.DefaultEndIndex
-  fullName: Unify.Collections.UnifyEnumerableRange.DefaultEndIndex
-  nameWithType: UnifyEnumerableRange.DefaultEndIndex
+- uid: Unify.Collections.UnifyEnumerableRange.AlwaysFirstItem
+  name: AlwaysFirstItem
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_AlwaysFirstItem
+  commentId: F:Unify.Collections.UnifyEnumerableRange.AlwaysFirstItem
+  fullName: Unify.Collections.UnifyEnumerableRange.AlwaysFirstItem
+  nameWithType: UnifyEnumerableRange.AlwaysFirstItem
+- uid: Unify.Collections.UnifyEnumerableRange.AlwaysLastItem
+  name: AlwaysLastItem
+  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_AlwaysLastItem
+  commentId: F:Unify.Collections.UnifyEnumerableRange.AlwaysLastItem
+  fullName: Unify.Collections.UnifyEnumerableRange.AlwaysLastItem
+  nameWithType: UnifyEnumerableRange.AlwaysLastItem
 - uid: Unify.Collections.UnifyEnumerableRange.DefaultLocked
   name: DefaultLocked
   href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultLocked
@@ -2399,12 +2385,6 @@ references:
   commentId: F:Unify.Collections.UnifyEnumerableRange.DefaultLoopCount
   fullName: Unify.Collections.UnifyEnumerableRange.DefaultLoopCount
   nameWithType: UnifyEnumerableRange.DefaultLoopCount
-- uid: Unify.Collections.UnifyEnumerableRange.DefaultStartIndex
-  name: DefaultStartIndex
-  href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultStartIndex
-  commentId: F:Unify.Collections.UnifyEnumerableRange.DefaultStartIndex
-  fullName: Unify.Collections.UnifyEnumerableRange.DefaultStartIndex
-  nameWithType: UnifyEnumerableRange.DefaultStartIndex
 - uid: Unify.Collections.UnifyEnumerableRange.DefaultStep
   name: DefaultStep
   href: 0.1.x/api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultStep

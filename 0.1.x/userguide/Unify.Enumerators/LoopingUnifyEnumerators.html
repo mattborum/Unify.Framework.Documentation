@@ -63,14 +63,17 @@
 
 <p><sup><font color="grey">Namespace: Unify.Collections, Unify.Collections.Generic</font></sup><br>
 <sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
-<p>Unify Enumerators provide a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property to specify how many times an enumeration should be repeated. The default setting for <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> is <strong>1</strong>.</p>
+<p>Unify Enumerators provide a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property to specify how many times an enumeration should be repeated. The value of the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property should be a value <strong>greater than zero</strong>; the default value is 1.</p>
 <h2 id="example">Example</h2>
-<p>This example demonstrates each of the Unify Enumerator types, with a generic type <strong>T</strong> of string, to iterate over a list containing the colours of the rainbow; <strong>&quot;Red&quot;</strong>, <strong>&quot;Orange&quot;</strong>, <strong>&quot;Yellow&quot;</strong>, <strong>&quot;Green&quot;</strong>, <strong>&quot;Blue&quot;</strong>, <strong>&quot;Indigo&quot;</strong> and <strong>&quot;Violet&quot;</strong>. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property is set to <strong>2</strong> to repeat the enumeration twice. To demonstrate when Unify Enumerator events are triggered, the <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_PassComplete"><strong>PassComplete</strong></a> and <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_Finished"><strong>Finished</strong></a> events are used to print a message to the Unity Console.  The example demonstrates two different ways of subscribing to events; event handler method and lambda expression.  The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property is initialised directly and also by using <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer" target="_blank"><strong>object initialiser syntax</strong></a>.</p>
-<p>EventHandler</p>
+<p>This example demonstrates each of the three built-in Unify Enumerator types; <a class="xref" href="../../api/Unify.Collections.Generic.UnifyEnumerator-1.html"><strong>UnifyEnumerator&lt;T&gt;</strong></a>, <a class="xref" href="../../api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html"><strong>YoYo&lt;T&gt;</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>Random&lt;T&gt;</strong></a>, with a generic type <strong>T</strong> of string, to iterate over a list containing the colours of the rainbow; <strong>&quot;Red&quot;</strong>, <strong>&quot;Orange&quot;</strong>, <strong>&quot;Yellow&quot;</strong>, <strong>&quot;Green&quot;</strong>, <strong>&quot;Blue&quot;</strong>, <strong>&quot;Indigo&quot;</strong> and <strong>&quot;Violet&quot;</strong>.</p>
+<p>The standard <a class="xref" href="../../api/Unify.Collections.Generic.UnifyEnumerator-1.html"><strong>UnifyEnumerator</strong></a> is used to iterate over the whole collection; this gives an single pass of the enumeration as; <strong>&quot;Red&quot;</strong>, <strong>&quot;Orange&quot;</strong>, <strong>&quot;Yellow&quot;</strong>, <strong>&quot;Green&quot;</strong>, <strong>&quot;Blue&quot;</strong>, <strong>&quot;Indigo&quot;</strong>, <strong>&quot;Violet&quot;</strong>. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property is set to a value of <strong>2</strong>.</p>
+<p>The standard <a class="xref" href="../../api/Unify.Collections.Generic.UnifyEnumerator-1.html"><strong>UnifyEnumerator</strong></a> is used again to iterate backwards over the collection with Enumerable Range values of <strong>5</strong> for the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> property and <strong>1</strong> for the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> property; this gives a single pass of the enumeration as; <strong>&quot;Indigo&quot;</strong>, <strong>&quot;Blue&quot;</strong>, <strong>&quot;Green&quot;</strong>, <strong>&quot;Yellow&quot;</strong>, <strong>&quot;Orange&quot;</strong>. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property is set to a value <strong>2</strong>.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html"><strong>UnifyYoYoEnumerator</strong></a> is used to iterate in a reverse <em>yo-yo</em> fashion over an Enumerable Range defined by a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> value of <strong>3</strong> and an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> value of <strong>0</strong>; this gives a single pass of the enumeration as; <strong>&quot;Green&quot;</strong>, <strong>&quot;Yellow&quot;</strong>, <strong>&quot;Orange&quot;</strong>, <strong>&quot;Red&quot;</strong>, <strong>&quot;Orange&quot;</strong>, <strong>&quot;Yellow&quot;</strong>, <strong>&quot;Green&quot;</strong>. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property is set to a value of <strong>2</strong>.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>UnifyRandomEnumerator</strong></a> is used with Enumerable Range values of <strong>1</strong> for the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> property and <strong>5</strong> for the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> property; this gives a single pass of the enumeration as a randomised list of the items; <strong>&quot;Orange&quot;</strong>, <strong>&quot;Yellow&quot;</strong>, <strong>&quot;Green&quot;</strong>, <strong>&quot;Blue&quot;</strong>, <strong>&quot;Indigo&quot;</strong>. The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property is set to <strong>3</strong>.</p>
 <p>Attach the script below to a GameObject and press:</p>
 <ul>
-<li><strong>F</strong> to Start the Forwards Enumerator</li>
-<li><strong>B</strong> to Start the Backwards Enumerator</li>
+<li><strong>S</strong> to Start the Standard Enumerator</li>
+<li><strong>B</strong> to Start the Standard Enumerator Backwards</li>
 <li><strong>Y</strong> to Start the Yo-Yo Enumerator</li>
 <li><strong>R</strong> to Start the Random Enumerator</li>
 <li><strong>X</strong> to Reset all Enumerators</li>
@@ -83,8 +86,8 @@ using UnityEngine;
 public class Enumerators_LoopingUnifyEnumerators : MonoBehaviour
 {
     private IList&lt;string&gt; list;
-    private IUnifyEnumerator&lt;string&gt; forwards;
-    private IUnifyEnumerator&lt;string&gt; backwards;
+    private IUnifyEnumerator&lt;string&gt; standardForwards;
+    private IUnifyEnumerator&lt;string&gt; standardBackwards;
     private IUnifyEnumerator&lt;string&gt; yoyo;
     private IUnifyEnumerator&lt;string&gt; random;
 
@@ -92,45 +95,36 @@ public class Enumerators_LoopingUnifyEnumerators : MonoBehaviour
     {
         list = new List&lt;string&gt; { &quot;Red&quot;, &quot;Orange&quot;, &quot;Yellow&quot;, &quot;Green&quot;, &quot;Blue&quot;, &quot;Indigo&quot;, &quot;Violet&quot; };
 
-        forwards = new UnifyForwardsEnumerator&lt;string&gt;(list);
-        forwards.loopCount = 2;
-        forwards.PassComplete += (s, e) =&gt; { print(&quot;*** Forwards Enumerator Pass Complete ***&quot;); };
-        forwards.Finished += (s, e) =&gt; { print(&quot;*** Finished ***&quot;); };
+        standardForwards = new UnifyEnumerator&lt;string&gt;(list, loopCount: 2);
+        standardBackwards = new UnifyEnumerator&lt;string&gt;(list, startIndex: 5, endIndex: 1, loopCount: 2);
+        yoyo = new UnifyYoYoEnumerator&lt;string&gt;(list, startIndex: 3, endIndex: 0, loopCount: 2);
+        random = new UnifyRandomEnumerator&lt;string&gt;(list, startIndex: 1, endIndex: 5, loopCount: 3);
 
-        backwards = new UnifyBackwardsEnumerator&lt;string&gt;(list);
-        backwards.loopCount = 2;
-        backwards.PassComplete += (s, e) =&gt; { print(&quot;*** Backwards Enumerator Pass Complete ***&quot;); };
-        backwards.Finished += (s, e) =&gt; { print(&quot;*** Finished ***&quot;); };
-
-        yoyo = new UnifyYoYoEnumerator&lt;string&gt;(list) { loopCount = 2 };
-        yoyo.PassComplete += PassCompleteEventHandler;
-        yoyo.Finished += FinishedEventHandler;
-
-        random = new UnifyRandomEnumerator&lt;string&gt;(list) { loopCount = 2 };
-        random.PassComplete += PassCompleteEventHandler;
-        random.Finished += FinishedEventHandler;
-
-        print(&quot;press F for FORWARDS, B for BACKWARDS, Y for YO-YO, R for RANDOM, X to RESET ALL ENUMERATORS&quot;);
+        PrintKeys();
     }
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.F))
+        if (Input.GetKeyUp(KeyCode.S))
         {
-            print(&quot;--- Forwards Enumerator ---&quot;);
-            while (forwards.MoveNext())
+            print(&quot;--- Standard Enumerator ---&quot;);
+            while (standardForwards.MoveNext())
             {
-                print(forwards.Current);
+                print(standardForwards.Current);
             }
+            print(Environment.NewLine);
+            PrintKeys();
         }
 
         if (Input.GetKeyUp(KeyCode.B))
         {
             print(&quot;--- Backwards Enumerator ---&quot;);
-            while (backwards.MoveNext())
+            while (standardBackwards.MoveNext())
             {
-                print(backwards.Current);
+                print(standardBackwards.Current);
             }
+            print(Environment.NewLine);
+            PrintKeys();
         }
 
         if (Input.GetKeyUp(KeyCode.Y))
@@ -140,6 +134,8 @@ public class Enumerators_LoopingUnifyEnumerators : MonoBehaviour
             {
                 print(yoyo.Current);
             }
+            print(Environment.NewLine);
+            PrintKeys();
         }
 
         if (Input.GetKeyUp(KeyCode.R))
@@ -149,33 +145,31 @@ public class Enumerators_LoopingUnifyEnumerators : MonoBehaviour
             {
                 print(random.Current);
             }
+            print(Environment.NewLine);
+            PrintKeys();
         }
 
         if (Input.GetKeyUp(KeyCode.X))
         {
             print(&quot;--- Resetting Enumerators ---&quot;);
-            forwards.Reset();
-            backwards.Reset();
+            standardForwards.Reset();
+            standardBackwards.Reset();
             yoyo.Reset();
             random.Reset();
+            PrintKeys();
         }
     }
 
-    private void PassCompleteEventHandler(object sender, EventArgs e)
+    private void PrintKeys()
     {
-        print(&quot;--- Pass Complete ---&quot;);
-    }
-
-    private void FinishedEventHandler(object sender, EventArgs e)
-    {
-        print(&quot;--- Finished ---&quot;);
+        print(&quot;press S for STANDARD, B for BACKWARDS, Y for YO-YO, R for RANDOM, X to RESET ALL ENUMERATORS&quot;);
     }
 }
 </code></pre>
 <h2 id="exceptions">Exceptions</h2>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
-<li>Setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property to a value of <strong>less than 0</strong> will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
+<li>Setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property to a value of <strong>less than 1</strong> will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
 </ul>
 </article>
           </div>

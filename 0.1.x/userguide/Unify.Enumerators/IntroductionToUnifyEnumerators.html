@@ -65,29 +65,88 @@
 <sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
 <p>This section provides examples to accompany the Unify API documentation on <a class="xref" href="../../api/Unify.Collections.html"><strong>Unify Enumerators</strong></a>.</p>
 <p>To get you up and running quickly, examples have been kept as simple as possible, using only the Unity Console.</p>
-<p>As well as having the basic functionality of iterating over a collection, Unify Enumerators also provide the following features:</p>
+<h2 id="unify-enumerator-types">Unify Enumerator types</h2>
+<p>Unify provides three types of enumerators out-of-the-box; <strong>Standard</strong>, <strong>Yo-Yo</strong> and <strong>Random</strong>, available through the following classes:</p>
 <ul>
-<li>Modification of the underlying collection is allowed</li>
-<li>Iterate over a partial collection</li>
-<li>Looping an iteration</li>
-<li>Stepping over items at a specified interval</li>
-<li>Iterating backwards</li>
-<li>A MovePrevious() method for fine-grained control</li>
-<li>Re-use through the Reset() method</li>
-</ul>
-<p>Unify Enumerators provide the following events:</p>
-<ul>
-<li><strong>PassComplete</strong> - triggered each time a looping Unify Enumerator successfully completes a pass while looping</li>
-<li><strong>Invalidated</strong> - triggered when a Unify Enumerator has no valid next item to move to</li>
-<li><strong>ResetFailed</strong> - triggered when a Unify Enumerator remains in an invalid state after calling Reset()</li>
-<li><strong>Finished</strong> - triggered when a Unify Enumerator successfully completes all passes of a loop</li>
-</ul>
-<p>Unify provides three types of enumerators out-of-the-box; <strong>Default</strong>, <strong>Yo-Yo</strong> and <strong>Random</strong>, available through the following classes:</p>
-<ul>
-<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyEnumerator-1.html"><strong>UnifyEnumerator&lt;T&gt;</strong></a></li>
+<li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyEnumerator-1.html"><strong>UnifyEnumerator&lt;T&gt;</strong></a> (Standard)</li>
 <li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html"><strong>UnifyYoYoEnumerator&lt;T&gt;</strong></a></li>
 <li><a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>UnifyRandomEnumerator&lt;T&gt;</strong></a></li>
 </ul>
+<p>See : <a class="xref" href="CreatingAndUsingUnifyEnumerators.html"><strong>Creating and Using Unify Enumerators</strong></a></p>
+<h2 id="features">Features</h2>
+<p>As well as having the basic functionality of iterating over a collection, Unify Enumerators also provide the following features:</p>
+<ul>
+<li>Allow modification of the underlying collection while iterating</li>
+<li>Iterate over a partial collection</li>
+<li>Loop an iteration</li>
+<li>Step over items at a specified interval</li>
+<li>A MovePrevious() method</li>
+<li>Re-use through the Reset() method</li>
+<li>Event System</li>
+</ul>
+<h2 id="controlling-the-behaviour-of-unify-enumertors">Controlling the behaviour of Unify Enumertors</h2>
+<p>The behaviour of a Unify Enumerator is controlled through Unify's <strong>Enumerable Range</strong> feature, which is implemented by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> class.  This class exposes the properties necessary to implement some of the features mentioned above, namely; specifying a range to iterate, looping the iteration, stepping over items while iterating and wheather the underlying collection should be <em>locked</em>.</p>
+<p>This behaviour is controlled via the following properties:</p>
+<h3 id="start-index">Start Index</h3>
+<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> property specifies the index from which the Unify Enumerator should start iterating over the underlying collection. This value is inclusive. The default value is specified by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_AlwaysFirstItem"><strong>UnifyEnumerableRange.AlwaysFirstItem</strong></a> constant; which is defined as always being the first item in the collection.</p>
+<h3 id="end-index">End Index</h3>
+<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> property specifies the index at which the Unify Enumerator should stop iterating over the underlying collction. This value is inclusive. The default value is specified by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_AlwaysLastItem"><strong>UnifyEnumerableRange.AlwaysLastItem</strong></a> constant; which is defined as always being the last item in the collection.</p>
+<h3 id="loop-count">Loop Count</h3>
+<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property specifies how many times the Unify Enumerator should enumerate over the underlying collection. The default value is <strong>1</strong>, specified by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultLoopCount"><strong>UnifyEnumerableRange.DefaultLoopCount</strong></a> constant.</p>
+<h3 id="step">Step</h3>
+<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> property specifies the interval at which the Unify Enumerator should move over the underlying collction, e.g. with a value of <strong>1</strong>, Unify will iterate over every item in the collection between the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> values; a value of <strong>2</strong> will iterate over every other item in the collection between the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> values. The default value is <strong>1</strong>, specified by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultStep"><strong>UnifyEnumerableRange.DefaultStep</strong></a> constant.</p>
+<h3 id="locked">Locked</h3>
+<p>When a Unify Enumerator is locked onto a collection, by setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_locked"><strong>locked</strong></a> property to <strong>true</strong>, a snapshot is taken of the items in the underlying collection that are covered by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a>, <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> values <strong>at the time the Unify Enumerator was created</strong>. Only those items in the snapshot will then be iterated, regardless of any subsequent changes made to the underlying collection. A Unify Enumerator will ignore items added or inserted to the underlying collection after it was created. However, they will not ignore items that are removed from the underlying collection, those items will be removed from the snapshot and not iterated over. The default value for <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_locked"><strong>locked</strong></a> is <strong>false</strong>, specified by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultLocked"><strong>UnifyEnumerableRange.DefaultLocked</strong></a> constant.</p>
+<h3 id="creating-a-unify-enumerable-range">Creating a Unify Enumerable Range</h3>
+<p>A <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> instance can be created by using the <code>new()</code> operator. The constructor accepts the parameters; <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a>, <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a>, <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a>, <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_locked"><strong>locked</strong></a>. All parameters are optional, default values are used for any parameter not specified. A <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> instance is mutable.</p>
+<p>Unify Enumerators provide two constructors to initialise Enumerable Range values; the first takes a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> instance, and the other takes each of the Enumerable Range properties as optional parameters. The following code snippet shows how to create a Unify Enumerator with an Enumerable Range, using each constructor:</p>
+<pre><code>IUnifyList&lt;string&gt; list = new UnifyList&lt;string&gt; { &quot;Hello,&quot;, &quot;Unify&quot;, &quot;World!&quot; };
+
+// Create an enumerable range with unnamed parameter values for startIndex, endIndex, step, loopCount and locked
+UnifyEnumerableRange range = new UnifyEnumerableRange(0, 4, 1, 2, false); 
+
+// A more readable method using named parameters
+UnifyEnumerableRange range = new UnifyEnumerableRange(startIndex: 0, endIndex: 3, step: 2, loopCount: 2, locked: true);
+
+// Not all parameters have to be specified
+UnifyEnumerableRange range = new UnifyEnumerableRange(endIndex: 4, loopCount: 2);
+
+// Object Initializer Syntax
+UnifyEnumerableRange range = new UnifyEnumerableRange() { startIndex = 8, endIndex = 1, step = 2 };
+
+// Create an enumerator using the specified enumerable range
+IUnifyEnumerator en = new UnifyEnumerator&lt;string&gt;(list, range);
+
+// Create an enumerator using unnamed parameters
+IUnifyEnumerator en = new UnifyEnumerator&lt;string&gt;(list, 3, 7, 2, 1, true);
+
+// Use named parameters for readability
+IUnifyEnumerator en = new UnifyEnumerator&lt;string&gt;(list, startIndex: 5, endIndex: 0, step: 2, loopCount: 2, locked: false);
+
+// Not all parameters have to be specified
+IUnifyEnumerator en = new UnifyEnumerator&lt;string&gt;(list, startIndex: 5, loopCount: 2, locked: true);
+</code></pre>
+<p>Although <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> instances are mutable, a Unify Enumerators Enumerable Range values are not; once a Unify Enumerator has Enumerable Range values set, they cannot be changed from the Unify Enumerator instance.</p>
+<h3 id="modifying-the-underlying-collection">Modifying the underlying collection</h3>
+<p>Unify Enumerators allow the underlying collection to be modified while iterating; items can be added, inserted or removed during the iteration process and Unify will adjust the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> property values on-the-fly.</p>
+<p>To use this functionality the underlying collection <strong>must</strong> implement either of Unify's <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html"><strong>IUnifyObservableCollection&lt;T&gt;</strong></a> or <a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html"><strong>IUnifyObservableCollection</strong></a> interface types; the <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a> class implements both of these interfaces.</p>
+<p>Unify will use the following rules when the underlying collection is modified during iteration:</p>
+<ul>
+<li>If an item is inserted before the current item position; the pointer will move to the right to maintain the current item position</li>
+<li>If an item is removed before the current item position; the pointer will move to the left to maintain the current item position</li>
+<li>If an item is inserted or removed after the current item position; the pointer remains unchanged</li>
+</ul>
+<p>The following animation shows how Unify Enumerators adjust their position as the underlying collection is modified.</p>
+<p><img src="../../../images/enumerableRange_anim.gif" alt="Enumerable Range Animation"></p>
+<h2 id="events">Events</h2>
+<p>Unify Enumerators provide the following events:</p>
+<ul>
+<li><a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_PassComplete"><strong>PassComplete</strong></a> - triggered each time a Unify Enumerator successfully completes each pass of a loop</li>
+<li><a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_Invalidated"><strong>Invalidated</strong></a> - triggered when a Unify Enumerator has no valid next or previous item to move to</li>
+<li><a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_ResetFailed"><strong>ResetFailed</strong></a> - triggered when a Unify Enumerator remains in an invalid state after calling Reset()</li>
+<li><a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_Finished"><strong>Finished</strong></a> - triggered when a Unify Enumerator successfully finishes</li>
+</ul>
+<p>See: <a class="xref" href="Events.html"><strong>Unify Enumerator Events</strong></a></p>
 <h2 id="exceptions">Exceptions</h2>
 <p>Unify will <strong>always</strong> throw an exception when trying to set properties or parameters to an invalid value. Specific details are provided in each relevant section.</p>
 </article>

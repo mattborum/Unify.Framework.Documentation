@@ -61,29 +61,33 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="unify-enumerable-range">Unify Enumerable Range</h1>
 
-<p>The functionality of Unify Enumerators is controlled through Unify's <strong>Enumerable Range</strong> feature, which is provided by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> class.</p>
+<p>The behaviour of Unify Enumerators is controlled through Unify's <strong>Enumerable Range</strong> feature, which is provided by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> class.</p>
 <p>This class provides the following properties:</p>
 <h2 id="start-index">Start Index</h2>
-<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> property specifies the index at which the Unify Enumerator should start iterating over the underlying collection. This value is inclusive.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> property specifies the index from which the Unify Enumerator should start iterating over the underlying collection. This value is inclusive and should be a value of <strong>zero or greater</strong>.</p>
 <h2 id="end-index">End Index</h2>
-<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> property specifies the index at which the Unify Enumerator should stop iterating over the underlying collction. This value is inclusive.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> property specifies the index from which the Unify Enumerator should stop iterating over the underlying collction. This value is inclusive and should be a value of <strong>zero or greater</strong>.</p>
 <h2 id="step">Step</h2>
-<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> property specifies the interval at which the Unify Enumerator will move over the underlying collction, e.g. with a value of <strong>1</strong>, Unify will iterate over every item in the collection between the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> values; a value of <strong>2</strong> will iterate over every other item in the collection between the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> values. The value of the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> property should always be an integer greater than <strong>0</strong>; the default value is <strong>1</strong>.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> property specifies the interval at which the Unify Enumerator should move over the underlying collction, e.g. with a value of <strong>1</strong>, Unify will iterate over every item in the collection between the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> values; a value of <strong>2</strong> will iterate over every other item in the collection between the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> values. The value of the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> property should always be a value <strong>greater than zero</strong>; the default value is <strong>1</strong>.</p>
 <h2 id="loop-count">Loop Count</h2>
-<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property specifies how many times the Unify Enumerator should iterate over the underlying colleciton. This value should be an integer greater than <strong>0</strong>; the default value is <strong>1</strong>.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property specifies how many times the Unify Enumerator should iterate over the underlying collection. This should be a value <strong>greater than zero</strong>; the default value is <strong>1</strong>.</p>
 <h2 id="locked">Locked</h2>
-<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_locked"><strong>locked</strong></a> property tells Unify Enumerators to <strong>only</strong> iterate over those items in the underlying collection that are between the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> values and covered by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> value, ignoring any items that are added to the collection after the Unify Enumerator has been created. Unify will not ignore items that are removed from the collection that are within the bounds of the Enumerable Range, these items will no longer be iterated over. The default value for the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_locked"><strong>locked</strong></a> property is <strong>false</strong>.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_locked"><strong>locked</strong></a> property tells Unify Enumerators to <strong>only</strong> iterate over those items in the underlying collection that are between the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> values inclusively, and covered by the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> value, ignoring any items that are added to the collection after the Unify Enumerator has been created. Unify will not ignore items that are removed from the collection that are within the bounds of these values, those items will no longer be iterated over. The default value is <strong>false</strong>.</p>
 <h2 id="using-start-index-and-end-index">Using Start Index and End Index</h2>
-<p>An enumerable range is defined by a start item and an end item; these values are initialised by their index position through the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> properties. As the underlying collection is modified the enumerable range will adjust so it is always defined by those items between, and including, the initial start and end items. If either of the start or end items are removed, the new start or end item will become the next item inside the range. When all items in the range have been removed the Unify Enumerator becomes invalid and cannot be used again.</p>
+<p>An enumerable range is defined by a start item and an end item; these values are initialised by their index position through the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> properties. As the underlying collection is modified the enumerable range will adjust so it is always defined by those items between, and including, the initial start and end items. If either of the start or end items are removed, the new start or end item will become the next item inside the range. When all items in the range have been removed the Unify Enumerator becomes invalid; the <a class="xref" href="../../api/Unify.Collections.IUnifyEnumerator.html#Unify_Collections_IUnifyEnumerator_Invalidated"><strong>Invalidated</strong></a> event is thrown and the enumerator cannot be used again.</p>
 <p>The following animation shows how Unify Enumerators adjust the enumerable range as the underlying collection is modified:</p>
 <p><img src="../../../images/enumerableRange_anim.gif" alt="Enumerable Range Animation"></p>
-<p>To specify an enumerable range that always starts or ends at the first or last item of a collection, regardless of any changes made, the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> class provides the constant values of  <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultStartIndex"><strong>DefaultStartIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_DefaultEndIndex"><strong>DefaultEndIndex</strong></a> to use as values for the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> properties.</p>
+<br>
+<p>To specify an enumerable range that always starts or ends at the first or last item of a collection, regardless of any changes made, the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html"><strong>UnifyEnumerableRange</strong></a> class provides the constants; <a href="xref:Unify.Collections.UnifyEnumerableRange.DefaultStartIndex"><strong>DefaultStartIndex</strong></a> and <a href="xref:Unify.Collections.UnifyEnumerableRange.DefaultEndIndex"><strong>DefaultEndIndex</strong></a>, to use as values for the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> and <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> properties to indicate this to the Unify Enumerator.</p>
 <h2 id="example">Example</h2>
-<p>This example demonstrates the four Unify Enumerator types, with a generic type <strong>T</strong> of string, to demonstrate iterating over an enumerable range. The example iterates over a list of fruits; <strong>&quot;Apple&quot;</strong>, <strong>&quot;Orange&quot;</strong>, <strong>&quot;Banana&quot;</strong>, <strong>&quot;Pear&quot;</strong>, <strong>&quot;Grape&quot;</strong>, <strong>&quot;Plum&quot;</strong>, <strong>&quot;Lemon&quot;</strong>, <strong>&quot;Lime&quot;</strong>, <strong>&quot;Cherry&quot;</strong> and <strong>&quot;Mango&quot;</strong>, with the enumerable range having a <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> of <strong>2</strong> and an <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> of <strong>8</strong>, which includes all items between, and including, <strong>&quot;Banana&quot;</strong> and <strong>&quot;Cherry&quot;</strong>.
-Attach the script below to a GameObject and press:</p>
+<p>This example demonstrates four ways to use the three Unify Enumerator types, each with a generic type <strong>T</strong> of string. Each Unify Enumerator iterates over a collection of fruits; <strong>&quot;Apple&quot;</strong>, <strong>&quot;Orange&quot;</strong>, <strong>&quot;Banana&quot;</strong>, <strong>&quot;Pear&quot;</strong>, <strong>&quot;Grape&quot;</strong>, <strong>&quot;Plum&quot;</strong>, <strong>&quot;Lemon&quot;</strong>, <strong>&quot;Lime&quot;</strong>, <strong>&quot;Cherry&quot;</strong> and <strong>&quot;Mango&quot;</strong>.</p>
+<p>The standard <a class="xref" href="../../api/Unify.Collections.Generic.UnifyEnumerator-1.html"><strong>UnifyEnumerator</strong></a> is used to iterate forwards over the collection, with an Enumerable Range <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> value of <strong>2</strong> and an Enumerable Range <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> value of <strong>9</strong>, which correspond to items; <strong>&quot;Banana&quot;</strong> and <strong>&quot;Mango&quot;</strong> repectively. The standard <a class="xref" href="../../api/Unify.Collections.Generic.UnifyEnumerator-1.html"><strong>UnifyEnumerator</strong></a> is also used to iterate backwards over the collection, with an Enumerable Range <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> value of <strong>5</strong> and an Enumerable Range <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> value of <strong>1</strong>, which correspond to items; <strong>&quot;Plum&quot;</strong> and <strong>&quot;Orange&quot;</strong> repectively.</p>
+<p>The <a class="xref" href="../../api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html"><strong>UnifyYoYoEnumerator</strong></a> is used to <em>yo-yo</em> over the collection, with an Enumerable Range <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> value of <strong>0</strong> and an Enumerable Range <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> value of <strong>8</strong>, which correspond to items; <strong>&quot;Apple&quot;</strong> and <strong>&quot;Cherry&quot;</strong> repectively. This Unify Enumerator moves from <strong>Apple</strong> to <strong>Cherry</strong> and back again to <strong>Apple</strong></p>
+<p>The <a class="xref" href="../../api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html"><strong>UnifyRandomEnumerator</strong></a> iterates randomly over the collection from an Enumerable Range <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> value of <strong>2</strong> and an Enumerable Range <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> value of <strong>7</strong>, which correspond to items; <strong>&quot;Banana&quot;</strong> and <strong>&quot;Lime&quot;</strong> repectively. Each item in a random enumeration is visited once, and only once.</p>
+<p>Attach the script below to a GameObject and press:</p>
 <ul>
-<li><strong>F</strong> to Start the Forwards Enumerator</li>
-<li><strong>B</strong> to Start the Backwards Enumerator</li>
+<li><strong>S</strong> to Start the Standard Unify Enumerator</li>
+<li><strong>B</strong> to Start the Standard Unify Enumerator Backwards</li>
 <li><strong>Y</strong> to Start the Yo-Yo Enumerator</li>
 <li><strong>R</strong> to Start the Random Enumerator</li>
 <li><strong>X</strong> to Reset all Enumerators</li>
@@ -95,7 +99,7 @@ using UnityEngine;
 public class Enumerators_SpecifyingAnEnumerableRange : MonoBehaviour
 {
     private IList&lt;string&gt; list;
-    private IUnifyEnumerator&lt;string&gt; forwards;
+    private IUnifyEnumerator&lt;string&gt; standard;
     private IUnifyEnumerator&lt;string&gt; backwards;
     private IUnifyEnumerator&lt;string&gt; yoyo;
     private IUnifyEnumerator&lt;string&gt; random;
@@ -104,30 +108,22 @@ public class Enumerators_SpecifyingAnEnumerableRange : MonoBehaviour
     {
         list = new List&lt;string&gt; { &quot;Apple&quot;, &quot;Orange&quot;, &quot;Banana&quot;, &quot;Pear&quot;, &quot;Grape&quot;, &quot;Plum&quot;, &quot;Lemon&quot;, &quot;Lime&quot;, &quot;Cherry&quot;, &quot;Mango&quot; };
 
-        forwards = new UnifyForwardsEnumerator&lt;string&gt;(list);
-        forwards.enumerableRange.startIndex = 2; // range starts at &quot;Banana&quot;
-        forwards.enumerableRange.endIndex = 8; // range ends at &quot;Cherry&quot;
+        standard = new UnifyEnumerator&lt;string&gt;(list, startIndex: 2, endIndex: 9); // range starts at &quot;Banana&quot; and ends at &quot;Mango&quot;
 
-        backwards = new UnifyBackwardsEnumerator&lt;string&gt;(list);
-        backwards.enumerableRange.startIndex = 2;
-        backwards.enumerableRange.endIndex = 8;
+        backwards = new UnifyEnumerator&lt;string&gt;(list, startIndex: 5, endIndex: 1); // range starts at &quot;Plum&quot; and ends at &quot;Orange&quot;
 
-        yoyo = new UnifyYoYoEnumerator&lt;string&gt;(list);
-        yoyo.enumerableRange.startIndex = 2;
-        yoyo.enumerableRange.endIndex = 8;
+        yoyo = new UnifyYoYoEnumerator&lt;string&gt;(list, startIndex: 0, endIndex: 8); // range starts at &quot;Apple&quot;, moves to &quot;Cherry&quot; and then back to &quot;Apple&quot;
 
-        random = new UnifyRandomEnumerator&lt;string&gt;(list);
-        random.enumerableRange.startIndex = 2;
-        random.enumerableRange.endIndex = 8
+        random = new UnifyRandomEnumerator&lt;string&gt;(list, startIndex: 2, endIndex: 7); // range starts at &quot;Banana&quot; and ends at &quot;Lime&quot;
 
-        print(&quot;press F for FORWARDS, B for BACKWARDS, Y for YO-YO, R for RANDOM, X to RESET ALL ENUMERATORS&quot;);
+        print(&quot;press S for STANDARD, B for BACKWARDS, Y for YO-YO, R for RANDOM, X to RESET ALL ENUMERATORS&quot;);
     }
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.F))
+        if (Input.GetKeyUp(KeyCode.S))
         {
-            RunForwards();
+            RunStandard();
         }
 
         if (Input.GetKeyUp(KeyCode.B))
@@ -151,12 +147,12 @@ public class Enumerators_SpecifyingAnEnumerableRange : MonoBehaviour
         }
     }
 
-    private void RunForwards()
+    private void RunStandard()
     {
-        print(&quot;--- Forwards Enumerator ---&quot;);
-        while (forwards.MoveNext())
+        print(&quot;--- Standard Enumerator ---&quot;);
+        while (standard.MoveNext())
         {
-            print(forwards.Current);
+            print(standard.Current);
         }
     }
 
@@ -171,7 +167,7 @@ public class Enumerators_SpecifyingAnEnumerableRange : MonoBehaviour
 
     private void RunYoYo()
     {
-        print(&quot;--- Yo-Yo Enumerator ---&quot;);
+        print(&quot;--- YoYo Enumerator ---&quot;);
         while (yoyo.MoveNext())
         {
             print(yoyo.Current);
@@ -190,7 +186,7 @@ public class Enumerators_SpecifyingAnEnumerableRange : MonoBehaviour
     private void ResetAll()
     {
         print(&quot;--- Resetting Enumerators ---&quot;);
-        forwards.Reset();
+        standard.Reset();
         backwards.Reset();
         yoyo.Reset();
         random.Reset();
@@ -200,8 +196,10 @@ public class Enumerators_SpecifyingAnEnumerableRange : MonoBehaviour
 <h2 id="exceptions">Exceptions</h2>
 <p>Exceptions will <strong>always</strong> be thrown under the following circumstances:</p>
 <ul>
-<li>Setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> property to a value of <strong>less than -1</strong> will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
-<li>Setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> property to a value of <strong>less than -1</strong> will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
+<li>Setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_startIndex"><strong>startIndex</strong></a> property to a value of <strong>less than 0</strong> will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
+<li>Setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_endIndex"><strong>endIndex</strong></a> property to a value of <strong>less than 0</strong> will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
+<li>Setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_step"><strong>step</strong></a> property to a value of <strong>less than 1</strong> will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
+<li>Setting the <a class="xref" href="../../api/Unify.Collections.UnifyEnumerableRange.html#Unify_Collections_UnifyEnumerableRange_loopCount"><strong>loopCount</strong></a> property to a value of <strong>less than 1</strong> will throw an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception" target="_blank"><strong>ArgumentOutOfRangeException</strong></a></li>
 </ul>
 <h2 id="see-also">See Also</h2>
 <ul>

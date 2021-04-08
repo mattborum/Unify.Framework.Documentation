@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyEnumerator-1.html",
-          "hash": "qY6nkRLnQEWkwG5c9B+mrw=="
+          "hash": "cMIDgNRTCBWpOSHD5BKH2g=="
         }
       },
       "is_incremental": true,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyEnumeratorBase-1.html",
-          "hash": "6zDweaRQ6RsNJHw+y1Dr2w=="
+          "hash": "CMyjsIGpgpcAuhpRy51KnQ=="
         }
       },
       "is_incremental": true,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyRandomEnumerator-1.html",
-          "hash": "QPN24SfX+Z+eDed7Qy2q5g=="
+          "hash": "+xCKyYYm9TrprRBn3xSb3g=="
         }
       },
       "is_incremental": true,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.Generic.UnifyYoYoEnumerator-1.html",
-          "hash": "RrL/MfBBsSY4ASbc9o0sTg=="
+          "hash": "OdrU6zX6lhwf9yoN5DojmA=="
         }
       },
       "is_incremental": true,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/api/Unify.Collections.UnifyEnumerableRange.html",
-          "hash": "/cZrY0IIH98GjmBW97bAvA=="
+          "hash": "VCds2zE9y/6KbH4vWe6NhA=="
         }
       },
       "is_incremental": true,
@@ -456,7 +456,7 @@
           "hash": "zuT85vikZA7HidyOgwsm0g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -468,7 +468,7 @@
           "hash": "wUANqjVxHIIISAvcvPgnNA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -480,7 +480,7 @@
           "hash": "NbxG+ddOI7A70nQwn7dhAA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -492,7 +492,7 @@
           "hash": "ePI9Kos7SngNDWcQPGBO1Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -504,7 +504,7 @@
           "hash": "VEgpls8WjCiZ7idmTX5m3g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -516,7 +516,7 @@
           "hash": "ascZ5Ltb59peo69eY9JaZQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -528,7 +528,7 @@
           "hash": "kHXBxbSaBzkB1rzcFBgXMg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -540,7 +540,7 @@
           "hash": "6G97SpBqDMevrNFnlnITTQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -552,7 +552,7 @@
           "hash": "mP4C+3o69z8ZcJT3AlAf6Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -564,7 +564,7 @@
           "hash": "kh0AvKX8y4H1jyHxUkns4A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -576,7 +576,7 @@
           "hash": "Dj6JQaNxUN44lW1RjfzYng=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -588,7 +588,7 @@
           "hash": "faEXwF+bSq+jIFoRBWaAFw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -600,7 +600,7 @@
           "hash": "7sfOqx25+DScqxmP+EMOvg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -612,7 +612,7 @@
           "hash": "9gN4Hq5qya6yzeA+0mpjbQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -624,7 +624,7 @@
           "hash": "SvLEAiyOoYdxobd1SE19XA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -636,7 +636,7 @@
           "hash": "+ghmX+rfikhj9STmS66NzQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -648,7 +648,7 @@
           "hash": "ZVSz87WU275xdeLlBOn42g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -660,7 +660,7 @@
           "hash": "OH2Zr48L6C+AoX4EqCZDgQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -672,7 +672,7 @@
           "hash": "dDHXcF0dorFZeb2TvfQfew=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -684,7 +684,7 @@
           "hash": "6Ox4TdTyMfZ1s4K1ucnhEA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -696,7 +696,7 @@
           "hash": "GEanA/9ApaFfXmaR90HyYg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -711,7 +711,7 @@
           "hash": "BOOIJ0ImW3CpQamXrLdADQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -723,7 +723,7 @@
           "hash": "ev1ruT3yWc6VOwwglIiepw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -735,7 +735,7 @@
           "hash": "KjqWe0CjzmFLyp16SdN23w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -747,7 +747,7 @@
           "hash": "5eblG6P66cQ18xGQie3grg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -759,7 +759,22 @@
           "hash": "WEd8pvp7h3Q6Kpm1NKEzww=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Enumerators/CreatingAnEnumerableRange.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Enumerators/CreatingAnEnumerableRange.html",
+          "hash": "t/GbNFGFMwI4Ot+0eEjWZA=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -768,10 +783,22 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/CreatingAndUsingUnifyEnumerators.html",
-          "hash": "051fYeevnQUUh6jYYAVTkA=="
+          "hash": "/Po/OWGUA1KH2C8gqwZfhA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "0.1.x/userguide/Unify.Enumerators/EnumeratingAPartialCollection.md",
+      "output": {
+        ".html": {
+          "relative_path": "0.1.x/userguide/Unify.Enumerators/EnumeratingAPartialCollection.html",
+          "hash": "2QQYIl4jDrYZ5HF8CRCwdg=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -780,10 +807,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/Events.html",
-          "hash": "mJK/cVmyghzBEgYtc4FjjA=="
+          "hash": "vWyGwNZaRg9foXLIV6A39w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -792,10 +819,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/IntroductionToUnifyEnumerators.html",
-          "hash": "z+fxYI+aGgcxM1ZF3NndWw=="
+          "hash": "VzFK+4sqrwIrcBfw2Bp6Aw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -804,10 +831,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/LoopingUnifyEnumerators.html",
-          "hash": "mIuodRg/qQAcErFri0pweA=="
+          "hash": "wAG/gqpczVlH5JX5UO2sOQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -816,10 +843,10 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/ModifyingACollection.html",
-          "hash": "0pC/zk+/Rbi5d3WizJicTw=="
+          "hash": "SmPW1csZYkerhbUYQuk1ig=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -831,7 +858,7 @@
           "hash": "q/TcSE8ILeVf08XqaTacuw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -840,19 +867,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/Unify.Enumerators/SteppingUnifyEnumerators.html",
-          "hash": "Qq8KiQ5/nSEN+UBbYcW1Gw=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "0.1.x/userguide/Unify.Enumerators/UnifyEnumerableRange.md",
-      "output": {
-        ".html": {
-          "relative_path": "0.1.x/userguide/Unify.Enumerators/UnifyEnumerableRange.html",
-          "hash": "ox+mHs0ut1Qoy5c6L230FA=="
+          "hash": "6dW+EOQVKjkNd6GEqomD1Q=="
         }
       },
       "is_incremental": false,
@@ -867,7 +882,7 @@
           "hash": "+bv5p22RubvKZsCNJpFD3A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -876,7 +891,7 @@
       "output": {
         ".html": {
           "relative_path": "0.1.x/userguide/toc.html",
-          "hash": "tYwwxqKkzkyEy7dRcjqkDg=="
+          "hash": "6ROYnTfIxD91qF3SWVGVgw=="
         }
       },
       "is_incremental": false,
@@ -1240,8 +1255,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 39,
-          "skipped_file_count": 38
+          "total_file_count": 40,
+          "skipped_file_count": 40
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

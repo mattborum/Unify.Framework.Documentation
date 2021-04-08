@@ -64,8 +64,8 @@
 <p><sup><font color="grey">Namespace: Unify.Collections, Unify.Collections.Generic</font></sup><br>
 <sup><font color="grey">Assembly: Unify.Collections.dll</font></sup></p>
 <p>Unify Enumerators allow the underlying collection to be modified while iterating; items can be added, inserted or removed during the iteration process and Unify will adjust the enumerator on-the-fly.</p>
-<p>To use this functionality the underlying collection <strong>must</strong> implement either of Unify's <a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html"><strong>IUnifyObservableCollection</strong></a> or <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html"><strong>IUnifyObservableCollection&lt;T&gt;</strong></a> interface types; <a href="xref:Unify.Collections.UnifyList"><strong>UnifyList</strong></a> and <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a> implement these interface types respectively.</p>
-<p>Unify will use the following rules when a collection is modified while iterating:</p>
+<p>To use this functionality the underlying collection <strong>must</strong> implement either of Unify's <a class="xref" href="../../api/Unify.Collections.Generic.IUnifyObservableCollection-1.html"><strong>IUnifyObservableCollection&lt;T&gt;</strong></a> or <a class="xref" href="../../api/Unify.Collections.IUnifyObservableCollection.html"><strong>IUnifyObservableCollection</strong></a> interface types; the <a class="xref" href="../../api/Unify.Collections.Generic.UnifyList-1.html"><strong>UnifyList&lt;T&gt;</strong></a> class implements both of these interfaces.</p>
+<p>Unify will use the following rules when the underlying collection is modified during iteration:</p>
 <ul>
 <li>If an item is inserted before the current item position; the pointer will move to the right to maintain the current item position</li>
 <li>If an item is removed before the current item position; the pointer will move to the left to maintain the current item position</li>
